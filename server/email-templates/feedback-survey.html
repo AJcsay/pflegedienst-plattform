@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ihre Meinung ist uns wichtig - CuraMain Feedback</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .content {
+            padding: 30px;
+        }
+        .greeting {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .feedback-intro {
+            background-color: #f0f9ff;
+            border-left: 4px solid #0f766e;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .feedback-intro h3 {
+            margin-top: 0;
+            color: #1e3a8a;
+            font-size: 18px;
+        }
+        .feedback-intro p {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #555;
+        }
+        .criteria-list {
+            background-color: #f9fafb;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .criteria-list h4 {
+            margin-top: 0;
+            color: #333;
+        }
+        .criteria-item {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .criteria-item:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #0f766e;
+            font-weight: bold;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #0f766e;
+            color: white;
+            padding: 14px 40px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 25px 0;
+            font-weight: 600;
+            text-align: center;
+            font-size: 16px;
+        }
+        .cta-button:hover {
+            background-color: #0d5f59;
+        }
+        .time-estimate {
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #92400e;
+        }
+        .contact-info {
+            background-color: #f9fafb;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #666;
+        }
+        .contact-info h4 {
+            margin-top: 0;
+            color: #333;
+        }
+        .contact-item {
+            margin: 8px 0;
+        }
+        .footer {
+            background-color: #f3f4f6;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            border-top: 1px solid #e5e7eb;
+        }
+        .footer a {
+            color: #0f766e;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ihre Meinung ist uns wichtig!</h1>
+        </div>
+
+        <div class="content">
+            <div class="greeting">
+                <p>Liebe/r {{firstName}} {{lastName}},</p>
+                <p>vielen Dank, dass Sie uns vertraut haben! Wir möchten gerne von Ihren Erfahrungen erfahren.</p>
+            </div>
+
+            <div class="feedback-intro">
+                <h3>Helfen Sie uns, besser zu werden</h3>
+                <p>Ihre Rückmeldung ist für uns wertvoll und hilft uns, unsere Dienstleistungen kontinuierlich zu verbessern. Mit nur wenigen Klicks können Sie uns Ihre Erfahrung mitteilen.</p>
+            </div>
+
+            <div class="criteria-list">
+                <h4>Wir möchten gerne Ihre Bewertung zu folgenden Punkten erfahren:</h4>
+                <div class="criteria-item">Gesamtbewertung des Termins</div>
+                <div class="criteria-item">Qualität der Pflegeleistung</div>
+                <div class="criteria-item">Professionalität unseres Teams</div>
+                <div class="criteria-item">Kommunikation und Verständnis</div>
+                <div class="criteria-item">Würden Sie uns weiterempfehlen?</div>
+            </div>
+
+            <div class="time-estimate">
+                <strong>⏱️ Zeitaufwand:</strong> Die Umfrage dauert nur etwa 2-3 Minuten.
+            </div>
+
+            <div style="text-align: center;">
+                <a href="{{surveyUrl}}" class="cta-button">Zur Umfrage</a>
+            </div>
+
+            <p style="font-size: 14px; color: #666; text-align: center;">
+                Der Link ist 30 Tage lang gültig. Danach können Umfragen nicht mehr eingereicht werden.
+            </p>
+
+            <div class="contact-info">
+                <h4>Fragen oder Anliegen?</h4>
+                <p>Falls Sie Fragen zur Umfrage haben oder direkt mit uns sprechen möchten:</p>
+                <div class="contact-item">
+                    <strong>Telefon:</strong> <a href="tel:{{companyPhone}}">{{companyPhone}}</a>
+                </div>
+                <div class="contact-item">
+                    <strong>E-Mail:</strong> <a href="mailto:{{companyEmail}}">{{companyEmail}}</a>
+                </div>
+            </div>
+
+            <p style="margin-top: 30px; color: #666; font-size: 14px;">
+                Mit freundlichen Grüßen,<br>
+                <strong>Das Team von CuraMain</strong><br>
+                Professionelle Pflegedienstleistungen im Rhein-Main-Gebiet
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>Dies ist eine automatische Umfrage-Email. Bitte antworten Sie nicht auf diese E-Mail.</p>
+            <p><a href="{{companyWebsite}}/impressum">Impressum</a> | <a href="{{companyWebsite}}/datenschutz">Datenschutz</a></p>
+        </div>
+    </div>
+</body>
+</html>

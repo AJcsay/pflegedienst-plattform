@@ -1,0 +1,28 @@
+# Robots.txt für CuraMain - Pflegedienst im Rhein-Main-Gebiet
+# https://www.curamain.de
+
+# Alle Suchmaschinen-Bots
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+
+# Spezifische Bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Sitemap
+Sitemap: https://www.curamain.de/sitemap.xml
+
+# Crawl-Verzögerung (optional - nur wenn nötig)
+# Crawl-delay: 1

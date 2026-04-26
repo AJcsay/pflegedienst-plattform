@@ -1,0 +1,134 @@
+{
+  "categories": [
+    {
+      "id": "pflegegrade",
+      "title": "Pflegegrade",
+      "description": "Alles über die Pflegegrade in Deutschland",
+      "questions": [
+        {
+          "id": "was-sind-pflegegrade",
+          "question": "Was sind Pflegegrade?",
+          "answer": "Pflegegrade sind eine Einstufung des Pflegebedarfs in Deutschland. Sie bestimmen, wie viel Unterstützung eine Person benötigt und wie viel Leistungen die Pflegekasse zahlt. Es gibt 5 Pflegegrade:\n\n**Pflegegrad 1 (Geringe Beeinträchtigung)**: Minimale Unterstützung im Alltag erforderlich\n\n**Pflegegrad 2 (Erhebliche Beeinträchtigung)**: Regelmäßige Hilfe bei Körperpflege, Ernährung oder Mobilität\n\n**Pflegegrad 3 (Schwere Beeinträchtigung)**: Umfangreiche Hilfe bei mehreren Aktivitäten des täglichen Lebens\n\n**Pflegegrad 4 (Schwerste Beeinträchtigung)**: Sehr umfangreiche Hilfe, oft rund um die Uhr\n\n**Pflegegrad 5 (Schwerste Beeinträchtigung mit besonderen Anforderungen)**: Maximale Unterstützung, oft mit Spezialisierung"
+        },
+        {
+          "id": "wie-beantrage-ich-pflegegrad",
+          "question": "Wie beantrage ich einen Pflegegrad?",
+          "answer": "Die Beantragung eines Pflegegrades erfolgt in mehreren Schritten:\n\n**Schritt 1: Antrag stellen**\n- Kontaktieren Sie Ihre Pflegekasse oder Krankenkasse\n- Stellen Sie einen schriftlichen Antrag auf Pflegeleistungen\n- Sie können den Antrag auch telefonisch stellen und erhalten dann ein Formular per Post\n\n**Schritt 2: Medizinischer Dienst**\n- Der Medizinische Dienst (MD) wird Sie zu Hause besuchen\n- Der Gutachter führt ein Gespräch und beobachtet Sie bei alltäglichen Aktivitäten\n- Der Besuch dauert etwa 30-60 Minuten\n\n**Schritt 3: Begutachtung**\n- Der MD erstellt ein Gutachten basierend auf Ihrem Unterstützungsbedarf\n- Die Pflegekasse trifft eine Entscheidung über den Pflegegrad\n\n**Schritt 4: Bescheid**\n- Sie erhalten einen schriftlichen Bescheid mit dem zuerkannten Pflegegrad\n- Die Leistungen gelten rückwirkend ab dem Antragsmonat\n\n**Tipp**: Bereiten Sie sich auf den Termin vor und notieren Sie Ihre Schwierigkeiten im Alltag!"
+        },
+        {
+          "id": "unterschied-pflegegrade",
+          "question": "Was ist der Unterschied zwischen den Pflegegraden?",
+          "answer": "Die Pflegegrade unterscheiden sich nach dem Ausmaß der erforderlichen Unterstützung:\n\n| Pflegegrad | Punkte | Leistung pro Monat | Typische Situation |\n|---|---|---|---|\n| Grad 1 | 12-26 | €125 | Leichte Gedächtnisstörungen, minimale Hilfe |\n| Grad 2 | 27-47 | €316 | Regelmäßige Hilfe beim Waschen, Anziehen |\n| Grad 3 | 48-70 | €545 | Umfangreiche Hilfe bei Körperpflege, Mobilität |\n| Grad 4 | 71-90 | €728 | Sehr umfangreiche Hilfe, oft rund um die Uhr |\n| Grad 5 | 90+ | €901 | Maximale Unterstützung mit Spezialisierung |\n\n**Wichtig**: Die genaue Höhe der Leistungen hängt von der Art der Pflege ab (stationär vs. ambulant) und ob Sie eine Pflegekraft angestellt haben oder einen Pflegedienst nutzen."
+        },
+        {
+          "id": "wer-bekommt-pflegegrad",
+          "question": "Wer bekommt einen Pflegegrad?",
+          "answer": "Ein Pflegegrad wird gewährt, wenn:\n\n✓ Sie Schwierigkeiten bei alltäglichen Aktivitäten haben (Körperpflege, Ernährung, Mobilität)\n✓ Sie mindestens 12 Punkte in der Begutachtung erreichen\n✓ Sie in einer gesetzlichen Krankenkasse versichert sind (oder privat versichert mit Pflegezusatzversicherung)\n✓ Sie mindestens 6 Monate einen Pflegebedarf haben (oder voraussichtlich haben)\n\n**Keine Pflegegrade für**:\n- Reine psychische Erkrankungen ohne körperliche Beeinträchtigung\n- Vorübergehende Erkrankungen (z.B. Grippe)\n- Menschen unter 18 Jahren (andere Regelungen)\n\n**Hinweis**: Auch junge Menschen können einen Pflegegrad erhalten, wenn sie einen Pflegebedarf haben (z.B. nach einem Unfall)."
+        },
+        {
+          "id": "pflegegrad-aenderung",
+          "question": "Kann sich mein Pflegegrad ändern?",
+          "answer": "Ja, Ihr Pflegegrad kann sich ändern:\n\n**Erhöhung des Pflegegrades**:\n- Sie können einen Antrag auf Höherstufung stellen, wenn sich Ihr Zustand verschlechtert\n- Der Medizinische Dienst führt eine neue Begutachtung durch\n- Die Erhöhung gilt rückwirkend ab dem Antragsmonat\n\n**Senkung des Pflegegrades**:\n- Die Pflegekasse kann den Pflegegrad senken, wenn sich Ihr Zustand verbessert\n- Sie haben das Recht auf eine neue Begutachtung\n\n**Überprüfung**:\n- Die Pflegekasse überprüft regelmäßig (alle 2-3 Jahre) Ihren Pflegegrad\n- Sie werden rechtzeitig benachrichtigt\n\n**Tipp**: Wenn Sie denken, dass Ihr Pflegegrad nicht mehr passt, stellen Sie einen Antrag auf Überprüfung!"
+        }
+      ]
+    },
+    {
+      "id": "kosten",
+      "title": "Kosten & Finanzierung",
+      "description": "Informationen zu Kosten und Finanzierungsmöglichkeiten",
+      "questions": [
+        {
+          "id": "wie-viel-kostet-ambulante-pflege",
+          "question": "Wie viel kostet ambulante Pflege?",
+          "answer": "Die Kosten für ambulante Pflege hängen von mehreren Faktoren ab:\n\n**Leistungsumfang**:\n- Grundpflege (Körperpflege, Ernährung): €30-60 pro Besuch\n- Behandlungspflege (Verbandswechsel, Injektionen): €40-80 pro Besuch\n- Hauswirtschaftliche Hilfe (Putzen, Einkaufen): €20-40 pro Stunde\n- Betreuung/Begleitung: €15-30 pro Stunde\n\n**Häufigkeit**:\n- 1x täglich: €100-150/Tag\n- 2x täglich: €180-280/Tag\n- 3x täglich: €250-400/Tag\n- 24-Stunden-Betreuung: €1.500-3.000/Monat\n\n**Was zahlt die Pflegekasse?**\n- Pflegegrad 2: €316/Monat\n- Pflegegrad 3: €545/Monat\n- Pflegegrad 4: €728/Monat\n- Pflegegrad 5: €901/Monat\n\n**Zuzahlungen**:\n- Sie zahlen die Differenz zwischen Pflegekasse und tatsächlichen Kosten selbst\n- Pflegekasse zahlt maximal 80% der Kosten\n- Sie zahlen mindestens 20% selbst\n\n**Beispiel**: Bei Pflegegrad 3 (€545/Monat) und tatsächlichen Kosten von €800/Monat zahlen Sie €255 selbst."
+        },
+        {
+          "id": "was-zahlt-pflegekasse",
+          "question": "Was zahlt die Pflegekasse?",
+          "answer": "Die Pflegekasse zahlt folgende Leistungen:\n\n**Ambulante Pflegeleistungen (Sachleistungen)**:\n- Grundpflege und Körperpflege\n- Behandlungspflege (ärztlich verordnet)\n- Hauswirtschaftliche Versorgung\n- Betreuung und Begleitung\n- Leistungen werden direkt an den Pflegedienst gezahlt\n\n**Pflegegeld (Alternative)**:\n- Sie können sich selbst um die Pflege kümmern und erhalten Geld\n- Pflegegrad 1: €125/Monat\n- Pflegegrad 2: €316/Monat\n- Pflegegrad 3: €545/Monat\n- Pflegegrad 4: €728/Monat\n- Pflegegrad 5: €901/Monat\n\n**Kombinationsleistungen**:\n- Sie können Sachleistungen und Pflegegeld kombinieren\n- Beispiel: 50% Pflegedienst, 50% Pflegegeld\n\n**Weitere Leistungen**:\n- Pflegehilfsmittel (Windeln, Katheter, etc.): bis €40/Monat\n- Wohnumfeldverbesserung (Rampen, Handgriffe): bis €4.000 einmalig\n- Tagesbetreuung/Nachtbetreuung\n- Kurzzeitpflege (bis 28 Tage/Jahr)\n- Verhinderungspflege (Urlaub für Angehörige)\n\n**Wichtig**: Die Pflegekasse zahlt NICHT für:\n- Unterkunft und Verpflegung (außer in Pflegeheimen)\n- Ärztliche Behandlung (zahlt Krankenkasse)\n- Medikamente (zahlt Krankenkasse)"
+        },
+        {
+          "id": "wie-beantrage-ich-pflegeleistungen",
+          "question": "Wie beantrage ich Pflegeleistungen?",
+          "answer": "Pflegeleistungen beantragen Sie direkt bei Ihrer Pflegekasse:\n\n**Schritt 1: Antrag stellen**\n- Kontaktieren Sie Ihre Pflegekasse (Telefon oder schriftlich)\n- Fordern Sie ein Antragsformular an\n- Füllen Sie das Formular aus und senden Sie es zurück\n\n**Schritt 2: Medizinische Begutachtung**\n- Der Medizinische Dienst besucht Sie zu Hause\n- Der Gutachter stellt fest, welche Leistungen Sie benötigen\n\n**Schritt 3: Leistungsbewilligung**\n- Die Pflegekasse teilt Ihnen mit, welche Leistungen bewilligt wurden\n- Sie erhalten einen Bescheid mit den genauen Leistungen und Beträgen\n\n**Schritt 4: Pflegedienst wählen**\n- Sie wählen einen Pflegedienst (z.B. CuraMain)\n- Der Pflegedienst stellt einen Antrag auf Kostenübernahme\n- Die Pflegekasse zahlt direkt an den Pflegedienst\n\n**Tipp**: Die Leistungen gelten rückwirkend ab dem Antragsmonat. Je früher Sie einen Antrag stellen, desto früher erhalten Sie Leistungen!"
+        },
+        {
+          "id": "selbstbeteiligung-zuzahlung",
+          "question": "Muss ich eine Selbstbeteiligung zahlen?",
+          "answer": "Ja, bei ambulanten Pflegeleistungen müssen Sie eine Selbstbeteiligung zahlen:\n\n**Eigenanteil bei Sachleistungen**:\n- Die Pflegekasse zahlt maximal 80% der Kosten\n- Sie zahlen mindestens 20% selbst\n- Der genaue Betrag hängt von den tatsächlichen Kosten ab\n\n**Beispiel Pflegegrad 3**:\n- Pflegekasse zahlt: €545/Monat\n- Tatsächliche Kosten: €680/Monat\n- Sie zahlen: €135/Monat\n\n**Pflegegeld (keine Zuzahlung)**:\n- Wenn Sie Pflegegeld erhalten, müssen Sie KEINE Zuzahlung leisten\n- Sie erhalten den vollen Betrag und zahlen selbst für die Pflege\n\n**Zuzahlungsbefreiung**:\n- Wenn Sie sehr wenig Einkommen haben, können Sie eine Zuzahlungsbefreiung beantragen\n- Kontaktieren Sie Ihre Pflegekasse für Details\n\n**Tipp**: Fragen Sie Ihren Pflegedienst nach den genauen Kosten und wie viel Sie selbst zahlen müssen!"
+        },
+        {
+          "id": "private-versicherung",
+          "question": "Zahlt meine private Versicherung auch Pflegeleistungen?",
+          "answer": "Das hängt von Ihrer privaten Versicherung ab:\n\n**Private Krankenversicherung mit Pflegezusatzversicherung**:\n- Ja, die Pflegezusatzversicherung zahlt Pflegeleistungen\n- Die Leistungen sind ähnlich wie bei der gesetzlichen Krankenversicherung\n- Sie erhalten einen Pflegegrad und entsprechende Leistungen\n\n**Private Krankenversicherung ohne Pflegezusatzversicherung**:\n- Nein, die Basis-Versicherung zahlt keine Pflegeleistungen\n- Sie müssen eine Pflegezusatzversicherung abschließen\n- Dies ist oft teuer, wenn Sie bereits älter sind\n\n**Wichtig**: \n- Private Versicherte zahlen in die private Pflegeversicherung ein\n- Die Leistungen sind oft niedriger als bei der gesetzlichen Versicherung\n- Sie sollten eine Zusatzversicherung abschließen, wenn Sie noch jung sind\n\n**Tipp**: Überprüfen Sie Ihren Versicherungsvertrag oder kontaktieren Sie Ihren Versicherer für genaue Informationen!"
+        }
+      ]
+    },
+    {
+      "id": "leistungen",
+      "title": "Unsere Leistungen",
+      "description": "Informationen zu den Pflegeleistungen von CuraMain",
+      "questions": [
+        {
+          "id": "grundpflege-vs-behandlungspflege",
+          "question": "Was ist der Unterschied zwischen Grundpflege und Behandlungspflege?",
+          "answer": "**Grundpflege** (zahlt Pflegekasse):\n- Körperpflege: Waschen, Duschen, Baden, Zahnpflege\n- Ernährung: Unterstützung beim Essen und Trinken\n- Ausscheidung: Toilettengang, Inkontinenzversorgung\n- Mobilität: Aufstehen, Gehen, Treppensteigen\n- Wechsel der Kleidung\n- Bettenmachen und Wäschewechsel\n\n**Behandlungspflege** (ärztlich verordnet, zahlt Krankenkasse):\n- Wundversorgung und Verbandswechsel\n- Injektionen und Infusionen\n- Katheterversorgung\n- Medikamentengabe und Kontrolle\n- Blutdruckmessung und Blutzuckerkontrolle\n- Atemwegstherapie\n- Spezielle Pflegemaßnahmen nach ärztlicher Anweisung\n\n**Wichtig**: \n- Grundpflege wird von der Pflegekasse bezahlt\n- Behandlungspflege wird von der Krankenkasse bezahlt\n- Beide Leistungen können kombiniert werden\n- Behandlungspflege muss vom Arzt verordnet werden"
+        },
+        {
+          "id": "kultursensible-pflege",
+          "question": "Was ist kultursensible Pflege?",
+          "answer": "Kultursensible Pflege bedeutet, dass wir Ihre kulturellen, religiösen und persönlichen Bedürfnisse respektieren und berücksichtigen:\n\n**Religiöse Bedürfnisse**:\n- Respekt vor Ihren religiösen Überzeugungen\n- Unterstützung bei religiösen Praktiken\n- Verständnis für Speisevorschriften\n- Beachtung von Gebetszeiten\n\n**Kulturelle Besonderheiten**:\n- Verständnis für kulturelle Traditionen\n- Respekt vor Familie und Familienstrukturen\n- Beachtung von Schamgefühlen und Privatsphäre\n- Verständnis für unterschiedliche Kommunikationsstile\n\n**Sprachliche Unterstützung**:\n- Mehrsprachiges Pflegepersonal (Deutsch, Arabisch, Türkisch, Russisch, Polnisch)\n- Verständnis für Sprachbarrieren\n- Geduld und klare Kommunikation\n\n**Persönliche Vorlieben**:\n- Berücksichtigung von Essgewohnheiten\n- Respekt vor persönlichen Routinen\n- Beachtung von Kleidungsvorschriften\n- Verständnis für Familienbesuche\n\n**Warum ist das wichtig?**\n- Bessere Vertrauensbeziehung\n- Höhere Zufriedenheit mit der Pflege\n- Bessere Gesundheitsergebnisse\n- Respekt vor Ihrer Würde und Autonomie"
+        },
+        {
+          "id": "24-stunden-betreuung",
+          "question": "Bietet CuraMain 24-Stunden-Betreuung an?",
+          "answer": "Ja, CuraMain bietet 24-Stunden-Betreuung an:\n\n**Was ist 24-Stunden-Betreuung?**\n- Eine Pflegekraft ist rund um die Uhr für Sie da\n- Sie wohnt bei Ihnen zu Hause\n- Sie hilft bei allen Aktivitäten des täglichen Lebens\n- Sie ist auch nachts erreichbar\n\n**Wann ist 24-Stunden-Betreuung sinnvoll?**\n- Sie haben einen hohen Pflegebedarf (Pflegegrad 4-5)\n- Sie sind nachts oft unsicher oder benötigen Hilfe\n- Sie haben spezielle medizinische Anforderungen\n- Sie möchten nicht ins Pflegeheim gehen\n- Sie möchten in Ihrer vertrauten Umgebung bleiben\n\n**Kosten**:\n- 24-Stunden-Betreuung kostet €1.500-3.000/Monat\n- Die Pflegekasse zahlt einen Teil (Pflegegeld oder Sachleistungen)\n- Sie zahlen die Differenz selbst\n\n**Wie funktioniert es?**\n- Kontaktieren Sie CuraMain für ein Beratungsgespräch\n- Wir besprechen Ihre Bedürfnisse und erstellen einen Pflegeplan\n- Eine geeignete Pflegekraft wird ausgewählt\n- Die Betreuung beginnt zum vereinbarten Zeitpunkt\n\n**Tipp**: Kontaktieren Sie uns für ein kostenloses Beratungsgespräch!"
+        },
+        {
+          "id": "verhinderungspflege",
+          "question": "Was ist Verhinderungspflege?",
+          "answer": "Verhinderungspflege ist eine Leistung der Pflegekasse, wenn Ihre Angehörigen (z.B. Ehepartner, Kinder) in den Urlaub fahren oder ausfallen:\n\n**Wer bekommt Verhinderungspflege?**\n- Sie müssen einen Pflegegrad haben (ab Pflegegrad 2)\n- Sie werden normalerweise von Angehörigen gepflegt\n- Die Angehörigen können nicht mehr pflegen (Urlaub, Krankheit, etc.)\n\n**Wie viel zahlt die Pflegekasse?**\n- Bis zu 6 Wochen pro Jahr\n- Maximal €1.612 pro Jahr\n- Die Pflegekasse zahlt bis zu 80% der Kosten\n- Sie zahlen 20% selbst\n\n**Wie beantrage ich Verhinderungspflege?**\n- Kontaktieren Sie Ihre Pflegekasse\n- Teilen Sie mit, wann Sie Verhinderungspflege benötigen\n- Die Pflegekasse genehmigt die Leistung\n- Sie wählen einen Pflegedienst (z.B. CuraMain)\n\n**Beispiel**:\n- Ihre Tochter fährt 2 Wochen in den Urlaub\n- Sie benötigen Verhinderungspflege\n- CuraMain kümmert sich um Sie\n- Die Pflegekasse zahlt die Kosten (80%)\n- Sie zahlen 20% selbst\n\n**Tipp**: Planen Sie Ihren Urlaub rechtzeitig und beantragen Sie Verhinderungspflege frühzeitig!"
+        }
+      ]
+    },
+    {
+      "id": "prozess",
+      "title": "Prozess & Ablauf",
+      "description": "Wie läuft die Zusammenarbeit mit CuraMain ab?",
+      "questions": [
+        {
+          "id": "wie-starte-ich-mit-curamain",
+          "question": "Wie starte ich mit CuraMain?",
+          "answer": "Der Prozess mit CuraMain ist einfach und unkompliziert:\n\n**Schritt 1: Erstkontakt**\n- Rufen Sie uns an: 069 / 30 123 456\n- Oder füllen Sie unser Kontaktformular aus\n- Wir vereinbaren einen Termin für ein kostenloses Beratungsgespräch\n\n**Schritt 2: Beratungsgespräch**\n- Wir lernen Sie und Ihre Situation kennen\n- Wir besprechen Ihren Pflegebedarf\n- Wir erklären unsere Leistungen und Kosten\n- Wir beantworten alle Ihre Fragen\n\n**Schritt 3: Pflegeplan erstellen**\n- Wir erstellen einen individuellen Pflegeplan\n- Wir berücksichtigen Ihre Wünsche und Bedürfnisse\n- Wir besprechen den Plan mit Ihnen\n\n**Schritt 4: Vertrag abschließen**\n- Wir schließen einen Pflegevertrag ab\n- Wir klären alle Fragen zu Kosten und Leistungen\n- Sie erhalten eine Kopie des Vertrags\n\n**Schritt 5: Pflege beginnt**\n- Zum vereinbarten Zeitpunkt beginnt die Pflege\n- Eine geeignete Pflegekraft wird Ihnen vorgestellt\n- Die Pflege läuft nach Ihrem Pflegeplan\n\n**Schritt 6: Regelmäßige Überprüfung**\n- Wir überprüfen regelmäßig, ob die Pflege passt\n- Wir passen den Pflegeplan bei Bedarf an\n- Wir sind jederzeit für Ihre Fragen da\n\n**Tipp**: Rufen Sie uns noch heute an für ein kostenloses Beratungsgespräch!"
+        },
+        {
+          "id": "notfall-bereitschaft",
+          "question": "Habt ihr eine Notfallbereitschaft?",
+          "answer": "Ja, CuraMain hat eine 24/7-Notfallbereitschaft:\n\n**Notfall-Telefonnummer**:\n- 069 / 30 123 456 (rund um die Uhr erreichbar)\n- Wir sind auch nachts und am Wochenende erreichbar\n\n**Was ist ein Notfall?**\n- Plötzliche Verschlechterung des Zustands\n- Sturz oder Verletzung\n- Starke Schmerzen\n- Atembeschwerden\n- Andere medizinische Notfälle\n\n**Was tun wir im Notfall?**\n- Wir hören Ihnen zu und beruhigen Sie\n- Wir geben erste Hilfe oder Ratschläge\n- Wir schicken eine Pflegekraft, wenn nötig\n- Wir rufen den Notarzt, wenn nötig\n- Wir informieren Ihre Angehörigen\n\n**Wichtig**:\n- Bei lebensbedrohlichen Notfällen rufen Sie immer den Notarzt (112)\n- Wir unterstützen Sie zusätzlich\n- Ihre Sicherheit ist unsere höchste Priorität\n\n**Tipp**: Speichern Sie unsere Notfall-Nummer in Ihrem Handy!"
+        },
+        {
+          "id": "kosten-transparenz",
+          "question": "Sind die Kosten transparent und gibt es versteckte Gebühren?",
+          "answer": "Ja, bei CuraMain sind die Kosten vollständig transparent:\n\n**Was ist transparent?**\n- Alle Kosten werden Ihnen schriftlich mitgeteilt\n- Es gibt keine versteckten Gebühren\n- Sie wissen genau, was Sie zahlen\n- Sie erhalten regelmäßige Rechnungen\n\n**Kosten-Übersicht**:\n- Grundpflege: €30-60 pro Besuch\n- Behandlungspflege: €40-80 pro Besuch\n- Hauswirtschaftliche Hilfe: €20-40 pro Stunde\n- 24-Stunden-Betreuung: €1.500-3.000/Monat\n\n**Was zahlt die Pflegekasse?**\n- Wir rechnen direkt mit Ihrer Pflegekasse ab\n- Sie zahlen nur die Differenz\n- Wir helfen Ihnen bei der Abrechnung\n\n**Zusatzkosten?**\n- Nein, es gibt keine versteckten Zusatzkosten\n- Alle Kosten sind im Pflegeplan enthalten\n- Wenn sich etwas ändert, informieren wir Sie vorher\n\n**Tipp**: Fragen Sie uns nach einer detaillierten Kostenaufstellung!"
+        }
+      ]
+    },
+    {
+      "id": "partner",
+      "title": "Für Partner",
+      "description": "Informationen für Zuweiser, Kliniken und Krankenkassen",
+      "questions": [
+        {
+          "id": "wie-ueberweise-ich-patienten",
+          "question": "Wie überweise ich Patienten an CuraMain?",
+          "answer": "Die Patientenüberleitung an CuraMain ist einfach:\n\n**Schritt 1: Kontakt aufnehmen**\n- Telefon: 069 / 30 123 456\n- Email: info@curamain.de\n- Oder nutzen Sie unser Zuweiser-Portal\n\n**Schritt 2: Patientendaten übermitteln**\n- Patientenname und Kontaktdaten\n- Diagnose und Pflegebedarf\n- Ärztliche Verordnung (falls vorhanden)\n- Besondere Anforderungen\n\n**Schritt 3: Versorgungsplan**\n- Wir erstellen einen individuellen Versorgungsplan\n- Wir besprechen den Plan mit dem Patienten\n- Wir informieren Sie über den Status\n\n**Schritt 4: Übergabe**\n- Wir übernehmen die Versorgung zum vereinbarten Zeitpunkt\n- Wir halten Sie über den Verlauf informiert\n- Wir arbeiten eng mit Ihnen zusammen\n\n**Tipp**: Je früher Sie uns informieren, desto besser können wir planen!"
+        },
+        {
+          "id": "kapazitaet-anfrage",
+          "question": "Wie frage ich Kapazitäten ab?",
+          "answer": "Kapazitätsabfragen sind schnell und unkompliziert:\n\n**Online-Portal**:\n- Nutzen Sie unser Kapazitäts-Portal\n- Geben Sie Ihre Anforderungen ein\n- Sie erhalten sofort eine Rückmeldung\n\n**Telefonisch**:\n- Rufen Sie uns an: 069 / 30 123 456\n- Teilen Sie Ihre Anforderungen mit\n- Wir geben Ihnen sofort Auskunft\n\n**Per Email**:\n- Senden Sie eine Email an info@curamain.de\n- Beschreiben Sie Ihre Anforderungen\n- Wir antworten innerhalb von 24 Stunden\n\n**Was sollten Sie mitteilen?**\n- Anzahl der Patienten\n- Art der Pflege (Grundpflege, Behandlungspflege)\n- Zeitraum (wie lange, wie oft)\n- Besondere Anforderungen\n- Gewünschter Starttermin\n\n**Tipp**: Fragen Sie rechtzeitig an, damit wir planen können!"
+        }
+      ]
+    }
+  ]
+}
