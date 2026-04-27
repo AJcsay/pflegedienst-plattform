@@ -1,14 +1,15 @@
 import { Link } from "wouter";
-import { trpc } from "@/lib/trpc";
 import {
   ArrowRight, Briefcase, MapPin, Heart,
   GraduationCap, Car, Calendar, Euro, Users, Coffee, Shield
 } from "lucide-react";
 import { useState } from "react";
 import { useSEO } from "@/hooks/useSEO";
+import jobsData from "@/data/jobs.json";
+import type { Job } from "@/data/types";
 
 const PHOTOS = {
-  team: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332473442/mPPhYwgpPecz3rTTMqZjFL/5_FpU4S7YbAhdIMgbPUTpABc_1775907771125_na1fn_L2hvbWUvdWJ1bnR1L2N1cmFtYWluX3RlYW0_38e8983c.png",
+  team: "/img/team.webp",
 };
 
 const benefits = [
@@ -37,6 +38,8 @@ const filterOptions = [
   { value: "internship", label: "Praktikum" },
 ];
 
+const allJobs: Job[] = (jobsData as { jobs: Job[] }).jobs.filter((j) => j.active);
+
 export default function Karriere() {
   useSEO({
     title: "Jobs & Karriere beim Pflegedienst – CuraMain",
@@ -45,10 +48,9 @@ export default function Karriere() {
     canonical: "https://www.curamain.de/karriere",
   });
 
-  const { data: jobs, isLoading } = trpc.jobs.list.useQuery();
   const [filterType, setFilterType] = useState<string>("all");
 
-  const filteredJobs = jobs?.filter((job) => filterType === "all" || job.employmentType === filterType);
+  const filteredJobs = allJobs.filter((job) => filterType === "all" || job.employmentType === filterType);
 
   return (
     <div className="bg-cm-cream">
@@ -104,7 +106,7 @@ export default function Karriere() {
         </div>
 
         {/* Filter Pills */}
-        {jobs && jobs.length > 0 && (
+        {allJobs.length > 0 && (
           <div className="flex flex-wrap gap-2 justify-center mb-10">
             {filterOptions.map((opt) => (
               <button
@@ -122,16 +124,7 @@ export default function Karriere() {
           </div>
         )}
 
-        {isLoading ? (
-          <div className="space-y-4 max-w-3xl mx-auto">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-white p-6 rounded-3xl border border-cm-teal-100 animate-pulse">
-                <div className="h-6 bg-cm-teal-50 rounded w-1/3 mb-3" />
-                <div className="h-4 bg-cm-teal-50 rounded w-2/3" />
-              </div>
-            ))}
-          </div>
-        ) : filteredJobs && filteredJobs.length > 0 ? (
+        {filteredJobs.length > 0 ? (
           <div className="space-y-4 max-w-3xl mx-auto">
             {filteredJobs.map((job) => (
               <div

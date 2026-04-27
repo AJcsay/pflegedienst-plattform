@@ -1,0 +1,8 @@
+# /api/-Verzeichnis: keine Directory-Listings, PHP-Files normal ausführen
+Options -Indexes
+DirectoryIndex disabled
+
+# Zugriff auf .htaccess oder .git-Reste verbieten
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>

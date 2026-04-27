@@ -1,0 +1,47 @@
+# CuraMain – .htaccess für /htdocs/ auf All-Inkl
+# Beim Deploy nach /htdocs/.htaccess umbenennen.
+
+# === SPA-Routing =============================================================
+# Alles, was nicht existiert und nicht /api oder /uploads ist, → index.html
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/api/
+RewriteCond %{REQUEST_URI} !^/uploads/
+RewriteCond %{REQUEST_URI} !^/dokumente/
+RewriteRule ^ index.html [L]
+
+# === HTTPS erzwingen =========================================================
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# === Cache-Control für Build-Assets ==========================================
+<IfModule mod_headers.c>
+  <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|woff|woff2|ttf|otf|css|js|ico)$">
+    Header set Cache-Control "max-age=31536000, public, immutable"
+  </FilesMatch>
+
+  # HTML & JSON sollen nicht im Browser-Cache hängen
+  <FilesMatch "\.(html|json)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+
+  # Sicherheits-Header
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# === Komprimierung ===========================================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+# === Schutz vor versteckten Dateien ==========================================
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
+# === Fehler-Pages ============================================================
+ErrorDocument 404 /index.html

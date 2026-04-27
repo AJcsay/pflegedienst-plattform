@@ -1,9 +1,8 @@
 import { Link } from "wouter";
-import { trpc } from "@/lib/trpc";
-import { useAuth } from "@/_core/hooks/useAuth";
-import { getLoginUrl } from "@/const";
-import { FileText, FileDown, ArrowRight, Lock } from "lucide-react";
+import { FileText, FileDown } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import documentsData from "@/data/documents.json";
+import type { Document } from "@/data/types";
 
 const PartnerTabs = ({ active }: { active: string }) => (
   <div className="flex flex-wrap gap-2 mb-10 justify-center">
@@ -44,6 +43,8 @@ const categoryColors: Record<string, string> = {
   other: "bg-gray-50 text-gray-700",
 };
 
+const documents: Document[] = (documentsData as { documents: Document[] }).documents;
+
 export default function PartnerDokumente() {
   useSEO({
     title: "Partner-Dokumente & Qualitätsunterlagen – CuraMain",
@@ -51,42 +52,6 @@ export default function PartnerDokumente() {
     keywords: "CuraMain Qualitätsunterlagen, Pflegedienst Dokumente Rhein-Main, Kooperationsvertrag Pflege Rhein-Main-Gebiet",
     canonical: "https://www.curamain.de/partner/dokumente",
   });
-
-  const { user, loading: authLoading } = useAuth();
-  const { data: documents, isLoading } = trpc.documents.list.useQuery();
-
-  if (authLoading) {
-    return (
-      <div className="bg-cm-cream min-h-[60vh] flex items-center justify-center">
-        <div className="text-center">
-          <div className="h-8 w-8 rounded-full border-4 border-cm-teal border-t-transparent animate-spin mx-auto mb-4" />
-          <p className="text-cm-ink/60">Wird geladen …</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (!user) {
-    return (
-      <div className="bg-cm-cream min-h-[60vh] flex items-center justify-center py-20">
-        <div className="text-center max-w-md">
-          <div className="w-16 h-16 rounded-full bg-cm-teal-50 flex items-center justify-center mx-auto mb-5">
-            <Lock className="h-8 w-8 text-cm-teal" />
-          </div>
-          <h2 className="h-serif text-3xl text-cm-ink mb-3">Anmeldung erforderlich</h2>
-          <p className="text-cm-ink/70 mb-6">
-            Der Zugriff auf Partner-Dokumente ist nur für angemeldete Benutzer verfügbar.
-          </p>
-          <a
-            href={getLoginUrl()}
-            className="inline-flex items-center gap-2 bg-cm-teal hover:bg-cm-teal-500 text-white px-6 py-3 rounded-full font-medium transition-colors"
-          >
-            Anmelden <ArrowRight className="w-4 h-4" />
-          </a>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="bg-cm-cream">
@@ -111,16 +76,7 @@ export default function PartnerDokumente() {
       <section className="container py-12 lg:py-14">
         <PartnerTabs active="dokumente" />
 
-        {isLoading ? (
-          <div className="space-y-4 max-w-3xl mx-auto">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-white p-6 rounded-3xl border border-cm-teal-100 animate-pulse">
-                <div className="h-5 bg-cm-teal-50 rounded w-1/3 mb-2" />
-                <div className="h-4 bg-cm-teal-50 rounded w-2/3" />
-              </div>
-            ))}
-          </div>
-        ) : documents && documents.length > 0 ? (
+        {documents.length > 0 ? (
           <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
             {documents.map((doc) => (
               <a

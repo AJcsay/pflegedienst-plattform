@@ -5,5 +5,18 @@ dist/
 .env.local
 .env.*.local
 .manus-logs/
+.claude/
+__manus__/
 *.log
 npm-debug.log*
+.vite/
+.cache/
+coverage/
+playwright-report/
+test-results/
+
+# IDE
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json

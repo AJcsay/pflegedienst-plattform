@@ -18,15 +18,6 @@ import PartnerZuweiser from "./pages/PartnerZuweiser";
 import PartnerKapazitaet from "./pages/PartnerKapazitaet";
 import PartnerKassen from "./pages/PartnerKassen";
 import PartnerDokumente from "./pages/PartnerDokumente";
-import Admin from "./pages/Admin";
-import AdminAppointments from "./pages/AdminAppointments";
-import AdminReminders from "./pages/AdminReminders";
-import { AdminCampaigns } from "./pages/AdminCampaigns";
-import AdminLogin from "./pages/AdminLogin";
-import AdminSetup from "./pages/AdminSetup";
-import { AdminForgotPassword } from "./pages/AdminForgotPassword";
-import { AdminResetPassword } from "./pages/AdminResetPassword";
-import AdminErrorBoundary from "./components/AdminErrorBoundary";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 
@@ -63,7 +54,7 @@ function HashScrollHandler() {
       const navbarHeight = 80;
       const rect = element.getBoundingClientRect();
       const scrollTop = window.scrollY + rect.top - navbarHeight;
-      window.scrollTo({ top: scrollTop, behavior: 'smooth' });
+      window.scrollTo({ top: scrollTop, behavior: "smooth" });
     };
 
     setTimeout(scrollToHash, 100);
@@ -86,7 +77,6 @@ function Router() {
       {/* Career */}
       <Route path="/karriere">{() => <PublicLayout><Karriere /></PublicLayout>}</Route>
       <Route path="/bewerbung">{() => <PublicLayout><Bewerbung /></PublicLayout>}</Route>
-      {/* Alias für verschachtelte URLs aus Navbar/Footer/Karriere-Seite */}
       <Route path="/karriere/bewerbung">{() => <PublicLayout><Bewerbung /></PublicLayout>}</Route>
 
       {/* Partners */}
@@ -94,16 +84,6 @@ function Router() {
       <Route path="/partner/kapazitaet">{() => <PublicLayout><PartnerKapazitaet /></PublicLayout>}</Route>
       <Route path="/partner/kassen">{() => <PublicLayout><PartnerKassen /></PublicLayout>}</Route>
       <Route path="/partner/dokumente">{() => <PublicLayout><PartnerDokumente /></PublicLayout>}</Route>
-
-      {/* Admin (no public layout) */}
-      <Route path="/admin/setup" component={AdminSetup} />
-      <Route path="/admin/login" component={AdminLogin} />
-      <Route path="/admin/forgot-password" component={AdminForgotPassword} />
-      <Route path="/admin/reset-password" component={AdminResetPassword} />
-      <Route path="/admin">{() => <AdminErrorBoundary><Admin /></AdminErrorBoundary>}</Route>
-      <Route path="/admin/appointments">{() => <AdminErrorBoundary><AdminAppointments /></AdminErrorBoundary>}</Route>
-      <Route path="/admin/campaigns">{() => <AdminErrorBoundary><AdminCampaigns /></AdminErrorBoundary>}</Route>
-      <Route path="/admin/reminders">{() => <AdminErrorBoundary><AdminReminders /></AdminErrorBoundary>}</Route>
 
       {/* Legal pages */}
       <Route path="/impressum">{() => <PublicLayout><Impressum /></PublicLayout>}</Route>

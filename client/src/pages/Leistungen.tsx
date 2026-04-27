@@ -8,13 +8,13 @@ import { useSearch } from "wouter";
 import { useEffect } from "react";
 
 const PHOTOS = {
-  hero: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332473442/mPPhYwgpPecz3rTTMqZjFL/4_SG8iDwrqiXZmnc07OoDVj2_1775907777133_na1fn_L2hvbWUvdWJ1bnR1L2N1cmFtYWluX2NhcmVfcGxhbg_a3923d20.png",
-  behandlung: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332473442/mPPhYwgpPecz3rTTMqZjFL/1_9zKTC85ulmJR4icRxmoTKa_1775907769962_na1fn_L2hvbWUvdWJ1bnR1L2N1cmFtYWluX2hvbWVfY2FyZQ_fd828362.png",
-  grundpflege: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332473442/mPPhYwgpPecz3rTTMqZjFL/2_esuW4iLvagCFvHzAcbgNnR_1775907775672_na1fn_L2hvbWUvdWJ1bnR1L2N1cmFtYWluX2h5Z2llbmVfY2FyZQ_2291c2b0.png",
-  hauswirtschaft: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332473442/mPPhYwgpPecz3rTTMqZjFL/3_z4iDfgYKlmKcvbqciG51t0_1775907776363_na1fn_L2hvbWUvdWJ1bnR1L2N1cmFtYWluX21lYWxfc2NlbmU_7fdf52ba.png",
-  team: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332473442/mPPhYwgpPecz3rTTMqZjFL/5_FpU4S7YbAhdIMgbPUTpABc_1775907771125_na1fn_L2hvbWUvdWJ1bnR1L2N1cmFtYWluX3RlYW0_38e8983c.png",
-  aktivierung: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332473442/mPPhYwgpPecz3rTTMqZjFL/6_W8qvxUqAE3QNKZBqGnHTOj_1775907774556_na1fn_L2hvbWUvdWJ1bnR1L2N1cmFtYWluX3dlYnNpdGVfaW1hZ2U_f0d00ede.png",
-  heroNew: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332473442/mPPhYwgpPecz3rTTMqZjFL/0_sjWBvfaeQIkjOPDNBmSidr_1775907774674_na1fn_L2hvbWUvdWJ1bnR1L2N1cmFtYWluX2hlcm9faW1hZ2U_a946dfec.png",
+  hero: "/img/beratung.png",
+  behandlung: "/img/behandlung.png",
+  grundpflege: "/img/grundpflege.png",
+  hauswirtschaft: "/img/hauswirtschaft.png",
+  team: "/img/team.png",
+  aktivierung: "/img/aktivierung.png",
+  heroNew: "/img/palliativ.png",
 };
 
 const fullServices = [

@@ -1,0 +1,6 @@
+# Diese Datei muss nach Deployment in /uploads/.htaccess umbenannt werden
+# (auf All-Inkl, sobald /uploads/bewerbungen/ existiert).
+# Sie blockiert jeden öffentlichen Zugriff auf hochgeladene CVs.
+
+Require all denied
+Options -Indexes

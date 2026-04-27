@@ -1,9 +1,9 @@
 import { Link } from "wouter";
 import { useState } from "react";
-import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 import { CheckCircle2, ArrowRight, Stethoscope, Building2, Hospital } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import { submitContact } from "@/lib/api";
 
 const PartnerTabs = ({ active }: { active: string }) => (
   <div className="flex flex-wrap gap-2 mb-10 justify-center">
@@ -55,16 +55,9 @@ export default function PartnerZuweiser() {
     notes: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [pending, setPending] = useState(false);
 
-  const mutation = trpc.referrals.submit.useMutation({
-    onSuccess: () => {
-      setSubmitted(true);
-      toast.success("Zuweiser-Anfrage erfolgreich gesendet!");
-    },
-    onError: (err) => toast.error("Fehler: " + err.message),
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if ((window as any).gtag) {
       (window as any).gtag("event", "partner_referral_submission", {
@@ -73,15 +66,42 @@ export default function PartnerZuweiser() {
         value: 1,
       });
     }
-    mutation.mutate({
-      ...form,
+
+    setPending(true);
+    const message = [
+      `Einrichtungsart: ${form.referrerType}`,
+      `Einrichtung: ${form.institutionName}`,
+      `Ansprechpartner: ${form.contactPerson}`,
+      form.patientName ? `Patient: ${form.patientName}` : "",
+      form.patientInsurance ? `Versicherung: ${form.patientInsurance}` : "",
+      form.careLevel ? `Pflegegrad: ${form.careLevel}` : "",
+      `Dringlichkeit: ${form.urgency}`,
+      form.careNeeds ? `Pflegebedarf: ${form.careNeeds}` : "",
+      form.notes ? `Anmerkungen: ${form.notes}` : "",
+    ].filter(Boolean).join("\n");
+
+    const result = await submitContact({
+      firstName: form.contactPerson.split(" ")[0] || form.contactPerson,
+      lastName: form.contactPerson.split(" ").slice(1).join(" ") || "-",
+      email: form.email,
       phone: form.phone || undefined,
-      patientName: form.patientName || undefined,
-      patientInsurance: form.patientInsurance || undefined,
-      careLevel: form.careLevel || undefined,
-      careNeeds: form.careNeeds || undefined,
-      notes: form.notes || undefined,
+      organization: form.institutionName,
+      subject: `Patientenüberleitung (${form.urgency})`,
+      message,
+      category: "referral",
+      extra: {
+        referrerType: form.referrerType,
+        urgency: form.urgency,
+        careLevel: form.careLevel || undefined,
+      },
     });
+    setPending(false);
+    if (result.success) {
+      setSubmitted(true);
+      toast.success("Zuweiser-Anfrage erfolgreich gesendet!");
+    } else {
+      toast.error("Fehler: " + result.error);
+    }
   };
 
   if (submitted) {
@@ -227,10 +247,10 @@ export default function PartnerZuweiser() {
 
               <button
                 type="submit"
-                disabled={mutation.isPending}
+                disabled={pending}
                 className="w-full bg-cm-teal hover:bg-cm-teal-500 disabled:opacity-60 text-white px-7 py-3.5 rounded-full font-medium shadow-md flex items-center justify-center gap-2 transition-colors"
               >
-                {mutation.isPending ? "Wird gesendet …" : (<>Anfrage absenden <ArrowRight className="w-4 h-4" /></>)}
+                {pending ? "Wird gesendet …" : (<>Anfrage absenden <ArrowRight className="w-4 h-4" /></>)}
               </button>
             </form>
           </div>

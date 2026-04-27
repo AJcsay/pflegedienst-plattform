@@ -1,0 +1,68 @@
+name: Deploy to All-Inkl
+
+# Wird DERZEIT NICHT automatisch ausgeführt.
+# Erst aktivieren, sobald die Secrets gesetzt sind:
+#   ALLINKL_HOST   z. B. "w0123abc.kasserver.com"
+#   ALLINKL_USER   SSH/SFTP-Benutzer
+#   ALLINKL_PASS   SSH/SFTP-Passwort
+#
+# Aktivierung:
+#   1. Trigger umstellen: aus "workflow_dispatch" → "[push, workflow_dispatch]"
+#   2. Secrets in GitHub-Repo > Settings > Secrets and variables > Actions setzen
+#   3. Optional: Branch-Filter ergänzen (nur main pusht live)
+
+on:
+  workflow_dispatch:
+  # push:
+  #   branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type-check
+        run: npm run check
+
+      - name: Build
+        run: npm run build
+
+      - name: SFTP Upload (Frontend)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.ALLINKL_HOST }}
+          username: ${{ secrets.ALLINKL_USER }}
+          password: ${{ secrets.ALLINKL_PASS }}
+          protocol: ftps
+          local-dir: ./dist/public/
+          server-dir: /htdocs/
+          # PHP, Uploads und htaccess separat hochladen, nichts dort verloren bügeln
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+
+      - name: SFTP Upload (PHP-API)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.ALLINKL_HOST }}
+          username: ${{ secrets.ALLINKL_USER }}
+          password: ${{ secrets.ALLINKL_PASS }}
+          protocol: ftps
+          local-dir: ./php/
+          server-dir: /htdocs/api/
+          # /uploads/ darf NICHT mit gespiegelt werden
+          dangerous-clean-slate: false
+          exclude: |
+            uploads.htaccess

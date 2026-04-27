@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { useAuth } from "@/_core/hooks/useAuth";
 import {
   Heart, Menu, X, ChevronDown,
-  Briefcase, Building2, LayoutDashboard
+  Briefcase, Building2,
 } from "lucide-react";
 
 const navGroups = [
@@ -41,7 +40,6 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [location] = useLocation();
-  const { user, isAuthenticated } = useAuth();
 
   const isActive = (href: string) => location === href;
 
@@ -51,7 +49,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 px-2 lg:px-3 py-1.5 mr-1 shrink-0">
           <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663332473442/mPPhYwgpPecz3rTTMqZjFL/CuraMain_Logo_optimized_7f0d04db.png"
+            src="/img/logo.png"
             alt="CuraMain"
             className="h-9 lg:h-10 w-auto"
           />
@@ -125,18 +123,8 @@ export default function Navbar() {
           })}
         </div>
 
-        {/* CTA + Admin + Mobile toggle */}
+        {/* CTA + Mobile toggle */}
         <div className="flex items-center gap-2 ml-auto">
-          {isAuthenticated && user?.role === "admin" && (
-            <Link
-              href="/admin"
-              className="hidden lg:flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-medium text-cm-teal-600 hover:bg-cm-teal-50 transition-colors"
-              title="Admin-Dashboard"
-            >
-              <LayoutDashboard className="h-3.5 w-3.5" />
-              Admin
-            </Link>
-          )}
           <Link
             href="/kontakt/patient"
             className="hidden md:inline-flex bg-cm-teal hover:bg-cm-teal-500 text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-md whitespace-nowrap transition-colors"
@@ -188,15 +176,6 @@ export default function Navbar() {
                 ))}
               </div>
             ))}
-            {isAuthenticated && user?.role === "admin" && (
-              <Link
-                href="/admin"
-                className="block px-4 py-2.5 mt-3 text-sm font-medium rounded-full text-cm-teal-600 hover:bg-cm-teal-50"
-                onClick={() => setMobileOpen(false)}
-              >
-                Admin-Dashboard
-              </Link>
-            )}
             <div className="pt-3">
               <Link
                 href="/kontakt/patient"

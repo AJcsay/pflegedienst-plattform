@@ -1,9 +1,11 @@
 import { Link } from "wouter";
 import { useState } from "react";
-import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 import { CheckCircle2, ArrowRight, FileDown, FileText, Shield, Star, Globe2 } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import { submitContact } from "@/lib/api";
+import documentsData from "@/data/documents.json";
+import type { Document } from "@/data/types";
 
 const PartnerTabs = ({ active }: { active: string }) => (
   <div className="flex flex-wrap gap-2 mb-10 justify-center">
@@ -48,6 +50,8 @@ const PILLARS = [
   { I: Globe2, t: "DMP & Hospizdienste", d: "Kooperation mit Frankfurter Palliativnetz und ausgewählten Hospizdiensten im Rhein-Main-Gebiet." },
 ];
 
+const documents: Document[] = (documentsData as { documents: Document[] }).documents;
+
 export default function PartnerKassen() {
   useSEO({
     title: "Krankenkassen & private Ärzte – CuraMain Partner",
@@ -66,18 +70,9 @@ export default function PartnerKassen() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [pending, setPending] = useState(false);
 
-  const { data: documents } = trpc.documents.list.useQuery();
-
-  const mutation = trpc.contact.submit.useMutation({
-    onSuccess: () => {
-      setSubmitted(true);
-      toast.success("Ihre Anfrage wurde erfolgreich gesendet!");
-    },
-    onError: (err) => toast.error("Fehler: " + err.message),
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if ((window as any).gtag) {
       (window as any).gtag("event", "partner_insurance_submission", {
@@ -86,7 +81,15 @@ export default function PartnerKassen() {
         value: 1,
       });
     }
-    mutation.mutate({ ...form, category: "insurance" });
+    setPending(true);
+    const result = await submitContact({ ...form, category: "insurance" });
+    setPending(false);
+    if (result.success) {
+      setSubmitted(true);
+      toast.success("Ihre Anfrage wurde erfolgreich gesendet!");
+    } else {
+      toast.error("Fehler: " + result.error);
+    }
   };
 
   if (submitted) {
@@ -192,10 +195,10 @@ export default function PartnerKassen() {
               </div>
               <button
                 type="submit"
-                disabled={mutation.isPending}
+                disabled={pending}
                 className="w-full bg-cm-teal hover:bg-cm-teal-500 disabled:opacity-60 text-white px-7 py-3.5 rounded-full font-medium shadow-md flex items-center justify-center gap-2 transition-colors"
               >
-                {mutation.isPending ? "Wird gesendet …" : (<>Nachricht senden <ArrowRight className="w-4 h-4" /></>)}
+                {pending ? "Wird gesendet …" : (<>Nachricht senden <ArrowRight className="w-4 h-4" /></>)}
               </button>
             </form>
           </div>
@@ -207,7 +210,7 @@ export default function PartnerKassen() {
                 <FileText className="w-5 h-5 text-cm-teal" />
                 <h3 className="h-serif text-xl text-cm-ink">Dokumente</h3>
               </div>
-              {documents && documents.length > 0 ? (
+              {documents.length > 0 ? (
                 <div className="space-y-3">
                   {documents.map((doc) => (
                     <a

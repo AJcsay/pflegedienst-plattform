@@ -1,11 +1,15 @@
 import { useState, useRef, useMemo } from "react";
 import { useSearch } from "wouter";
 import { useSEO } from "@/hooks/useSEO";
-import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 import { CheckCircle2, Upload, FileText, X, ArrowRight, Briefcase } from "lucide-react";
+import jobsData from "@/data/jobs.json";
+import type { Job } from "@/data/types";
+import { submitBewerbung } from "@/lib/api";
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
+
+const allJobs: Job[] = (jobsData as { jobs: Job[] }).jobs.filter((j) => j.active);
 
 export default function Bewerbung() {
   useSEO({
@@ -19,7 +23,6 @@ export default function Bewerbung() {
   const params = useMemo(() => new URLSearchParams(searchString), [searchString]);
   const preselectedJobId = params.get("job");
 
-  const { data: jobs } = trpc.jobs.list.useQuery();
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -30,15 +33,8 @@ export default function Bewerbung() {
   });
   const [file, setFile] = useState<File | null>(null);
   const [submitted, setSubmitted] = useState(false);
+  const [pending, setPending] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const mutation = trpc.applications.submit.useMutation({
-    onSuccess: () => {
-      setSubmitted(true);
-      toast.success("Ihre Bewerbung wurde erfolgreich eingereicht!");
-    },
-    onError: (err) => toast.error("Fehler: " + err.message),
-  });
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const f = e.target.files?.[0];
@@ -65,29 +61,33 @@ export default function Bewerbung() {
       });
     }
 
-    let resumeBase64: string | undefined;
-    let resumeFileName: string | undefined;
-    if (file) {
-      const buffer = await file.arrayBuffer();
-      const bytes = new Uint8Array(buffer);
-      let binary = "";
-      for (let i = 0; i < bytes.byteLength; i++) {
-        binary += String.fromCharCode(bytes[i]);
-      }
-      resumeBase64 = btoa(binary);
-      resumeFileName = file.name;
-    }
+    setPending(true);
 
-    mutation.mutate({
-      firstName: form.firstName,
-      lastName: form.lastName,
-      email: form.email,
-      phone: form.phone || undefined,
-      message: form.message || undefined,
-      jobPostingId: form.jobPostingId && form.jobPostingId !== "none" ? Number(form.jobPostingId) : undefined,
-      resumeBase64,
-      resumeFileName,
-    });
+    const jobIdNum =
+      form.jobPostingId && form.jobPostingId !== "none" ? Number(form.jobPostingId) : undefined;
+    const jobTitle = jobIdNum ? allJobs.find((j) => j.id === jobIdNum)?.title : undefined;
+
+    const result = await submitBewerbung(
+      {
+        firstName: form.firstName,
+        lastName: form.lastName,
+        email: form.email,
+        phone: form.phone || undefined,
+        message: form.message || undefined,
+        jobPostingId: jobIdNum,
+        jobTitle,
+      },
+      file,
+    );
+
+    setPending(false);
+
+    if (result.success) {
+      setSubmitted(true);
+      toast.success("Ihre Bewerbung wurde erfolgreich eingereicht!");
+    } else {
+      toast.error("Fehler: " + result.error);
+    }
   };
 
   if (submitted) {
@@ -132,7 +132,7 @@ export default function Bewerbung() {
         <div className="bg-white p-8 lg:p-10 rounded-3xl border border-cm-teal-100">
           <form onSubmit={handleSubmit} className="space-y-5">
             {/* Job */}
-            {jobs && jobs.length > 0 && (
+            {allJobs.length > 0 && (
               <div>
                 <label className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Stelle (optional)</label>
                 <select
@@ -141,7 +141,7 @@ export default function Bewerbung() {
                   className="w-full px-4 py-3 rounded-xl border border-cm-teal-100 bg-white focus:border-cm-teal-300 focus:ring-2 focus:ring-cm-teal-100 outline-none transition"
                 >
                   <option value="">Initiativbewerbung</option>
-                  {jobs.map((job) => (
+                  {allJobs.map((job) => (
                     <option key={job.id} value={String(job.id)}>
                       {job.title}
                     </option>
@@ -256,10 +256,10 @@ export default function Bewerbung() {
 
             <button
               type="submit"
-              disabled={mutation.isPending}
+              disabled={pending}
               className="w-full bg-cm-teal hover:bg-cm-teal-500 disabled:opacity-60 text-white px-7 py-3.5 rounded-full font-medium shadow-md flex items-center justify-center gap-2 transition-colors"
             >
-              {mutation.isPending ? "Wird gesendet …" : (<>Bewerbung absenden <ArrowRight className="w-4 h-4" /></>)}
+              {pending ? "Wird gesendet …" : (<>Bewerbung absenden <ArrowRight className="w-4 h-4" /></>)}
             </button>
           </form>
         </div>

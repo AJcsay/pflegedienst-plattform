@@ -3,7 +3,7 @@ import { Heart, Users, Award, Shield, ArrowRight, Target, Eye } from "lucide-rea
 import { useSEO } from "@/hooks/useSEO";
 
 const PHOTOS = {
-  team: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332473442/mPPhYwgpPecz3rTTMqZjFL/5_FpU4S7YbAhdIMgbPUTpABc_1775907771125_na1fn_L2hvbWUvdWJ1bnR1L2N1cmFtYWluX3RlYW0_38e8983c.png",
+  team: "/img/team.png",
 };
 
 const values = [

@@ -1,9 +1,9 @@
 import { Link } from "wouter";
 import { useState } from "react";
-import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 import { CheckCircle2, ArrowRight, Activity } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import { submitContact } from "@/lib/api";
 
 const PartnerTabs = ({ active }: { active: string }) => (
   <div className="flex flex-wrap gap-2 mb-10 justify-center">
@@ -33,7 +33,6 @@ const PartnerTabs = ({ active }: { active: string }) => (
 const inputCls =
   "w-full px-4 py-3 rounded-xl border border-cm-teal-100 focus:border-cm-teal-300 focus:ring-2 focus:ring-cm-teal-100 outline-none transition";
 
-// Statische Live-Verfügbarkeits-Tabelle (für die Region-Übersicht; echte Anfrage geht weiter über das Form)
 const LIVE_AVAILABILITY = [
   { region: "Frankfurt-Bornheim/Nordend", a: "🟢 Frei", b: "🟢 Frei", c: "🟡 Begrenzt" },
   { region: "Frankfurt-Sachsenhausen", a: "🟢 Frei", b: "🟡 Begrenzt", c: "🟢 Frei" },
@@ -62,16 +61,9 @@ export default function PartnerKapazitaet() {
     notes: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [pending, setPending] = useState(false);
 
-  const mutation = trpc.capacity.submit.useMutation({
-    onSuccess: () => {
-      setSubmitted(true);
-      toast.success("Kapazitätsabfrage erfolgreich gesendet!");
-    },
-    onError: (err) => toast.error("Fehler: " + err.message),
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if ((window as any).gtag) {
       (window as any).gtag("event", "partner_capacity_submission", {
@@ -80,17 +72,41 @@ export default function PartnerKapazitaet() {
         value: 1,
       });
     }
-    mutation.mutate({
-      institutionName: form.institutionName,
-      contactPerson: form.contactPerson,
+
+    setPending(true);
+    const message = [
+      `Einrichtung: ${form.institutionName}`,
+      `Ansprechpartner: ${form.contactPerson}`,
+      form.careType ? `Pflegeart: ${form.careType}` : "",
+      form.region ? `Region/PLZ: ${form.region}` : "",
+      form.numberOfPatients ? `Anzahl Patienten: ${form.numberOfPatients}` : "",
+      form.desiredStartDate ? `Gewünschter Beginn: ${form.desiredStartDate}` : "",
+      form.notes ? `Anmerkungen: ${form.notes}` : "",
+    ].filter(Boolean).join("\n");
+
+    const result = await submitContact({
+      firstName: form.contactPerson.split(" ")[0] || form.contactPerson,
+      lastName: form.contactPerson.split(" ").slice(1).join(" ") || "-",
       email: form.email,
       phone: form.phone || undefined,
-      careType: form.careType || undefined,
-      region: form.region || undefined,
-      numberOfPatients: form.numberOfPatients ? Number(form.numberOfPatients) : undefined,
-      desiredStartDate: form.desiredStartDate || undefined,
-      notes: form.notes || undefined,
+      organization: form.institutionName,
+      subject: "Kapazitätsabfrage",
+      message,
+      category: "capacity",
+      extra: {
+        careType: form.careType || undefined,
+        region: form.region || undefined,
+        numberOfPatients: form.numberOfPatients ? Number(form.numberOfPatients) : undefined,
+        desiredStartDate: form.desiredStartDate || undefined,
+      },
     });
+    setPending(false);
+    if (result.success) {
+      setSubmitted(true);
+      toast.success("Kapazitätsabfrage erfolgreich gesendet!");
+    } else {
+      toast.error("Fehler: " + result.error);
+    }
   };
 
   if (submitted) {
@@ -225,10 +241,10 @@ export default function PartnerKapazitaet() {
             </div>
             <button
               type="submit"
-              disabled={mutation.isPending}
+              disabled={pending}
               className="w-full bg-cm-teal hover:bg-cm-teal-500 disabled:opacity-60 text-white px-7 py-3.5 rounded-full font-medium shadow-md flex items-center justify-center gap-2 transition-colors"
             >
-              {mutation.isPending ? "Wird gesendet …" : (<>Kapazität anfragen <ArrowRight className="w-4 h-4" /></>)}
+              {pending ? "Wird gesendet …" : (<>Kapazität anfragen <ArrowRight className="w-4 h-4" /></>)}
             </button>
           </form>
         </div>

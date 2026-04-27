@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2 space-y-4">
             <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663332473442/mPPhYwgpPecz3rTTMqZjFL/CuraMain_Logo_optimized_7f0d04db.png"
+              src="/img/logo.png"
               alt="CuraMain"
               className="h-12 w-auto max-w-xs brightness-0 invert opacity-90"
             />

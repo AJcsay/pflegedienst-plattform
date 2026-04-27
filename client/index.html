@@ -198,19 +198,8 @@
         });
       }
     </script>
-    <!-- Umami Analytics: wird via Vite env-Substitution eingesetzt; bei fehlender Konfiguration ignorieren -->
-    <script>
-      (function () {
-        var endpoint = "%VITE_ANALYTICS_ENDPOINT%";
-        var websiteId = "%VITE_ANALYTICS_WEBSITE_ID%";
-        if (endpoint.indexOf('%VITE_') === 0 || !endpoint || !websiteId || websiteId.indexOf('%VITE_') === 0) return;
-        var s = document.createElement('script');
-        s.defer = true;
-        s.src = endpoint + '/umami';
-        s.setAttribute('data-website-id', websiteId);
-        document.body.appendChild(s);
-      })();
-    </script>
+    <!-- Analytics-Snippet wurde mit dem Manus-Setup entfernt.
+         Bei Bedarf: Plausible / Matomo-Snippet hier einsetzen. -->
   </body>
 
 </html>

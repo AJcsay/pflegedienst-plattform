@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 import { Phone, Mail, MapPin, Clock, CheckCircle2, Send, Calendar, ArrowRight } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
-import { AppointmentBooking } from "@/components/AppointmentBooking";
+import { submitContact } from "@/lib/api";
 
 const SPRACHEN = ["Deutsch", "Englisch", "Türkisch", "Arabisch", "Russisch", "Polnisch", "Französisch"];
+
+// Externe Termin-Buchung. Sobald die Zeeg-URL feststeht, hier eintragen.
+// Beispiel: "https://zeeg.me/curamain/erstberatung"
+const ZEEG_URL = import.meta.env.VITE_ZEEG_URL as string | undefined;
 
 export default function KontaktPatient() {
   useSEO({
@@ -18,17 +21,10 @@ export default function KontaktPatient() {
 
   const [form, setForm] = useState({ firstName: "", lastName: "", email: "", phone: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [pending, setPending] = useState(false);
   const [activeTab, setActiveTab] = useState("contact");
 
-  const mutation = trpc.contact.submit.useMutation({
-    onSuccess: () => {
-      setSubmitted(true);
-      toast.success("Ihre Anfrage wurde erfolgreich gesendet!");
-    },
-    onError: (err) => toast.error("Fehler beim Senden: " + err.message),
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if ((window as any).gtag) {
       (window as any).gtag("event", "contact_patient_submission", {
@@ -37,7 +33,15 @@ export default function KontaktPatient() {
         value: 1,
       });
     }
-    mutation.mutate({ ...form, category: "patient" });
+    setPending(true);
+    const result = await submitContact({ ...form, category: "patient" });
+    setPending(false);
+    if (result.success) {
+      setSubmitted(true);
+      toast.success("Ihre Anfrage wurde erfolgreich gesendet!");
+    } else {
+      toast.error("Fehler beim Senden: " + result.error);
+    }
   };
 
   if (submitted) {
@@ -168,16 +172,43 @@ export default function KontaktPatient() {
                 </div>
                 <button
                   type="submit"
-                  disabled={mutation.isPending}
+                  disabled={pending}
                   className="w-full bg-cm-teal hover:bg-cm-teal-500 disabled:opacity-60 text-white px-7 py-3.5 rounded-full font-medium shadow-md flex items-center justify-center gap-2 transition-colors"
                 >
-                  {mutation.isPending ? "Wird gesendet …" : (<>Nachricht senden <ArrowRight className="w-4 h-4" /></>)}
+                  {pending ? "Wird gesendet …" : (<>Nachricht senden <ArrowRight className="w-4 h-4" /></>)}
                 </button>
               </form>
             </TabsContent>
 
             <TabsContent value="appointment" className="mt-0">
-              <AppointmentBooking appointmentType="initial_consultation" onSuccess={() => setActiveTab("contact")} />
+              {ZEEG_URL ? (
+                <div className="rounded-2xl overflow-hidden border border-cm-teal-100 bg-white">
+                  <iframe
+                    src={ZEEG_URL}
+                    title="Termin vereinbaren – CuraMain"
+                    className="w-full"
+                    style={{ height: "720px", border: 0 }}
+                    loading="lazy"
+                  />
+                </div>
+              ) : (
+                <div className="text-center py-12 px-6 bg-cm-teal-50/40 rounded-2xl border border-dashed border-cm-teal-200">
+                  <Calendar className="w-10 h-10 text-cm-teal mx-auto mb-4" />
+                  <h3 className="h-serif text-2xl text-cm-ink mb-2">
+                    Online-Buchung kommt in Kürze
+                  </h3>
+                  <p className="text-cm-ink/70 mb-6 max-w-md mx-auto">
+                    Bis dahin freuen wir uns über Ihren Anruf oder das Kontaktformular. Wir melden uns innerhalb von 24 Stunden mit einem Terminvorschlag.
+                  </p>
+                  <a
+                    href="tel:+4969792 16147"
+                    className="inline-flex items-center gap-2 bg-cm-teal hover:bg-cm-teal-500 text-white px-6 py-3 rounded-full font-medium transition-colors"
+                  >
+                    <Phone className="w-4 h-4" />
+                    069 / 79 216 147
+                  </a>
+                </div>
+              )}
             </TabsContent>
           </Tabs>
         </div>

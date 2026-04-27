@@ -1,0 +1,64 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "title": "Pflegedienstleitung (PDL) m/w/d",
+      "department": "Leitung",
+      "location": "Frankfurt am Main",
+      "employmentType": "fulltime",
+      "description": "Wir suchen eine engagierte Pflegedienstleitung, die unseren ambulanten Pflegedienst fachlich, organisatorisch und personell führt. Sie übernehmen die Verantwortung für Qualitätssicherung, Tourenplanung und Mitarbeiterführung in einem wachsenden Team.",
+      "requirements": "Anerkannte Weiterbildung zur PDL (mindestens 460 Stunden), examinierte Pflegefachkraft, mehrjährige Berufserfahrung, Führungskompetenz, sicherer Umgang mit Pflegesoftware.",
+      "benefits": "Übertarifliches Gehalt, Dienstwagen zur Privatnutzung, betriebliche Altersvorsorge, 30 Tage Urlaub, regelmäßige Fortbildungen.",
+      "active": true,
+      "publishedAt": "2026-04-26"
+    },
+    {
+      "id": 2,
+      "title": "Pflegefachkraft m/w/d",
+      "department": "Pflege",
+      "location": "Frankfurt am Main",
+      "employmentType": "fulltime",
+      "description": "Verstärken Sie unser Team als examinierte Pflegefachkraft in der ambulanten Versorgung. Sie betreuen Patient·innen in der Behandlungs- und Grundpflege und arbeiten eng mit Ärzten und Angehörigen zusammen.",
+      "requirements": "Abgeschlossene Ausbildung zur Pflegefachkraft (Altenpflege, Gesundheits- und Krankenpflege oder Pflegefachfrau/-mann), Führerschein Klasse B, Empathie und Teamfähigkeit.",
+      "benefits": "Übertarifliches Gehalt nach TVöD-P, Dienstwagen, flexible Dienstpläne, kollegiales Team, Sprachzulagen für mehrsprachige Mitarbeitende.",
+      "active": true,
+      "publishedAt": "2026-04-26"
+    },
+    {
+      "id": 3,
+      "title": "Pflegefachkraft m/w/d",
+      "department": "Pflege",
+      "location": "Frankfurt am Main",
+      "employmentType": "parttime",
+      "description": "Teilzeit-Stelle für examinierte Pflegefachkräfte mit individuell vereinbarter Stundenzahl. Ideal zur Vereinbarkeit von Familie und Beruf.",
+      "requirements": "Abgeschlossene Ausbildung zur Pflegefachkraft, Führerschein Klasse B, Zuverlässigkeit.",
+      "benefits": "Übertarifliches Stundenentgelt, flexible Dienstplangestaltung, betriebliche Altersvorsorge, Fortbildungen.",
+      "active": true,
+      "publishedAt": "2026-04-26"
+    },
+    {
+      "id": 4,
+      "title": "Pflegeassistent·in / Pflegehelfer·in m/w/d",
+      "department": "Pflege",
+      "location": "Frankfurt am Main",
+      "employmentType": "fulltime",
+      "description": "Unterstützen Sie unsere examinierten Fachkräfte bei der Grundpflege und der Begleitung unserer Patient·innen im Alltag. Eine sinnstiftende Tätigkeit mit echtem Mehrwert für die Menschen, die wir betreuen.",
+      "requirements": "Abgeschlossener Pflegehelfer-/Pflegeassistenzkurs (mind. 200 Stunden) oder vergleichbare Qualifikation, Führerschein Klasse B, Zuverlässigkeit und Freude am Umgang mit älteren Menschen.",
+      "benefits": "Faire Bezahlung mit Zuschlägen, Dienstkleidung gestellt, strukturierte Einarbeitung, Möglichkeit zur Weiterqualifikation zur Pflegefachkraft.",
+      "active": true,
+      "publishedAt": "2026-04-26"
+    },
+    {
+      "id": 5,
+      "title": "Hauswirtschaftliche Mitarbeiter·in m/w/d",
+      "department": "Hauswirtschaft",
+      "location": "Frankfurt am Main",
+      "employmentType": "minijob",
+      "description": "Auf Minijob-Basis übernehmen Sie hauswirtschaftliche Leistungen bei unseren Patient·innen — z. B. Einkaufen, Kochen, leichte Reinigung und Wäsche.",
+      "requirements": "Erfahrung im Haushalt, Zuverlässigkeit, freundlicher Umgang mit älteren Menschen, Deutschkenntnisse für die Verständigung mit Patient·innen.",
+      "benefits": "Geregelte Einsätze, Fahrtkostenpauschale, wertschätzendes Arbeitsklima, keine Wochenendpflicht.",
+      "active": true,
+      "publishedAt": "2026-04-26"
+    }
+  ]
+}

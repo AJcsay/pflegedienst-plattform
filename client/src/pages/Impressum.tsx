@@ -30,15 +30,15 @@ export default function Impressum() {
 
           <section>
             <h2 className="text-2xl font-semibold mb-4">Geschäftsführung</h2>
-            <p>Geschäftsführer: [Name eintragen]</p>
+            <p>Geschäftsführer: Alie Junior Sesay</p>
           </section>
 
           <section>
             <h2 className="text-2xl font-semibold mb-4">Registereintrag</h2>
             <div className="space-y-2">
               <p><strong>Registergericht:</strong> Amtsgericht Frankfurt am Main</p>
-              <p><strong>Handelsregister-Nummer:</strong> [HRB-Nummer eintragen]</p>
-              <p><strong>Umsatzsteuer-ID:</strong> [USt-ID eintragen]</p>
+              <p><strong>Handelsregister-Nummer:</strong> Eintragung in das Handelsregister beim Amtsgericht Frankfurt am Main beantragt (Gesellschaft in Gründung)</p>
+              <p><strong>Umsatzsteuer-ID:</strong> wird nach Erteilung ergänzt</p>
             </div>
           </section>
 

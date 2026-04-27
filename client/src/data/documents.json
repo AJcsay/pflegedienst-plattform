@@ -1,0 +1,54 @@
+{
+  "documents": [
+    {
+      "id": 1,
+      "title": "Versorgungsvertrag § 132a SGB V",
+      "description": "Auszug unseres Versorgungsvertrags für die häusliche Krankenpflege.",
+      "category": "contract",
+      "fileUrl": "/dokumente/versorgungsvertrag-sgb-v.pdf",
+      "fileName": "versorgungsvertrag-sgb-v.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-04-26"
+    },
+    {
+      "id": 2,
+      "title": "Versorgungsvertrag § 72 SGB XI",
+      "description": "Zulassungsbescheid und Landesrahmenvertrag Hessen.",
+      "category": "contract",
+      "fileUrl": "/dokumente/versorgungsvertrag-sgb-xi.pdf",
+      "fileName": "versorgungsvertrag-sgb-xi.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-04-26"
+    },
+    {
+      "id": 3,
+      "title": "Pflegekonzept",
+      "description": "Unser ausführliches Pflegekonzept nach SGB XI.",
+      "category": "quality",
+      "fileUrl": "/dokumente/pflegekonzept.pdf",
+      "fileName": "pflegekonzept.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-04-26"
+    },
+    {
+      "id": 4,
+      "title": "Hygieneplan",
+      "description": "Standards der Hygiene in der ambulanten Versorgung.",
+      "category": "quality",
+      "fileUrl": "/dokumente/hygieneplan.pdf",
+      "fileName": "hygieneplan.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-04-26"
+    },
+    {
+      "id": 5,
+      "title": "Leistungsverzeichnis",
+      "description": "Übersicht aller abrechenbaren Leistungen mit den Kassen.",
+      "category": "supply",
+      "fileUrl": "/dokumente/leistungsverzeichnis.pdf",
+      "fileName": "leistungsverzeichnis.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-04-26"
+    }
+  ]
+}
