@@ -8,13 +8,13 @@ import { useSEO } from "@/hooks/useSEO";
 // Lokale Bilder (in client/public/img/, siehe scripts/download-images.sh)
 const PHOTOS = {
   hero: "/img/hero.webp",
-  behandlung: "/img/behandlung.png",
-  grundpflege: "/img/grundpflege.png",
-  hauswirtschaft: "/img/hauswirtschaft.png",
-  beratung: "/img/beratung.png",
-  team: "/img/team.png",
-  aktivierung: "/img/aktivierung.png",
-  heroNew: "/img/palliativ.png",
+  behandlung: "/img/behandlung.webp",
+  grundpflege: "/img/grundpflege.webp",
+  hauswirtschaft: "/img/hauswirtschaft.webp",
+  beratung: "/img/beratung.webp",
+  team: "/img/team.webp",
+  aktivierung: "/img/aktivierung.webp",
+  heroNew: "/img/palliativ.webp",
 };
 
 const services = [

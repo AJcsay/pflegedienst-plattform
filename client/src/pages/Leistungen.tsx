@@ -8,13 +8,13 @@ import { useSearch } from "wouter";
 import { useEffect } from "react";
 
 const PHOTOS = {
-  hero: "/img/beratung.png",
-  behandlung: "/img/behandlung.png",
-  grundpflege: "/img/grundpflege.png",
-  hauswirtschaft: "/img/hauswirtschaft.png",
-  team: "/img/team.png",
-  aktivierung: "/img/aktivierung.png",
-  heroNew: "/img/palliativ.png",
+  hero: "/img/beratung.webp",
+  behandlung: "/img/behandlung.webp",
+  grundpflege: "/img/grundpflege.webp",
+  hauswirtschaft: "/img/hauswirtschaft.webp",
+  team: "/img/team.webp",
+  aktivierung: "/img/aktivierung.webp",
+  heroNew: "/img/palliativ.webp",
 };
 
 const fullServices = [

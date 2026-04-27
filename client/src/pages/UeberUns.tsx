@@ -3,7 +3,7 @@ import { Heart, Users, Award, Shield, ArrowRight, Target, Eye } from "lucide-rea
 import { useSEO } from "@/hooks/useSEO";
 
 const PHOTOS = {
-  team: "/img/team.png",
+  team: "/img/team.webp",
 };
 
 const values = [
