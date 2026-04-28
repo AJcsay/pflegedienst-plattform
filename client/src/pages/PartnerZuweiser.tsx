@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import { CheckCircle2, ArrowRight, Stethoscope, Building2, Hospital } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 import { submitContact } from "@/lib/api";
+import HoneypotField from "@/components/HoneypotField";
 
 const PartnerTabs = ({ active }: { active: string }) => (
   <div className="flex flex-wrap gap-2 mb-10 justify-center">
@@ -54,13 +55,14 @@ export default function PartnerZuweiser() {
     urgency: "normal" as "normal" | "urgent" | "emergency",
     notes: "",
   });
+  const [website, setWebsite] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [pending, setPending] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if ((window as any).gtag) {
-      (window as any).gtag("event", "partner_referral_submission", {
+    if (window.gtag) {
+      window.gtag("event", "partner_referral_submission", {
         event_category: "engagement",
         event_label: "Partner Referral Form",
         value: 1,
@@ -89,6 +91,7 @@ export default function PartnerZuweiser() {
       subject: `Patientenüberleitung (${form.urgency})`,
       message,
       category: "referral",
+      website,
       extra: {
         referrerType: form.referrerType,
         urgency: form.urgency,
@@ -147,6 +150,7 @@ export default function PartnerZuweiser() {
         <div className="grid lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 bg-white p-8 lg:p-10 rounded-3xl border border-cm-teal-100">
             <form onSubmit={handleSubmit} className="space-y-6">
+              <HoneypotField value={website} onChange={setWebsite} />
               {/* Einrichtungsart */}
               <div>
                 <label className="text-sm font-semibold text-cm-ink/80 mb-3 block">Einrichtungsart *</label>

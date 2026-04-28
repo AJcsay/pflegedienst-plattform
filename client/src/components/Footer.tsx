@@ -9,9 +9,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2 space-y-4">
             <img
-              src="/img/logo.png"
+              src="/img/logo-transparent.png"
               alt="CuraMain"
-              className="h-12 w-auto max-w-xs brightness-0 invert opacity-90"
+              className="h-14 w-auto max-w-xs brightness-0 invert opacity-90"
             />
             <p className="text-sm leading-relaxed text-white/60 max-w-md">
               Ambulanter Pflegedienst im Rhein-Main-Gebiet. Professionelle, kultursensible Pflege – direkt bei Ihnen zu Hause.

@@ -6,6 +6,7 @@ import { CheckCircle2, Upload, FileText, X, ArrowRight, Briefcase } from "lucide
 import jobsData from "@/data/jobs.json";
 import type { Job } from "@/data/types";
 import { submitBewerbung } from "@/lib/api";
+import HoneypotField from "@/components/HoneypotField";
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
 
@@ -31,6 +32,7 @@ export default function Bewerbung() {
     message: "",
     jobPostingId: preselectedJobId || "",
   });
+  const [website, setWebsite] = useState("");
   const [file, setFile] = useState<File | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const [pending, setPending] = useState(false);
@@ -53,8 +55,8 @@ export default function Bewerbung() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if ((window as any).gtag) {
-      (window as any).gtag("event", "application_submission", {
+    if (window.gtag) {
+      window.gtag("event", "application_submission", {
         event_category: "engagement",
         event_label: "Application Form",
         value: 1,
@@ -76,6 +78,7 @@ export default function Bewerbung() {
         message: form.message || undefined,
         jobPostingId: jobIdNum,
         jobTitle,
+        website,
       },
       file,
     );
@@ -131,6 +134,7 @@ export default function Bewerbung() {
       <section className="container py-12 lg:py-14 max-w-3xl">
         <div className="bg-white p-8 lg:p-10 rounded-3xl border border-cm-teal-100">
           <form onSubmit={handleSubmit} className="space-y-5">
+            <HoneypotField value={website} onChange={setWebsite} />
             {/* Job */}
             {allJobs.length > 0 && (
               <div>

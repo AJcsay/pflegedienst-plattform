@@ -107,14 +107,16 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo json_encode(['success' => false, 'error' => 'Ungültige E-Mail-Adresse.']);
     exit;
 }
-// Header-Injection-Schutz
-foreach ([$firstName, $lastName, $email, $subject] as $f) {
+// Header-Injection-Schutz: alle einzeiligen Felder dürfen kein CR/LF enthalten
+foreach ([$firstName, $lastName, $email, $subject, $phone, $organization] as $f) {
     if (preg_match("/[\r\n]/", $f)) {
         http_response_code(400);
         echo json_encode(['success' => false, 'error' => 'Ungültige Zeichen.']);
         exit;
     }
 }
+// Mehrzeilige Felder: CRLF auf LF normalisieren (verhindert MIME-Strukturbruch)
+$message = str_replace(["\r\n", "\r"], "\n", $message);
 
 // === Empfänger nach Kategorie ===============================================
 $to = match ($category) {

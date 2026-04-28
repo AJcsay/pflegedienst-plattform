@@ -27,6 +27,8 @@ export interface ContactPayload {
   // optional Felder für Partner-spezifische Anfragen
   organization?: string;
   extra?: Record<string, unknown>;
+  // Honeypot — von echten Nutzern niemals ausgefüllt
+  website?: string;
 }
 
 export interface BewerbungPayload {
@@ -37,6 +39,8 @@ export interface BewerbungPayload {
   message?: string;
   jobPostingId?: number;
   jobTitle?: string;
+  // Honeypot — von echten Nutzern niemals ausgefüllt
+  website?: string;
 }
 
 interface ApiOk {
