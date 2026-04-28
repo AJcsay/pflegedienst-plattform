@@ -1,4 +1,5 @@
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster } from "@/components/ui/sonner";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch, useLocation } from "wouter";
 import { useEffect } from "react";
@@ -102,6 +103,7 @@ export default function App() {
         <TooltipProvider>
           <HashScrollHandler />
           <Router />
+          <Toaster richColors position="top-right" />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

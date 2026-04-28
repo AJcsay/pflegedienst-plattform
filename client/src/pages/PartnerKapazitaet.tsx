@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import { CheckCircle2, ArrowRight, Activity } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 import { submitContact } from "@/lib/api";
+import HoneypotField from "@/components/HoneypotField";
 
 const PartnerTabs = ({ active }: { active: string }) => (
   <div className="flex flex-wrap gap-2 mb-10 justify-center">
@@ -60,13 +61,14 @@ export default function PartnerKapazitaet() {
     desiredStartDate: "",
     notes: "",
   });
+  const [website, setWebsite] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [pending, setPending] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if ((window as any).gtag) {
-      (window as any).gtag("event", "partner_capacity_submission", {
+    if (window.gtag) {
+      window.gtag("event", "partner_capacity_submission", {
         event_category: "engagement",
         event_label: "Partner Capacity Form",
         value: 1,
@@ -93,6 +95,7 @@ export default function PartnerKapazitaet() {
       subject: "Kapazitätsabfrage",
       message,
       category: "capacity",
+      website,
       extra: {
         careType: form.careType || undefined,
         region: form.region || undefined,
@@ -187,6 +190,7 @@ export default function PartnerKapazitaet() {
         <div className="bg-white p-8 lg:p-10 rounded-3xl border border-cm-teal-100 max-w-3xl mx-auto">
           <h3 className="h-serif text-2xl text-cm-ink mb-6">Kapazität konkret anfragen</h3>
           <form onSubmit={handleSubmit} className="space-y-5">
+            <HoneypotField value={website} onChange={setWebsite} />
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
                 <label className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Einrichtung / Organisation *</label>

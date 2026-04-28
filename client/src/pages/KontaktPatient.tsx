@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import { Phone, Mail, MapPin, Clock, CheckCircle2, Send, Calendar, ArrowRight } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 import { submitContact } from "@/lib/api";
+import HoneypotField from "@/components/HoneypotField";
 
 const SPRACHEN = ["Deutsch", "Englisch", "Türkisch", "Arabisch", "Russisch", "Polnisch", "Französisch"];
 
@@ -20,21 +21,22 @@ export default function KontaktPatient() {
   });
 
   const [form, setForm] = useState({ firstName: "", lastName: "", email: "", phone: "", subject: "", message: "" });
+  const [website, setWebsite] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [pending, setPending] = useState(false);
   const [activeTab, setActiveTab] = useState("contact");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if ((window as any).gtag) {
-      (window as any).gtag("event", "contact_patient_submission", {
+    if (window.gtag) {
+      window.gtag("event", "contact_patient_submission", {
         event_category: "engagement",
         event_label: "Patient Contact Form",
         value: 1,
       });
     }
     setPending(true);
-    const result = await submitContact({ ...form, category: "patient" });
+    const result = await submitContact({ ...form, category: "patient", website });
     setPending(false);
     if (result.success) {
       setSubmitted(true);
@@ -99,6 +101,7 @@ export default function KontaktPatient() {
 
             <TabsContent value="contact" className="mt-0">
               <form onSubmit={handleSubmit} className="space-y-4">
+                <HoneypotField value={website} onChange={setWebsite} />
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="firstName" className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Vorname *</label>

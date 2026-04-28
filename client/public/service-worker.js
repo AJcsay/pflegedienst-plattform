@@ -1,5 +1,5 @@
 // Version bei jedem Release hochzählen, damit alte Caches invalidiert werden
-const SW_VERSION = 'v2';
+const SW_VERSION = 'v3';
 const CACHE_NAME = `curamain-${SW_VERSION}`;
 const RUNTIME_CACHE = `curamain-runtime-${SW_VERSION}`;
 const ASSETS_TO_CACHE = [
@@ -10,72 +10,51 @@ const ASSETS_TO_CACHE = [
   '/icon-512x512.png',
 ];
 
-// Install event: Cache essential assets
 self.addEventListener('install', (event) => {
-  console.log('[Service Worker] Installing...');
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      console.log('[Service Worker] Caching essential assets');
-      return cache.addAll(ASSETS_TO_CACHE).catch((err) => {
-        console.warn('[Service Worker] Failed to cache some assets:', err);
-      });
-    })
+    caches.open(CACHE_NAME).then((cache) =>
+      cache.addAll(ASSETS_TO_CACHE).catch((err) => {
+        console.warn('[SW] Failed to cache some assets:', err);
+      }),
+    ),
   );
   self.skipWaiting();
 });
 
-// Activate event: Clean up old caches
 self.addEventListener('activate', (event) => {
-  console.log('[Service Worker] Activating...');
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
+    caches.keys().then((cacheNames) =>
+      Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME && cacheName !== RUNTIME_CACHE) {
-            console.log('[Service Worker] Deleting old cache:', cacheName);
             return caches.delete(cacheName);
           }
-        })
-      );
-    })
+        }),
+      ),
+    ),
   );
   self.clients.claim();
 });
 
-// Fetch event: Network first, fallback to cache
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
-  // Skip non-GET requests
-  if (request.method !== 'GET') {
-    return;
-  }
+  // Nur GET-Requests; alles andere (POST/PUT/...) immer direkt durchreichen.
+  if (request.method !== 'GET') return;
 
-  // Nur same-origin Requests cachen/abfangen (CORS-Probleme mit Fonts/GA vermeiden)
-  if (url.origin !== self.location.origin) {
-    return;
-  }
+  // Nur same-origin (CORS-Probleme mit Fonts/GA vermeiden)
+  if (url.origin !== self.location.origin) return;
 
-  // Skip API requests (let them fail gracefully offline)
-  if (url.pathname.startsWith('/api/')) {
-    event.respondWith(
-      fetch(request).catch(() => {
-        return new Response(
-          JSON.stringify({ error: 'Offline - API not available' }),
-          { status: 503, headers: { 'Content-Type': 'application/json' } }
-        );
-      })
-    );
-    return;
-  }
+  // API-Endpoints komplett am SW vorbei: kein Caching, kein Offline-Stub.
+  // Verhindert, dass SW versehentlich JSON-Antworten cached oder mit
+  // einem 503-Stub den Client verwirrt.
+  if (url.pathname.startsWith('/api/')) return;
 
   // Admin-Routen nicht cachen (Auth-Risiken vermeiden)
-  if (url.pathname.startsWith('/admin')) {
-    return;
-  }
+  if (url.pathname.startsWith('/admin')) return;
 
-  // Network first strategy for HTML, CSS, JS
+  // Network first für HTML/CSS/JS
   if (
     request.headers.get('accept')?.includes('text/html') ||
     url.pathname.endsWith('.js') ||
@@ -88,50 +67,32 @@ self.addEventListener('fetch', (event) => {
             return response;
           }
           const responseToCache = response.clone();
-          caches.open(RUNTIME_CACHE).then((cache) => {
-            cache.put(request, responseToCache);
-          });
+          caches.open(RUNTIME_CACHE).then((cache) => cache.put(request, responseToCache));
           return response;
         })
-        .catch(() => {
-          return caches.match(request).then((response) => {
-            return response || new Response('Offline - Page not available', { status: 503 });
-          });
-        })
+        .catch(() =>
+          caches.match(request).then(
+            (cached) => cached || new Response('Offline - Page not available', { status: 503 }),
+          ),
+        ),
     );
     return;
   }
 
-  // Cache first strategy for images and other assets
+  // Cache first für Bilder & sonstige Assets
   event.respondWith(
-    caches.match(request).then((response) => {
-      if (response) {
-        return response;
-      }
+    caches.match(request).then((cached) => {
+      if (cached) return cached;
       return fetch(request)
         .then((response) => {
           if (!response || response.status !== 200 || response.type === 'error') {
             return response;
           }
           const responseToCache = response.clone();
-          caches.open(RUNTIME_CACHE).then((cache) => {
-            cache.put(request, responseToCache);
-          });
+          caches.open(RUNTIME_CACHE).then((cache) => cache.put(request, responseToCache));
           return response;
         })
-        .catch(() => {
-          return new Response('Offline - Asset not available', { status: 503 });
-        });
-    })
+        .catch(() => new Response('Offline - Asset not available', { status: 503 }));
+    }),
   );
-});
-
-// Background sync for form submissions (future enhancement)
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'sync-forms') {
-    event.waitUntil(
-      // Implement form sync logic here
-      Promise.resolve()
-    );
-  }
 });

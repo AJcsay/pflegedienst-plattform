@@ -1,19 +1,25 @@
 # CuraMain – .htaccess für /htdocs/ auf All-Inkl
 # Beim Deploy nach /htdocs/.htaccess umbenennen.
 
+RewriteEngine On
+
+# === Apex → www-Redirect (Duplicate-Content vermeiden) =======================
+# curamain.de → www.curamain.de (canonical)
+RewriteCond %{HTTP_HOST} ^curamain\.de$ [NC]
+RewriteRule ^(.*)$ https://www.curamain.de/$1 [R=301,L]
+
+# === HTTPS erzwingen =========================================================
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
 # === SPA-Routing =============================================================
 # Alles, was nicht existiert und nicht /api oder /uploads ist, → index.html
-RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !^/api/
 RewriteCond %{REQUEST_URI} !^/uploads/
 RewriteCond %{REQUEST_URI} !^/dokumente/
 RewriteRule ^ index.html [L]
-
-# === HTTPS erzwingen =========================================================
-RewriteCond %{HTTPS} !=on
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 # === Cache-Control für Build-Assets ==========================================
 <IfModule mod_headers.c>
@@ -29,8 +35,15 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
   # Sicherheits-Header
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
   Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+  # Content-Security-Policy: erlaubt nur eigene Domain + bekannte Drittanbieter
+  # (Google Fonts, Google Analytics, optional Zeeg + Trustindex iframe).
+  # 'unsafe-inline' für script-src ist nötig wegen gtag-Inline-Snippet im
+  # index.html; ohne strict-dynamic CSP-Hash-Setup ist das pragmatisch.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com; frame-src https://zeeg.me https://*.zeeg.me https://cdn.trustindex.io; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
 </IfModule>
 
 # === Komprimierung ===========================================================

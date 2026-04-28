@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import { CheckCircle2, ArrowRight, FileDown, FileText, Shield, Star, Globe2 } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 import { submitContact } from "@/lib/api";
+import HoneypotField from "@/components/HoneypotField";
 import documentsData from "@/data/documents.json";
 import type { Document } from "@/data/types";
 
@@ -69,20 +70,21 @@ export default function PartnerKassen() {
     subject: "",
     message: "",
   });
+  const [website, setWebsite] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [pending, setPending] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if ((window as any).gtag) {
-      (window as any).gtag("event", "partner_insurance_submission", {
+    if (window.gtag) {
+      window.gtag("event", "partner_insurance_submission", {
         event_category: "engagement",
         event_label: "Partner Insurance Form",
         value: 1,
       });
     }
     setPending(true);
-    const result = await submitContact({ ...form, category: "insurance" });
+    const result = await submitContact({ ...form, category: "insurance", website });
     setPending(false);
     if (result.success) {
       setSubmitted(true);
@@ -161,6 +163,7 @@ export default function PartnerKassen() {
           <div className="lg:col-span-2 bg-white p-8 lg:p-10 rounded-3xl border border-cm-teal-100">
             <h2 className="h-serif text-2xl text-cm-ink mb-6">Kontaktformular</h2>
             <form onSubmit={handleSubmit} className="space-y-5">
+              <HoneypotField value={website} onChange={setWebsite} />
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Vorname *</label>
