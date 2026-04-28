@@ -49,7 +49,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 px-2 lg:px-3 py-1.5 mr-1 shrink-0">
           <img
-            src="/img/logo.png"
+            src="/img/logo-transparent.png"
             alt="CuraMain"
             className="h-9 lg:h-10 w-auto"
           />
