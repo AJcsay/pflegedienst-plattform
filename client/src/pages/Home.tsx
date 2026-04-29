@@ -77,38 +77,39 @@ export default function Home() {
           <p className="text-lg text-cm-ink/80 max-w-xl mb-8 leading-relaxed">
             Professionelle, kultursensible Pflege – direkt bei Ihnen zu Hause im Rhein-Main-Gebiet. Unser mehrsprachiges Team begleitet Sie mit Kompetenz, Herz und echtem Verständnis für Ihre Bedürfnisse.
           </p>
-          <div className="flex flex-wrap gap-3 mb-8">
+          <div className="flex flex-wrap gap-3 mb-6">
             <Link
               href="/kontakt/patient"
-              className="bg-cm-teal hover:bg-cm-teal-500 text-white px-7 py-3.5 rounded-full font-medium shadow-lg flex items-center gap-2 transition-colors"
+              className="bg-cm-teal-600 hover:bg-cm-teal-700 text-white px-7 py-3.5 rounded-full font-medium shadow-lg flex items-center gap-2 transition-colors min-h-[48px]"
             >
-              Kostenlose Erstberatung
+              Kostenloses Erstgespräch anfordern
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="tel:+4969792 16147"
-              className="pill border border-white/60 px-7 py-3.5 rounded-full font-medium flex items-center gap-2 shadow-sm"
+              href="tel:+496979216147"
+              className="pill border border-white/60 px-7 py-3.5 rounded-full font-medium flex items-center gap-2 shadow-sm min-h-[48px]"
             >
-              <Phone className="w-4 h-4 text-cm-teal" />
-              069 / 79 216 147
+              <Phone className="w-4 h-4 text-cm-teal-700" />
+              069 79 216 147
             </a>
           </div>
+          <p className="text-sm text-cm-ink/70 mb-6 inline-flex items-center gap-1.5">
+            <CheckCircle2 className="w-4 h-4 text-cm-teal-700" aria-hidden="true" />
+            Kostenlos &amp; unverbindlich · Mehrsprachig · Antwort innerhalb 24h
+          </p>
+          {/* Trust-Block über Fold: Kassenzulassung + Sprachen + Region */}
           <div className="flex flex-wrap gap-2">
-            <span className="pill border border-white/60 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm shadow-sm">
-              <Shield className="w-3.5 h-3.5 text-cm-teal" />
-              Kassenzugelassen
+            <span className="pill border border-white/60 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm shadow-sm">
+              <Shield className="w-3.5 h-3.5 text-cm-teal-700" />
+              Kassenzugelassen (§ 132a SGB V · § 72 SGB XI)
             </span>
-            <span className="pill border border-white/60 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm shadow-sm">
-              <Award className="w-3.5 h-3.5 text-cm-teal" />
-              5+ Jahre Erfahrung
-            </span>
-            <span className="pill border border-white/60 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm shadow-sm">
-              <Star className="w-3.5 h-3.5 text-cm-teal" fill="currentColor" />
-              4,8 Sterne
-            </span>
-            <span className="pill border border-white/60 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm shadow-sm">
-              <Globe2 className="w-3.5 h-3.5 text-cm-teal" />
+            <span className="pill border border-white/60 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm shadow-sm">
+              <Globe2 className="w-3.5 h-3.5 text-cm-teal-700" />
               7+ Sprachen
+            </span>
+            <span className="pill border border-white/60 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm shadow-sm">
+              <Award className="w-3.5 h-3.5 text-cm-teal-700" />
+              5+ Jahre im Rhein-Main-Gebiet
             </span>
           </div>
         </div>
@@ -204,6 +205,42 @@ export default function Home() {
       </section>
 
       {/* ─────────────────────────────────────────── */}
+      {/* VERSORGUNGSGEBIET (lokale Stadt-Links)      */}
+      {/* ─────────────────────────────────────────── */}
+      <section className="container pb-12 lg:pb-20">
+        <div className="bg-white border border-cm-teal-100 rounded-3xl p-8 lg:p-10">
+          <div className="flex flex-wrap items-end justify-between gap-4 mb-6">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cm-teal">Versorgungsgebiet</span>
+              <h2 className="h-serif text-3xl lg:text-4xl text-cm-ink mt-2">Pflege im ganzen Rhein-Main-Gebiet</h2>
+            </div>
+          </div>
+          <p className="text-cm-ink/70 leading-relaxed mb-6 max-w-2xl">
+            Vom Hauptstandort in Frankfurt-Bornheim versorgen wir Patientinnen und Patienten täglich in den umliegenden Städten – mit kurzen Anfahrtszeiten und festen Tourenplänen.
+          </p>
+          <div className="grid sm:grid-cols-3 gap-3">
+            {[
+              { slug: "frankfurt", name: "Frankfurt am Main", sub: "Bornheim · Nordend · Sachsenhausen · Bockenheim" },
+              { slug: "offenbach", name: "Offenbach", sub: "Innenstadt · Bürgel · Bieber · Tempelsee" },
+              { slug: "hanau", name: "Hanau", sub: "Innenstadt · Großauheim · Maintal · Bad Vilbel" },
+            ].map((c) => (
+              <Link
+                key={c.slug}
+                href={`/pflegedienst/${c.slug}`}
+                className="group bg-cm-cream/60 hover:bg-cm-teal-50 border border-cm-teal-100 hover:border-cm-teal-300 rounded-2xl p-5 transition-colors"
+              >
+                <div className="font-semibold text-cm-ink group-hover:text-cm-teal-700 mb-1 flex items-center gap-2">
+                  {c.name}
+                  <ArrowRight className="w-4 h-4 opacity-60 group-hover:translate-x-0.5 transition-transform" />
+                </div>
+                <div className="text-xs text-cm-ink/60">{c.sub}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────── */}
       {/* TESTIMONIALS                                */}
       {/* ─────────────────────────────────────────── */}
       <section className="container pb-12 lg:pb-20">
@@ -263,7 +300,7 @@ export default function Home() {
                 Termin vereinbaren <ArrowRight className="w-4 h-4" />
               </Link>
               <a
-                href="tel:+4969792 16147"
+                href="tel:+496979216147"
                 className="bg-white/15 backdrop-blur border border-white/30 text-white px-7 py-3.5 rounded-full font-medium inline-flex items-center gap-2 hover:bg-white/25 transition-colors"
               >
                 <Phone className="w-4 h-4" />

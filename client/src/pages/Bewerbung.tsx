@@ -7,6 +7,7 @@ import jobsData from "@/data/jobs.json";
 import type { Job } from "@/data/types";
 import { submitBewerbung } from "@/lib/api";
 import HoneypotField from "@/components/HoneypotField";
+import ConsentCheckbox from "@/components/ConsentCheckbox";
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
 
@@ -17,7 +18,7 @@ export default function Bewerbung() {
     title: "Jetzt bewerben beim Pflegedienst – CuraMain",
     description: "Bewerben Sie sich jetzt bei CuraMain im Rhein-Main-Gebiet. Pflegefachkraft, Pflegehelfer oder Hauswirtschaft – Lebenslauf hochladen und Teil unseres Teams werden.",
     keywords: "Bewerbung Pflegedienst Rhein-Main, Pflegekraft bewerben Rhein-Main-Gebiet, CuraMain Stelle bewerben",
-    canonical: "https://www.curamain.de/bewerbung",
+    canonical: "https://www.curamain.de/karriere/bewerbung",
   });
 
   const searchString = useSearch();
@@ -33,6 +34,7 @@ export default function Bewerbung() {
     jobPostingId: preselectedJobId || "",
   });
   const [website, setWebsite] = useState("");
+  const [consent, setConsent] = useState(false);
   const [file, setFile] = useState<File | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const [pending, setPending] = useState(false);
@@ -55,6 +57,10 @@ export default function Bewerbung() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!consent) {
+      toast.error("Bitte bestätigen Sie die Datenschutzhinweise.");
+      return;
+    }
     if (window.gtag) {
       window.gtag("event", "application_submission", {
         event_category: "engagement",
@@ -160,6 +166,7 @@ export default function Bewerbung() {
                 <input
                   id="firstName"
                   required
+                  autoComplete="given-name"
                   value={form.firstName}
                   onChange={(e) => setForm((f) => ({ ...f, firstName: e.target.value }))}
                   placeholder="Max"
@@ -171,6 +178,7 @@ export default function Bewerbung() {
                 <input
                   id="lastName"
                   required
+                  autoComplete="family-name"
                   value={form.lastName}
                   onChange={(e) => setForm((f) => ({ ...f, lastName: e.target.value }))}
                   placeholder="Mustermann"
@@ -185,6 +193,8 @@ export default function Bewerbung() {
                 <input
                   id="email"
                   type="email"
+                  inputMode="email"
+                  autoComplete="email"
                   required
                   value={form.email}
                   onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
@@ -197,6 +207,8 @@ export default function Bewerbung() {
                 <input
                   id="phone"
                   type="tel"
+                  inputMode="tel"
+                  autoComplete="tel"
                   value={form.phone}
                   onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
                   placeholder="0151 …"
@@ -258,10 +270,12 @@ export default function Bewerbung() {
               />
             </div>
 
+            <ConsentCheckbox checked={consent} onChange={setConsent} id="consent-bewerbung" />
             <button
               type="submit"
               disabled={pending}
-              className="w-full bg-cm-teal hover:bg-cm-teal-500 disabled:opacity-60 text-white px-7 py-3.5 rounded-full font-medium shadow-md flex items-center justify-center gap-2 transition-colors"
+              aria-busy={pending}
+              className="w-full bg-cm-teal-600 hover:bg-cm-teal-700 disabled:opacity-60 text-white px-7 py-3.5 rounded-full font-medium shadow-md flex items-center justify-center gap-2 transition-colors min-h-[48px]"
             >
               {pending ? "Wird gesendet …" : (<>Bewerbung absenden <ArrowRight className="w-4 h-4" /></>)}
             </button>

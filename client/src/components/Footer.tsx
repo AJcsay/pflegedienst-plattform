@@ -17,11 +17,11 @@ export default function Footer() {
               Ambulanter Pflegedienst im Rhein-Main-Gebiet. Professionelle, kultursensible Pflege – direkt bei Ihnen zu Hause.
             </p>
             <div className="space-y-2 text-sm pt-2">
-              <a href="tel:+4969792 16147" className="flex items-center gap-2.5 hover:text-cm-mint transition-colors">
+              <a href="tel:+496979216147" className="flex items-center gap-2.5 py-2 hover:text-cm-mint transition-colors">
                 <Phone className="h-4 w-4 shrink-0 text-cm-mint" />
                 069 / 79 216 147
               </a>
-              <a href="mailto:info@curamain.de" className="flex items-center gap-2.5 hover:text-cm-mint transition-colors">
+              <a href="mailto:info@curamain.de" className="flex items-center gap-2.5 py-2 hover:text-cm-mint transition-colors">
                 <Mail className="h-4 w-4 shrink-0 text-cm-mint" />
                 info@curamain.de
               </a>
@@ -40,11 +40,17 @@ export default function Footer() {
           <div className="space-y-3">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-cm-mint">Seiten</h4>
             <div className="space-y-2 text-sm">
-              <Link href="/ueber-uns" className="block hover:text-cm-mint transition-colors">Über uns</Link>
-              <Link href="/leistungen" className="block hover:text-cm-mint transition-colors">Leistungen</Link>
-              <Link href="/faq" className="block hover:text-cm-mint transition-colors">Häufige Fragen</Link>
-              <Link href="/testimonials" className="block hover:text-cm-mint transition-colors">Stimmen</Link>
-              <Link href="/kontakt/patient" className="block hover:text-cm-mint transition-colors">Erstberatung</Link>
+              <Link href="/ueber-uns" className="block py-2 hover:text-cm-mint transition-colors">Über uns</Link>
+              <Link href="/leistungen" className="block py-2 hover:text-cm-mint transition-colors">Leistungen</Link>
+              <Link href="/faq" className="block py-2 hover:text-cm-mint transition-colors">Häufige Fragen</Link>
+              <Link href="/testimonials" className="block py-2 hover:text-cm-mint transition-colors">Stimmen</Link>
+              <Link href="/kontakt/patient" className="block py-2 hover:text-cm-mint transition-colors">Erstberatung</Link>
+            </div>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-cm-mint pt-3">Versorgungsgebiet</h4>
+            <div className="space-y-2 text-sm">
+              <Link href="/pflegedienst/frankfurt" className="block py-2 hover:text-cm-mint transition-colors">Pflegedienst Frankfurt</Link>
+              <Link href="/pflegedienst/offenbach" className="block py-2 hover:text-cm-mint transition-colors">Pflegedienst Offenbach</Link>
+              <Link href="/pflegedienst/hanau" className="block py-2 hover:text-cm-mint transition-colors">Pflegedienst Hanau</Link>
             </div>
           </div>
 
@@ -52,12 +58,12 @@ export default function Footer() {
           <div className="space-y-3">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-cm-mint">Karriere & Partner</h4>
             <div className="space-y-2 text-sm">
-              <Link href="/karriere" className="block hover:text-cm-mint transition-colors">Stellenangebote</Link>
-              <Link href="/karriere/bewerbung" className="block hover:text-cm-mint transition-colors">Jetzt bewerben</Link>
-              <Link href="/partner/zuweiser" className="block hover:text-cm-mint transition-colors">Ärzte & Kliniken</Link>
-              <Link href="/partner/kapazitaet" className="block hover:text-cm-mint transition-colors">Kapazitätsabfrage</Link>
-              <Link href="/partner/kassen" className="block hover:text-cm-mint transition-colors">Krankenkassen</Link>
-              <Link href="/partner/dokumente" className="block hover:text-cm-mint transition-colors">Dokumente</Link>
+              <Link href="/karriere" className="block py-2 hover:text-cm-mint transition-colors">Stellenangebote</Link>
+              <Link href="/karriere/bewerbung" className="block py-2 hover:text-cm-mint transition-colors">Jetzt bewerben</Link>
+              <Link href="/partner/zuweiser" className="block py-2 hover:text-cm-mint transition-colors">Ärzte & Kliniken</Link>
+              <Link href="/partner/kapazitaet" className="block py-2 hover:text-cm-mint transition-colors">Kapazitätsabfrage</Link>
+              <Link href="/partner/kassen" className="block py-2 hover:text-cm-mint transition-colors">Krankenkassen</Link>
+              <Link href="/partner/dokumente" className="block py-2 hover:text-cm-mint transition-colors">Dokumente</Link>
             </div>
           </div>
         </div>
@@ -69,8 +75,8 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} CuraMain · Geschäftsführer: Alie Junior Sesay & Alhaji Allie Bangura
           </span>
           <div className="flex items-center gap-5">
-            <Link href="/impressum" className="hover:text-cm-mint transition-colors">Impressum</Link>
-            <Link href="/datenschutz" className="hover:text-cm-mint transition-colors">Datenschutz</Link>
+            <Link href="/impressum" className="inline-block py-2 hover:text-cm-mint transition-colors">Impressum</Link>
+            <Link href="/datenschutz" className="inline-block py-2 hover:text-cm-mint transition-colors">Datenschutz</Link>
           </div>
         </div>
       </div>

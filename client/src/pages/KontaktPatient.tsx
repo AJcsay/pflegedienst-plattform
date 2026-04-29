@@ -20,14 +20,24 @@ export default function KontaktPatient() {
     canonical: "https://www.curamain.de/kontakt/patient",
   });
 
-  const [form, setForm] = useState({ firstName: "", lastName: "", email: "", phone: "", subject: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "", consent: false });
   const [website, setWebsite] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [pending, setPending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState("contact");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError(null);
+    if (!form.phone && !form.email) {
+      setError("Bitte hinterlassen Sie Telefon oder E-Mail, damit wir uns zurückmelden können.");
+      return;
+    }
+    if (!form.consent) {
+      setError("Bitte bestätigen Sie die Datenschutzhinweise.");
+      return;
+    }
     if (window.gtag) {
       window.gtag("event", "contact_patient_submission", {
         event_category: "engagement",
@@ -36,12 +46,22 @@ export default function KontaktPatient() {
       });
     }
     setPending(true);
-    const result = await submitContact({ ...form, category: "patient", website });
+    const [first, ...rest] = form.name.trim().split(/\s+/);
+    const result = await submitContact({
+      firstName: first || form.name,
+      lastName: rest.join(" ") || "-",
+      email: form.email,
+      phone: form.phone || undefined,
+      message: form.message,
+      category: "patient",
+      website,
+    });
     setPending(false);
     if (result.success) {
       setSubmitted(true);
       toast.success("Ihre Anfrage wurde erfolgreich gesendet!");
     } else {
+      setError("Fehler beim Senden: " + result.error);
       toast.error("Fehler beim Senden: " + result.error);
     }
   };
@@ -85,6 +105,7 @@ export default function KontaktPatient() {
 
       {/* FORM + INFO */}
       <section className="container py-12 lg:py-14 grid lg:grid-cols-3 gap-8">
+        <h2 className="sr-only">Anfrage senden</h2>
         {/* FORMULAR */}
         <div className="lg:col-span-2 bg-white p-8 lg:p-10 rounded-3xl border border-cm-teal-100">
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -100,86 +121,89 @@ export default function KontaktPatient() {
             </TabsList>
 
             <TabsContent value="contact" className="mt-0">
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                 <HoneypotField value={website} onChange={setWebsite} />
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="firstName" className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Vorname *</label>
-                    <input
-                      id="firstName"
-                      required
-                      value={form.firstName}
-                      onChange={(e) => setForm((f) => ({ ...f, firstName: e.target.value }))}
-                      placeholder="Max"
-                      className="w-full px-4 py-3 rounded-xl border border-cm-teal-100 focus:border-cm-teal-300 focus:ring-2 focus:ring-cm-teal-100 outline-none transition"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Nachname *</label>
-                    <input
-                      id="lastName"
-                      required
-                      value={form.lastName}
-                      onChange={(e) => setForm((f) => ({ ...f, lastName: e.target.value }))}
-                      placeholder="Mustermann"
-                      className="w-full px-4 py-3 rounded-xl border border-cm-teal-100 focus:border-cm-teal-300 focus:ring-2 focus:ring-cm-teal-100 outline-none transition"
-                    />
-                  </div>
-                </div>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="email" className="text-sm font-medium text-cm-ink/80 mb-1.5 block">E-Mail *</label>
-                    <input
-                      id="email"
-                      type="email"
-                      required
-                      value={form.email}
-                      onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-                      placeholder="max@beispiel.de"
-                      className="w-full px-4 py-3 rounded-xl border border-cm-teal-100 focus:border-cm-teal-300 focus:ring-2 focus:ring-cm-teal-100 outline-none transition"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Telefon</label>
-                    <input
-                      id="phone"
-                      type="tel"
-                      value={form.phone}
-                      onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
-                      placeholder="0151 …"
-                      className="w-full px-4 py-3 rounded-xl border border-cm-teal-100 focus:border-cm-teal-300 focus:ring-2 focus:ring-cm-teal-100 outline-none transition"
-                    />
-                  </div>
-                </div>
+                <p className="text-sm text-cm-ink/60">Drei Felder reichen – wir melden uns innerhalb von 24 Stunden zurück.</p>
                 <div>
-                  <label htmlFor="subject" className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Betreff</label>
+                  <label htmlFor="name" className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Ihr Name <span aria-hidden="true">*</span></label>
                   <input
-                    id="subject"
-                    value={form.subject}
-                    onChange={(e) => setForm((f) => ({ ...f, subject: e.target.value }))}
-                    placeholder="z. B. Erstberatung Grundpflege"
+                    id="name"
+                    required
+                    autoComplete="name"
+                    value={form.name}
+                    onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
+                    placeholder="Max Mustermann"
                     className="w-full px-4 py-3 rounded-xl border border-cm-teal-100 focus:border-cm-teal-300 focus:ring-2 focus:ring-cm-teal-100 outline-none transition"
                   />
                 </div>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="phone" className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Telefon <span aria-hidden="true">*</span></label>
+                    <input
+                      id="phone"
+                      type="tel"
+                      inputMode="tel"
+                      autoComplete="tel"
+                      value={form.phone}
+                      onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
+                      placeholder="0151 …"
+                      aria-describedby="contact-help"
+                      className="w-full px-4 py-3 rounded-xl border border-cm-teal-100 focus:border-cm-teal-300 focus:ring-2 focus:ring-cm-teal-100 outline-none transition"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="text-sm font-medium text-cm-ink/80 mb-1.5 block">E-Mail <span className="text-cm-ink/50">(optional)</span></label>
+                    <input
+                      id="email"
+                      type="email"
+                      inputMode="email"
+                      autoComplete="email"
+                      value={form.email}
+                      onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
+                      placeholder="max@beispiel.de"
+                      aria-describedby="contact-help"
+                      className="w-full px-4 py-3 rounded-xl border border-cm-teal-100 focus:border-cm-teal-300 focus:ring-2 focus:ring-cm-teal-100 outline-none transition"
+                    />
+                  </div>
+                </div>
+                <p id="contact-help" className="text-xs text-cm-ink/60">Wir brauchen mindestens Telefon oder E-Mail, um zu antworten.</p>
                 <div>
-                  <label htmlFor="message" className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Ihre Nachricht *</label>
+                  <label htmlFor="message" className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Ihre Nachricht <span aria-hidden="true">*</span></label>
                   <textarea
                     id="message"
                     required
                     rows={5}
                     value={form.message}
                     onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
-                    placeholder="Beschreiben Sie kurz Ihre Situation und Ihren Pflegebedarf …"
+                    placeholder="Worum geht es? z. B. „Mein Vater (78) braucht Grundpflege ab nächster Woche, spricht Türkisch."
                     className="w-full px-4 py-3 rounded-xl border border-cm-teal-100 focus:border-cm-teal-300 focus:ring-2 focus:ring-cm-teal-100 outline-none transition"
                   />
+                </div>
+                <label className="flex items-start gap-3 text-sm text-cm-ink/80 leading-relaxed">
+                  <input
+                    type="checkbox"
+                    required
+                    checked={form.consent}
+                    onChange={(e) => setForm((f) => ({ ...f, consent: e.target.checked }))}
+                    className="mt-1 w-5 h-5 rounded border-cm-teal-300 text-cm-teal-700 focus:ring-2 focus:ring-cm-teal-300"
+                  />
+                  <span>
+                    Ich habe die <a href="/datenschutz" className="underline hover:text-cm-teal-700">Datenschutzhinweise</a> gelesen und bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden. <span aria-hidden="true">*</span>
+                  </span>
+                </label>
+                <div role="status" aria-live="polite" className="min-h-[1.25rem] text-sm">
+                  {error && <span className="text-red-600">{error}</span>}
+                  {pending && <span className="text-cm-ink/60">Wird gesendet …</span>}
                 </div>
                 <button
                   type="submit"
                   disabled={pending}
-                  className="w-full bg-cm-teal hover:bg-cm-teal-500 disabled:opacity-60 text-white px-7 py-3.5 rounded-full font-medium shadow-md flex items-center justify-center gap-2 transition-colors"
+                  aria-busy={pending}
+                  className="w-full bg-cm-teal-600 hover:bg-cm-teal-700 disabled:opacity-60 text-white px-7 py-3.5 rounded-full font-medium shadow-md flex items-center justify-center gap-2 transition-colors min-h-[48px]"
                 >
-                  {pending ? "Wird gesendet …" : (<>Nachricht senden <ArrowRight className="w-4 h-4" /></>)}
+                  {pending ? "Wird gesendet …" : (<>Kostenloses Erstgespräch anfordern <ArrowRight className="w-4 h-4" /></>)}
                 </button>
+                <p className="text-xs text-cm-ink/60 text-center">Kostenlos & unverbindlich · Antwort innerhalb von 24h</p>
               </form>
             </TabsContent>
 
@@ -204,7 +228,7 @@ export default function KontaktPatient() {
                     Bis dahin freuen wir uns über Ihren Anruf oder das Kontaktformular. Wir melden uns innerhalb von 24 Stunden mit einem Terminvorschlag.
                   </p>
                   <a
-                    href="tel:+4969792 16147"
+                    href="tel:+496979216147"
                     className="inline-flex items-center gap-2 bg-cm-teal hover:bg-cm-teal-500 text-white px-6 py-3 rounded-full font-medium transition-colors"
                   >
                     <Phone className="w-4 h-4" />
@@ -221,7 +245,7 @@ export default function KontaktPatient() {
           <div className="bg-cm-teal-50 p-6 rounded-3xl">
             <h3 className="h-serif text-xl text-cm-ink mb-4">So erreichen Sie uns</h3>
             <div className="space-y-3 text-sm">
-              <a href="tel:+4969792 16147" className="flex gap-3 hover:text-cm-teal-600 transition-colors">
+              <a href="tel:+496979216147" className="flex gap-3 hover:text-cm-teal-600 transition-colors">
                 <Phone className="w-5 h-5 text-cm-teal flex-shrink-0 mt-0.5" />
                 <div>
                   <div className="font-medium text-cm-ink">069 / 79 216 147</div>
@@ -268,7 +292,7 @@ export default function KontaktPatient() {
             <h3 className="h-serif text-xl mb-2">Notfall?</h3>
             <p className="text-sm text-white/80 mb-4">Unsere 24/7-Notfallbereitschaft ist jederzeit für Sie erreichbar.</p>
             <a
-              href="tel:+4969792 16147"
+              href="tel:+496979216147"
               className="block w-full text-center bg-cm-mint hover:bg-cm-teal-300 text-cm-ink px-5 py-3 rounded-full font-medium transition-colors"
             >
               <Phone className="w-4 h-4 inline mr-2" />

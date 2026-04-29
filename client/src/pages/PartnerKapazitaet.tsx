@@ -5,6 +5,7 @@ import { CheckCircle2, ArrowRight, Activity } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 import { submitContact } from "@/lib/api";
 import HoneypotField from "@/components/HoneypotField";
+import ConsentCheckbox from "@/components/ConsentCheckbox";
 
 const PartnerTabs = ({ active }: { active: string }) => (
   <div className="flex flex-wrap gap-2 mb-10 justify-center">
@@ -62,11 +63,16 @@ export default function PartnerKapazitaet() {
     notes: "",
   });
   const [website, setWebsite] = useState("");
+  const [consent, setConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [pending, setPending] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!consent) {
+      toast.error("Bitte bestätigen Sie die Datenschutzhinweise.");
+      return;
+    }
     if (window.gtag) {
       window.gtag("event", "partner_capacity_submission", {
         event_category: "engagement",
@@ -150,6 +156,7 @@ export default function PartnerKapazitaet() {
 
       <section className="container py-12 lg:py-14">
         <PartnerTabs active="kapazitaet" />
+        <h2 className="sr-only">Aktuelle Kapazitäten und Anfrage</h2>
 
         {/* Live-Verfügbarkeits-Tabelle */}
         <div className="bg-white rounded-3xl border border-cm-teal-100 overflow-hidden mb-8">
@@ -243,10 +250,12 @@ export default function PartnerKapazitaet() {
               <label className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Weitere Anmerkungen</label>
               <textarea rows={4} value={form.notes} onChange={(e) => setForm((f) => ({ ...f, notes: e.target.value }))} className={inputCls} />
             </div>
+            <ConsentCheckbox checked={consent} onChange={setConsent} id="consent-kapazitaet" />
             <button
               type="submit"
               disabled={pending}
-              className="w-full bg-cm-teal hover:bg-cm-teal-500 disabled:opacity-60 text-white px-7 py-3.5 rounded-full font-medium shadow-md flex items-center justify-center gap-2 transition-colors"
+              aria-busy={pending}
+              className="w-full bg-cm-teal-600 hover:bg-cm-teal-700 disabled:opacity-60 text-white px-7 py-3.5 rounded-full font-medium shadow-md flex items-center justify-center gap-2 transition-colors min-h-[48px]"
             >
               {pending ? "Wird gesendet …" : (<>Kapazität anfragen <ArrowRight className="w-4 h-4" /></>)}
             </button>

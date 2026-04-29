@@ -75,6 +75,7 @@ export default function PartnerDokumente() {
 
       <section className="container py-12 lg:py-14">
         <PartnerTabs active="dokumente" />
+        <h2 className="sr-only">Dokumente zum Download</h2>
 
         {documents.length > 0 ? (
           <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">

@@ -7,6 +7,8 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ConsentBanner from "./components/ConsentBanner";
+import MobileCallBar from "./components/MobileCallBar";
 import Home from "./pages/Home";
 import Leistungen from "./pages/Leistungen";
 import FAQ from "./pages/FAQ";
@@ -21,13 +23,16 @@ import PartnerKassen from "./pages/PartnerKassen";
 import PartnerDokumente from "./pages/PartnerDokumente";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
+import Pflegedienst from "./pages/Pflegedienst";
 
 function PublicLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
+      <a href="#main-content" className="skip-link">Zum Inhalt springen</a>
       <Navbar />
-      <main className="pt-24">{children}</main>
+      <main id="main-content" className="pt-24 pb-24 lg:pb-0">{children}</main>
       <Footer />
+      <MobileCallBar />
     </>
   );
 }
@@ -86,6 +91,9 @@ function Router() {
       <Route path="/partner/kassen">{() => <PublicLayout><PartnerKassen /></PublicLayout>}</Route>
       <Route path="/partner/dokumente">{() => <PublicLayout><PartnerDokumente /></PublicLayout>}</Route>
 
+      {/* Service-Area-Pages (lokale SEO) */}
+      <Route path="/pflegedienst/:city">{() => <PublicLayout><Pflegedienst /></PublicLayout>}</Route>
+
       {/* Legal pages */}
       <Route path="/impressum">{() => <PublicLayout><Impressum /></PublicLayout>}</Route>
       <Route path="/datenschutz">{() => <PublicLayout><Datenschutz /></PublicLayout>}</Route>
@@ -103,6 +111,7 @@ export default function App() {
         <TooltipProvider>
           <HashScrollHandler />
           <Router />
+          <ConsentBanner />
           <Toaster richColors position="top-right" />
         </TooltipProvider>
       </ThemeProvider>

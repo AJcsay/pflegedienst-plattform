@@ -5,6 +5,7 @@ import { CheckCircle2, ArrowRight, Stethoscope, Building2, Hospital } from "luci
 import { useSEO } from "@/hooks/useSEO";
 import { submitContact } from "@/lib/api";
 import HoneypotField from "@/components/HoneypotField";
+import ConsentCheckbox from "@/components/ConsentCheckbox";
 
 const PartnerTabs = ({ active }: { active: string }) => (
   <div className="flex flex-wrap gap-2 mb-10 justify-center">
@@ -56,11 +57,16 @@ export default function PartnerZuweiser() {
     notes: "",
   });
   const [website, setWebsite] = useState("");
+  const [consent, setConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [pending, setPending] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!consent) {
+      toast.error("Bitte bestätigen Sie die Datenschutzhinweise.");
+      return;
+    }
     if (window.gtag) {
       window.gtag("event", "partner_referral_submission", {
         event_category: "engagement",
@@ -146,6 +152,7 @@ export default function PartnerZuweiser() {
 
       <section className="container py-12 lg:py-14">
         <PartnerTabs active="zuweiser" />
+        <h2 className="sr-only">Patient an CuraMain überleiten</h2>
 
         <div className="grid lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 bg-white p-8 lg:p-10 rounded-3xl border border-cm-teal-100">
@@ -249,10 +256,13 @@ export default function PartnerZuweiser() {
                 <textarea rows={3} value={form.notes} onChange={(e) => setForm((f) => ({ ...f, notes: e.target.value }))} className={inputCls} />
               </div>
 
+              <ConsentCheckbox checked={consent} onChange={setConsent} id="consent-zuweiser" />
+
               <button
                 type="submit"
                 disabled={pending}
-                className="w-full bg-cm-teal hover:bg-cm-teal-500 disabled:opacity-60 text-white px-7 py-3.5 rounded-full font-medium shadow-md flex items-center justify-center gap-2 transition-colors"
+                aria-busy={pending}
+                className="w-full bg-cm-teal-600 hover:bg-cm-teal-700 disabled:opacity-60 text-white px-7 py-3.5 rounded-full font-medium shadow-md flex items-center justify-center gap-2 transition-colors min-h-[48px]"
               >
                 {pending ? "Wird gesendet …" : (<>Anfrage absenden <ArrowRight className="w-4 h-4" /></>)}
               </button>
@@ -278,7 +288,7 @@ export default function PartnerZuweiser() {
               <h3 className="h-serif text-xl mb-2">Notfall-Übernahme</h3>
               <p className="text-sm text-white/80 mb-4">Rückmeldung innerhalb von 4 Stunden bei „Notfall"-Dringlichkeit.</p>
               <a
-                href="tel:+4969792 16147"
+                href="tel:+496979216147"
                 className="block w-full text-center bg-cm-mint hover:bg-cm-teal-300 text-cm-ink px-5 py-3 rounded-full font-medium transition-colors"
               >
                 Sofort anrufen
