@@ -145,10 +145,12 @@
     outline: 3px solid #fff;
     outline-offset: -3px;
   }
-  /* Verhindert horizontales Scrollen auf Mobile durch lange dt. Wörter o. ä. */
-  html, body {
-    overflow-x: clip;
-  }
+  /* Hinweis: KEIN globales `overflow-x: clip|hidden` auf <html>/<body>!
+   * Das hat Chrome (Bug-Reprod 2026-04-30 auf curamain.de) den vertikalen
+   * Scroll abgewürgt — scrollY blieb bei 0, Footer war nicht erreichbar.
+   * Der ursprüngliche Anlass (überlaufende H1 wie "Patientenüberleitung")
+   * ist über `overflow-wrap: anywhere; hyphens: auto` auf h1/h2/h3 gelöst.
+   */
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', 'DM Sans', system-ui, -apple-system, sans-serif;
