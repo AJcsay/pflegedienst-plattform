@@ -46,7 +46,9 @@ jobs:
           password: ${{ secrets.ALLINKL_PASS }}
           protocol: ftps
           local-dir: ./dist/public/
-          server-dir: /htdocs/
+          # All-Inkl Multi-Domain-Setup: Webroot für curamain.de liegt unter /curamain.de/,
+          # NICHT unter /htdocs/ (das wäre nur bei Single-Domain-Konten der echte Webroot).
+          server-dir: /curamain.de/
           # PHP, Uploads und htaccess separat hochladen, nichts dort verloren bügeln
           exclude: |
             **/.git*
@@ -61,7 +63,7 @@ jobs:
           password: ${{ secrets.ALLINKL_PASS }}
           protocol: ftps
           local-dir: ./php/
-          server-dir: /htdocs/api/
+          server-dir: /curamain.de/api/
           # /uploads/ darf NICHT mit gespiegelt werden
           dangerous-clean-slate: false
           exclude: |
