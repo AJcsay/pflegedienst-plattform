@@ -78,9 +78,6 @@ export function useSEO({
       description,
     );
     upsertMeta('meta[property="og:image"]', "property", "og:image", imageUrl);
-    if (canonical) {
-      upsertMeta('meta[property="og:url"]', "property", "og:url", canonical);
-    }
 
     // Twitter Card
     upsertMeta(
@@ -102,10 +99,13 @@ export function useSEO({
       imageUrl,
     );
 
-    // Canonical
-    if (canonical) {
-      upsertLink("canonical", canonical);
-    }
+    // Canonical: immer setzen — Default = aktuelle URL (ohne Query/Hash).
+    // Verhindert Leak des vorherigen Canonical-Werts beim Routenwechsel.
+    const canonicalUrl =
+      canonical ??
+      `https://www.curamain.de${window.location.pathname.replace(/\/+$/, "") || "/"}`;
+    upsertLink("canonical", canonicalUrl);
+    upsertMeta('meta[property="og:url"]', "property", "og:url", canonicalUrl);
 
     // Robots (nur anfassen wenn explizit gewünscht — sonst bleibt der Wert aus index.html bestehen)
     if (noindex) {

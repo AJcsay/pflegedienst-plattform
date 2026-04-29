@@ -5,6 +5,7 @@ import { CheckCircle2, ArrowRight, FileDown, FileText, Shield, Star, Globe2 } fr
 import { useSEO } from "@/hooks/useSEO";
 import { submitContact } from "@/lib/api";
 import HoneypotField from "@/components/HoneypotField";
+import ConsentCheckbox from "@/components/ConsentCheckbox";
 import documentsData from "@/data/documents.json";
 import type { Document } from "@/data/types";
 
@@ -71,11 +72,16 @@ export default function PartnerKassen() {
     message: "",
   });
   const [website, setWebsite] = useState("");
+  const [consent, setConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [pending, setPending] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!consent) {
+      toast.error("Bitte bestätigen Sie die Datenschutzhinweise.");
+      return;
+    }
     if (window.gtag) {
       window.gtag("event", "partner_insurance_submission", {
         event_category: "engagement",
@@ -132,6 +138,7 @@ export default function PartnerKassen() {
 
       <section className="container py-12 lg:py-14">
         <PartnerTabs active="kassen" />
+        <h2 className="sr-only">Kassen-Kooperation und Kontakt</h2>
 
         {/* 3 Pillars */}
         <div className="grid md:grid-cols-3 gap-5 mb-12">
@@ -196,10 +203,12 @@ export default function PartnerKassen() {
                 <label className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Nachricht *</label>
                 <textarea required rows={5} value={form.message} onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))} placeholder="Beschreiben Sie Ihr Anliegen …" className={inputCls} />
               </div>
+              <ConsentCheckbox checked={consent} onChange={setConsent} id="consent-kassen" />
               <button
                 type="submit"
                 disabled={pending}
-                className="w-full bg-cm-teal hover:bg-cm-teal-500 disabled:opacity-60 text-white px-7 py-3.5 rounded-full font-medium shadow-md flex items-center justify-center gap-2 transition-colors"
+                aria-busy={pending}
+                className="w-full bg-cm-teal-600 hover:bg-cm-teal-700 disabled:opacity-60 text-white px-7 py-3.5 rounded-full font-medium shadow-md flex items-center justify-center gap-2 transition-colors min-h-[48px]"
               >
                 {pending ? "Wird gesendet …" : (<>Nachricht senden <ArrowRight className="w-4 h-4" /></>)}
               </button>

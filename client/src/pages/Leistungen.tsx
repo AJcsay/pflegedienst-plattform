@@ -210,7 +210,7 @@ export default function Leistungen() {
               Kostenlose Erstberatung <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="tel:+4969792 16147"
+              href="tel:+496979216147"
               className="bg-white border border-cm-teal-100 hover:border-cm-teal-300 text-cm-ink px-7 py-3 rounded-full font-medium inline-flex items-center gap-2 transition-colors"
             >
               <Phone className="w-4 h-4 text-cm-teal" />

@@ -121,6 +121,34 @@
   * {
     @apply border-border outline-ring/50;
   }
+  /* Sichtbarer Tastatur-Fokus (WCAG 2.4.7). */
+  :focus-visible {
+    outline: 3px solid var(--cm-teal-700, #3d6764);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  /* Skip-Link – wird sichtbar bei Tab-Fokus. */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    padding: 12px 18px;
+    background: #3d6764;
+    color: #fff;
+    border-radius: 0 0 12px 0;
+    font-weight: 600;
+  }
+  .skip-link:focus,
+  .skip-link:focus-visible {
+    left: 0;
+    outline: 3px solid #fff;
+    outline-offset: -3px;
+  }
+  /* Verhindert horizontales Scrollen auf Mobile durch lange dt. Wörter o. ä. */
+  html, body {
+    overflow-x: clip;
+  }
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', 'DM Sans', system-ui, -apple-system, sans-serif;
@@ -138,11 +166,16 @@
     letter-spacing: -0.01em;
     line-height: 1.08;
     font-weight: 500;
+    /* Lange dt. Komposita dürfen umbrechen statt zu überlaufen */
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
   }
   h4, h5, h6 {
     font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
     font-weight: 600;
     letter-spacing: -0.01em;
+    overflow-wrap: anywhere;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -216,7 +249,7 @@ html {
   --cm-teal-300: #8cc6c0;
   --cm-teal-400: #6fb1ad;
   --cm-teal-500: #5a9a96;
-  --cm-teal-600: #4a807c;
+  --cm-teal-600: #467670;
   --cm-teal-700: #3d6764;
   --cm-ink: #1c2826;
   --cm-cream: #f9f6f1;
@@ -260,16 +293,22 @@ html {
 }
 
 /* Direkte Farb-Klassen für Manus-Look (umgehen Tailwind-v4-Theme) */
-.text-cm-teal { color: var(--cm-teal-400); }
-.text-cm-teal-600 { color: var(--cm-teal-600); }
+/* WCAG-AA: bg-cm-teal nutzt jetzt --cm-teal-600 (4,5:1 mit weiß, statt 2,45:1). */
+.text-cm-teal { color: var(--cm-teal-600); }
+.text-cm-teal-600 { color: var(--cm-teal-700); }
 .text-cm-teal-700 { color: var(--cm-teal-700); }
-.bg-cm-teal { background-color: var(--cm-teal-400); }
+.bg-cm-teal { background-color: var(--cm-teal-600); }
 .bg-cm-teal-50 { background-color: var(--cm-teal-50); }
 .bg-cm-teal-500 { background-color: var(--cm-teal-500); }
+.bg-cm-teal-600 { background-color: var(--cm-teal-600); }
+.bg-cm-teal-700 { background-color: var(--cm-teal-700); }
 .bg-cm-cream { background-color: var(--cm-cream); }
 .bg-cm-ink { background-color: var(--cm-ink); }
 .text-cm-ink { color: var(--cm-ink); }
 .text-cm-mint { color: var(--cm-mint); }
 .border-cm-teal-100 { border-color: var(--cm-teal-100); }
-.hover\:bg-cm-teal-500:hover { background-color: var(--cm-teal-500); }
+.border-cm-teal-200 { border-color: var(--cm-teal-200); }
+.hover\:bg-cm-teal-500:hover { background-color: var(--cm-teal-700); }
+.hover\:bg-cm-teal-700:hover { background-color: var(--cm-teal-700); }
 .hover\:border-cm-teal-300:hover { border-color: var(--cm-teal-300); }
+.hover\:text-cm-teal-700:hover { color: var(--cm-teal-700); }

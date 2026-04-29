@@ -105,28 +105,6 @@
           }
         ]
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "150",
-        "reviewCount": "50"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "author": {"@type": "Person", "name": "Maria Schmidt"},
-          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-          "reviewBody": "Ausgezeichnete Pflegedienstleistungen mit sehr freundlichem Personal."
-        },
-        {
-          "@type": "Review",
-          "author": {"@type": "Person", "name": "Hans Müller"},
-          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-          "reviewBody": "Sehr professionell und zuverlässig. Kann ich nur weiterempfehlen."
-        }
-      ],
       "sameAs": [
         "https://www.facebook.com/curamain",
         "https://www.instagram.com/curamain"
@@ -158,26 +136,35 @@
       ]
     }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Async Google Fonts loading (verhindert Render-Blocking) -->
+    <!-- Fonts werden self-hosted via @fontsource (siehe client/src/main.tsx) – kein externer Request, DSGVO-konform. -->
+
+    <!-- Hero-Bild vorab laden (LCP-Element auf "/") -->
     <link
       rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=DM+Serif+Display:ital@0;1&display=swap"
-      onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=DM+Serif+Display:ital@0;1&display=swap"
-        rel="stylesheet" />
-    </noscript>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCTHTN4SHB"></script>
+      as="image"
+      href="/img/hero.webp"
+      type="image/webp"
+      fetchpriority="high" />
+
+    <!-- Google Analytics – wird erst nach explizitem Opt-In geladen (TDDDG §25). -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VCTHTN4SHB', { 'anonymize_ip': true });
+      window.__loadAnalytics = function () {
+        if (window.__gaLoaded) return;
+        window.__gaLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VCTHTN4SHB';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-VCTHTN4SHB', { 'anonymize_ip': true });
+      };
+      try {
+        if (localStorage.getItem('cm-consent-v1') === 'accepted') {
+          window.__loadAnalytics();
+        }
+      } catch (e) {}
     </script>
   </head>
 

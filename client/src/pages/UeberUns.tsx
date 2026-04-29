@@ -58,7 +58,7 @@ export default function UeberUns() {
             <div className="w-12 h-12 rounded-2xl bg-cm-teal-50 flex items-center justify-center mb-5">
               <Target className="w-6 h-6 text-cm-teal" />
             </div>
-            <h3 className="h-serif text-3xl text-cm-ink mb-3">Unsere Mission</h3>
+            <h2 className="h-serif text-3xl text-cm-ink mb-3">Unsere Mission</h2>
             <p className="text-cm-ink/70 leading-relaxed">
               Menschen so lange wie möglich selbstbestimmt in ihrem vertrauten Zuhause leben zu lassen – mit professioneller, kultursensibler Pflege, die den ganzen Menschen sieht.
             </p>
@@ -67,7 +67,7 @@ export default function UeberUns() {
             <div className="w-12 h-12 rounded-2xl bg-cm-teal-50 flex items-center justify-center mb-5">
               <Eye className="w-6 h-6 text-cm-teal" />
             </div>
-            <h3 className="h-serif text-3xl text-cm-ink mb-3">Unsere Vision</h3>
+            <h2 className="h-serif text-3xl text-cm-ink mb-3">Unsere Vision</h2>
             <p className="text-cm-ink/70 leading-relaxed">
               Der vertrauenswürdigste Pflegedienst im Rhein-Main-Gebiet zu sein – bekannt für Qualität, Menschlichkeit und kulturelle Vielfalt.
             </p>
