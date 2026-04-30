@@ -1,3 +1,5 @@
+import { Link } from "wouter";
+
 interface Props {
   checked: boolean;
   onChange: (v: boolean) => void;
@@ -21,9 +23,9 @@ export default function ConsentCheckbox({ checked, onChange, id = "consent" }: P
       />
       <span>
         Ich habe die{" "}
-        <a href="/datenschutz" className="underline hover:text-cm-teal-700">
+        <Link href="/datenschutz" className="underline hover:text-cm-teal-700">
           Datenschutzhinweise
-        </a>{" "}
+        </Link>{" "}
         gelesen und bin einverstanden, dass meine Angaben zur Bearbeitung dieser Anfrage verarbeitet werden. <span aria-hidden="true">*</span>
       </span>
     </label>

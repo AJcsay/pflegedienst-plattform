@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "sonner";
 import { Phone, Mail, MapPin, Clock, CheckCircle2, Send, Calendar, ArrowRight } from "lucide-react";
@@ -215,7 +216,7 @@ export default function KontaktPatient() {
                     className="mt-1 w-5 h-5 rounded border-cm-teal-300 text-cm-teal-700 focus:ring-2 focus:ring-cm-teal-300"
                   />
                   <span>
-                    Ich habe die <a href="/datenschutz" className="underline hover:text-cm-teal-700">Datenschutzhinweise</a> gelesen und bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden. <span aria-hidden="true">*</span>
+                    Ich habe die <Link href="/datenschutz" className="underline hover:text-cm-teal-700">Datenschutzhinweise</Link> gelesen und bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden. <span aria-hidden="true">*</span>
                   </span>
                 </label>
                 <div role="status" aria-live="polite" className="min-h-[1.25rem] text-sm">

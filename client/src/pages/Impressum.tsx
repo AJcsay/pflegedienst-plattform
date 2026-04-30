@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import { useSEO } from "@/hooks/useSEO";
 
 export default function Impressum() {
@@ -63,7 +64,7 @@ export default function Impressum() {
 
           <section>
             <h2 className="text-2xl font-semibold mb-4">Datenschutz</h2>
-            <p>Informationen zum Datenschutz finden Sie in unserer <a href="/datenschutz" className="text-primary hover:underline">Datenschutzerklärung</a>.</p>
+            <p>Informationen zum Datenschutz finden Sie in unserer <Link href="/datenschutz" className="text-primary hover:underline">Datenschutzerklärung</Link>.</p>
           </section>
 
           <section>

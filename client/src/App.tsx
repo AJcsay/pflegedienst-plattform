@@ -40,33 +40,44 @@ function PublicLayout({ children }: { children: React.ReactNode }) {
   );
 }
 
-function HashScrollHandler() {
+/**
+ * ScrollHandler — kümmert sich um zwei Fälle:
+ * 1. Routenwechsel mit Hash (z. B. /karriere#benefits) → smooth scroll zum Anchor.
+ * 2. Routenwechsel ohne Hash → instant scroll nach oben (Standard-SPA-Verhalten).
+ *
+ * Wouter triggert keinen Browser-Reload bei Link-Klicks — der Browser behält
+ * die alte Scroll-Position. Diese Komponente repariert das.
+ */
+function ScrollHandler() {
   const [location] = useLocation();
 
   useEffect(() => {
     const hash = window.location.hash.slice(1);
-    if (!hash) return;
 
-    let attempts = 0;
-    const maxAttempts = 20;
-
-    const scrollToHash = () => {
-      const element = document.getElementById(hash);
-      if (!element) {
-        if (attempts < maxAttempts) {
-          attempts++;
-          setTimeout(scrollToHash, 100);
+    if (hash) {
+      // Hash-Anchor: warte bis Element im DOM ist, dann smooth scroll
+      let attempts = 0;
+      const maxAttempts = 20;
+      const scrollToHash = () => {
+        const element = document.getElementById(hash);
+        if (!element) {
+          if (attempts < maxAttempts) {
+            attempts++;
+            setTimeout(scrollToHash, 100);
+          }
+          return;
         }
-        return;
-      }
+        const navbarHeight = 80;
+        const rect = element.getBoundingClientRect();
+        const scrollTop = window.scrollY + rect.top - navbarHeight;
+        window.scrollTo({ top: scrollTop, behavior: "smooth" });
+      };
+      setTimeout(scrollToHash, 100);
+      return;
+    }
 
-      const navbarHeight = 80;
-      const rect = element.getBoundingClientRect();
-      const scrollTop = window.scrollY + rect.top - navbarHeight;
-      window.scrollTo({ top: scrollTop, behavior: "smooth" });
-    };
-
-    setTimeout(scrollToHash, 100);
+    // Kein Hash → instant top (wir wollen keinen sichtbaren Scroll-Sweep)
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
   }, [location]);
 
   return null;
@@ -117,7 +128,7 @@ export default function App() {
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
-          <HashScrollHandler />
+          <ScrollHandler />
           <Router />
           <ConsentBanner />
           <Toaster richColors position="top-right" />
