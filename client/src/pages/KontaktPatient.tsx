@@ -20,11 +20,18 @@ export default function KontaktPatient() {
     canonical: "https://www.curamain.de/kontakt/patient",
   });
 
-  const [form, setForm] = useState({ firstName: "", lastName: "", email: "", phone: "", subject: "", message: "" });
+  const [form, setForm] = useState({ firstName: "", lastName: "", email: "", phone: "", subject: "", message: "", stadtteil: "" });
   const [website, setWebsite] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [pending, setPending] = useState(false);
   const [activeTab, setActiveTab] = useState("contact");
+
+  const STADTTEILE = [
+    { value: "nordend-ost", label: "Nordend-Ost" },
+    { value: "bornheim", label: "Bornheim" },
+    { value: "ostend", label: "Ostend" },
+    { value: "other", label: "Anderer Stadtteil – bitte Anfrage senden" },
+  ];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -151,16 +158,38 @@ export default function KontaktPatient() {
                     />
                   </div>
                 </div>
-                <div>
-                  <label htmlFor="subject" className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Betreff</label>
-                  <input
-                    id="subject"
-                    value={form.subject}
-                    onChange={(e) => setForm((f) => ({ ...f, subject: e.target.value }))}
-                    placeholder="z. B. Erstberatung Grundpflege"
-                    className="w-full px-4 py-3 rounded-xl border border-cm-teal-100 focus:border-cm-teal-300 focus:ring-2 focus:ring-cm-teal-100 outline-none transition"
-                  />
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="stadtteil" className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Stadtteil *</label>
+                    <select
+                      id="stadtteil"
+                      required
+                      value={form.stadtteil}
+                      onChange={(e) => setForm((f) => ({ ...f, stadtteil: e.target.value }))}
+                      className="w-full px-4 py-3 rounded-xl border border-cm-teal-100 focus:border-cm-teal-300 focus:ring-2 focus:ring-cm-teal-100 outline-none transition"
+                    >
+                      <option value="">– Wählen Sie einen Stadtteil –</option>
+                      {STADTTEILE.map((st) => (
+                        <option key={st.value} value={st.value}>{st.label}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="subject" className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Betreff</label>
+                    <input
+                      id="subject"
+                      value={form.subject}
+                      onChange={(e) => setForm((f) => ({ ...f, subject: e.target.value }))}
+                      placeholder="z. B. Erstberatung Grundpflege"
+                      className="w-full px-4 py-3 rounded-xl border border-cm-teal-100 focus:border-cm-teal-300 focus:ring-2 focus:ring-cm-teal-100 outline-none transition"
+                    />
+                  </div>
                 </div>
+                {form.stadtteil === "other" && (
+                  <div className="bg-cm-teal-50 border border-cm-teal-200 rounded-xl p-4 text-sm text-cm-ink/70">
+                    <strong>Hinweis:</strong> Aktuell versorgen wir primär Nordend-Ost, Bornheim und Ostend. Wir prüfen Ihre Anfrage individuell und melden uns innerhalb von 48 Stunden.
+                  </div>
+                )}
                 <div>
                   <label htmlFor="message" className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Ihre Nachricht *</label>
                   <textarea

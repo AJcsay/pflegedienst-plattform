@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import {
-  Stethoscope, HandHeart, UserCheck, CalendarCheck, Heart, Users,
+  Stethoscope, HandHeart, UserCheck, CalendarCheck, Users,
   ArrowRight, CheckCircle2, Phone
 } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
@@ -14,7 +14,6 @@ const PHOTOS = {
   hauswirtschaft: "/img/hauswirtschaft.webp",
   team: "/img/team.webp",
   aktivierung: "/img/aktivierung.webp",
-  heroNew: "/img/palliativ.webp",
 };
 
 const fullServices = [
@@ -56,14 +55,6 @@ const compactServices = [
     badge: "Kostenübernahme durch die Pflegekasse",
   },
   {
-    id: "palliativ",
-    icon: Heart,
-    title: "Palliativpflege",
-    sub: "Würdevolle Begleitung",
-    description: "Einfühlsame Begleitung in der letzten Lebensphase. Wir sorgen für Schmerzlinderung und Lebensqualität.",
-    badge: "24-Stunden-Erreichbarkeit",
-  },
-  {
     id: "hauswirtschaft",
     icon: Users,
     title: "Hauswirtschaftliche Versorgung",
@@ -76,8 +67,8 @@ const compactServices = [
 export default function Leistungen() {
   useSEO({
     title: "Pflegeleistungen & Kultursensible Pflege im Rhein-Main-Gebiet – CuraMain",
-    description: "Umfassende Pflegeleistungen im Rhein-Main-Gebiet: Behandlungspflege, Grundpflege, Verhinderungspflege, Palliativpflege & kultursensible Betreuung. Kassenzugelassen.",
-    keywords: "Pflegeleistungen Rhein-Main, kultursensible Pflege Rhein-Main-Gebiet, interkulturelle Pflege, Grundpflege, Behandlungspflege, Verhinderungspflege, Palliativpflege, ambulante Pflege Rhein-Main",
+    description: "Umfassende Pflegeleistungen im Rhein-Main-Gebiet: Behandlungspflege, Grundpflege, Beratungsbesuche, Verhinderungspflege & kultursensible Betreuung. Kassenzugelassen.",
+    keywords: "Pflegeleistungen Rhein-Main, kultursensible Pflege Rhein-Main-Gebiet, interkulturelle Pflege, Grundpflege, Behandlungspflege, Beratungsbesuche, Verhinderungspflege, ambulante Pflege Rhein-Main",
     canonical: "https://www.curamain.de/leistungen",
   });
 

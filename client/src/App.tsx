@@ -12,6 +12,9 @@ import Leistungen from "./pages/Leistungen";
 import FAQ from "./pages/FAQ";
 import Testimonials from "./pages/Testimonials";
 import KontaktPatient from "./pages/KontaktPatient";
+import NordendOst from "./pages/NordendOst";
+import Bornheim from "./pages/Bornheim";
+import Ostend from "./pages/Ostend";
 import UeberUns from "./pages/UeberUns";
 import Karriere from "./pages/Karriere";
 import Bewerbung from "./pages/Bewerbung";
@@ -70,6 +73,9 @@ function Router() {
       {/* Public pages */}
       <Route path="/">{() => <PublicLayout><Home /></PublicLayout>}</Route>
       <Route path="/leistungen">{() => <PublicLayout><Leistungen /></PublicLayout>}</Route>
+      <Route path="/pflege/nordend-ost">{() => <PublicLayout><NordendOst /></PublicLayout>}</Route>
+      <Route path="/pflege/bornheim">{() => <PublicLayout><Bornheim /></PublicLayout>}</Route>
+      <Route path="/pflege/ostend">{() => <PublicLayout><Ostend /></PublicLayout>}</Route>
       <Route path="/faq">{() => <PublicLayout><FAQ /></PublicLayout>}</Route>
       <Route path="/testimonials">{() => <PublicLayout><Testimonials /></PublicLayout>}</Route>
       <Route path="/kontakt/patient">{() => <PublicLayout><KontaktPatient /></PublicLayout>}</Route>
