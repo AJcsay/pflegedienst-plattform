@@ -226,7 +226,6 @@ export default function PartnerKapazitaet() {
                   <option value="grundpflege">Grundpflege</option>
                   <option value="behandlungspflege">Behandlungspflege</option>
                   <option value="verhinderungspflege">Verhinderungspflege</option>
-                  <option value="palliativpflege">Palliativpflege</option>
                   <option value="hauswirtschaft">Hauswirtschaft</option>
                   <option value="kombination">Kombination</option>
                 </select>

@@ -8,6 +8,14 @@ import HoneypotField from "@/components/HoneypotField";
 
 const SPRACHEN = ["Deutsch", "Englisch", "Türkisch", "Arabisch", "Russisch", "Polnisch", "Französisch"];
 
+// Phase-1-Versorgungsgebiete (Strategie 2026-04-30)
+const STADTTEILE = [
+  { value: "nordend-ost", label: "Nordend-Ost" },
+  { value: "bornheim", label: "Bornheim" },
+  { value: "ostend", label: "Ostend" },
+  { value: "anderer", label: "Anderer Stadtteil – bitte Anfrage senden" },
+];
+
 // Externe Termin-Buchung. Sobald die Zeeg-URL feststeht, hier eintragen.
 // Beispiel: "https://zeeg.me/curamain/erstberatung"
 const ZEEG_URL = import.meta.env.VITE_ZEEG_URL as string | undefined;
@@ -20,7 +28,7 @@ export default function KontaktPatient() {
     canonical: "https://www.curamain.de/kontakt/patient",
   });
 
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "", consent: false });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", stadtteil: "", message: "", consent: false });
   const [website, setWebsite] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [pending, setPending] = useState(false);
@@ -52,7 +60,7 @@ export default function KontaktPatient() {
       lastName: rest.join(" ") || "-",
       email: form.email,
       phone: form.phone || undefined,
-      message: form.message,
+      message: form.stadtteil ? `[Stadtteil: ${form.stadtteil}] ${form.message}` : form.message,
       category: "patient",
       website,
     });
@@ -167,6 +175,25 @@ export default function KontaktPatient() {
                   </div>
                 </div>
                 <p id="contact-help" className="text-xs text-cm-ink/60">Wir brauchen mindestens Telefon oder E-Mail, um zu antworten.</p>
+                <div>
+                  <label htmlFor="stadtteil" className="text-sm font-medium text-cm-ink/80 mb-1.5 block">In welchem Stadtteil wohnen Sie?</label>
+                  <select
+                    id="stadtteil"
+                    value={form.stadtteil}
+                    onChange={(e) => setForm((f) => ({ ...f, stadtteil: e.target.value }))}
+                    className="w-full px-4 py-3 rounded-xl border border-cm-teal-100 focus:border-cm-teal-300 focus:ring-2 focus:ring-cm-teal-100 outline-none transition bg-white"
+                  >
+                    <option value="">Bitte wählen</option>
+                    {STADTTEILE.map((s) => (
+                      <option key={s.value} value={s.value}>{s.label}</option>
+                    ))}
+                  </select>
+                  {form.stadtteil === "anderer" && (
+                    <p className="mt-2 text-xs text-cm-ink/70 leading-relaxed bg-cm-teal-50 rounded-xl px-4 py-3">
+                      Aktuell versorgen wir primär Nordend-Ost, Bornheim und Ostend. Wir prüfen Ihre Anfrage individuell und melden uns innerhalb von 48 Stunden.
+                    </p>
+                  )}
+                </div>
                 <div>
                   <label htmlFor="message" className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Ihre Nachricht <span aria-hidden="true">*</span></label>
                   <textarea

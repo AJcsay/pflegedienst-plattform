@@ -14,14 +14,13 @@ const PHOTOS = {
   beratung: "/img/beratung.webp",
   team: "/img/team.webp",
   aktivierung: "/img/aktivierung.webp",
-  heroNew: "/img/palliativ.webp",
 };
 
 const services = [
   { title: "Behandlungspflege", sub: "SGB V – Medizinische Versorgung", desc: "Wundversorgung, Injektionen, Medikamentengabe – durch examinierte Fachkräfte nach ärztlicher Verordnung.", icon: Stethoscope, img: PHOTOS.behandlung },
   { title: "Grundpflege", sub: "SGB XI – Körperpflege", desc: "Körperpflege, Mobilisation, Ernährung – würdevoll und einfühlsam.", icon: HandHeart, img: PHOTOS.grundpflege },
   { title: "Beratungsbesuche", sub: "§ 37.3 SGB XI", desc: "Pflichtberatung für Pflegegeldempfänger – kostenlos und kompetent.", icon: Heart, img: PHOTOS.beratung },
-  { title: "Palliativpflege", sub: "Würdevolle Begleitung", desc: "Einfühlsame Begleitung in der letzten Lebensphase, 24h erreichbar.", icon: Shield, img: PHOTOS.heroNew },
+  { title: "Hauswirtschaftliche Unterstützung", sub: "Entlastung im Alltag", desc: "Einkauf, Reinigung, Wäsche, Mahlzeiten – wir entlasten Sie im Alltag.", icon: Users, img: PHOTOS.hauswirtschaft },
 ];
 
 const testimonials = [
@@ -139,7 +138,7 @@ export default function Home() {
             Pflege, die den ganzen Menschen sieht.
           </h2>
           <p className="text-cm-ink/70 leading-relaxed">
-            Von der medizinischen Behandlungspflege bis zur palliativen Begleitung – wir betreuen Sie mit allen Pflegeleistungen aus einer Hand.
+            Von der medizinischen Behandlungspflege bis zur hauswirtschaftlichen Unterstützung – wir betreuen Sie mit allen Pflegeleistungen aus einer Hand.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">

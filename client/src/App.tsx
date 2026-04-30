@@ -24,6 +24,9 @@ import PartnerDokumente from "./pages/PartnerDokumente";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import Pflegedienst from "./pages/Pflegedienst";
+import NordendOst from "./pages/NordendOst";
+import Bornheim from "./pages/Bornheim";
+import Ostend from "./pages/Ostend";
 
 function PublicLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -93,6 +96,11 @@ function Router() {
 
       {/* Service-Area-Pages (lokale SEO) */}
       <Route path="/pflegedienst/:city">{() => <PublicLayout><Pflegedienst /></PublicLayout>}</Route>
+
+      {/* Phase-1-Versorgungsgebiete (Strategie 2026-04-30) */}
+      <Route path="/pflege/nordend-ost">{() => <PublicLayout><NordendOst /></PublicLayout>}</Route>
+      <Route path="/pflege/bornheim">{() => <PublicLayout><Bornheim /></PublicLayout>}</Route>
+      <Route path="/pflege/ostend">{() => <PublicLayout><Ostend /></PublicLayout>}</Route>
 
       {/* Legal pages */}
       <Route path="/impressum">{() => <PublicLayout><Impressum /></PublicLayout>}</Route>
