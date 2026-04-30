@@ -17,69 +17,34 @@ export interface City {
   travelHint: string;
 }
 
+// Phase-1-Versorgungsgebiete (Strategie 2026-04-30):
+// Nordend-Ost · Bornheim · Ostend (Heimrevier um Berger Str. 69).
+// Offenbach, Hanau, Sachsenhausen, Bockenheim sind NICHT Phase 1 — kommen später.
 export const CITIES: City[] = [
   {
     slug: "frankfurt",
     name: "Frankfurt am Main",
-    heroTitle: "Ambulante Pflege in Frankfurt am Main",
+    heroTitle: "Ambulante Pflege in Frankfurt – Nordend-Ost · Bornheim · Ostend",
     intro:
-      "Direkt aus dem Bornheimer Standort versorgen wir Patientinnen und Patienten in ganz Frankfurt – mit Grund- und Behandlungspflege, kultursensibel und in sieben Sprachen.",
+      "Direkt aus dem Standort Berger Straße 69 versorgen wir Patientinnen und Patienten im Heimrevier rund um Bornheim und Nordend – mit Grund- und Behandlungspflege, kultursensibel und in sieben Sprachen.",
     districts: [
+      "Nordend-Ost",
       "Bornheim",
-      "Nordend",
-      "Sachsenhausen",
       "Ostend",
-      "Bockenheim",
-      "Gallus",
-      "Höchst",
-      "Riederwald",
     ],
     hospitals: [
-      "Universitätsklinikum Frankfurt",
-      "Markus Krankenhaus",
-      "Sankt Katharinen-Krankenhaus",
-      "Bürgerhospital",
-      "Klinikum Frankfurt Höchst",
+      "Bürgerhospital Frankfurt (Nordend-West)",
+      "Sankt Katharinen-Krankenhaus (Bornheim, mit eigener Geriatrie)",
+      "Bethanien-Krankenhaus (Nordendgrenze)",
+      "Klinik Rotes Kreuz (Ostend)",
     ],
     highlights: [
       "Wir sind Vertragspartner aller gesetzlichen Krankenkassen in Hessen (§ 132a SGB V & § 72 SGB XI).",
-      "Tägliche Touren in Bornheim und Nordend – meist innerhalb von 24 Stunden ein Erstgespräch vor Ort möglich.",
+      "E-Bike-Touren in Nordend-Ost, Bornheim und Ostend – meist innerhalb von 24 Stunden ein Erstgespräch vor Ort möglich.",
       "Mehrsprachiges Team mit Deutsch, Türkisch, Arabisch, Russisch, Polnisch, Englisch und Französisch.",
     ],
-    geo: { lat: 50.1109, lng: 8.6821 },
-    travelHint: "Hauptstandort Berger Straße 69 – wir sind in 5–20 Minuten in jedem Frankfurter Stadtteil.",
-  },
-  {
-    slug: "offenbach",
-    name: "Offenbach am Main",
-    heroTitle: "Ambulanter Pflegedienst in Offenbach",
-    intro:
-      "In Offenbach betreuen wir die Stadtteile Innenstadt, Bürgel, Bieber und Tempelsee. Schnelle Übernahme nach Klinikaufenthalt oder bei akut steigendem Pflegebedarf – auf Wunsch mehrsprachig.",
-    districts: ["Innenstadt", "Bürgel", "Bieber", "Tempelsee", "Rumpenheim", "Lauterborn"],
-    hospitals: ["Sana Klinikum Offenbach", "Ketteler Krankenhaus"],
-    highlights: [
-      "Enge Zusammenarbeit mit dem Sana Klinikum Offenbach für nahtlose Entlassungen ins häusliche Umfeld.",
-      "Für Bornheim/Bürgel-Anbindung: in der Regel binnen 4 Stunden vor Ort bei Notfall-Übernahmen.",
-      "Tägliche Touren – 7 Tage die Woche, auch an Feiertagen.",
-    ],
-    geo: { lat: 50.0956, lng: 8.7761 },
-    travelHint: "Von der Berger Straße ca. 20 Minuten – wir versorgen Offenbach werktäglich.",
-  },
-  {
-    slug: "hanau",
-    name: "Hanau",
-    heroTitle: "Häusliche Pflege in Hanau und Maintal",
-    intro:
-      "Vom Stadtzentrum Hanau bis nach Maintal-Bischofsheim und Bad Vilbel – wir betreuen Patient*innen im östlichen Rhein-Main-Gebiet mit qualifizierter Behandlungspflege und kultursensibler Grundpflege.",
-    districts: ["Hanau-Innenstadt", "Großauheim", "Steinheim", "Wolfgang", "Lamboy", "Maintal-Bischofsheim", "Bad Vilbel"],
-    hospitals: ["Klinikum Hanau", "St. Vinzenz-Krankenhaus Hanau"],
-    highlights: [
-      "Kooperation mit dem Klinikum Hanau für Patientenüberleitungen.",
-      "Fester Tourenplan in Hanau-Innenstadt, Großauheim und Maintal-Bischofsheim.",
-      "Spezialisiert auf Wundversorgung und Diabetes-Behandlungspflege.",
-    ],
-    geo: { lat: 50.1357, lng: 8.9151 },
-    travelHint: "Aus Frankfurt-Bornheim erreichen wir Hanau und Maintal in 25–35 Minuten.",
+    geo: { lat: 50.1234, lng: 8.7045 },
+    travelHint: "Hauptstandort Berger Straße 69 – wir sind in unter 10 Minuten in jedem Phase-1-Stadtteil.",
   },
 ];
 

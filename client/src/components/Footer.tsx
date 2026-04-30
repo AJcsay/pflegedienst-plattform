@@ -48,9 +48,9 @@ export default function Footer() {
             </div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-cm-mint pt-3">Versorgungsgebiet</h4>
             <div className="space-y-2 text-sm">
-              <Link href="/pflegedienst/frankfurt" className="block py-2 hover:text-cm-mint transition-colors">Pflegedienst Frankfurt</Link>
-              <Link href="/pflegedienst/offenbach" className="block py-2 hover:text-cm-mint transition-colors">Pflegedienst Offenbach</Link>
-              <Link href="/pflegedienst/hanau" className="block py-2 hover:text-cm-mint transition-colors">Pflegedienst Hanau</Link>
+              <Link href="/pflege/nordend-ost" className="block py-2 hover:text-cm-mint transition-colors">Pflege Nordend-Ost</Link>
+              <Link href="/pflege/bornheim" className="block py-2 hover:text-cm-mint transition-colors">Pflege Bornheim</Link>
+              <Link href="/pflege/ostend" className="block py-2 hover:text-cm-mint transition-colors">Pflege Ostend</Link>
             </div>
           </div>
 

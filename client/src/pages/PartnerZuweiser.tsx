@@ -281,7 +281,7 @@ export default function PartnerZuweiser() {
             <div className="bg-white p-6 rounded-3xl border border-cm-teal-100">
               <h3 className="font-semibold text-cm-ink mb-2">Versorgungsgebiet</h3>
               <p className="text-sm text-cm-ink/70">
-                Frankfurt am Main, Offenbach, Bad Vilbel, Maintal, Hanau, Neu-Isenburg.
+                Frankfurt-Nordend-Ost, Bornheim, Ostend (Phase 1, ab Mai 2026). Erweiterung in Phase 2/3 geplant.
               </p>
             </div>
             <div className="bg-cm-ink text-white p-6 rounded-3xl">

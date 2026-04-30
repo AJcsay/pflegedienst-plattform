@@ -26,7 +26,7 @@ const services = [
 const testimonials = [
   {
     name: "Fatima A.",
-    role: "Tochter eines Patienten, Sachsenhausen",
+    role: "Tochter eines Patienten, Nordend-Ost",
     text: "Mein Vater spricht kaum Deutsch – das war für uns immer ein Problem. Bei CuraMain wurde uns sofort eine arabischsprachige Pflegekraft zugeteilt. Er fühlt sich endlich verstanden und gut versorgt.",
   },
   {
@@ -36,7 +36,7 @@ const testimonials = [
   },
   {
     name: "Renate H.",
-    role: "Patientin, Offenbach",
+    role: "Patientin, Bornheim",
     text: "Nach meiner Hüft-OP wollte ich so schnell wie möglich nach Hause. CuraMain hat die Entlassung mit der Klinik koordiniert und war schon am ersten Tag da. Ich hätte nicht gedacht, dass das so reibungslos klappt.",
   },
 ];
@@ -52,7 +52,7 @@ export default function Home() {
   useSEO({
     title: "CuraMain – Ambulanter Pflegedienst im Rhein-Main-Gebiet",
     description: "CuraMain: Professioneller ambulanter Pflegedienst im Rhein-Main-Gebiet. Grundpflege, Behandlungspflege & kultursensible Betreuung – persönlich, zuverlässig, mehrsprachig.",
-    keywords: "Pflegedienst Rhein-Main, ambulante Pflege Rhein-Main-Gebiet, kultursensible Pflege, Pflegedienst Frankfurt, Pflegedienst Offenbach, Pflegedienst Wiesbaden, Grundpflege, Behandlungspflege, Verhinderungspflege, CuraMain",
+    keywords: "Pflegedienst Frankfurt, ambulante Pflege Frankfurt, kultursensible Pflege, Pflegedienst Nordend-Ost, Pflegedienst Bornheim, Pflegedienst Ostend, Grundpflege, Behandlungspflege, Verhinderungspflege, CuraMain",
     canonical: "https://www.curamain.de",
   });
 
@@ -211,21 +211,21 @@ export default function Home() {
           <div className="flex flex-wrap items-end justify-between gap-4 mb-6">
             <div>
               <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cm-teal">Versorgungsgebiet</span>
-              <h2 className="h-serif text-3xl lg:text-4xl text-cm-ink mt-2">Pflege im ganzen Rhein-Main-Gebiet</h2>
+              <h2 className="h-serif text-3xl lg:text-4xl text-cm-ink mt-2">Pflege im Bornheim-Nordend-Heimrevier</h2>
             </div>
           </div>
           <p className="text-cm-ink/70 leading-relaxed mb-6 max-w-2xl">
-            Vom Hauptstandort in Frankfurt-Bornheim versorgen wir Patientinnen und Patienten täglich in den umliegenden Städten – mit kurzen Anfahrtszeiten und festen Tourenplänen.
+            Aus der Berger Straße 69 versorgen wir das Heimrevier rund um Nordend-Ost, Bornheim und Ostend – mit E-Bike-Touren, kurzen Anfahrtszeiten und festen Tourenplänen.
           </p>
           <div className="grid sm:grid-cols-3 gap-3">
             {[
-              { slug: "frankfurt", name: "Frankfurt am Main", sub: "Bornheim · Nordend · Sachsenhausen · Bockenheim" },
-              { slug: "offenbach", name: "Offenbach", sub: "Innenstadt · Bürgel · Bieber · Tempelsee" },
-              { slug: "hanau", name: "Hanau", sub: "Innenstadt · Großauheim · Maintal · Bad Vilbel" },
+              { slug: "nordend-ost", name: "Nordend-Ost", sub: "Vom Merianplatz bis zum Bürgerhospital" },
+              { slug: "bornheim", name: "Bornheim", sub: "Saalburgstraße · Bornheim Mitte · Sankt Katharinen" },
+              { slug: "ostend", name: "Ostend", sub: "EZB-Quartier · Habsburgerallee · Klinik Rotes Kreuz" },
             ].map((c) => (
               <Link
                 key={c.slug}
-                href={`/pflegedienst/${c.slug}`}
+                href={`/pflege/${c.slug}`}
                 className="group bg-cm-cream/60 hover:bg-cm-teal-50 border border-cm-teal-100 hover:border-cm-teal-300 rounded-2xl p-5 transition-colors"
               >
                 <div className="font-semibold text-cm-ink group-hover:text-cm-teal-700 mb-1 flex items-center gap-2">

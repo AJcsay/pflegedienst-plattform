@@ -35,12 +35,11 @@ const PartnerTabs = ({ active }: { active: string }) => (
 const inputCls =
   "w-full px-4 py-3 rounded-xl border border-cm-teal-100 focus:border-cm-teal-300 focus:ring-2 focus:ring-cm-teal-100 outline-none transition";
 
+// Phase-1-Versorgungsgebiete (Strategie 2026-04-30): Nordend-Ost, Bornheim, Ostend
 const LIVE_AVAILABILITY = [
-  { region: "Frankfurt-Bornheim/Nordend", a: "🟢 Frei", b: "🟢 Frei", c: "🟡 Begrenzt" },
-  { region: "Frankfurt-Sachsenhausen", a: "🟢 Frei", b: "🟡 Begrenzt", c: "🟢 Frei" },
-  { region: "Offenbach", a: "🟢 Frei", b: "🟢 Frei", c: "🟢 Frei" },
-  { region: "Bad Vilbel / Maintal", a: "🟡 Begrenzt", b: "🔴 Ausgelastet", c: "🟡 Begrenzt" },
-  { region: "Hanau", a: "🟢 Frei", b: "🟢 Frei", c: "🟢 Frei" },
+  { region: "Frankfurt-Nordend-Ost", a: "🟢 Frei", b: "🟢 Frei", c: "🟡 Begrenzt" },
+  { region: "Frankfurt-Bornheim", a: "🟢 Frei", b: "🟡 Begrenzt", c: "🟢 Frei" },
+  { region: "Frankfurt-Ostend", a: "🟢 Frei", b: "🟢 Frei", c: "🟢 Frei" },
 ];
 
 export default function PartnerKapazitaet() {
@@ -232,7 +231,7 @@ export default function PartnerKapazitaet() {
               </div>
               <div>
                 <label className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Region / PLZ</label>
-                <input value={form.region} onChange={(e) => setForm((f) => ({ ...f, region: e.target.value }))} placeholder="z. B. Frankfurt-Sachsenhausen" className={inputCls} />
+                <input value={form.region} onChange={(e) => setForm((f) => ({ ...f, region: e.target.value }))} placeholder="z. B. Frankfurt-Nordend-Ost" className={inputCls} />
               </div>
             </div>
             <div className="grid sm:grid-cols-2 gap-4">

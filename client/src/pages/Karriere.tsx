@@ -43,8 +43,8 @@ const allJobs: Job[] = (jobsData as { jobs: Job[] }).jobs.filter((j) => j.active
 export default function Karriere() {
   useSEO({
     title: "Jobs & Karriere beim Pflegedienst – CuraMain",
-    description: "Jetzt als Pflegefachkraft, Pflegehelfer oder in der Hauswirtschaft bei CuraMain im Rhein-Main-Gebiet bewerben. Übertarifliche Bezahlung, flexible Dienstpläne, Dienstwagen.",
-    keywords: "Pflegejobs Rhein-Main, Pflegefachkraft Stelle Rhein-Main-Gebiet, Pflegedienst Karriere Frankfurt Offenbach Wiesbaden, CuraMain Jobs",
+    description: "Jetzt als Pflegefachkraft, Pflegehelfer oder in der Hauswirtschaft bei CuraMain in Frankfurt-Bornheim/Nordend bewerben. Übertarifliche Bezahlung, E-Bike-Touren statt Pkw-Stress, flexible Dienstpläne.",
+    keywords: "Pflegejobs Frankfurt, Pflegefachkraft Stelle Bornheim Nordend, Pflegedienst Karriere Frankfurt-Ost, CuraMain Jobs",
     canonical: "https://www.curamain.de/karriere",
   });
 
