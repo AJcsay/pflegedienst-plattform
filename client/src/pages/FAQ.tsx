@@ -2,18 +2,84 @@ import { Link } from "wouter";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight, Phone, HelpCircle } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import faqData from "@/data/faq.json";
 
 export default function FAQ() {
   const [activeCategory, setActiveCategory] = useState("pflegegrade");
 
   useSEO({
-    title: "Häufige Fragen zur ambulanten Pflege – CuraMain Rhein-Main",
-    description: "Antworten auf häufige Fragen rund um ambulante Pflege, Pflegegrade, Kosten, Leistungen und Antragstellung. CuraMain berät Sie kostenlos im Rhein-Main-Gebiet.",
-    keywords: "Pflegedienst FAQ, Pflegegrad beantragen, Pflegekosten, ambulante Pflege Fragen, kultursensible Pflege, Verhinderungspflege, CuraMain",
+    title: "Häufige Fragen zur ambulanten Pflege in Frankfurt – CuraMain",
+    description: "Antworten auf häufige Fragen zu Pflegegraden, Kosten, Leistungen und Antragstellung. CuraMain berät Sie kostenlos in Frankfurt – Nordend, Bornheim & Ostend. ☎ 069 79 216 147",
+    keywords: "Pflegedienst FAQ Frankfurt, Pflegegrad beantragen Frankfurt, ambulante Pflege Fragen Frankfurt, Pflegekosten Frankfurt, CuraMain FAQ",
     canonical: "https://www.curamain.de/faq",
   });
+
+  useEffect(() => {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was sind Pflegegrade?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pflegegrade sind eine Einstufung des Pflegebedarfs in Deutschland. Es gibt 5 Pflegegrade, die bestimmen, wie viel Unterstützung eine Person benötigt und wie viel Leistungen die Pflegekasse zahlt – von Pflegegrad 1 (geringe Beeinträchtigung) bis Pflegegrad 5 (schwerste Beeinträchtigung mit besonderen Anforderungen)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie beantrage ich einen Pflegegrad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Stellen Sie einen schriftlichen Antrag bei Ihrer Pflegekasse. Der Medizinische Dienst besucht Sie daraufhin zu Hause und erstellt ein Gutachten. Sie erhalten einen Bescheid mit dem zuerkannten Pflegegrad – die Leistungen gelten rückwirkend ab dem Antragsmonat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viel kostet ambulante Pflege?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Pflegekasse übernimmt je nach Pflegegrad zwischen 316 € (Grad 2) und 901 € (Grad 5) pro Monat für ambulante Sachleistungen. Die tatsächlichen Kosten hängen vom Leistungsumfang ab. CuraMain berät Sie kostenlos über Ihre individuelle Kostenstruktur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist kultursensible Pflege?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kultursensible Pflege bedeutet, dass religiöse, kulturelle und sprachliche Bedürfnisse in der täglichen Pflege berücksichtigt werden. Bei CuraMain in Frankfurt umfasst das mehrsprachige Kommunikation, Respekt vor religiösen Praktiken wie Gebetszeiten oder Speisevorschriften sowie geschlechtssensible Pflegeeinsätze auf Wunsch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was zahlt die Pflegekasse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Pflegekasse zahlt ambulante Pflegeleistungen (Grundpflege, Behandlungspflege, Hauswirtschaft) direkt an den Pflegedienst. Alternativ können Sie Pflegegeld erhalten: Pflegegrad 2: 316 €/Monat, Pflegegrad 3: 545 €/Monat, Pflegegrad 4: 728 €/Monat, Pflegegrad 5: 901 €/Monat. Kombinationen sind möglich."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Stadtteile in Frankfurt versorgt CuraMain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CuraMain versorgt aktuell Frankfurt-Nordend-Ost, Frankfurt-Bornheim und Frankfurt-Ostend. Unser Standort in der Berger Straße 69 liegt mitten im Versorgungsgebiet – per E-Bike erreichen wir jeden Haushalt in unter 10 Minuten."
+          }
+        }
+      ]
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = "faq-schema";
+    script.textContent = JSON.stringify(faqSchema);
+    document.head.appendChild(script);
+    return () => {
+      const el = document.getElementById("faq-schema");
+      if (el) el.remove();
+    };
+  }, []);
 
   const currentCategory = faqData.categories.find((cat) => cat.id === activeCategory);
 

@@ -66,9 +66,9 @@ const compactServices = [
 
 export default function Leistungen() {
   useSEO({
-    title: "Pflegeleistungen & Kultursensible Pflege im Rhein-Main-Gebiet – CuraMain",
-    description: "Umfassende Pflegeleistungen im Rhein-Main-Gebiet: Behandlungspflege, Grundpflege, Verhinderungspflege, Beratungsbesuche § 37.3 & kultursensible Betreuung. Kassenzugelassen.",
-    keywords: "Pflegeleistungen Rhein-Main, kultursensible Pflege Rhein-Main-Gebiet, interkulturelle Pflege, Grundpflege, Behandlungspflege, Verhinderungspflege, Beratungsbesuche, ambulante Pflege Rhein-Main",
+    title: "Pflegeleistungen Frankfurt – Behandlungspflege, Grundpflege & mehr | CuraMain",
+    description: "Ambulante Pflegeleistungen in Frankfurt: Behandlungspflege (SGB V), Grundpflege (SGB XI), Verhinderungspflege, Beratungsbesuche § 37.3 & kultursensible Betreuung. Kassenzugelassen.",
+    keywords: "Pflegeleistungen Frankfurt, Behandlungspflege Frankfurt, Grundpflege Frankfurt, Verhinderungspflege Frankfurt, Beratungsbesuche Frankfurt, kultursensible Pflege Frankfurt, ambulante Pflege Frankfurt kassenzugelassen",
     canonical: "https://www.curamain.de/leistungen",
   });
 
@@ -174,7 +174,7 @@ export default function Leistungen() {
               Das Rhein-Main-Gebiet ist eine der vielfältigsten Regionen Deutschlands. Unser mehrsprachiges Team respektiert religiöse Bedürfnisse, Geschlechtssensibilität und kulturelle Traditionen.
             </p>
             <ul className="space-y-3 text-sm text-white/85">
-              <li className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-cm-mint flex-shrink-0" /><span><strong className="text-white">7+ Sprachen</strong> – Deutsch, Arabisch, Türkisch, Russisch, Polnisch, Englisch, Französisch</span></li>
+              <li className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-cm-mint flex-shrink-0" /><span><strong className="text-white">Mehrsprachiges Team</strong> – Pflege in Ihrer Sprache, ohne Missverständnisse</span></li>
               <li className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-cm-mint flex-shrink-0" /><span><strong className="text-white">Religiöse Bedürfnisse</strong> – Gebetszeiten, Ramadan, halal/koschere Ernährung</span></li>
               <li className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-cm-mint flex-shrink-0" /><span><strong className="text-white">Geschlechtssensibel</strong> – Auf Wunsch ausschließlich weibliche oder männliche Pflegekräfte</span></li>
             </ul>

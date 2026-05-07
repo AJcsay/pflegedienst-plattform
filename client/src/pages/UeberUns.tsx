@@ -14,19 +14,18 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2020", text: "Gründung von CuraMain im Rhein-Main-Gebiet – mit dem Ziel, ambulante Pflege menschlicher und moderner zu gestalten." },
-  { year: "2021", text: "Erste Kassenzulassung und Aufbau eines qualifizierten Pflegeteams." },
-  { year: "2022", text: "Erweiterung des Leistungsangebots: Behandlungspflege, Palliativpflege und Hauswirtschaft." },
-  { year: "2023", text: "Wachstum auf über 80 betreute Patienten und Ausbau der Kooperationen mit Kliniken und Hausärzten." },
-  { year: "2024", text: "Einführung digitaler Pflegeprozesse und Launch der neuen Online-Plattform für Patienten, Bewerber und Partner." },
-  { year: "2025", text: "Kontinuierliches Wachstum – mit dem Anspruch, der vertrauenswürdigste Pflegedienst im Rhein-Main-Gebiet zu werden." },
+  { year: "2011", text: "Boys Bangura beginnt seine Pflegekarriere in Frankfurt. Erste Stationen in der stationären und ambulanten Versorgung – der Grundstein für über ein Jahrzehnt praktische Pflegeerfahrung." },
+  { year: "2016", text: "Übernahme von Leitungsaufgaben: Tourenplanung, Einarbeitung neuer Pflegekräfte und direkte Zusammenarbeit mit Hausärzten und Kliniken im Frankfurter Ostend und Bornheim." },
+  { year: "2022", text: "Wachsende Überzeugung: Pflege in Frankfurt braucht einen Dienst, der kulturelle Vielfalt nicht als Herausforderung, sondern als Stärke begreift. Die Idee zu CuraMain entsteht." },
+  { year: "2024", text: "Intensive Vorbereitungsphase: Konzeptentwicklung, Aufbau des Netzwerks mit Krankenhäusern und Sozialdiensten, Standortwahl Berger Straße 69 – mitten im Versorgungsgebiet." },
+  { year: "2026", text: "Gründung der CuraMain Pflegedienst GmbH in Frankfurt am Main. Mit über 13 Jahren Pflegeerfahrung und einem mehrsprachigen Team startet CuraMain in Nordend, Bornheim und Ostend." },
 ];
 
 export default function UeberUns() {
   useSEO({
-    title: "Über CuraMain – Ambulanter Pflegedienst im Rhein-Main-Gebiet",
-    description: "CuraMain: Ambulanter Pflegedienst im Rhein-Main-Gebiet, gegründet 2020. Lernen Sie unser Team, unsere Werte und unsere Geschichte kennen.",
-    keywords: "CuraMain über uns, Pflegedienst Rhein-Main Geschichte, ambulante Pflege Team Rhein-Main-Gebiet",
+    title: "Über CuraMain – Ambulanter Pflegedienst Frankfurt mit 13+ Jahren Erfahrung",
+    description: "CuraMain Frankfurt: Gegründet von erfahrenen Pflegefachkräften mit über 13 Jahren Praxis in Nordend, Bornheim und Ostend. Lernen Sie unser Team und unsere Werte kennen.",
+    keywords: "CuraMain über uns, Pflegedienst Frankfurt Team, ambulante Pflege Frankfurt Erfahrung, kultursensible Pflege Frankfurt Gründer",
     canonical: "https://www.curamain.de/ueber-uns",
   });
 
@@ -40,13 +39,13 @@ export default function UeberUns() {
         <div className="relative z-10 container pt-6 pb-10">
           <span className="pill inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm border border-white/60 shadow-sm">
             <Heart className="w-4 h-4 text-cm-teal" fill="currentColor" />
-            Gegründet 2020 · Frankfurt am Main
+            13+ Jahre Pflegeerfahrung · Frankfurt am Main
           </span>
           <h1 className="h-serif text-5xl lg:text-7xl text-cm-teal mt-6 mb-6 max-w-3xl leading-[1.05]">
             Pflege aus Überzeugung.
           </h1>
           <p className="text-lg text-cm-ink/80 max-w-2xl leading-relaxed">
-            CuraMain steht für moderne ambulante Pflege im Rhein-Main-Gebiet. Seit unserer Gründung wachsen wir stetig – angetrieben von echter Menschlichkeit und dem Anspruch, Pflege würdevoll und professionell zu gestalten.
+            CuraMain steht für ambulante Pflege in Frankfurt, die wirklich funktioniert. Gegründet von Pflegefachkräften mit über 13 Jahren praktischer Erfahrung in Nordend, Bornheim und Ostend – angetrieben von echter Menschlichkeit und dem Anspruch, Pflege würdevoll und professionell zu gestalten.
           </p>
         </div>
       </section>

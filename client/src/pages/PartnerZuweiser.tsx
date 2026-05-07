@@ -38,8 +38,8 @@ const inputCls =
 export default function PartnerZuweiser() {
   useSEO({
     title: "Zuweiser-Portal für Ärzte & Kliniken – CuraMain",
-    description: "Patientenüberleitung an CuraMain: Zuweiser-Portal für Hausärzte, Fachärzte, Kliniken & Krankenhäuser im Rhein-Main-Gebiet. Schnelle Rückmeldung, zuverlässige ambulante Weiterversorgung.",
-    keywords: "Zuweiser Pflegedienst Rhein-Main, Patientenüberleitung Rhein-Main-Gebiet, ambulante Pflege nach Klinik, CuraMain Partner",
+    description: "Patientenüberleitung an CuraMain Frankfurt: Zuweiser-Portal für Hausärzte, Fachärzte & Kliniken. Rückmeldung in 4h, nahtlose ambulante Weiterversorgung in Nordend, Bornheim & Ostend.",
+    keywords: "Zuweiser Pflegedienst Frankfurt, Patientenüberleitung Frankfurt, ambulante Pflege nach Klinik Frankfurt, Pflegedienst Partner Frankfurt, Bürgerhospital Zuweiser, Sankt Katharinen Zuweiser",
     canonical: "https://www.curamain.de/partner/zuweiser",
   });
 
@@ -281,7 +281,7 @@ export default function PartnerZuweiser() {
             <div className="bg-white p-6 rounded-3xl border border-cm-teal-100">
               <h3 className="font-semibold text-cm-ink mb-2">Versorgungsgebiet</h3>
               <p className="text-sm text-cm-ink/70">
-                Frankfurt-Nordend-Ost, Bornheim, Ostend (Phase 1, ab Mai 2026). Erweiterung in Phase 2/3 geplant.
+                Frankfurt-Nordend-Ost, Bornheim und Ostend. Erweiterung des Versorgungsgebiets ist geplant.
               </p>
             </div>
             <div className="bg-cm-ink text-white p-6 rounded-3xl">

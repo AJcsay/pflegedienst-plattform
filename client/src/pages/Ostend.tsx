@@ -3,14 +3,48 @@ import {
   MapPin, PhoneIcon, Mail, ArrowRight, Bike, Hospital, Languages
 } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import { useEffect } from "react";
 
 export default function Ostend() {
   useSEO({
-    title: "Ambulanter Pflegedienst Ostend Frankfurt – CuraMain",
-    description: "Pflege im Ostend: vom EZB-Quartier bis zum Zoo. 7+ Sprachen, Klinik-Anbindung, ohne Verkehrsstress per E-Bike.",
-    keywords: "Pflege Ostend Frankfurt, Pflegedienst Ostend, ambulante Pflege Ostend, EZB Quartier, CuraMain",
+    title: "Pflegedienst Frankfurt Ostend – Klinik Rotes Kreuz & EZB-Quartier | CuraMain",
+    description: "Ambulanter Pflegedienst Frankfurt-Ostend: Klinik-Anbindung Rotes Kreuz, mehrsprachig, per E-Bike in unter 10 Min. Kostenlose Erstberatung. ☎ 069 79 216 147",
+    keywords: "Pflegedienst Frankfurt Ostend, ambulante Pflege Ostend Frankfurt, häusliche Pflege Ostend, Pflegedienst Klinik Rotes Kreuz Frankfurt, Pflegedienst EZB Quartier Frankfurt, CuraMain Ostend",
     canonical: "https://www.curamain.de/pflege/ostend",
   });
+
+  useEffect(() => {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://www.curamain.de/pflege/ostend#local",
+      "name": "CuraMain – Pflegedienst Frankfurt Ostend",
+      "description": "Ambulanter Pflegedienst in Frankfurt-Ostend. Klinik-Anbindung Rotes Kreuz, mehrsprachig, kassenzugelassen.",
+      "url": "https://www.curamain.de/pflege/ostend",
+      "telephone": "+49 69 79216147",
+      "email": "info@curamain.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Berger Straße 69",
+        "addressLocality": "Frankfurt am Main",
+        "addressRegion": "Ostend",
+        "postalCode": "60316",
+        "addressCountry": "DE"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 50.1290, "longitude": 8.7094 },
+      "areaServed": { "@type": "Place", "name": "Frankfurt-Ostend" },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" }
+      ],
+      "parentOrganization": { "@id": "https://www.curamain.de/#business" }
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = "local-schema-ostend";
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+    return () => { const el = document.getElementById("local-schema-ostend"); if (el) el.remove(); };
+  }, []);
 
   return (
     <div className="bg-cm-cream">
@@ -40,7 +74,7 @@ export default function Ostend() {
             Das Ostend hat sich in den letzten zehn Jahren stärker verändert als fast jeder andere Frankfurter Stadtteil. Die Europäische Zentralbank, neue Wohnquartiere am Osthafen, der Zoo, das Hanauer Landstraßen-Quartier — und gleichzeitig Generationen von Familien, die hier seit Jahrzehnten leben. Unsere Pflege wird beidem gerecht.
           </p>
           <p className="text-lg text-cm-ink/80 leading-relaxed mb-6">
-            Aus der Berger Straße 69 sind wir in unter 12 Minuten am Ostpark, an der Klinik des Roten Kreuzes oder in den ruhigen Wohnstraßen rund um die Habsburgerallee. Mit dem E-Bike kommen wir auch dort an, wo Autos im EZB-Berufsverkehr feststecken. Unsere Pflegekräfte sprechen die Sprachen der vielfältigen Ostend-Bevölkerung — von Türkisch und Arabisch bis Russisch und Polnisch.
+            Aus der Berger Straße 69 sind wir in unter 12 Minuten am Ostpark, an der Klinik des Roten Kreuzes oder in den ruhigen Wohnstraßen rund um die Habsburgerallee. Mit dem E-Bike kommen wir auch dort an, wo Autos im EZB-Berufsverkehr feststecken. Unser mehrsprachiges Team spricht die Sprachen der vielfältigen Ostend-Bevölkerung — in über 5 Sprachen, kultursensibel und vertraut mit den Traditionen des Stadtteils.
           </p>
           <p className="text-lg text-cm-ink/80 leading-relaxed">
             Im Ostend bedeutet Pflege Anschluss: Anschluss an das Krankenhaus, Anschluss an die Hausarztpraxis und vor allem Anschluss an die Menschen, die Sie täglich begleiten.
@@ -78,7 +112,7 @@ export default function Ostend() {
             </div>
             <h3 className="h-serif text-xl text-cm-ink mb-3">Vielsprachige Versorgung im vielsprachigsten Stadtteil</h3>
             <p className="text-sm text-cm-ink/70 leading-relaxed">
-              Wir pflegen in 7+ Sprachen — weil Ihre Würde nicht von Ihrer Muttersprache abhängen darf.
+              Unser mehrsprachiges Team pflegt in Ihrer Sprache — weil Ihre Würde nicht von Ihrer Muttersprache abhängen darf.
             </p>
           </div>
         </div>

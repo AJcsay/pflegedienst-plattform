@@ -41,7 +41,7 @@ export const CITIES: City[] = [
     highlights: [
       "Wir sind Vertragspartner aller gesetzlichen Krankenkassen in Hessen (§ 132a SGB V & § 72 SGB XI).",
       "E-Bike-Touren in Nordend-Ost, Bornheim und Ostend – meist innerhalb von 24 Stunden ein Erstgespräch vor Ort möglich.",
-      "Mehrsprachiges Team mit Deutsch, Türkisch, Arabisch, Russisch, Polnisch, Englisch und Französisch.",
+      "Mehrsprachiges Team — wir pflegen in über 5 Sprachen, kultursensibel und geschlechtssensibel.",
     ],
     geo: { lat: 50.1234, lng: 8.7045 },
     travelHint: "Hauptstandort Berger Straße 69 – wir sind in unter 10 Minuten in jedem Phase-1-Stadtteil.",

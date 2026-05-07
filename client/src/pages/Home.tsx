@@ -50,9 +50,9 @@ const stats = [
 
 export default function Home() {
   useSEO({
-    title: "CuraMain – Ambulanter Pflegedienst im Rhein-Main-Gebiet",
-    description: "CuraMain: Professioneller ambulanter Pflegedienst im Rhein-Main-Gebiet. Grundpflege, Behandlungspflege & kultursensible Betreuung – persönlich, zuverlässig, mehrsprachig.",
-    keywords: "Pflegedienst Frankfurt, ambulante Pflege Frankfurt, kultursensible Pflege, Pflegedienst Nordend-Ost, Pflegedienst Bornheim, Pflegedienst Ostend, Grundpflege, Behandlungspflege, Verhinderungspflege, CuraMain",
+    title: "CuraMain – Ambulanter Pflegedienst Frankfurt | Nordend · Bornheim · Ostend",
+    description: "CuraMain: Ambulanter Pflegedienst in Frankfurt – Nordend, Bornheim & Ostend. Grundpflege, Behandlungspflege & kultursensible Betreuung. Kassenzugelassen. ☎ 069 79 216 147",
+    keywords: "Pflegedienst Frankfurt, ambulanter Pflegedienst Frankfurt, häusliche Pflege Frankfurt, Pflegedienst Frankfurt Nordend, Pflegedienst Frankfurt Bornheim, Pflegedienst Frankfurt Ostend, kultursensible Pflege Frankfurt, mehrsprachiger Pflegedienst, Grundpflege Frankfurt, Behandlungspflege Frankfurt, CuraMain",
     canonical: "https://www.curamain.de",
   });
 
@@ -68,13 +68,13 @@ export default function Home() {
         <div className="relative z-10 container pt-8 pb-8 flex-1">
           <span className="pill inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm border border-white/60 shadow-sm">
             <Heart className="w-4 h-4 text-cm-teal" fill="currentColor" />
-            Ihr Ambulanter Pflegedienst im Rhein-Main-Gebiet
+            Ihr Ambulanter Pflegedienst in Frankfurt
           </span>
           <h1 className="h-serif text-5xl lg:text-7xl text-cm-teal mt-6 mb-6 max-w-3xl leading-[1.05]">
             Weil Ihr Zuhause der beste Ort zum Heilen ist.
           </h1>
           <p className="text-lg text-cm-ink/80 max-w-xl mb-8 leading-relaxed">
-            Professionelle, kultursensible Pflege – direkt bei Ihnen zu Hause im Rhein-Main-Gebiet. Unser mehrsprachiges Team begleitet Sie mit Kompetenz, Herz und echtem Verständnis für Ihre Bedürfnisse.
+            Professionelle, kultursensible Pflege in Frankfurt – direkt bei Ihnen zu Hause in Nordend, Bornheim und Ostend. Unser mehrsprachiges Team begleitet Sie mit Kompetenz, Herz und echtem Verständnis für Ihre Bedürfnisse.
           </p>
           <div className="flex flex-wrap gap-3 mb-6">
             <Link
@@ -104,11 +104,11 @@ export default function Home() {
             </span>
             <span className="pill border border-white/60 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm shadow-sm">
               <Globe2 className="w-3.5 h-3.5 text-cm-teal-700" />
-              7+ Sprachen
+              Mehrsprachig
             </span>
             <span className="pill border border-white/60 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm shadow-sm">
               <Award className="w-3.5 h-3.5 text-cm-teal-700" />
-              5+ Jahre im Rhein-Main-Gebiet
+              Frankfurt – Nordend · Bornheim · Ostend
             </span>
           </div>
         </div>
@@ -178,11 +178,11 @@ export default function Home() {
               Vielfalt ist <span className="text-cm-teal-600">unsere Stärke.</span>
             </h2>
             <p className="text-cm-ink/70 leading-relaxed mb-6">
-              Das Rhein-Main-Gebiet ist eine der vielfältigsten Regionen Deutschlands. Bei CuraMain spiegelt sich diese Vielfalt in unserem Team wider – wir sprechen über 7 Sprachen und respektieren religiöse, kulturelle und geschlechtssensible Bedürfnisse.
+              Frankfurt ist eine der vielfältigsten Städte Deutschlands. Bei CuraMain spiegelt sich diese Vielfalt in unserem Team wider – unser mehrsprachiges Team respektiert religiöse, kulturelle und geschlechtssensible Bedürfnisse.
             </p>
             <ul className="space-y-2.5">
               {[
-                { t: "Mehrsprachiges Team", d: "Deutsch, Arabisch, Türkisch, Russisch, Polnisch, Englisch, Französisch." },
+                { t: "Mehrsprachiges Team", d: "Pflege in Ihrer Sprache – unser Team kommuniziert in mehreren Sprachen." },
                 { t: "Religiös sensibel", d: "Gebetszeiten, Ramadan, halal/koschere Ernährung." },
                 { t: "Geschlechtssensibel", d: "Auf Wunsch ausschließlich weibliche oder männliche Pflegekräfte." },
               ].map((p) => (
@@ -307,7 +307,7 @@ export default function Home() {
               </a>
             </div>
             <div className="mt-6 flex flex-wrap gap-3 justify-center text-sm text-white/80">
-              <span className="flex items-center gap-1.5"><Users className="w-4 h-4" />7+ Sprachen</span>
+              <span className="flex items-center gap-1.5"><Users className="w-4 h-4" />Mehrsprachig</span>
               <span className="flex items-center gap-1.5"><Shield className="w-4 h-4" />Kassenzugelassen</span>
               <span className="flex items-center gap-1.5"><Heart className="w-4 h-4" />Mo–Fr 8:00–18:00, Notfall 24/7</span>
             </div>

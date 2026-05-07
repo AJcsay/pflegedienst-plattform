@@ -3,14 +3,48 @@ import {
   MapPin, PhoneIcon, Mail, ArrowRight, Stethoscope, Bike, Languages
 } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import { useEffect } from "react";
 
 export default function Bornheim() {
   useSEO({
-    title: "Ambulanter Pflegedienst Bornheim Frankfurt – CuraMain",
-    description: "Pflege in Bornheim mit Geriatrie-Anbindung Sankt Katharinen. Mehrsprachig, kultursensibel, E-Bike-schnell. Kostenlose Beratung.",
-    keywords: "Pflege Bornheim Frankfurt, Pflegedienst Bornheim, ambulante Pflege Bornheim, Sankt Katharinen, CuraMain",
+    title: "Pflegedienst Frankfurt Bornheim – mehrsprachig & kassenzugelassen | CuraMain",
+    description: "Ambulanter Pflegedienst Frankfurt-Bornheim: Geriatrie-Anbindung Sankt Katharinen, mehrsprachig, kultursensibel. Kostenlose Erstberatung. ☎ 069 79 216 147",
+    keywords: "Pflegedienst Frankfurt Bornheim, ambulante Pflege Bornheim Frankfurt, häusliche Pflege Bornheim, Pflegedienst Saalburgstraße, Pflegedienst Sankt Katharinen Frankfurt, CuraMain Bornheim",
     canonical: "https://www.curamain.de/pflege/bornheim",
   });
+
+  useEffect(() => {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://www.curamain.de/pflege/bornheim#local",
+      "name": "CuraMain – Pflegedienst Frankfurt Bornheim",
+      "description": "Ambulanter Pflegedienst in Frankfurt-Bornheim. Mehrsprachig, kultursensibel, kassenzugelassen. Geriatrie-Anbindung Sankt Katharinen.",
+      "url": "https://www.curamain.de/pflege/bornheim",
+      "telephone": "+49 69 79216147",
+      "email": "info@curamain.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Berger Straße 69",
+        "addressLocality": "Frankfurt am Main",
+        "addressRegion": "Bornheim",
+        "postalCode": "60316",
+        "addressCountry": "DE"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 50.1290, "longitude": 8.7094 },
+      "areaServed": { "@type": "Place", "name": "Frankfurt-Bornheim" },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" }
+      ],
+      "parentOrganization": { "@id": "https://www.curamain.de/#business" }
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = "local-schema-bornheim";
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+    return () => { const el = document.getElementById("local-schema-bornheim"); if (el) el.remove(); };
+  }, []);
 
   return (
     <div className="bg-cm-cream">
@@ -78,7 +112,7 @@ export default function Bornheim() {
             </div>
             <h3 className="h-serif text-xl text-cm-ink mb-3">Pflege aus Überzeugung — kultur- und geschlechtssensibel</h3>
             <p className="text-sm text-cm-ink/70 leading-relaxed">
-              Egal ob türkische, arabische, polnische oder deutsche Wurzeln: Ihre Pflege spricht Ihre Sprache.
+              Egal welche Herkunft oder Tradition: Unser mehrsprachiges Team pflegt Sie in Ihrer Sprache — kultursensibel und respektvoll.
             </p>
           </div>
         </div>

@@ -12,7 +12,7 @@ interface SEOProps {
 }
 
 const DEFAULT_TITLE =
-  "CuraMain – Ambulanter Pflegedienst im Rhein-Main-Gebiet";
+  "CuraMain – Ambulanter Pflegedienst Frankfurt | Nordend · Bornheim · Ostend";
 const DEFAULT_IMAGE = "https://www.curamain.de/og-image.jpg";
 
 /** Meta-Tag per Attribute upserten; gibt das Element zurück. */

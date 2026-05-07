@@ -3,14 +3,48 @@ import {
   MapPin, PhoneIcon, Mail, ArrowRight, Bike, Building2, Languages
 } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import { useEffect } from "react";
 
 export default function NordendOst() {
   useSEO({
-    title: "Ambulanter Pflegedienst Nordend-Ost Frankfurt – CuraMain",
-    description: "Pflege in Nordend-Ost: persönlich, mehrsprachig, in unter 10 Min. bei Ihnen. Direkt am Bürgerhospital. Jetzt Beratung anfragen.",
-    keywords: "Pflege Nordend-Ost Frankfurt, Pflegedienst Nordend, ambulante Pflege Nordend-Ost, CuraMain Berger Straße",
+    title: "Pflegedienst Frankfurt Nordend-Ost – in unter 10 Min. bei Ihnen | CuraMain",
+    description: "Ambulanter Pflegedienst Frankfurt Nordend-Ost: Berger Straße 69, direkt am Bürgerhospital. Mehrsprachig, kassenzugelassen, E-Bike-schnell. ☎ 069 79 216 147",
+    keywords: "Pflegedienst Frankfurt Nordend, ambulante Pflege Nordend-Ost, Pflegedienst Nordend-Ost Frankfurt, häusliche Pflege Nordend Frankfurt, CuraMain Berger Straße, Pflegedienst Bürgerhospital",
     canonical: "https://www.curamain.de/pflege/nordend-ost",
   });
+
+  useEffect(() => {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://www.curamain.de/pflege/nordend-ost#local",
+      "name": "CuraMain – Pflegedienst Frankfurt Nordend-Ost",
+      "description": "Ambulanter Pflegedienst in Frankfurt Nordend-Ost. Berger Straße 69, direkt am Bürgerhospital. Mehrsprachig, kassenzugelassen.",
+      "url": "https://www.curamain.de/pflege/nordend-ost",
+      "telephone": "+49 69 79216147",
+      "email": "info@curamain.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Berger Straße 69",
+        "addressLocality": "Frankfurt am Main",
+        "addressRegion": "Nordend-Ost",
+        "postalCode": "60316",
+        "addressCountry": "DE"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 50.1290, "longitude": 8.7094 },
+      "areaServed": { "@type": "Place", "name": "Frankfurt-Nordend-Ost" },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" }
+      ],
+      "parentOrganization": { "@id": "https://www.curamain.de/#business" }
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = "local-schema-nordend";
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+    return () => { const el = document.getElementById("local-schema-nordend"); if (el) el.remove(); };
+  }, []);
 
   return (
     <div className="bg-cm-cream">
@@ -78,7 +112,7 @@ export default function NordendOst() {
             </div>
             <h3 className="h-serif text-xl text-cm-ink mb-3">Mehrsprachige Versorgung — bei Ihnen zu Hause</h3>
             <p className="text-sm text-cm-ink/70 leading-relaxed">
-              Pflege auf Deutsch, Türkisch, Arabisch, Russisch, Polnisch und vier weiteren Sprachen — kultursensibel und geschlechtssensibel.
+              Mehrsprachige Pflege in über 5 Sprachen — kultursensibel und geschlechtssensibel.
             </p>
           </div>
         </div>
