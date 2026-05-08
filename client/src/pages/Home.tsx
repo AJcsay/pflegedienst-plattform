@@ -236,6 +236,14 @@ export default function Home() {
               </Link>
             ))}
           </div>
+          <div className="mt-4 text-right">
+            <Link
+              href="/frankfurt"
+              className="inline-flex items-center gap-2 text-cm-teal-600 hover:text-cm-teal-700 font-medium text-sm"
+            >
+              Alle Einsatzgebiete in Frankfurt <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 

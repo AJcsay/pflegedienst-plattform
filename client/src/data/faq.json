@@ -129,6 +129,24 @@
           "answer": "Kapazitätsabfragen sind schnell und unkompliziert:\n\n**Online-Portal**:\n- Nutzen Sie unser Kapazitäts-Portal\n- Geben Sie Ihre Anforderungen ein\n- Sie erhalten sofort eine Rückmeldung\n\n**Telefonisch**:\n- Rufen Sie uns an: 069 / 30 123 456\n- Teilen Sie Ihre Anforderungen mit\n- Wir geben Ihnen sofort Auskunft\n\n**Per Email**:\n- Senden Sie eine Email an info@curamain.de\n- Beschreiben Sie Ihre Anforderungen\n- Wir antworten innerhalb von 24 Stunden\n\n**Was sollten Sie mitteilen?**\n- Anzahl der Patienten\n- Art der Pflege (Grundpflege, Behandlungspflege)\n- Zeitraum (wie lange, wie oft)\n- Besondere Anforderungen\n- Gewünschter Starttermin\n\n**Tipp**: Fragen Sie rechtzeitig an, damit wir planen können!"
         }
       ]
+    },
+    {
+      "id": "frankfurt",
+      "label": "Pflege in Frankfurt",
+      "questions": [
+        {
+          "question": "Wer bietet ambulante Pflege in Frankfurt an?",
+          "answer": "CuraMain Pflegedienst GmbH (i.Gr.) ist ein ambulanter Pflegedienst mit Sitz in der Berger Straße 69, 60316 Frankfurt am Main. Das Team spricht Deutsch, Englisch und Französisch und betreut pflegebedürftige Menschen in Frankfurt und Offenbach am Main."
+        },
+        {
+          "question": "Wie finde ich einen guten Pflegedienst in Frankfurt?",
+          "answer": "Achten Sie auf eine Kassenzulassung nach § 72 SGB XI, transparente Leistungsnachweise und mehrsprachiges Fachpersonal. CuraMain ist kassenzugelassen und berät Sie kostenlos unter 069 79216147."
+        },
+        {
+          "question": "Kann ich als Angehöriger ambulante Pflege beantragen?",
+          "answer": "Ja. Mit einer Vollmacht oder einem Betreuungsbeschluss können Angehörige alle Schritte – von der Pflegegradbeantragung bis zur Vertragsunterzeichnung – stellvertretend erledigen. CuraMain unterstützt Sie dabei von Anfang an."
+        }
+      ]
     }
   ]
 }

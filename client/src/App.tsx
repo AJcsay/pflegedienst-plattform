@@ -27,6 +27,8 @@ import Pflegedienst from "./pages/Pflegedienst";
 import NordendOst from "./pages/NordendOst";
 import Bornheim from "./pages/Bornheim";
 import Ostend from "./pages/Ostend";
+import Frankfurt from "./pages/Frankfurt";
+import Offenbach from "./pages/Offenbach";
 
 function PublicLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -112,6 +114,9 @@ function Router() {
       <Route path="/pflege/nordend-ost">{() => <PublicLayout><NordendOst /></PublicLayout>}</Route>
       <Route path="/pflege/bornheim">{() => <PublicLayout><Bornheim /></PublicLayout>}</Route>
       <Route path="/pflege/ostend">{() => <PublicLayout><Ostend /></PublicLayout>}</Route>
+      {/* Rhein-Main Stadtueberblick */}
+      <Route path="/frankfurt">{() => <PublicLayout><Frankfurt /></PublicLayout>}</Route>
+      <Route path="/offenbach">{() => <PublicLayout><Offenbach /></PublicLayout>}</Route>
 
       {/* Legal pages */}
       <Route path="/impressum">{() => <PublicLayout><Impressum /></PublicLayout>}</Route>

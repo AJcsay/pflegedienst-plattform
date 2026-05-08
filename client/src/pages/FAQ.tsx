@@ -67,6 +67,30 @@ export default function FAQ() {
             "@type": "Answer",
             "text": "CuraMain versorgt aktuell Frankfurt-Nordend-Ost, Frankfurt-Bornheim und Frankfurt-Ostend. Unser Standort in der Berger Straße 69 liegt mitten im Versorgungsgebiet – per E-Bike erreichen wir jeden Haushalt in unter 10 Minuten."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Wer bietet ambulante Pflege in Frankfurt an?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CuraMain Pflegedienst GmbH (i.Gr.) ist ein ambulanter Pflegedienst mit Sitz in der Berger Straße 69, 60316 Frankfurt am Main. Das Team spricht Deutsch, Englisch und Französisch und betreut pflegebedürftige Menschen in Frankfurt und Offenbach am Main."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie finde ich einen guten Pflegedienst in Frankfurt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Achten Sie auf eine Kassenzulassung nach § 72 SGB XI, transparente Leistungsnachweise und mehrsprachiges Fachpersonal. CuraMain ist kassenzugelassen und berät Sie kostenlos unter 069 79216147."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich als Angehöriger ambulante Pflege beantragen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Mit einer Vollmacht oder einem Betreuungsbeschluss können Angehörige alle Schritte – von der Pflegegradbeantragung bis zur Vertragsunterzeichnung – stellvertretend erledigen. CuraMain unterstützt Sie dabei von Anfang an."
+          }
         }
       ]
     };
