@@ -34,6 +34,13 @@ export default function Footer() {
                 Mo–Fr 8:00–18:00 Uhr · Notfall 24/7
               </div>
             </div>
+            <div className="pt-4">
+              <img
+                src="/bpa-mitglied.jpg"
+                alt="Mitglied im bpa – Bundesverband privater Anbieter sozialer Dienste e. V."
+                className="h-20 w-auto rounded bg-white/95 p-2"
+              />
+            </div>
           </div>
 
           {/* Seiten */}
@@ -51,9 +58,6 @@ export default function Footer() {
               <Link href="/pflege/nordend-ost" className="block py-2 hover:text-cm-mint transition-colors">Pflege Nordend-Ost</Link>
               <Link href="/pflege/bornheim" className="block py-2 hover:text-cm-mint transition-colors">Pflege Bornheim</Link>
               <Link href="/pflege/ostend" className="block py-2 hover:text-cm-mint transition-colors">Pflege Ostend</Link>
-              <Link href="/pflege/sachsenhausen" className="block py-2 hover:text-cm-mint transition-colors">Pflege Sachsenhausen</Link>
-              <Link href="/pflege/westend" className="block py-2 hover:text-cm-mint transition-colors">Pflege Westend</Link>
-              <Link href="/pflege/bockenheim" className="block py-2 hover:text-cm-mint transition-colors">Pflege Bockenheim</Link>
             </div>
           </div>
 
@@ -75,7 +79,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
           <span>
-            &copy; {new Date().getFullYear()} CuraMain · Geschäftsführer: Alie Junior Sesay & Alhaji Allie Bangura
+            &copy; {new Date().getFullYear()} CuraMain · Geschäftsführer: Alie Junior Sesay
           </span>
           <div className="flex items-center gap-5">
             <Link href="/impressum" className="inline-block py-2 hover:text-cm-mint transition-colors">Impressum</Link>
