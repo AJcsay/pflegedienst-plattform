@@ -51,6 +51,9 @@ export default function Footer() {
               <Link href="/pflege/nordend-ost" className="block py-2 hover:text-cm-mint transition-colors">Pflege Nordend-Ost</Link>
               <Link href="/pflege/bornheim" className="block py-2 hover:text-cm-mint transition-colors">Pflege Bornheim</Link>
               <Link href="/pflege/ostend" className="block py-2 hover:text-cm-mint transition-colors">Pflege Ostend</Link>
+              <Link href="/pflege/sachsenhausen" className="block py-2 hover:text-cm-mint transition-colors">Pflege Sachsenhausen</Link>
+              <Link href="/pflege/westend" className="block py-2 hover:text-cm-mint transition-colors">Pflege Westend</Link>
+              <Link href="/pflege/bockenheim" className="block py-2 hover:text-cm-mint transition-colors">Pflege Bockenheim</Link>
             </div>
           </div>
 

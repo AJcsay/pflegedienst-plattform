@@ -29,6 +29,9 @@ import Bornheim from "./pages/Bornheim";
 import Ostend from "./pages/Ostend";
 import Frankfurt from "./pages/Frankfurt";
 import Offenbach from "./pages/Offenbach";
+import Sachsenhausen from "./pages/Sachsenhausen";
+import Westend from "./pages/Westend";
+import Bockenheim from "./pages/Bockenheim";
 
 function PublicLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -114,6 +117,12 @@ function Router() {
       <Route path="/pflege/nordend-ost">{() => <PublicLayout><NordendOst /></PublicLayout>}</Route>
       <Route path="/pflege/bornheim">{() => <PublicLayout><Bornheim /></PublicLayout>}</Route>
       <Route path="/pflege/ostend">{() => <PublicLayout><Ostend /></PublicLayout>}</Route>
+
+      {/* Phase-2-Versorgungsgebiete (2026-05-18) */}
+      <Route path="/pflege/sachsenhausen">{() => <PublicLayout><Sachsenhausen /></PublicLayout>}</Route>
+      <Route path="/pflege/westend">{() => <PublicLayout><Westend /></PublicLayout>}</Route>
+      <Route path="/pflege/bockenheim">{() => <PublicLayout><Bockenheim /></PublicLayout>}</Route>
+
       {/* Rhein-Main Stadtueberblick */}
       <Route path="/frankfurt">{() => <PublicLayout><Frankfurt /></PublicLayout>}</Route>
       <Route path="/offenbach">{() => <PublicLayout><Offenbach /></PublicLayout>}</Route>
