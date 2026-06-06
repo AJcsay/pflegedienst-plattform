@@ -9,7 +9,7 @@ set ftp:ssl-protect-data true
 set ssl:verify-certificate no
 set net:max-retries 2
 set net:timeout 30
-open -u 'w01e2ff7,1SqS79D6xeft-Wu-R@:a' ftps://w01e2ff7.kasserver.com
+open -u 'w01e2ff7,eiAjYEBTzcw52(JRQNbp' ftps://w01e2ff7.kasserver.com
 mirror --reverse --delete --verbose --exclude-glob '.git*' --exclude-glob 'node_modules/' ./ /curamain.de/
 bye
 " > /tmp/curamain-deploy.log 2>&1
