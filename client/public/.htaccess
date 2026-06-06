@@ -1,0 +1,19 @@
+# CuraMain — Root-Routing (All-Inkl Apache)
+# Erstellt 2026-06-07: Fix /api-404 (Formular) + /kontakt-403 + SPA-Fallback
+
+RewriteEngine On
+RewriteBase /
+
+# --- API-Endpunkte: Frontend postet auf /api/*.php, Dateien liegen in /php/ ---
+RewriteRule ^api/(.+)$ php/$1 [L,QSA]
+
+# --- /kontakt (Verzeichnis ohne Index) -> Patient-Formular ---
+RewriteRule ^kontakt/?$ /kontakt/patient [R=301,L]
+
+# --- SPA-Fallback: existierende Dateien/Verzeichnisse normal ausliefern ---
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
+# --- Keine Directory-Listings ---
+Options -Indexes
