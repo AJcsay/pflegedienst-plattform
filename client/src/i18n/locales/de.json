@@ -1,0 +1,491 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "cta": "Kostenlose Erstberatung",
+    "menuOpen": "Menü öffnen",
+    "menuClose": "Menü schließen",
+    "groups": {
+      "patients": {
+        "label": "Für Patienten",
+        "services": "Unsere Leistungen",
+        "faq": "Häufige Fragen",
+        "contact": "Erstberatung anfordern"
+      },
+      "applicants": {
+        "label": "Für Bewerber",
+        "jobs": "Stellenangebote",
+        "apply": "Schnellbewerbung",
+        "benefits": "Benefits & Vorteile"
+      },
+      "partners": {
+        "label": "Für Partner",
+        "doctors": "Ärzte & Kliniken",
+        "capacity": "Kapazitätsabfrage",
+        "insurance": "Krankenkassen",
+        "documents": "Dokumente"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Pflege und Teilhabe im Rhein-Main-Gebiet. Professionelle, kultursensible ambulante Pflege – direkt bei Ihnen zu Hause.",
+    "hours": "Mo–Fr 8:00–18:00 Uhr · Notfall 24/7",
+    "pagesLabel": "Seiten",
+    "coverageLabel": "Versorgungsgebiet",
+    "careerLabel": "Karriere & Partner",
+    "links": {
+      "about": "Über uns",
+      "services": "Leistungen",
+      "faq": "Häufige Fragen",
+      "testimonials": "Stimmen",
+      "contact": "Erstberatung",
+      "nordend": "Pflege Nordend-Ost",
+      "bornheim": "Pflege Bornheim",
+      "ostend": "Pflege Ostend",
+      "jobs": "Stellenangebote",
+      "apply": "Jetzt bewerben",
+      "doctors": "Ärzte & Kliniken",
+      "capacity": "Kapazitätsabfrage",
+      "insurance": "Krankenkassen",
+      "documents": "Dokumente",
+      "imprint": "Impressum",
+      "privacy": "Datenschutz"
+    },
+    "copyright": "© {{year}} CuraMain · Geschäftsführer: Alie Junior Sesay"
+  },
+  "home": {
+    "seo": {
+      "title": "CuraMain – Pflege & Teilhabe in Frankfurt | Nordend · Bornheim · Ostend",
+      "description": "CuraMain: Pflege & Teilhabe in Frankfurt – Nordend, Bornheim & Ostend. Grundpflege, Behandlungspflege, kultursensible Begleitung. Kassenzugelassen. ☎ 069 79 216 147",
+      "keywords": "Pflege und Teilhabe Frankfurt, Pflegedienst Frankfurt, ambulanter Pflegedienst Frankfurt, häusliche Pflege Frankfurt, Pflegedienst Frankfurt Nordend, Pflegedienst Frankfurt Bornheim, Pflegedienst Frankfurt Ostend, kultursensible Pflege Frankfurt, mehrsprachiger Pflegedienst, Grundpflege Frankfurt, Behandlungspflege Frankfurt, Teilhabe Frankfurt, CuraMain"
+    },
+    "hero": {
+      "pill": "Pflege & Teilhabe in Frankfurt – für jede Lebensphase",
+      "h1": "Weil Ihr Zuhause der beste Ort zum Heilen ist.",
+      "p": "Professionelle, kultursensible Pflege in Frankfurt – direkt bei Ihnen zu Hause in Nordend, Bornheim und Ostend. Unser mehrsprachiges Team begleitet Menschen jeden Alters mit Kompetenz, Herz und einem echten Verständnis für ihre Lebenssituation.",
+      "ctaPrimary": "Kostenloses Erstgespräch anfordern",
+      "ctaPhone": "069 79 216 147",
+      "subline": "Kostenlos & unverbindlich · Mehrsprachig · Antwort innerhalb 24h",
+      "badge1": "Kassenzugelassen (§ 132a SGB V · § 72 SGB XI)",
+      "badge2": "Mehrsprachig",
+      "badge3": "Frankfurt – Nordend · Bornheim · Ostend"
+    },
+    "stats": [
+      { "value": "4,8★", "label": "Patientenzufriedenheit" },
+      { "value": "150+", "label": "Versorgte Patienten" },
+      { "value": "5+", "label": "Jahre Erfahrung" },
+      { "value": "100%", "label": "Kassenzulassung" }
+    ],
+    "services": {
+      "label": "Was wir leisten",
+      "h2": "Pflege, die den ganzen Menschen sieht.",
+      "p": "Von der medizinischen Behandlungspflege bis zur hauswirtschaftlichen Unterstützung – wir betreuen Sie mit allen Pflegeleistungen aus einer Hand. Schrittweise wachsen wir um Pflege- und Teilhabe-Angebote für Kinder, Jugendliche und Erwachsene mit Behinderungen.",
+      "cta": "Alle Leistungen ansehen",
+      "items": [
+        {
+          "title": "Behandlungspflege",
+          "sub": "SGB V – Medizinische Versorgung",
+          "desc": "Wundversorgung, Injektionen, Medikamentengabe – durch examinierte Fachkräfte nach ärztlicher Verordnung."
+        },
+        {
+          "title": "Grundpflege",
+          "sub": "SGB XI – Körperpflege",
+          "desc": "Körperpflege, Mobilisation, Ernährung – würdevoll und einfühlsam."
+        },
+        {
+          "title": "Beratungsbesuche",
+          "sub": "§ 37.3 SGB XI",
+          "desc": "Pflichtberatung für Pflegegeldempfänger – kostenlos und kompetent."
+        },
+        {
+          "title": "Hauswirtschaftliche Unterstützung",
+          "sub": "Entlastung im Alltag",
+          "desc": "Einkauf, Reinigung, Wäsche, Mahlzeiten – wir entlasten Sie im Alltag."
+        }
+      ]
+    },
+    "culture": {
+      "label": "Kultursensibel",
+      "h2a": "Vielfalt ist ",
+      "h2b": "unsere Stärke.",
+      "p": "Frankfurt ist eine der vielfältigsten Städte Deutschlands. Bei CuraMain spiegelt sich diese Vielfalt in unserem Team wider – unser mehrsprachiges Team respektiert religiöse, kulturelle und geschlechtssensible Bedürfnisse.",
+      "points": [
+        {
+          "title": "Mehrsprachiges Team",
+          "desc": "Pflege in Ihrer Sprache – unser Team kommuniziert in mehreren Sprachen."
+        },
+        {
+          "title": "Religiös sensibel",
+          "desc": "Gebetszeiten, Ramadan, halal/koschere Ernährung."
+        },
+        {
+          "title": "Geschlechtssensibel",
+          "desc": "Auf Wunsch ausschließlich weibliche oder männliche Pflegekräfte."
+        }
+      ]
+    },
+    "teilhabe": {
+      "label": "In Vorbereitung — Start Q4 2027 / Q1 2028",
+      "h2": "Pflege und Teilhabe – über alle Lebensphasen.",
+      "p": "In unserer Satzung verankert, schrittweise im Aufbau: CuraMain erweitert die Versorgung um Felder, die Pflege und Teilhabe für Kinder, Jugendliche und Erwachsene mit Behinderungen integrieren. Wenn Sie heute schon Interesse signalisieren möchten, freuen wir uns über eine Voranmeldung – wir melden uns, sobald die jeweilige Versorgung verfügbar ist.",
+      "badge": "In Vorbereitung",
+      "cta": "Voranmeldung Pflege & Teilhabe",
+      "note": "Phase-1-Versorgung (Grundpflege, Behandlungspflege, Beratung) ist bereits aktiv.",
+      "items": [
+        {
+          "title": "Ambulante Kinderkrankenpflege",
+          "desc": "Häusliche Krankenpflege für chronisch kranke Kinder und Jugendliche (SGB V § 132a)."
+        },
+        {
+          "title": "Außerklinische Intensivpflege",
+          "desc": "Versorgung beatmeter Patient·innen in häuslicher Umgebung, Kitas und Schulen (§ 37c SGB V, AKI-RL)."
+        },
+        {
+          "title": "Schulbegleitung",
+          "desc": "Begleitung von Schüler·innen mit körperlichen, geistigen oder seelischen Beeinträchtigungen im Schulalltag (SGB IX / SGB VIII)."
+        },
+        {
+          "title": "Soziale Teilhabeleistungen",
+          "desc": "Assistenz und Begleitung für erwachsene Menschen mit Behinderungen im Alltag (SGB IX §§ 76 ff.)."
+        }
+      ]
+    },
+    "coverage": {
+      "label": "Versorgungsgebiet",
+      "h2": "Pflege im Bornheim-Nordend-Heimrevier",
+      "p": "Aus der Berger Straße 69 versorgen wir das Heimrevier rund um Nordend-Ost, Bornheim und Ostend – mit E-Bike-Touren, kurzen Anfahrtszeiten und festen Tourenplänen.",
+      "cta": "Alle Einsatzgebiete in Frankfurt",
+      "areas": [
+        {
+          "slug": "nordend-ost",
+          "name": "Nordend-Ost",
+          "sub": "Vom Merianplatz bis zum Bürgerhospital"
+        },
+        {
+          "slug": "bornheim",
+          "name": "Bornheim",
+          "sub": "Saalburgstraße · Bornheim Mitte · Sankt Katharinen"
+        },
+        {
+          "slug": "ostend",
+          "name": "Ostend",
+          "sub": "EZB-Quartier · Habsburgerallee · Klinik Rotes Kreuz"
+        }
+      ]
+    },
+    "testimonials": {
+      "label": "Stimmen",
+      "h2": "Echte Erfahrungen.\nEchte Menschen.",
+      "cta": "Alle Bewertungen lesen",
+      "items": [
+        {
+          "name": "Fatima A.",
+          "role": "Tochter eines Patienten, Nordend-Ost",
+          "text": "Mein Vater spricht kaum Deutsch – das war für uns immer ein Problem. Bei CuraMain wurde uns sofort eine arabischsprachige Pflegekraft zugeteilt. Er fühlt sich endlich verstanden und gut versorgt."
+        },
+        {
+          "name": "Dr. Markus R.",
+          "role": "Allgemeinarzt, Frankfurt-Bornheim",
+          "text": "Ich überweise seit über einem Jahr Patienten an CuraMain. Die Rückmeldungen sind durchweg positiv: pünktlich, dokumentiert und immer erreichbar. Für meine Praxis ein verlässlicher Partner."
+        },
+        {
+          "name": "Renate H.",
+          "role": "Patientin, Bornheim",
+          "text": "Nach meiner Hüft-OP wollte ich so schnell wie möglich nach Hause. CuraMain hat die Entlassung mit der Klinik koordiniert und war schon am ersten Tag da. Ich hätte nicht gedacht, dass das so reibungslos klappt."
+        }
+      ]
+    },
+    "ctaBanner": {
+      "h2": "Lassen Sie uns sprechen.",
+      "p": "Die Erstberatung ist kostenlos, mehrsprachig und unverbindlich. Wir kommen auch zu Ihnen nach Hause.",
+      "book": "Termin vereinbaren",
+      "phone": "069 / 79 216 147",
+      "badge1": "Mehrsprachig",
+      "badge2": "Kassenzugelassen",
+      "badge3": "Mo–Fr 8:00–18:00, Notfall 24/7"
+    }
+  },
+  "leistungen": {
+    "seo": {
+      "title": "Pflege & Teilhabe Frankfurt – Behandlungspflege, Grundpflege & mehr | CuraMain",
+      "description": "Pflege und Teilhabe in Frankfurt: Behandlungspflege (SGB V), Grundpflege (SGB XI), Verhinderungspflege, Beratungsbesuche § 37.3 & kultursensible Betreuung. Kassenzugelassen.",
+      "keywords": "Pflege und Teilhabe Frankfurt, Pflegeleistungen Frankfurt, Behandlungspflege Frankfurt, Grundpflege Frankfurt, Verhinderungspflege Frankfurt, Beratungsbesuche Frankfurt, kultursensible Pflege Frankfurt, ambulante Pflege Frankfurt kassenzugelassen"
+    },
+    "hero": {
+      "pill": "Mit allen Pflegekassen abrechenbar",
+      "h1": "Pflege & Teilhabe.",
+      "p": "Aktiv für Sie: das volle Spektrum ambulanter Pflege in Frankfurt – kassenzugelassen, individuell abgestimmt, kultursensibel. In Vorbereitung: Pflege- und Teilhabe-Angebote für Kinder, Jugendliche und Erwachsene mit Behinderungen."
+    },
+    "fullServices": [
+      {
+        "id": "behandlungspflege",
+        "title": "Behandlungspflege",
+        "sub": "SGB V – Medizinische Versorgung",
+        "description": "Unsere examinierten Pflegefachpersonen führen alle ärztlich verordneten medizinischen Maßnahmen professionell und zuverlässig durch.",
+        "details": [
+          "Wundversorgung und Verbandswechsel",
+          "Injektionen und Infusionen",
+          "Medikamentengabe und -überwachung",
+          "Blutdruck- und Blutzuckermessung",
+          "Katheter- und Stomaversorgung",
+          "An- und Ausziehen von Kompressionsstrümpfen"
+        ]
+      },
+      {
+        "id": "grundpflege",
+        "title": "Grundpflege",
+        "sub": "SGB XI – Körperpflege & Mobilisation",
+        "description": "Wir unterstützen Sie einfühlsam bei den täglichen Verrichtungen und achten dabei stets auf Ihre Selbstbestimmung und Würde.",
+        "details": [
+          "Körperpflege und Hygiene",
+          "Hilfe beim An- und Auskleiden",
+          "Mobilisation und Lagerung",
+          "Hilfe bei der Nahrungsaufnahme",
+          "Begleitung bei Toilettengängen",
+          "Betten und Lagern"
+        ]
+      }
+    ],
+    "compactServices": {
+      "label": "Weitere Angebote",
+      "h2": "Spezialisierte Pflegeleistungen.",
+      "items": [
+        {
+          "id": "verhinderungspflege",
+          "title": "Verhinderungspflege",
+          "sub": "SGB XI – Vertretung",
+          "description": "Wenn die reguläre Pflegeperson verhindert ist, übernehmen wir die Versorgung – zuverlässig und vertraut.",
+          "badge": "Bis 6 Wochen pro Jahr · Pflegekasse"
+        },
+        {
+          "id": "beratung",
+          "title": "Beratungsbesuche § 37.3",
+          "sub": "SGB XI – Pflichtberatung",
+          "description": "Regelmäßige Pflegeberatung für Pflegegeldempfänger – wir beraten Sie zu Hause und sichern die Qualität der Pflege.",
+          "badge": "Kostenübernahme durch die Pflegekasse"
+        },
+        {
+          "id": "hauswirtschaft",
+          "title": "Hauswirtschaftliche Versorgung",
+          "sub": "Unterstützung im Alltag",
+          "description": "Einkauf, Reinigung, Wäsche, Mahlzeiten – wir entlasten Sie im Alltag, damit Sie sich erholen können.",
+          "badge": "Abrechnung über § 45b SGB XI möglich"
+        }
+      ]
+    },
+    "teilhabe": {
+      "label": "In Vorbereitung — Start Q4 2027 / Q1 2028",
+      "h2": "Pflege und Teilhabe – schrittweise erweitert.",
+      "p": "In der Satzung der CuraMain GmbH verankert, im Aufbau befindlich: Wir bauen Versorgungstiefe in vier zusätzlichen Feldern auf. Diese Leistungen sind heute noch nicht buchbar. Wenn Sie heute schon Bedarf signalisieren möchten, freuen wir uns über eine Voranmeldung – wir melden uns, sobald die Zulassung vorliegt.",
+      "cta": "Voranmeldung Pflege & Teilhabe",
+      "note": "Hinweis: Die hier genannten Leistungen sind noch nicht aktiv. Voranmeldungen helfen uns, die Versorgung passgenau aufzubauen.",
+      "items": [
+        {
+          "title": "Ambulante Kinderkrankenpflege",
+          "sub": "SGB V § 132a — geplant",
+          "desc": "Häusliche Krankenpflege für chronisch kranke Kinder und Jugendliche: Medikamente, Sondenkost, Trachealkanülen-Pflege, Wundversorgung. Mehrsprachig und kultursensibel."
+        },
+        {
+          "title": "Außerklinische Intensivpflege",
+          "sub": "§ 37c SGB V · AKI-RL — geplant",
+          "desc": "24-Stunden-Versorgung beatmeter Patient·innen in der eigenen Wohnung, Wohngemeinschaft oder im Schul- und Kindergartenalltag."
+        },
+        {
+          "title": "Schulbegleitung",
+          "sub": "SGB IX / SGB VIII — geplant",
+          "desc": "Begleitung von Schüler·innen mit körperlichen, geistigen oder seelischen Beeinträchtigungen in Grundschule, weiterführender Schule oder beruflicher Bildung."
+        },
+        {
+          "title": "Soziale Teilhabeleistungen",
+          "sub": "SGB IX §§ 76 ff. — geplant",
+          "desc": "Assistenz und Begleitung für erwachsene Menschen mit Behinderungen: Wohnumfeld, Arzt- und Behördenbesuche, Freizeit, selbstständige Lebensführung."
+        }
+      ]
+    },
+    "culture": {
+      "label": "Vielfalt",
+      "h2a": "Kultursensible Pflege – ",
+      "h2b": "für jeden Menschen.",
+      "p": "Das Rhein-Main-Gebiet ist eine der vielfältigsten Regionen Deutschlands. Unser mehrsprachiges Team respektiert religiöse Bedürfnisse, Geschlechtssensibilität und kulturelle Traditionen.",
+      "points": [
+        {
+          "title": "Mehrsprachiges Team",
+          "desc": "Pflege in Ihrer Sprache, ohne Missverständnisse"
+        },
+        {
+          "title": "Religiöse Bedürfnisse",
+          "desc": "Gebetszeiten, Ramadan, halal/koschere Ernährung"
+        },
+        {
+          "title": "Geschlechtssensibel",
+          "desc": "Auf Wunsch ausschließlich weibliche oder männliche Pflegekräfte"
+        }
+      ]
+    },
+    "cta": {
+      "h2": "Welche Pflege benötigen Sie?",
+      "p": "Lassen Sie sich kostenlos und unverbindlich beraten. Wir finden gemeinsam die passende Versorgung.",
+      "primary": "Kostenlose Erstberatung",
+      "phone": "069 / 79 216 147"
+    }
+  },
+  "kontakt": {
+    "seo": {
+      "title": "Kostenlose Pflegeberatung anfragen – CuraMain",
+      "description": "Fordern Sie jetzt Ihre kostenlose Erstberatung bei CuraMain im Rhein-Main-Gebiet an. Wir beraten Sie zu Pflegeleistungen, Pflegegraden und Kosten.",
+      "keywords": "Pflegeberatung Rhein-Main, Erstberatung Pflegedienst Rhein-Main-Gebiet, Pflegedienst Kontakt, CuraMain"
+    },
+    "languages": ["Deutsch", "Englisch", "Spanisch", "Arabisch", "+ weitere auf Anfrage"],
+    "districts": [
+      { "value": "nordend-ost", "label": "Nordend-Ost" },
+      { "value": "bornheim", "label": "Bornheim" },
+      { "value": "ostend", "label": "Ostend" },
+      { "value": "anderer", "label": "Anderer Stadtteil – bitte Anfrage senden" }
+    ],
+    "hero": {
+      "pill": "Kostenlos & unverbindlich",
+      "h1": "Kostenlose Erstberatung.",
+      "p": "Füllen Sie das Formular aus – wir melden uns zeitnah bei Ihnen. Mehrsprachig verfügbar."
+    },
+    "form": {
+      "srLabel": "Anfrage senden",
+      "tabs": {
+        "contact": "Kontaktformular",
+        "appointment": "Termin vereinbaren"
+      },
+      "hint": "Drei Felder reichen – wir melden uns innerhalb von 24 Stunden zurück.",
+      "name": "Ihr Name",
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "emailOptional": "(optional)",
+      "contactHelp": "Wir brauchen mindestens Telefon oder E-Mail, um zu antworten.",
+      "district": "In welchem Stadtteil wohnen Sie?",
+      "districtPlaceholder": "Bitte wählen",
+      "districtOtherHint": "Aktuell versorgen wir primär Nordend-Ost, Bornheim und Ostend. Wir prüfen Ihre Anfrage individuell und melden uns innerhalb von 48 Stunden.",
+      "message": "Ihre Nachricht",
+      "messagePlaceholder": "Worum geht es? z. B.: Mein Vater (78) braucht Grundpflege ab nächster Woche, spricht Türkisch.",
+      "consent": "Ich habe die <1>Datenschutzhinweise</1> gelesen und bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden.",
+      "submit": "Kostenloses Erstgespräch anfordern",
+      "submitting": "Wird gesendet …",
+      "subline": "Kostenlos & unverbindlich · Antwort innerhalb von 24h",
+      "errorNoContact": "Bitte hinterlassen Sie Telefon oder E-Mail, damit wir uns zurückmelden können.",
+      "errorNoConsent": "Bitte bestätigen Sie die Datenschutzhinweise.",
+      "errorSending": "Fehler beim Senden: ",
+      "successToast": "Ihre Anfrage wurde erfolgreich gesendet!",
+      "errorToast": "Fehler beim Senden: "
+    },
+    "appointment": {
+      "comingSoonTitle": "Online-Buchung kommt in Kürze",
+      "comingSoonText": "Bis dahin freuen wir uns über Ihren Anruf oder das Kontaktformular. Wir melden uns innerhalb von 24 Stunden mit einem Terminvorschlag.",
+      "callButton": "069 / 79 216 147",
+      "iframeTitle": "Termin vereinbaren – CuraMain"
+    },
+    "success": {
+      "h2": "Vielen Dank!",
+      "p": "Ihre Anfrage für eine kostenlose Erstberatung ist bei uns eingegangen. Wir melden uns innerhalb von 24 Stunden bei Ihnen."
+    },
+    "sidebar": {
+      "reachUs": "So erreichen Sie uns",
+      "phone": "069 / 79 216 147",
+      "phoneHours": "Mo–Fr 8:00–18:00 · Notfall 24/7",
+      "emailReply": "Antwort innerhalb von 24h",
+      "address": "Berger Str. 69",
+      "city": "60316 Frankfurt am Main",
+      "officeHours": "Bürozeiten",
+      "officeHoursVal": "Mo–Fr 8:00–18:00 Uhr",
+      "multilingual": "Mehrsprachig",
+      "multilingualLabel": "Wir beraten in:",
+      "emergency": "Notfall?",
+      "emergencyText": "Unsere 24/7-Notfallbereitschaft ist jederzeit für Sie erreichbar.",
+      "callNow": "Jetzt anrufen"
+    },
+    "map": {
+      "label": "Standort",
+      "h2": "Besuchen Sie uns.",
+      "loadButton": "Karte von Google Maps laden",
+      "loadConsent": "Mit dem Laden stimmen Sie der Datenschutzerklärung von Google zu. Dabei können Daten an Google in die USA übertragen werden – Details in unserer",
+      "loadConsentLink": "Datenschutzerklärung",
+      "address": "Berger Straße 69, 60316 Frankfurt am Main",
+      "openMaps": "In Google Maps öffnen",
+      "iframeTitle": "CuraMain Standort – Berger Straße 69, Frankfurt am Main"
+    }
+  },
+  "ueberUns": {
+    "seo": {
+      "title": "Über CuraMain – Pflege & Teilhabe in Frankfurt mit 13+ Jahren Erfahrung",
+      "description": "CuraMain Frankfurt: Gegründet von erfahrenen Pflegefachpersonen mit über 13 Jahren Praxis in Nordend, Bornheim und Ostend. Unsere Werte, unser Team und unsere Vision: Pflege und Teilhabe über alle Lebensphasen.",
+      "keywords": "CuraMain über uns, Pflegedienst Frankfurt Team, Pflege und Teilhabe Frankfurt, ambulante Pflege Frankfurt Erfahrung, kultursensible Pflege Frankfurt Gründer"
+    },
+    "hero": {
+      "pill": "13+ Jahre Pflegeerfahrung · Frankfurt am Main",
+      "h1a": "Pflege aus Überzeugung.",
+      "h1b": "Für jede Lebensphase.",
+      "p": "CuraMain steht für Pflege und Teilhabe in Frankfurt, die wirklich funktioniert. Gegründet von Pflegefachpersonen mit über 13 Jahren praktischer Erfahrung in Nordend, Bornheim und Ostend – angetrieben von echter Menschlichkeit und dem Anspruch, Pflege würdevoll und professionell zu gestalten. Schritt für Schritt erweitern wir unsere Versorgung um Teilhabe-Angebote für Kinder, Jugendliche und Erwachsene mit Behinderungen."
+    },
+    "mission": {
+      "h2": "Unsere Mission",
+      "p": "Menschen jeden Alters – Kinder, Erwachsene, Senior·innen – ein selbstbestimmtes Leben in ihrem vertrauten Umfeld zu ermöglichen. Mit professioneller, kultursensibler Pflege und verlässlicher Teilhabe-Begleitung, die den ganzen Menschen sieht."
+    },
+    "vision": {
+      "h2": "Unsere Vision",
+      "p": "Die vertrauenswürdigste Adresse im Rhein-Main-Gebiet für Pflege und Teilhabe über alle Lebensphasen – bekannt für Qualität, Menschlichkeit, kulturelle Vielfalt und die Verlässlichkeit eines lokalen Dienstes mit regionaler Verwurzelung."
+    },
+    "values": {
+      "label": "Was uns antreibt",
+      "h2": "Unsere vier Werte.",
+      "items": [
+        {
+          "title": "Menschlichkeit",
+          "desc": "Jeder Mensch verdient eine Pflege, die seine Würde und Individualität respektiert."
+        },
+        {
+          "title": "Zuverlässigkeit",
+          "desc": "Pünktlichkeit, Verbindlichkeit und Beständigkeit sind die Grundpfeiler unserer Arbeit."
+        },
+        {
+          "title": "Teamgeist",
+          "desc": "Nur gemeinsam können wir die beste Versorgung für unsere Patienten sicherstellen."
+        },
+        {
+          "title": "Qualität",
+          "desc": "Kontinuierliche Weiterbildung und höchste Standards in der Pflege sind unser Anspruch."
+        }
+      ]
+    },
+    "milestones": {
+      "label": "Unser Weg",
+      "h2": "Meilensteine.",
+      "items": [
+        {
+          "year": "2011",
+          "text": "Boys Bangura beginnt seine Pflegekarriere in Frankfurt. Erste Stationen in der stationären und ambulanten Versorgung – der Grundstein für über ein Jahrzehnt praktische Pflegeerfahrung."
+        },
+        {
+          "year": "2016",
+          "text": "Übernahme von Leitungsaufgaben: Tourenplanung, Einarbeitung neuer Pflegekräfte und direkte Zusammenarbeit mit Hausärzten und Kliniken im Frankfurter Ostend und Bornheim."
+        },
+        {
+          "year": "2022",
+          "text": "Wachsende Überzeugung: Pflege in Frankfurt braucht einen Dienst, der kulturelle Vielfalt nicht als Herausforderung, sondern als Stärke begreift. Die Idee zu CuraMain entsteht."
+        },
+        {
+          "year": "2024",
+          "text": "Intensive Vorbereitungsphase: Konzeptentwicklung, Aufbau des Netzwerks mit Krankenhäusern und Sozialdiensten, Standortwahl Berger Straße 69 – mitten im Versorgungsgebiet."
+        },
+        {
+          "year": "2026",
+          "text": "Notarielle Beurkundung der CuraMain GmbH in Frankfurt am Main. Mit über 13 Jahren Pflegeerfahrung und einem mehrsprachigen Team startet CuraMain in Nordend, Bornheim und Ostend – als Dachmarke Pflege und Teilhabe über alle Lebensphasen."
+        },
+        {
+          "year": "ab 2027",
+          "text": "Stufenweiser Ausbau der Versorgung um Schulbegleitung, soziale Teilhabeleistungen, ambulante Kinderkrankenpflege und außerklinische Intensivpflege – in der Satzung verankert, mit klarem Qualitäts- und Personalfahrplan."
+        }
+      ]
+    },
+    "cta": {
+      "h2": "Lernen Sie uns kennen.",
+      "p": "Persönliches Gespräch, Hausbesuch oder Telefonberatung – wir nehmen uns Zeit für Sie.",
+      "button": "Erstberatung anfragen"
+    }
+  }
+}

@@ -75,7 +75,8 @@ function ScrollHandler() {
         const navbarHeight = 80;
         const rect = element.getBoundingClientRect();
         const scrollTop = window.scrollY + rect.top - navbarHeight;
-        window.scrollTo({ top: scrollTop, behavior: "smooth" });
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.scrollTo({ top: scrollTop, behavior: reduceMotion ? "auto" : "smooth" });
       };
       setTimeout(scrollToHash, 100);
       return;

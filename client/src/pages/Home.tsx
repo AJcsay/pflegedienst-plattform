@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { useTranslation } from "react-i18next";
 import {
   Heart, Shield, Phone, ArrowRight, CheckCircle2,
   Award, Star, Quote, Users, Stethoscope, HandHeart, Globe2
@@ -16,45 +17,26 @@ const PHOTOS = {
   aktivierung: "/img/aktivierung.webp",
 };
 
-const services = [
-  { title: "Behandlungspflege", sub: "SGB V – Medizinische Versorgung", desc: "Wundversorgung, Injektionen, Medikamentengabe – durch examinierte Fachkräfte nach ärztlicher Verordnung.", icon: Stethoscope, img: PHOTOS.behandlung },
-  { title: "Grundpflege", sub: "SGB XI – Körperpflege", desc: "Körperpflege, Mobilisation, Ernährung – würdevoll und einfühlsam.", icon: HandHeart, img: PHOTOS.grundpflege },
-  { title: "Beratungsbesuche", sub: "§ 37.3 SGB XI", desc: "Pflichtberatung für Pflegegeldempfänger – kostenlos und kompetent.", icon: Heart, img: PHOTOS.beratung },
-  { title: "Hauswirtschaftliche Unterstützung", sub: "Entlastung im Alltag", desc: "Einkauf, Reinigung, Wäsche, Mahlzeiten – wir entlasten Sie im Alltag.", icon: Users, img: PHOTOS.hauswirtschaft },
-];
-
-const testimonials = [
-  {
-    name: "Fatima A.",
-    role: "Tochter eines Patienten, Nordend-Ost",
-    text: "Mein Vater spricht kaum Deutsch – das war für uns immer ein Problem. Bei CuraMain wurde uns sofort eine arabischsprachige Pflegekraft zugeteilt. Er fühlt sich endlich verstanden und gut versorgt.",
-  },
-  {
-    name: "Dr. Markus R.",
-    role: "Allgemeinarzt, Frankfurt-Bornheim",
-    text: "Ich überweise seit über einem Jahr Patienten an CuraMain. Die Rückmeldungen sind durchweg positiv: pünktlich, dokumentiert und immer erreichbar. Für meine Praxis ein verlässlicher Partner.",
-  },
-  {
-    name: "Renate H.",
-    role: "Patientin, Bornheim",
-    text: "Nach meiner Hüft-OP wollte ich so schnell wie möglich nach Hause. CuraMain hat die Entlassung mit der Klinik koordiniert und war schon am ersten Tag da. Ich hätte nicht gedacht, dass das so reibungslos klappt.",
-  },
-];
-
-const stats = [
-  { value: "4,8★", label: "Patientenzufriedenheit" },
-  { value: "150+", label: "Versorgte Patienten" },
-  { value: "5+", label: "Jahre Erfahrung" },
-  { value: "100%", label: "Kassenzulassung" },
-];
+// Icon-Mapping für Service-Karten (Reihenfolge entspricht JSON-Array)
+const SERVICE_ICONS = [Stethoscope, HandHeart, Heart, Users];
 
 export default function Home() {
+  const { t } = useTranslation();
+
   useSEO({
-    title: "CuraMain – Ambulanter Pflegedienst Frankfurt | Nordend · Bornheim · Ostend",
-    description: "CuraMain: Ambulanter Pflegedienst in Frankfurt – Nordend, Bornheim & Ostend. Grundpflege, Behandlungspflege & kultursensible Betreuung. Kassenzugelassen. ☎ 069 79 216 147",
-    keywords: "Pflegedienst Frankfurt, ambulanter Pflegedienst Frankfurt, häusliche Pflege Frankfurt, Pflegedienst Frankfurt Nordend, Pflegedienst Frankfurt Bornheim, Pflegedienst Frankfurt Ostend, kultursensible Pflege Frankfurt, mehrsprachiger Pflegedienst, Grundpflege Frankfurt, Behandlungspflege Frankfurt, CuraMain",
+    title: t("home.seo.title"),
+    description: t("home.seo.description"),
+    keywords: t("home.seo.keywords"),
     canonical: "https://www.curamain.de",
   });
+
+  const stats = t("home.stats", { returnObjects: true }) as Array<{ value: string; label: string }>;
+  const serviceItems = t("home.services.items", { returnObjects: true }) as Array<{ title: string; sub: string; desc: string }>;
+  const servicePhotos = [PHOTOS.behandlung, PHOTOS.grundpflege, PHOTOS.beratung, PHOTOS.hauswirtschaft];
+  const culturePoints = t("home.culture.points", { returnObjects: true }) as Array<{ title: string; desc: string }>;
+  const teilhabeItems = t("home.teilhabe.items", { returnObjects: true }) as Array<{ title: string; desc: string }>;
+  const coverageAreas = t("home.coverage.areas", { returnObjects: true }) as Array<{ slug: string; name: string; sub: string }>;
+  const testimonials = t("home.testimonials.items", { returnObjects: true }) as Array<{ name: string; role: string; text: string }>;
 
   return (
     <div className="bg-cm-cream">
@@ -68,20 +50,20 @@ export default function Home() {
         <div className="relative z-10 container pt-8 pb-8 flex-1">
           <span className="pill inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm border border-white/60 shadow-sm">
             <Heart className="w-4 h-4 text-cm-teal" fill="currentColor" />
-            Ihr Ambulanter Pflegedienst in Frankfurt
+            {t("home.hero.pill")}
           </span>
           <h1 className="h-serif text-5xl lg:text-7xl text-cm-teal mt-6 mb-6 max-w-3xl leading-[1.05]">
-            Weil Ihr Zuhause der beste Ort zum Heilen ist.
+            {t("home.hero.h1")}
           </h1>
           <p className="text-lg text-cm-ink/80 max-w-xl mb-8 leading-relaxed">
-            Professionelle, kultursensible Pflege in Frankfurt – direkt bei Ihnen zu Hause in Nordend, Bornheim und Ostend. Unser mehrsprachiges Team begleitet Sie mit Kompetenz, Herz und echtem Verständnis für Ihre Bedürfnisse.
+            {t("home.hero.p")}
           </p>
           <div className="flex flex-wrap gap-3 mb-6">
             <Link
               href="/kontakt/patient"
               className="bg-cm-teal-600 hover:bg-cm-teal-700 text-white px-7 py-3.5 rounded-full font-medium shadow-lg flex items-center gap-2 transition-colors min-h-[48px]"
             >
-              Kostenloses Erstgespräch anfordern
+              {t("home.hero.ctaPrimary")}
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
@@ -89,26 +71,26 @@ export default function Home() {
               className="pill border border-white/60 px-7 py-3.5 rounded-full font-medium flex items-center gap-2 shadow-sm min-h-[48px]"
             >
               <Phone className="w-4 h-4 text-cm-teal-700" />
-              069 79 216 147
+              {t("home.hero.ctaPhone")}
             </a>
           </div>
           <p className="text-sm text-cm-ink/70 mb-6 inline-flex items-center gap-1.5">
             <CheckCircle2 className="w-4 h-4 text-cm-teal-700" aria-hidden="true" />
-            Kostenlos &amp; unverbindlich · Mehrsprachig · Antwort innerhalb 24h
+            {t("home.hero.subline")}
           </p>
           {/* Trust-Block über Fold: Kassenzulassung + Sprachen + Region */}
           <div className="flex flex-wrap gap-2">
             <span className="pill border border-white/60 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm shadow-sm">
               <Shield className="w-3.5 h-3.5 text-cm-teal-700" />
-              Kassenzugelassen (§ 132a SGB V · § 72 SGB XI)
+              {t("home.hero.badge1")}
             </span>
             <span className="pill border border-white/60 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm shadow-sm">
               <Globe2 className="w-3.5 h-3.5 text-cm-teal-700" />
-              Mehrsprachig
+              {t("home.hero.badge2")}
             </span>
             <span className="pill border border-white/60 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm shadow-sm">
               <Award className="w-3.5 h-3.5 text-cm-teal-700" />
-              Frankfurt – Nordend · Bornheim · Ostend
+              {t("home.hero.badge3")}
             </span>
           </div>
         </div>
@@ -133,36 +115,39 @@ export default function Home() {
       {/* ─────────────────────────────────────────── */}
       <section className="container py-12 lg:py-20">
         <div className="max-w-2xl mb-10">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cm-teal">Was wir leisten</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cm-teal">{t("home.services.label")}</span>
           <h2 className="h-serif text-4xl lg:text-5xl text-cm-ink mt-3 mb-4">
-            Pflege, die den ganzen Menschen sieht.
+            {t("home.services.h2")}
           </h2>
           <p className="text-cm-ink/70 leading-relaxed">
-            Von der medizinischen Behandlungspflege bis zur hauswirtschaftlichen Unterstützung – wir betreuen Sie mit allen Pflegeleistungen aus einer Hand.
+            {t("home.services.p")}
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {services.map((s) => (
-            <Link
-              key={s.title}
-              href="/leistungen"
-              className="group bg-white p-7 rounded-3xl border border-cm-teal-100 hover:border-cm-teal-300 hover:shadow-lg transition"
-            >
-              <div className="w-12 h-12 rounded-2xl bg-cm-teal-50 flex items-center justify-center mb-5">
-                <s.icon className="w-6 h-6 text-cm-teal" />
-              </div>
-              <h3 className="font-semibold text-lg mb-1.5 text-cm-ink">{s.title}</h3>
-              <p className="text-xs uppercase tracking-wider text-cm-teal-600 mb-2">{s.sub}</p>
-              <p className="text-sm text-cm-ink/70 leading-relaxed">{s.desc}</p>
-            </Link>
-          ))}
+          {serviceItems.map((s, i) => {
+            const Icon = SERVICE_ICONS[i];
+            return (
+              <Link
+                key={s.title}
+                href="/leistungen"
+                className="group bg-white p-7 rounded-3xl border border-cm-teal-100 hover:border-cm-teal-300 hover:shadow-lg transition"
+              >
+                <div className="w-12 h-12 rounded-2xl bg-cm-teal-50 flex items-center justify-center mb-5">
+                  <Icon className="w-6 h-6 text-cm-teal" />
+                </div>
+                <h3 className="font-semibold text-lg mb-1.5 text-cm-ink">{s.title}</h3>
+                <p className="text-xs uppercase tracking-wider text-cm-teal-600 mb-2">{s.sub}</p>
+                <p className="text-sm text-cm-ink/70 leading-relaxed">{s.desc}</p>
+              </Link>
+            );
+          })}
         </div>
         <div className="text-center mt-10">
           <Link
             href="/leistungen"
             className="inline-flex items-center gap-2 text-cm-teal-600 hover:text-cm-teal-700 font-medium"
           >
-            Alle Leistungen ansehen <ArrowRight className="w-4 h-4" />
+            {t("home.services.cta")} <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>
@@ -173,24 +158,20 @@ export default function Home() {
       <section className="container pb-12 lg:pb-20">
         <div className="grid lg:grid-cols-2 gap-0 bg-white rounded-3xl overflow-hidden border border-cm-teal-100">
           <div className="p-10 lg:p-14 flex flex-col justify-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cm-teal">Kultursensibel</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cm-teal">{t("home.culture.label")}</span>
             <h2 className="h-serif text-4xl lg:text-5xl text-cm-ink mt-3 mb-5">
-              Vielfalt ist <span className="text-cm-teal-600">unsere Stärke.</span>
+              {t("home.culture.h2a")}<span className="text-cm-teal-600">{t("home.culture.h2b")}</span>
             </h2>
             <p className="text-cm-ink/70 leading-relaxed mb-6">
-              Frankfurt ist eine der vielfältigsten Städte Deutschlands. Bei CuraMain spiegelt sich diese Vielfalt in unserem Team wider – unser mehrsprachiges Team respektiert religiöse, kulturelle und geschlechtssensible Bedürfnisse.
+              {t("home.culture.p")}
             </p>
             <ul className="space-y-2.5">
-              {[
-                { t: "Mehrsprachiges Team", d: "Pflege in Ihrer Sprache – unser Team kommuniziert in mehreren Sprachen." },
-                { t: "Religiös sensibel", d: "Gebetszeiten, Ramadan, halal/koschere Ernährung." },
-                { t: "Geschlechtssensibel", d: "Auf Wunsch ausschließlich weibliche oder männliche Pflegekräfte." },
-              ].map((p) => (
-                <li key={p.t} className="flex gap-3">
+              {culturePoints.map((p) => (
+                <li key={p.title} className="flex gap-3">
                   <CheckCircle2 className="w-5 h-5 text-cm-teal flex-shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-medium text-cm-ink">{p.t}</span>
-                    <span className="text-cm-ink/70"> – {p.d}</span>
+                    <span className="font-medium text-cm-ink">{p.title}</span>
+                    <span className="text-cm-ink/70"> – {p.desc}</span>
                   </div>
                 </li>
               ))}
@@ -204,25 +185,58 @@ export default function Home() {
       </section>
 
       {/* ─────────────────────────────────────────── */}
+      {/* PFLEGE & TEILHABE — IN VORBEREITUNG         */}
+      {/* ─────────────────────────────────────────── */}
+      <section className="container pb-12 lg:pb-20">
+        <div className="bg-white border border-cm-teal-100 rounded-3xl p-8 lg:p-12">
+          <div className="max-w-3xl mb-8">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cm-teal">{t("home.teilhabe.label")}</span>
+            <h2 className="h-serif text-4xl lg:text-5xl text-cm-ink mt-3 mb-4">
+              {t("home.teilhabe.h2")}
+            </h2>
+            <p className="text-cm-ink/70 leading-relaxed">
+              {t("home.teilhabe.p")}
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {teilhabeItems.map((f) => (
+              <div key={f.title} className="bg-cm-cream/60 border border-cm-teal-100 rounded-2xl p-5">
+                <div className="text-xs uppercase tracking-wider text-cm-teal-600 font-medium mb-2">{t("home.teilhabe.badge")}</div>
+                <h3 className="font-semibold text-cm-ink mb-2 leading-snug">{f.title}</h3>
+                <p className="text-sm text-cm-ink/70 leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <Link
+              href="/kontakt/patient?thema=teilhabe"
+              className="bg-cm-teal-600 hover:bg-cm-teal-700 text-white px-6 py-3 rounded-full font-medium shadow-sm inline-flex items-center gap-2 transition-colors"
+            >
+              {t("home.teilhabe.cta")} <ArrowRight className="w-4 h-4" />
+            </Link>
+            <span className="text-xs text-cm-ink/70 self-center">
+              {t("home.teilhabe.note")}
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────── */}
       {/* VERSORGUNGSGEBIET (lokale Stadt-Links)      */}
       {/* ─────────────────────────────────────────── */}
       <section className="container pb-12 lg:pb-20">
         <div className="bg-white border border-cm-teal-100 rounded-3xl p-8 lg:p-10">
           <div className="flex flex-wrap items-end justify-between gap-4 mb-6">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cm-teal">Versorgungsgebiet</span>
-              <h2 className="h-serif text-3xl lg:text-4xl text-cm-ink mt-2">Pflege im Bornheim-Nordend-Heimrevier</h2>
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cm-teal">{t("home.coverage.label")}</span>
+              <h2 className="h-serif text-3xl lg:text-4xl text-cm-ink mt-2">{t("home.coverage.h2")}</h2>
             </div>
           </div>
           <p className="text-cm-ink/70 leading-relaxed mb-6 max-w-2xl">
-            Aus der Berger Straße 69 versorgen wir das Heimrevier rund um Nordend-Ost, Bornheim und Ostend – mit E-Bike-Touren, kurzen Anfahrtszeiten und festen Tourenplänen.
+            {t("home.coverage.p")}
           </p>
           <div className="grid sm:grid-cols-3 gap-3">
-            {[
-              { slug: "nordend-ost", name: "Nordend-Ost", sub: "Vom Merianplatz bis zum Bürgerhospital" },
-              { slug: "bornheim", name: "Bornheim", sub: "Saalburgstraße · Bornheim Mitte · Sankt Katharinen" },
-              { slug: "ostend", name: "Ostend", sub: "EZB-Quartier · Habsburgerallee · Klinik Rotes Kreuz" },
-            ].map((c) => (
+            {coverageAreas.map((c) => (
               <Link
                 key={c.slug}
                 href={`/pflege/${c.slug}`}
@@ -232,7 +246,7 @@ export default function Home() {
                   {c.name}
                   <ArrowRight className="w-4 h-4 opacity-60 group-hover:translate-x-0.5 transition-transform" />
                 </div>
-                <div className="text-xs text-cm-ink/60">{c.sub}</div>
+                <div className="text-xs text-cm-ink/70">{c.sub}</div>
               </Link>
             ))}
           </div>
@@ -241,7 +255,7 @@ export default function Home() {
               href="/frankfurt"
               className="inline-flex items-center gap-2 text-cm-teal-600 hover:text-cm-teal-700 font-medium text-sm"
             >
-              Alle Einsatzgebiete in Frankfurt <ArrowRight className="w-4 h-4" />
+              {t("home.coverage.cta")} <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -252,24 +266,26 @@ export default function Home() {
       {/* ─────────────────────────────────────────── */}
       <section className="container pb-12 lg:pb-20">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cm-teal">Stimmen</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cm-teal">{t("home.testimonials.label")}</span>
           <h2 className="h-serif text-4xl lg:text-5xl text-cm-ink mt-3">
-            Echte Erfahrungen.<br />Echte Menschen.
+            {t("home.testimonials.h2").split("\n").map((line, i) => (
+              <span key={i}>{line}{i === 0 && <br />}</span>
+            ))}
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-5">
-          {testimonials.map((t) => (
-            <div key={t.name} className="bg-white p-7 rounded-3xl border border-cm-teal-100 relative">
+          {testimonials.map((testimonial) => (
+            <div key={testimonial.name} className="bg-white p-7 rounded-3xl border border-cm-teal-100 relative">
               <Quote className="w-7 h-7 text-cm-teal-200 absolute top-5 right-5" />
               <div className="flex gap-0.5 mb-4 text-yellow-400">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-current" />
                 ))}
               </div>
-              <p className="text-cm-ink/80 italic leading-relaxed mb-5">„{t.text}"</p>
+              <p className="text-cm-ink/80 italic leading-relaxed mb-5">„{testimonial.text}"</p>
               <div className="border-t border-cm-teal-100 pt-4">
-                <div className="font-semibold text-cm-ink">{t.name}</div>
-                <div className="text-xs text-cm-ink/60 mt-0.5">{t.role}</div>
+                <div className="font-semibold text-cm-ink">{testimonial.name}</div>
+                <div className="text-xs text-cm-ink/70 mt-0.5">{testimonial.role}</div>
               </div>
             </div>
           ))}
@@ -279,7 +295,7 @@ export default function Home() {
             href="/testimonials"
             className="inline-flex items-center gap-2 text-cm-teal-600 hover:text-cm-teal-700 font-medium"
           >
-            Alle Bewertungen lesen <ArrowRight className="w-4 h-4" />
+            {t("home.testimonials.cta")} <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>
@@ -294,30 +310,30 @@ export default function Home() {
         >
           <div className="relative z-10 max-w-2xl mx-auto">
             <h2 className="h-serif text-4xl lg:text-5xl text-white mb-5">
-              Lassen Sie uns sprechen.
+              {t("home.ctaBanner.h2")}
             </h2>
             <p className="text-white/90 text-lg mb-8 leading-relaxed">
-              Die Erstberatung ist kostenlos, mehrsprachig und unverbindlich. Wir kommen auch zu Ihnen nach Hause.
+              {t("home.ctaBanner.p")}
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Link
                 href="/kontakt/patient"
                 className="bg-white hover:bg-cm-teal-50 text-cm-teal-700 px-7 py-3.5 rounded-full font-medium shadow-lg inline-flex items-center gap-2 transition-colors"
               >
-                Termin vereinbaren <ArrowRight className="w-4 h-4" />
+                {t("home.ctaBanner.book")} <ArrowRight className="w-4 h-4" />
               </Link>
               <a
                 href="tel:+496979216147"
                 className="bg-white/15 backdrop-blur border border-white/30 text-white px-7 py-3.5 rounded-full font-medium inline-flex items-center gap-2 hover:bg-white/25 transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                069 / 79 216 147
+                {t("home.ctaBanner.phone")}
               </a>
             </div>
             <div className="mt-6 flex flex-wrap gap-3 justify-center text-sm text-white/80">
-              <span className="flex items-center gap-1.5"><Users className="w-4 h-4" />Mehrsprachig</span>
-              <span className="flex items-center gap-1.5"><Shield className="w-4 h-4" />Kassenzugelassen</span>
-              <span className="flex items-center gap-1.5"><Heart className="w-4 h-4" />Mo–Fr 8:00–18:00, Notfall 24/7</span>
+              <span className="flex items-center gap-1.5"><Users className="w-4 h-4" />{t("home.ctaBanner.badge1")}</span>
+              <span className="flex items-center gap-1.5"><Shield className="w-4 h-4" />{t("home.ctaBanner.badge2")}</span>
+              <span className="flex items-center gap-1.5"><Heart className="w-4 h-4" />{t("home.ctaBanner.badge3")}</span>
             </div>
           </div>
         </div>

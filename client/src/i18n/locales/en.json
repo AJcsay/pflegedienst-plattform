@@ -1,0 +1,491 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "cta": "Free Consultation",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "groups": {
+      "patients": {
+        "label": "For Patients",
+        "services": "Our Services",
+        "faq": "Frequently Asked Questions",
+        "contact": "Request Consultation"
+      },
+      "applicants": {
+        "label": "For Applicants",
+        "jobs": "Job Openings",
+        "apply": "Quick Apply",
+        "benefits": "Benefits & Perks"
+      },
+      "partners": {
+        "label": "For Partners",
+        "doctors": "Doctors & Clinics",
+        "capacity": "Capacity Enquiry",
+        "insurance": "Health Insurers",
+        "documents": "Documents"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Home care and participation in the Rhine-Main region. Professional, culturally sensitive outpatient care — right in your home.",
+    "hours": "Mon–Fri 8:00 am–6:00 pm · Emergency 24/7",
+    "pagesLabel": "Pages",
+    "coverageLabel": "Service Area",
+    "careerLabel": "Careers & Partners",
+    "links": {
+      "about": "About Us",
+      "services": "Services",
+      "faq": "FAQ",
+      "testimonials": "Testimonials",
+      "contact": "Consultation",
+      "nordend": "Care Nordend-Ost",
+      "bornheim": "Care Bornheim",
+      "ostend": "Care Ostend",
+      "jobs": "Job Openings",
+      "apply": "Apply Now",
+      "doctors": "Doctors & Clinics",
+      "capacity": "Capacity Enquiry",
+      "insurance": "Health Insurers",
+      "documents": "Documents",
+      "imprint": "Legal Notice",
+      "privacy": "Privacy Policy"
+    },
+    "copyright": "© {{year}} CuraMain · Managing Director: Alie Junior Sesay"
+  },
+  "home": {
+    "seo": {
+      "title": "CuraMain – Home Care & Participation in Frankfurt | Nordend · Bornheim · Ostend",
+      "description": "CuraMain: Professional home care in Frankfurt – Nordend, Bornheim & Ostend. Medical and personal care, culturally sensitive support. Fully insured. ☎ 069 79 216 147",
+      "keywords": "home care Frankfurt, outpatient nursing Frankfurt, ambulatory care Frankfurt, culturally sensitive care Frankfurt, multilingual nursing service, care Frankfurt Nordend, care Frankfurt Bornheim, CuraMain"
+    },
+    "hero": {
+      "pill": "Care & Participation in Frankfurt – at every stage of life",
+      "h1": "Because your home is the best place to heal.",
+      "p": "Professional, culturally sensitive care in Frankfurt – right at home in Nordend, Bornheim, and Ostend. Our multilingual team supports people of all ages with expertise, compassion, and a genuine understanding of each person's life situation.",
+      "ctaPrimary": "Request a free consultation",
+      "ctaPhone": "069 79 216 147",
+      "subline": "Free & no obligation · Multilingual · Reply within 24 h",
+      "badge1": "Approved by all health insurers (§ 132a SGB V · § 72 SGB XI)",
+      "badge2": "Multilingual",
+      "badge3": "Frankfurt – Nordend · Bornheim · Ostend"
+    },
+    "stats": [
+      { "value": "4.8★", "label": "Patient satisfaction" },
+      { "value": "150+", "label": "Patients cared for" },
+      { "value": "5+", "label": "Years of experience" },
+      { "value": "100%", "label": "Insurer approval" }
+    ],
+    "services": {
+      "label": "What we offer",
+      "h2": "Care that sees the whole person.",
+      "p": "From medical treatment care to household support – we provide all nursing services under one roof. Step by step, we are expanding to include care and participation services for children, young people, and adults with disabilities.",
+      "cta": "View all services",
+      "items": [
+        {
+          "title": "Medical Treatment Care",
+          "sub": "SGB V – Medical Services",
+          "desc": "Wound care, injections, medication administration – carried out by qualified nursing professionals on medical prescription."
+        },
+        {
+          "title": "Personal Care",
+          "sub": "SGB XI – Personal Hygiene & Mobility",
+          "desc": "Personal hygiene, mobility assistance, nutrition support – provided with dignity and compassion."
+        },
+        {
+          "title": "Advisory Visits",
+          "sub": "§ 37.3 SGB XI",
+          "desc": "Mandatory consultations for care allowance recipients – free of charge and professionally delivered."
+        },
+        {
+          "title": "Household Support",
+          "sub": "Everyday Assistance",
+          "desc": "Shopping, cleaning, laundry, meals – we take the everyday burden off your shoulders."
+        }
+      ]
+    },
+    "culture": {
+      "label": "Culturally Sensitive",
+      "h2a": "Diversity is ",
+      "h2b": "our strength.",
+      "p": "Frankfurt is one of Germany's most diverse cities. At CuraMain, that diversity is reflected in our team – our multilingual staff respects religious, cultural, and gender-sensitive needs.",
+      "points": [
+        {
+          "title": "Multilingual Team",
+          "desc": "Care in your language – our team communicates in multiple languages."
+        },
+        {
+          "title": "Religiously Sensitive",
+          "desc": "Prayer times, Ramadan, halal/kosher dietary needs respected."
+        },
+        {
+          "title": "Gender Sensitive",
+          "desc": "On request, exclusively female or male nursing professionals."
+        }
+      ]
+    },
+    "teilhabe": {
+      "label": "Coming Soon — Launch Q4 2027 / Q1 2028",
+      "h2": "Care and Participation – across every stage of life.",
+      "p": "Anchored in our articles of association and currently in development: CuraMain is expanding its services to include care and participation for children, young people, and adults with disabilities. If you would like to express interest now, we welcome advance registrations – we will be in touch as soon as the relevant care is available.",
+      "badge": "Coming Soon",
+      "cta": "Pre-register for Care & Participation",
+      "note": "Phase 1 services (personal care, medical care, advisory visits) are already active.",
+      "items": [
+        {
+          "title": "Paediatric Home Nursing",
+          "desc": "Home nursing care for chronically ill children and young people (SGB V § 132a)."
+        },
+        {
+          "title": "Out-of-Hospital Intensive Care",
+          "desc": "Care for ventilator-dependent patients at home, in nurseries, and at school (§ 37c SGB V, AKI-RL)."
+        },
+        {
+          "title": "School Accompaniment",
+          "desc": "Support for pupils with physical, cognitive, or emotional impairments throughout their school day (SGB IX / SGB VIII)."
+        },
+        {
+          "title": "Social Participation Services",
+          "desc": "Assistance and accompaniment for adults with disabilities in everyday life (SGB IX §§ 76 ff.)."
+        }
+      ]
+    },
+    "coverage": {
+      "label": "Service Area",
+      "h2": "Care in Bornheim, Nordend & beyond",
+      "p": "From Berger Straße 69, we cover the area around Nordend-Ost, Bornheim, and Ostend – with e-bike routes, short travel times, and reliable tour schedules.",
+      "cta": "All service areas in Frankfurt",
+      "areas": [
+        {
+          "slug": "nordend-ost",
+          "name": "Nordend-Ost",
+          "sub": "From Merianplatz to Bürgerhospital"
+        },
+        {
+          "slug": "bornheim",
+          "name": "Bornheim",
+          "sub": "Saalburgstraße · Bornheim Mitte · Sankt Katharinen"
+        },
+        {
+          "slug": "ostend",
+          "name": "Ostend",
+          "sub": "ECB Quarter · Habsburgerallee · Red Cross Clinic"
+        }
+      ]
+    },
+    "testimonials": {
+      "label": "Testimonials",
+      "h2": "Real experiences.\nReal people.",
+      "cta": "Read all reviews",
+      "items": [
+        {
+          "name": "Fatima A.",
+          "role": "Daughter of a patient, Nordend-Ost",
+          "text": "My father barely speaks German – that was always a challenge for us. At CuraMain, we were immediately matched with an Arabic-speaking nursing professional. He finally feels understood and well cared for."
+        },
+        {
+          "name": "Dr. Markus R.",
+          "role": "General Practitioner, Frankfurt-Bornheim",
+          "text": "I have been referring patients to CuraMain for over a year. The feedback is consistently positive: punctual, well-documented, and always reachable. A reliable partner for my practice."
+        },
+        {
+          "name": "Renate H.",
+          "role": "Patient, Bornheim",
+          "text": "After my hip surgery, I wanted to get home as quickly as possible. CuraMain coordinated the discharge with the clinic and was there on day one. I would never have thought it could go so smoothly."
+        }
+      ]
+    },
+    "ctaBanner": {
+      "h2": "Let's talk.",
+      "p": "The initial consultation is free, multilingual, and non-binding. We can also come to your home.",
+      "book": "Schedule an appointment",
+      "phone": "069 / 79 216 147",
+      "badge1": "Multilingual",
+      "badge2": "Insurer approved",
+      "badge3": "Mon–Fri 8 am–6 pm, Emergency 24/7"
+    }
+  },
+  "leistungen": {
+    "seo": {
+      "title": "Care & Participation Frankfurt – Medical Care, Personal Care & More | CuraMain",
+      "description": "Care and participation in Frankfurt: medical treatment care (SGB V), personal care (SGB XI), respite care, advisory visits § 37.3 & culturally sensitive support. Insurer approved.",
+      "keywords": "home care Frankfurt, nursing services Frankfurt, medical care Frankfurt, personal care Frankfurt, respite care Frankfurt, advisory visits Frankfurt, culturally sensitive care Frankfurt"
+    },
+    "hero": {
+      "pill": "Billable to all health insurers",
+      "h1": "Care & Participation.",
+      "p": "Active for you: the full spectrum of outpatient care in Frankfurt – insurer-approved, individually tailored, culturally sensitive. Coming soon: care and participation services for children, young people, and adults with disabilities."
+    },
+    "fullServices": [
+      {
+        "id": "behandlungspflege",
+        "title": "Medical Treatment Care",
+        "sub": "SGB V – Medical Services",
+        "description": "Our qualified nursing professionals carry out all medically prescribed measures professionally and reliably.",
+        "details": [
+          "Wound care and dressing changes",
+          "Injections and infusions",
+          "Medication administration and monitoring",
+          "Blood pressure and blood sugar measurement",
+          "Catheter and stoma care",
+          "Application and removal of compression stockings"
+        ]
+      },
+      {
+        "id": "grundpflege",
+        "title": "Personal Care",
+        "sub": "SGB XI – Personal Hygiene & Mobility",
+        "description": "We support you compassionately with daily activities, always respecting your self-determination and dignity.",
+        "details": [
+          "Personal hygiene",
+          "Assistance with dressing and undressing",
+          "Mobilisation and repositioning",
+          "Support with food intake",
+          "Accompaniment to the toilet",
+          "Bed-making and positioning"
+        ]
+      }
+    ],
+    "compactServices": {
+      "label": "Additional Services",
+      "h2": "Specialised nursing care.",
+      "items": [
+        {
+          "id": "verhinderungspflege",
+          "title": "Respite Care",
+          "sub": "SGB XI – Substitute Care",
+          "description": "When the regular caregiver is unavailable, we step in – reliably and with a familiar face.",
+          "badge": "Up to 6 weeks per year · Health insurer"
+        },
+        {
+          "id": "beratung",
+          "title": "Advisory Visits § 37.3",
+          "sub": "SGB XI – Mandatory Consultation",
+          "description": "Regular care consultations for care allowance recipients – we advise you at home and ensure the quality of care.",
+          "badge": "Covered by the care insurer"
+        },
+        {
+          "id": "hauswirtschaft",
+          "title": "Household Support",
+          "sub": "Everyday Assistance",
+          "description": "Shopping, cleaning, laundry, meals – we take the load off your daily routine so you can focus on recovery.",
+          "badge": "Billable under § 45b SGB XI"
+        }
+      ]
+    },
+    "teilhabe": {
+      "label": "Coming Soon — Launch Q4 2027 / Q1 2028",
+      "h2": "Care and Participation – expanding step by step.",
+      "p": "Anchored in CuraMain GmbH's articles of association and currently under development: we are building depth in four additional service fields. These services are not yet bookable. If you would like to express interest now, we welcome advance registrations – we will be in touch once approval is in place.",
+      "cta": "Pre-register for Care & Participation",
+      "note": "Note: The services listed here are not yet active. Advance registrations help us build the right capacity.",
+      "items": [
+        {
+          "title": "Paediatric Home Nursing",
+          "sub": "SGB V § 132a — planned",
+          "desc": "Home nursing for chronically ill children and young people: medication, tube feeding, tracheostomy care, wound management. Multilingual and culturally sensitive."
+        },
+        {
+          "title": "Out-of-Hospital Intensive Care",
+          "sub": "§ 37c SGB V · AKI-RL — planned",
+          "desc": "Round-the-clock care for ventilator-dependent patients in their own home, shared housing, or school and nursery settings."
+        },
+        {
+          "title": "School Accompaniment",
+          "sub": "SGB IX / SGB VIII — planned",
+          "desc": "Support for pupils with physical, cognitive, or emotional impairments in primary school, secondary school, or vocational education."
+        },
+        {
+          "title": "Social Participation Services",
+          "sub": "SGB IX §§ 76 ff. — planned",
+          "desc": "Assistance and accompaniment for adults with disabilities: home environment, medical and official appointments, leisure, independent living."
+        }
+      ]
+    },
+    "culture": {
+      "label": "Diversity",
+      "h2a": "Culturally sensitive care – ",
+      "h2b": "for every person.",
+      "p": "The Rhine-Main region is one of Germany's most diverse areas. Our multilingual team respects religious needs, gender sensitivity, and cultural traditions.",
+      "points": [
+        {
+          "title": "Multilingual Team",
+          "desc": "Care in your language, without misunderstandings"
+        },
+        {
+          "title": "Religious Needs",
+          "desc": "Prayer times, Ramadan, halal/kosher dietary requirements"
+        },
+        {
+          "title": "Gender Sensitive",
+          "desc": "On request, exclusively female or male nursing professionals"
+        }
+      ]
+    },
+    "cta": {
+      "h2": "What care do you need?",
+      "p": "Get free, non-binding advice. Together we will find the right care for you.",
+      "primary": "Free initial consultation",
+      "phone": "069 / 79 216 147"
+    }
+  },
+  "kontakt": {
+    "seo": {
+      "title": "Request a Free Care Consultation – CuraMain",
+      "description": "Request your free initial consultation with CuraMain in the Rhine-Main region. We advise you on care services, care levels, and costs.",
+      "keywords": "care consultation Rhine-Main, outpatient nursing consultation Rhine-Main, nursing service contact, CuraMain"
+    },
+    "languages": ["German", "English", "Spanish", "Arabic", "+ more on request"],
+    "districts": [
+      { "value": "nordend-ost", "label": "Nordend-Ost" },
+      { "value": "bornheim", "label": "Bornheim" },
+      { "value": "ostend", "label": "Ostend" },
+      { "value": "anderer", "label": "Other district – please send an enquiry" }
+    ],
+    "hero": {
+      "pill": "Free & no obligation",
+      "h1": "Free initial consultation.",
+      "p": "Fill in the form – we will get back to you promptly. Available in multiple languages."
+    },
+    "form": {
+      "srLabel": "Send enquiry",
+      "tabs": {
+        "contact": "Contact form",
+        "appointment": "Schedule appointment"
+      },
+      "hint": "Three fields are enough – we will respond within 24 hours.",
+      "name": "Your name",
+      "phone": "Phone",
+      "email": "Email",
+      "emailOptional": "(optional)",
+      "contactHelp": "We need at least a phone number or email address to get back to you.",
+      "district": "Which district do you live in?",
+      "districtPlaceholder": "Please select",
+      "districtOtherHint": "We currently serve primarily Nordend-Ost, Bornheim, and Ostend. We will review your enquiry individually and respond within 48 hours.",
+      "message": "Your message",
+      "messagePlaceholder": "What is this about? e.g. \"My father (78) needs personal care from next week and speaks Turkish.\"",
+      "consent": "I have read the <1>Privacy Policy</1> and agree that my details may be stored to process my enquiry.",
+      "submit": "Request free consultation",
+      "submitting": "Sending …",
+      "subline": "Free & no obligation · Reply within 24 h",
+      "errorNoContact": "Please provide a phone number or email address so we can get back to you.",
+      "errorNoConsent": "Please confirm the privacy notice.",
+      "errorSending": "Error sending: ",
+      "successToast": "Your enquiry has been sent successfully!",
+      "errorToast": "Error sending: "
+    },
+    "appointment": {
+      "comingSoonTitle": "Online booking coming soon",
+      "comingSoonText": "In the meantime, we are happy to hear from you by phone or via the contact form. We will get back to you within 24 hours with an appointment suggestion.",
+      "callButton": "069 / 79 216 147",
+      "iframeTitle": "Schedule appointment – CuraMain"
+    },
+    "success": {
+      "h2": "Thank you!",
+      "p": "Your request for a free initial consultation has been received. We will be in touch within 24 hours."
+    },
+    "sidebar": {
+      "reachUs": "How to reach us",
+      "phone": "069 / 79 216 147",
+      "phoneHours": "Mon–Fri 8 am–6 pm · Emergency 24/7",
+      "emailReply": "Reply within 24 h",
+      "address": "Berger Str. 69",
+      "city": "60316 Frankfurt am Main",
+      "officeHours": "Office hours",
+      "officeHoursVal": "Mon–Fri 8:00 am – 6:00 pm",
+      "multilingual": "Multilingual",
+      "multilingualLabel": "We advise in:",
+      "emergency": "Emergency?",
+      "emergencyText": "Our 24/7 emergency line is always available for you.",
+      "callNow": "Call now"
+    },
+    "map": {
+      "label": "Location",
+      "h2": "Visit us.",
+      "loadButton": "Load Google Maps",
+      "loadConsent": "By loading the map you agree to Google's privacy policy. Data may be transferred to Google in the USA – see our",
+      "loadConsentLink": "Privacy Policy",
+      "address": "Berger Straße 69, 60316 Frankfurt am Main",
+      "openMaps": "Open in Google Maps",
+      "iframeTitle": "CuraMain location – Berger Straße 69, Frankfurt am Main"
+    }
+  },
+  "ueberUns": {
+    "seo": {
+      "title": "About CuraMain – Care & Participation in Frankfurt with 13+ Years of Experience",
+      "description": "CuraMain Frankfurt: founded by experienced nursing professionals with over 13 years of hands-on practice in Nordend, Bornheim, and Ostend. Our values, team, and vision: care and participation across every stage of life.",
+      "keywords": "CuraMain about us, nursing service Frankfurt team, care and participation Frankfurt, outpatient care Frankfurt experience, culturally sensitive care Frankfurt founders"
+    },
+    "hero": {
+      "pill": "13+ years of nursing experience · Frankfurt am Main",
+      "h1a": "Care from conviction.",
+      "h1b": "For every stage of life.",
+      "p": "CuraMain stands for care and participation in Frankfurt that genuinely works. Founded by nursing professionals with over 13 years of hands-on experience in Nordend, Bornheim, and Ostend – driven by true compassion and the commitment to provide dignified, professional care. Step by step, we are expanding our services to include participation support for children, young people, and adults with disabilities."
+    },
+    "mission": {
+      "h2": "Our Mission",
+      "p": "To enable people of all ages – children, adults, seniors – to live a self-determined life in their familiar surroundings. With professional, culturally sensitive care and reliable participation support that sees the whole person."
+    },
+    "vision": {
+      "h2": "Our Vision",
+      "p": "To be the most trusted address in the Rhine-Main region for care and participation across every stage of life – known for quality, compassion, cultural diversity, and the reliability of a locally rooted service."
+    },
+    "values": {
+      "label": "What drives us",
+      "h2": "Our four values.",
+      "items": [
+        {
+          "title": "Compassion",
+          "desc": "Every person deserves care that respects their dignity and individuality."
+        },
+        {
+          "title": "Reliability",
+          "desc": "Punctuality, commitment, and consistency are the cornerstones of our work."
+        },
+        {
+          "title": "Teamwork",
+          "desc": "Only together can we ensure the best care for our patients."
+        },
+        {
+          "title": "Quality",
+          "desc": "Continuous professional development and the highest standards in care are what we stand for."
+        }
+      ]
+    },
+    "milestones": {
+      "label": "Our journey",
+      "h2": "Milestones.",
+      "items": [
+        {
+          "year": "2011",
+          "text": "Boys Bangura begins his nursing career in Frankfurt. Early placements in inpatient and outpatient care – the foundation for over a decade of hands-on nursing experience."
+        },
+        {
+          "year": "2016",
+          "text": "Taking on leadership responsibilities: tour planning, onboarding new nursing staff, and direct collaboration with GPs and clinics in Frankfurt's Ostend and Bornheim districts."
+        },
+        {
+          "year": "2022",
+          "text": "A growing conviction: Frankfurt needs a care service that sees cultural diversity not as a challenge but as a strength. The idea for CuraMain takes shape."
+        },
+        {
+          "year": "2024",
+          "text": "An intensive preparatory phase: concept development, building a network with hospitals and social services, selecting the Berger Straße 69 location – right in the heart of the service area."
+        },
+        {
+          "year": "2026",
+          "text": "CuraMain GmbH is formally incorporated in Frankfurt am Main. With over 13 years of nursing experience and a multilingual team, CuraMain launches in Nordend, Bornheim, and Ostend – under the brand \"Care and Participation\" across every stage of life."
+        },
+        {
+          "year": "from 2027",
+          "text": "Phased expansion to include school accompaniment, social participation services, paediatric home nursing, and out-of-hospital intensive care – anchored in the articles of association, with a clear quality and staffing roadmap."
+        }
+      ]
+    },
+    "cta": {
+      "h2": "Get to know us.",
+      "p": "A personal conversation, a home visit, or a phone consultation – we make time for you.",
+      "button": "Request consultation"
+    }
+  }
+}

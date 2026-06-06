@@ -162,7 +162,7 @@ export default function PartnerKapazitaet() {
           <div className="p-6 border-b border-cm-teal-100 flex flex-wrap items-center justify-between gap-3">
             <div>
               <h3 className="h-serif text-2xl text-cm-ink">Live-Verfügbarkeit</h3>
-              <p className="text-xs text-cm-ink/60">Übersicht zur Orientierung · Echte Anfrage über das Formular</p>
+              <p className="text-xs text-cm-ink/70">Übersicht zur Orientierung · Echte Anfrage über das Formular</p>
             </div>
             <span className="text-xs bg-cm-teal-50 text-cm-teal-700 px-3 py-1 rounded-full">
               🟢 Frei · 🟡 Begrenzt · 🔴 Ausgelastet

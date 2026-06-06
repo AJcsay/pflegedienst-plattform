@@ -43,8 +43,8 @@ const allJobs: Job[] = (jobsData as { jobs: Job[] }).jobs.filter((j) => j.active
 export default function Karriere() {
   useSEO({
     title: "Jobs & Karriere beim Pflegedienst – CuraMain",
-    description: "Jetzt als Pflegefachkraft, Pflegehelfer oder in der Hauswirtschaft bei CuraMain in Frankfurt-Bornheim/Nordend bewerben. Übertarifliche Bezahlung, E-Bike-Touren statt Pkw-Stress, flexible Dienstpläne.",
-    keywords: "Pflegejobs Frankfurt, Pflegefachkraft Stelle Bornheim Nordend, Pflegedienst Karriere Frankfurt-Ost, CuraMain Jobs",
+    description: "Jetzt als Pflegefachperson, Pflegeassistent·in oder in der Hauswirtschaft bei CuraMain in Frankfurt-Bornheim/Nordend bewerben. Übertarifliche Bezahlung, E-Bike-Touren statt Pkw-Stress, flexible Dienstpläne.",
+    keywords: "Pflegejobs Frankfurt, Pflegefachperson Stelle Bornheim Nordend, Pflegefachkraft Frankfurt, Pflegedienst Karriere Frankfurt-Ost, CuraMain Jobs",
     canonical: "https://www.curamain.de/karriere",
   });
 

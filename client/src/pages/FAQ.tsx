@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight, Phone, HelpCircle } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import faqData from "@/data/faq.json";
 
 export default function FAQ() {
@@ -14,96 +14,6 @@ export default function FAQ() {
     keywords: "Pflegedienst FAQ Frankfurt, Pflegegrad beantragen Frankfurt, ambulante Pflege Fragen Frankfurt, Pflegekosten Frankfurt, CuraMain FAQ",
     canonical: "https://www.curamain.de/faq",
   });
-
-  useEffect(() => {
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Was sind Pflegegrade?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Pflegegrade sind eine Einstufung des Pflegebedarfs in Deutschland. Es gibt 5 Pflegegrade, die bestimmen, wie viel Unterstützung eine Person benötigt und wie viel Leistungen die Pflegekasse zahlt – von Pflegegrad 1 (geringe Beeinträchtigung) bis Pflegegrad 5 (schwerste Beeinträchtigung mit besonderen Anforderungen)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Wie beantrage ich einen Pflegegrad?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Stellen Sie einen schriftlichen Antrag bei Ihrer Pflegekasse. Der Medizinische Dienst besucht Sie daraufhin zu Hause und erstellt ein Gutachten. Sie erhalten einen Bescheid mit dem zuerkannten Pflegegrad – die Leistungen gelten rückwirkend ab dem Antragsmonat."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Wie viel kostet ambulante Pflege?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Die Pflegekasse übernimmt je nach Pflegegrad zwischen 316 € (Grad 2) und 901 € (Grad 5) pro Monat für ambulante Sachleistungen. Die tatsächlichen Kosten hängen vom Leistungsumfang ab. CuraMain berät Sie kostenlos über Ihre individuelle Kostenstruktur."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Was ist kultursensible Pflege?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Kultursensible Pflege bedeutet, dass religiöse, kulturelle und sprachliche Bedürfnisse in der täglichen Pflege berücksichtigt werden. Bei CuraMain in Frankfurt umfasst das mehrsprachige Kommunikation, Respekt vor religiösen Praktiken wie Gebetszeiten oder Speisevorschriften sowie geschlechtssensible Pflegeeinsätze auf Wunsch."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Was zahlt die Pflegekasse?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Die Pflegekasse zahlt ambulante Pflegeleistungen (Grundpflege, Behandlungspflege, Hauswirtschaft) direkt an den Pflegedienst. Alternativ können Sie Pflegegeld erhalten: Pflegegrad 2: 316 €/Monat, Pflegegrad 3: 545 €/Monat, Pflegegrad 4: 728 €/Monat, Pflegegrad 5: 901 €/Monat. Kombinationen sind möglich."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Welche Stadtteile in Frankfurt versorgt CuraMain?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CuraMain versorgt aktuell Frankfurt-Nordend-Ost, Frankfurt-Bornheim und Frankfurt-Ostend. Unser Standort in der Berger Straße 69 liegt mitten im Versorgungsgebiet – per E-Bike erreichen wir jeden Haushalt in unter 10 Minuten."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Wer bietet ambulante Pflege in Frankfurt an?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CuraMain Pflegedienst GmbH (i.Gr.) ist ein ambulanter Pflegedienst mit Sitz in der Berger Straße 69, 60316 Frankfurt am Main. Das Team spricht Deutsch, Englisch und Französisch und betreut pflegebedürftige Menschen in Frankfurt und Offenbach am Main."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Wie finde ich einen guten Pflegedienst in Frankfurt?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Achten Sie auf eine Kassenzulassung nach § 72 SGB XI, transparente Leistungsnachweise und mehrsprachiges Fachpersonal. CuraMain ist kassenzugelassen und berät Sie kostenlos unter 069 79216147."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Kann ich als Angehöriger ambulante Pflege beantragen?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ja. Mit einer Vollmacht oder einem Betreuungsbeschluss können Angehörige alle Schritte – von der Pflegegradbeantragung bis zur Vertragsunterzeichnung – stellvertretend erledigen. CuraMain unterstützt Sie dabei von Anfang an."
-          }
-        }
-      ]
-    };
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.id = "faq-schema";
-    script.textContent = JSON.stringify(faqSchema);
-    document.head.appendChild(script);
-    return () => {
-      const el = document.getElementById("faq-schema");
-      if (el) el.remove();
-    };
-  }, []);
 
   const currentCategory = faqData.categories.find((cat) => cat.id === activeCategory);
 

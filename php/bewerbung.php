@@ -130,6 +130,14 @@ if (!empty($_FILES['cv']) && ($_FILES['cv']['error'] ?? UPLOAD_ERR_NO_FILE) !== 
     }
     $finfo = new finfo(FILEINFO_MIME_TYPE);
     $mime  = $finfo->file($cv['tmp_name']) ?: 'application/octet-stream';
+    // DOCX-Dateien sind ZIP-Container – manche Server-Installationen von libmagic
+    // geben für .docx 'application/zip' zurück (technisch korrekt, aber abweichend
+    // vom erwarteten vnd.openxmlformats-...). Wir normalisieren VOR dem Allow-Check,
+    // damit (a) der MIME-Check nicht fälschlich fehlschlägt und (b) der E-Mail-Anhang
+    // den semantisch richtigen Content-Type erhält.
+    if ($ext === 'docx' && $mime === 'application/zip') {
+        $mime = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+    }
     if (!in_array($mime, $ALLOWED_MIMES, true)) {
         http_response_code(400);
         echo json_encode(['success' => false, 'error' => 'MIME-Typ nicht erlaubt.']);

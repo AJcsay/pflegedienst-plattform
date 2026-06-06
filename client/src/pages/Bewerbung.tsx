@@ -16,7 +16,7 @@ const allJobs: Job[] = (jobsData as { jobs: Job[] }).jobs.filter((j) => j.active
 export default function Bewerbung() {
   useSEO({
     title: "Jetzt bewerben beim Pflegedienst – CuraMain",
-    description: "Bewerben Sie sich jetzt bei CuraMain im Rhein-Main-Gebiet. Pflegefachkraft, Pflegehelfer oder Hauswirtschaft – Lebenslauf hochladen und Teil unseres Teams werden.",
+    description: "Bewerben Sie sich jetzt bei CuraMain im Rhein-Main-Gebiet. Pflegefachperson, Pflegeassistent·in oder Hauswirtschaft – Lebenslauf hochladen und Teil unseres Teams werden.",
     keywords: "Bewerbung Pflegedienst Rhein-Main, Pflegekraft bewerben Rhein-Main-Gebiet, CuraMain Stelle bewerben",
     canonical: "https://www.curamain.de/karriere/bewerbung",
   });
@@ -232,7 +232,7 @@ export default function Bewerbung() {
                   <FileText className="h-5 w-5 text-cm-teal flex-shrink-0" />
                   <div className="flex-1 min-w-0">
                     <div className="text-sm font-medium text-cm-ink truncate">{file.name}</div>
-                    <div className="text-xs text-cm-ink/60">{(file.size / 1024 / 1024).toFixed(1)} MB</div>
+                    <div className="text-xs text-cm-ink/70">{(file.size / 1024 / 1024).toFixed(1)} MB</div>
                   </div>
                   <button
                     type="button"
@@ -242,7 +242,7 @@ export default function Bewerbung() {
                     }}
                     className="p-1.5 rounded-full hover:bg-white transition-colors"
                   >
-                    <X className="h-4 w-4 text-cm-ink/60" />
+                    <X className="h-4 w-4 text-cm-ink/70" />
                   </button>
                 </div>
               ) : (
@@ -253,7 +253,7 @@ export default function Bewerbung() {
                 >
                   <Upload className="h-10 w-10 text-cm-teal mx-auto mb-3" />
                   <div className="font-medium text-cm-ink mb-1">Klicken oder ziehen Sie Ihren Lebenslauf hierher</div>
-                  <div className="text-xs text-cm-ink/60">PDF, DOC oder DOCX · max. 10 MB</div>
+                  <div className="text-xs text-cm-ink/70">PDF, DOC oder DOCX · max. 10 MB</div>
                 </button>
               )}
             </div>

@@ -59,7 +59,7 @@ export default function Frankfurt() {
         {
           "@type": "Question",
           "name": "Spricht das CuraMain-Team Deutsch und andere Sprachen?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Ja, unser Pflegeteam ist mehrsprachig. Neben Deutsch sprechen wir Englisch, Französisch und weitere Sprachen. Kultursensible Pflege ist für uns selbstverständlich." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Ja, unser Pflegeteam ist mehrsprachig. Neben Deutsch sprechen wir Englisch, Spanisch, Arabisch und weitere Sprachen — mindestens fünf insgesamt. Kultursensible Pflege ist für uns selbstverständlich." }
         }
       ]
     };
@@ -117,7 +117,7 @@ export default function Frankfurt() {
     },
     {
       q: "Spricht das CuraMain-Team Deutsch und andere Sprachen?",
-      a: "Ja, unser Pflegeteam ist mehrsprachig. Neben Deutsch sprechen wir Englisch, Französisch und weitere Sprachen. Kultursensible Pflege ist für uns selbstverständlich."
+      a: "Ja, unser Pflegeteam ist mehrsprachig. Neben Deutsch sprechen wir Englisch, Spanisch, Arabisch und weitere Sprachen — mindestens fünf insgesamt. Kultursensible Pflege ist für uns selbstverständlich."
     },
   ];
 
@@ -162,13 +162,13 @@ export default function Frankfurt() {
       <section className="container py-12 lg:py-14">
         <div className="max-w-3xl">
           <p className="text-lg text-cm-ink/85 leading-relaxed mb-6">
-            CuraMain Pflegedienst GmbH ist ein ambulanter Pflegedienst mit Sitz in Frankfurt am Main. Wir versorgen pflegebedürftige Menschen in ihrem gewohnten Zuhause – würdevoll, zuverlässig und professionell. Unser Team besteht aus examinierten Pflegefachkräften mit Herz für den Beruf.
+            CuraMain ist ein ambulanter Pflegedienst mit Sitz in Frankfurt am Main. Wir versorgen pflegebedürftige Menschen in ihrem gewohnten Zuhause – würdevoll, zuverlässig und professionell. Unser Team besteht aus examinierten Pflegefachpersonen mit Herz für den Beruf.
           </p>
           <p className="text-lg text-cm-ink/80 leading-relaxed mb-6">
             Unsere aktiven Versorgungsgebiete liegen in Frankfurt-Nordend, Frankfurt-Bornheim und Frankfurt-Ostend. Von unserem Standort an der Berger Straße 69 erreichen wir diese Stadtteile schnell und effizient – per E-Bike, ohne lange Anfahrtszeiten.
           </p>
           <p className="text-lg text-cm-ink/80 leading-relaxed">
-            Wir pflegen Menschen unterschiedlichster Herkunft und Lebenssituation. Unser mehrsprachiges Team kommuniziert auf Deutsch, Englisch, Französisch und weiteren Sprachen – kultursensibel und mit Respekt vor individuellen Gewohnheiten und Werten.
+            Wir pflegen Menschen unterschiedlichster Herkunft und Lebenssituation. Unser mehrsprachiges Team kommuniziert auf Deutsch, Englisch, Spanisch, Arabisch und weiteren Sprachen – kultursensibel und mit Respekt vor individuellen Gewohnheiten und Werten.
           </p>
         </div>
       </section>
@@ -198,11 +198,11 @@ export default function Frankfurt() {
                   {c.name}
                   <ArrowRight className="w-4 h-4 opacity-60 group-hover:translate-x-0.5 transition-transform" />
                 </div>
-                <div className="text-xs text-cm-ink/60">{c.sub}</div>
+                <div className="text-xs text-cm-ink/70">{c.sub}</div>
               </Link>
             ))}
           </div>
-          <p className="text-sm text-cm-ink/60">
+          <p className="text-sm text-cm-ink/70">
             Weitere Frankfurter Stadtteile auf Anfrage – wir prüfen die Versorgung individuell.
           </p>
         </div>
@@ -250,7 +250,7 @@ export default function Frankfurt() {
               <div key={p.grad} className="bg-white rounded-2xl p-5 border border-cm-teal-100 text-center">
                 <div className="text-xs font-semibold text-cm-teal uppercase tracking-wide mb-2">{p.grad}</div>
                 <div className="h-serif text-2xl text-cm-ink mb-1">{p.betrag}</div>
-                <div className="text-xs text-cm-ink/60">{p.info}</div>
+                <div className="text-xs text-cm-ink/70">{p.info}</div>
               </div>
             ))}
           </div>

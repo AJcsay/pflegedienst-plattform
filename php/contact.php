@@ -97,12 +97,15 @@ $message   = s($data['message'] ?? '');
 $category  = s($data['category'] ?? 'general');
 $organization = s($data['organization'] ?? '');
 
-if ($firstName === '' || $email === '' || $message === '') {
+// Name + Nachricht Pflicht; zur Rückmeldung genügt E-Mail ODER Telefon
+// (Frontend bewirbt E-Mail als optional — Backend muss konsistent sein).
+if ($firstName === '' || $message === '' || ($email === '' && $phone === '')) {
     http_response_code(400);
-    echo json_encode(['success' => false, 'error' => 'Pflichtfelder fehlen.']);
+    echo json_encode(['success' => false, 'error' => 'Bitte Name, Nachricht und mindestens Telefon oder E-Mail angeben.']);
     exit;
 }
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+// E-Mail nur prüfen, wenn angegeben.
+if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     http_response_code(400);
     echo json_encode(['success' => false, 'error' => 'Ungültige E-Mail-Adresse.']);
     exit;
@@ -154,12 +157,12 @@ $bodyLines[] = "IP:    $ip";
 $bodyLines[] = "Datum: " . date('Y-m-d H:i:s T');
 $mailBody = implode("\n", $bodyLines);
 
-$headers = [
-    "From: CuraMain <$FROM>",
-    "Reply-To: $email",
-    "X-Mailer: curamain-website",
-    "Content-Type: text/plain; charset=UTF-8",
-];
+$headers = ["From: CuraMain <$FROM>"];
+if ($email !== '') {
+    $headers[] = "Reply-To: $email";
+}
+$headers[] = "X-Mailer: curamain-website";
+$headers[] = "Content-Type: text/plain; charset=UTF-8";
 
 $ok = mail($to, $subjectLine, $mailBody, implode("\r\n", $headers));
 
@@ -172,5 +175,41 @@ if (!$ok) {
 // Rate-Limit aktualisieren
 $attempts[] = $now;
 @file_put_contents($rlFile, json_encode(array_values($attempts)), LOCK_EX);
+
+// === Lead-Bridge: Fire-and-forget zum Hetzner-Cockpit ========================
+// Sendet Lead-Daten asynchron an den Worker (POST /api/leads).
+// Timeout 1 s — der Nutzer wartet NICHT auf diesen Call.
+// Fehler werden stumm ignoriert; Mail wurde bereits erfolgreich versendet.
+if (function_exists('curl_init')) {
+    $leadPayload = json_encode([
+        'name'       => trim("$firstName $lastName"),
+        'telefon'    => $phone,
+        'email'      => $email,
+        'nachricht'  => $message,
+        'stadtteil'  => '',
+        'pflegegrad' => '',
+        'kategorie'  => $category,
+        '_ip'        => $ip,
+    ]);
+    $lch = curl_init('https://cockpit.curamain.de/api/leads');
+    if ($lch !== false) {
+        curl_setopt_array($lch, [
+            CURLOPT_POST           => true,
+            CURLOPT_POSTFIELDS     => $leadPayload,
+            CURLOPT_HTTPHEADER     => [
+                'Content-Type: application/json',
+                'Content-Length: ' . strlen($leadPayload),
+            ],
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_TIMEOUT        => 1,
+            CURLOPT_CONNECTTIMEOUT => 1,
+            CURLOPT_SSL_VERIFYPEER => true,
+            CURLOPT_USERAGENT      => 'curamain-website/1.0',
+        ]);
+        @curl_exec($lch);
+        @curl_close($lch);
+    }
+}
+// === Ende Lead-Bridge ========================================================
 
 echo json_encode(['success' => true]);

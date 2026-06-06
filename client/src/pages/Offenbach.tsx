@@ -17,7 +17,7 @@ export default function Offenbach() {
     const schema = {
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",
-      name: "CuraMain Pflegedienst GmbH i.Gr.",
+      name: "CuraMain GmbH",
       url: "https://www.curamain.de",
       telephone: "+496979216147",
       email: "info@curamain.de",
@@ -75,7 +75,7 @@ export default function Offenbach() {
           name: "Spricht das Pflegeteam auch andere Sprachen als Deutsch?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Unser Team spricht mehrere Sprachen, darunter Arabisch, Türkisch, Englisch und weitere. Wir legen großen Wert auf kultursensible Pflege.",
+            text: "Unser Team spricht mehrere Sprachen, darunter Englisch, Spanisch und Arabisch – mindestens fünf Sprachen. Wir legen großen Wert auf kultursensible Pflege.",
           },
         },
       ],
@@ -113,12 +113,12 @@ export default function Offenbach() {
     {
       icon: <CheckCircle className="w-6 h-6 text-cm-teal" />,
       title: "Betreuungsleistungen",
-      text: "Gesellschaft, Alltagsbegleitung und Unterstützung nach § 45b SGB XI før mehr Lebensqualität.",
+      text: "Gesellschaft, Alltagsbegleitung und Unterstützung nach § 45b SGB XI für mehr Lebensqualität.",
     },
     {
       icon: <Languages className="w-6 h-6 text-cm-teal" />,
       title: "Kultursensible Pflege",
-      text: "Mehrsprachiges Team – Arabisch, Türkisch, Englisch und weitere Sprachen. Vertrauen durch Verständnis.",
+      text: "Mehrsprachiges Team – Englisch, Spanisch, Arabisch und weitere Sprachen. Vertrauen durch Verständnis.",
     },
     {
       icon: <MapPin className="w-6 h-6 text-cm-teal" />,
@@ -128,10 +128,10 @@ export default function Offenbach() {
   ];
 
   const pflegegrade = [
-    { grad: 1, betrag: "125 €", info: "Eingeschrănkte Alltagskompetenz" },
+    { grad: 1, betrag: "125 €", info: "Eingeschränkte Alltagskompetenz" },
     { grad: 2, betrag: "724 €", info: "Erhebliche Beeinträchtigung" },
     { grad: 3, betrag: "1.363 €", info: "Schwere Beeinträchtigung" },
-    { grad: 4, betrag: "1.693 ₼", info: "Schwerste Beeinträchtigung" },
+    { grad: 4, betrag: "1.693 €", info: "Schwerste Beeinträchtigung" },
     { grad: 5, betrag: "2.095 €", info: "Besondere Pflegebedürftigkeit" },
   ];
 
@@ -159,7 +159,7 @@ export default function Offenbach() {
     {
       frage: "Spricht das Pflegeteam auch andere Sprachen als Deutsch?",
       antwort:
-        "Unser Team spricht mehrere Sprachen, darunter Arabisch, Türkisch, Englisch und weitere. Wir legen großen Wert auf kultursensible Pflege.",
+        "Unser Team spricht mehrere Sprachen, darunter Englisch, Spanisch und Arabisch – mindestens fünf Sprachen. Wir legen großen Wert auf kultursensible Pflege.",
     },
   ];
 
@@ -181,7 +181,7 @@ export default function Offenbach() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/kontakt"
+              href="/kontakt/patient"
               className="bg-cm-teal text-white px-8 py-3 rounded-full font-medium hover:bg-cm-teal/90 transition-colors inline-flex items-center gap-2"
             >
               Jetzt Beratung anfragen <ArrowRight className="w-4 h-4" />
@@ -218,7 +218,7 @@ export default function Offenbach() {
           </p>
           <p>
             Unser mehrsprachiges Team ermöglicht es, Pflegebedürftige und
-            Angehörige in ihrer jeweiligen Muttersprache zu betreuen. Das schaft
+            Angehörige in ihrer jeweiligen Muttersprache zu betreuen. Das schafft
             Vertrauen – gerade in einer so persönlichen Situation wie der
             häuslichen Pflege.
           </p>
@@ -254,8 +254,8 @@ export default function Offenbach() {
           <h2 className="h-serif text-3xl text-cm-ink font-bold text-center mb-4">
             Sachleistungsbeträge nach § 36 SGB XI
           </h2>
-          <p className="text-center text-cm-ink/60 mb-10 text-sm">
-            Diese Beträge gelten før ambulante Pflegesachleistungen. Ihre
+          <p className="text-center text-cm-ink/70 mb-10 text-sm">
+            Diese Beträge gelten für ambulante Pflegesachleistungen. Ihre
             Pflegekasse übernimmt die Kosten bis zu den jeweiligen Höchstgrenzen.
           </p>
           <div className="overflow-hidden rounded-3xl border border-cm-teal-100">
@@ -322,7 +322,7 @@ export default function Offenbach() {
             in Offenbach am Main.
           </p>
           <Link
-            href="/kontakt"
+            href="/kontakt/patient"
             className="bg-cm-teal text-white px-10 py-4 rounded-full font-medium hover:bg-cm-teal/90 transition-colors inline-flex items-center gap-2 text-lg"
           >
             Jetzt Kontakt aufnehmen <ArrowRight className="w-5 h-5" />

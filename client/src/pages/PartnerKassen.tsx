@@ -238,21 +238,21 @@ export default function PartnerKassen() {
                           {doc.title}
                         </div>
                         {doc.description && (
-                          <div className="text-xs text-cm-ink/60 mt-0.5">{doc.description}</div>
+                          <div className="text-xs text-cm-ink/70 mt-0.5">{doc.description}</div>
                         )}
-                        <div className="text-xs text-cm-ink/60 mt-1">
+                        <div className="text-xs text-cm-ink/70 mt-1">
                           {categoryLabels[doc.category] || doc.category}
                           {doc.fileSize ? ` · ${(doc.fileSize / 1024 / 1024).toFixed(1)} MB` : ""}
                         </div>
                       </div>
-                      <FileDown className="w-4 h-4 text-cm-ink/60 group-hover:text-cm-teal flex-shrink-0 mt-1" />
+                      <FileDown className="w-4 h-4 text-cm-ink/70 group-hover:text-cm-teal flex-shrink-0 mt-1" />
                     </a>
                   ))}
                 </div>
               ) : (
                 <div className="text-center py-6">
                   <FileText className="w-10 h-10 text-cm-teal-200 mx-auto mb-3" />
-                  <p className="text-sm text-cm-ink/60">Aktuell keine Dokumente verfügbar.</p>
+                  <p className="text-sm text-cm-ink/70">Aktuell keine Dokumente verfügbar.</p>
                 </div>
               )}
             </div>

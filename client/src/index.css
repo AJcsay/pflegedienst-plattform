@@ -314,3 +314,22 @@ html {
 .hover\:bg-cm-teal-700:hover { background-color: var(--cm-teal-700); }
 .hover\:border-cm-teal-300:hover { border-color: var(--cm-teal-300); }
 .hover\:text-cm-teal-700:hover { color: var(--cm-teal-700); }
+
+/* ─────────────────────────────────────────────────────────────── */
+/* Reduzierte Bewegung — WCAG 2.3.3 (Vestibulär/Gleichgewicht)    */
+/* Nutzer·innen mit prefers-reduced-motion erhalten keine          */
+/* störenden Animationen oder Übergänge. scroll-behavior: smooth  */
+/* wird auf auto zurückgesetzt (JS-Seite: ScrollHandler in         */
+/* App.tsx prüft window.matchMedia).                              */
+/* ─────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}
