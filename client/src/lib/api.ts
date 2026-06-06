@@ -24,6 +24,8 @@ export interface ContactPayload {
   subject?: string;
   message: string;
   category: ContactCategory;
+  // Stadtteil (Patientenformular) — eigenes Feld für Lead-Bridge/NocoDB
+  stadtteil?: string;
   // optional Felder für Partner-spezifische Anfragen
   organization?: string;
   extra?: Record<string, unknown>;

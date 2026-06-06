@@ -60,7 +60,8 @@ export default function KontaktPatient() {
       lastName: rest.join(" ") || "-",
       email: form.email,
       phone: form.phone || undefined,
-      message: form.stadtteil ? `[Stadtteil: ${form.stadtteil}] ${form.message}` : form.message,
+      message: form.message,
+      stadtteil: form.stadtteil || undefined,
       category: "patient",
       website,
     });

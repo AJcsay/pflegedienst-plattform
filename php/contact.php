@@ -96,6 +96,7 @@ $subject   = s($data['subject'] ?? '');
 $message   = s($data['message'] ?? '');
 $category  = s($data['category'] ?? 'general');
 $organization = s($data['organization'] ?? '');
+$stadtteil = s($data['stadtteil'] ?? '');
 
 // Name + Nachricht Pflicht; zur Rückmeldung genügt E-Mail ODER Telefon
 // (Frontend bewirbt E-Mail als optional — Backend muss konsistent sein).
@@ -111,7 +112,7 @@ if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 // Header-Injection-Schutz: alle einzeiligen Felder dürfen kein CR/LF enthalten
-foreach ([$firstName, $lastName, $email, $subject, $phone, $organization] as $f) {
+foreach ([$firstName, $lastName, $email, $subject, $phone, $organization, $stadtteil] as $f) {
     if (preg_match("/[\r\n]/", $f)) {
         http_response_code(400);
         echo json_encode(['success' => false, 'error' => 'Ungültige Zeichen.']);
@@ -147,6 +148,7 @@ $bodyLines = [
 ];
 if ($phone !== '')        $bodyLines[] = "Telefon:      $phone";
 if ($organization !== '') $bodyLines[] = "Organisation: $organization";
+if ($stadtteil !== '')    $bodyLines[] = "Stadtteil:    $stadtteil";
 if ($subject !== '')      $bodyLines[] = "Betreff:      $subject";
 $bodyLines[] = '';
 $bodyLines[] = "Nachricht:";
@@ -186,7 +188,7 @@ if (function_exists('curl_init')) {
         'telefon'    => $phone,
         'email'      => $email,
         'nachricht'  => $message,
-        'stadtteil'  => '',
+        'stadtteil'  => $stadtteil,
         'pflegegrad' => '',
         'kategorie'  => $category,
         '_ip'        => $ip,
