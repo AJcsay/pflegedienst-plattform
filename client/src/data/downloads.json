@@ -1,0 +1,44 @@
+{
+  "downloads": [
+    {
+      "id": 1,
+      "title": "Unsere Leistungen auf einen Blick",
+      "description": "Behandlungspflege, Grundpflege, Hauswirtschaft, Beratungsbesuche und Betreuung — kompakt erklärt, inkl. erster Schritte.",
+      "category": "infoblatt",
+      "fileUrl": "/dokumente/curamain-infoblatt-leistungen.pdf",
+      "fileName": "curamain-infoblatt-leistungen.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-06-07"
+    },
+    {
+      "id": 2,
+      "title": "Checkliste Krankenhausentlassung",
+      "description": "Gut vorbereitet nach Hause: Was Sie noch in der Klinik klären sollten, was zu Hause wichtig ist — zum Abhaken.",
+      "category": "checkliste",
+      "fileUrl": "/dokumente/curamain-checkliste-krankenhausentlassung.pdf",
+      "fileName": "curamain-checkliste-krankenhausentlassung.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-06-07"
+    },
+    {
+      "id": 3,
+      "title": "Wegweiser Pflegegrad",
+      "description": "In fünf Schritten zum Pflegegrad: Antrag, MD-Begutachtung, Bescheid und alle Leistungsbeträge (Stand 2026).",
+      "category": "wegweiser",
+      "fileUrl": "/dokumente/curamain-wegweiser-pflegegrad.pdf",
+      "fileName": "curamain-wegweiser-pflegegrad.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-06-07"
+    },
+    {
+      "id": 4,
+      "title": "Beratungsbesuch nach § 37.3 SGB XI",
+      "description": "Pflicht für Pflegegeld-Beziehende: Wer braucht ihn, wie oft, was kostet er — und wie CuraMain Sie dabei begleitet.",
+      "category": "infoblatt",
+      "fileUrl": "/dokumente/curamain-beratungsbesuch-37-3.pdf",
+      "fileName": "curamain-beratungsbesuch-37-3.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-06-07"
+    }
+  ]
+}

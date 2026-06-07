@@ -53,6 +53,7 @@ export default function Footer() {
               <Link href="/ueber-uns" className="block py-2 hover:text-cm-mint transition-colors">{t("footer.links.about")}</Link>
               <Link href="/leistungen" className="block py-2 hover:text-cm-mint transition-colors">{t("footer.links.services")}</Link>
               <Link href="/faq" className="block py-2 hover:text-cm-mint transition-colors">{t("footer.links.faq")}</Link>
+              <Link href="/downloads" className="block py-2 hover:text-cm-mint transition-colors">{t("footer.links.downloads")}</Link>
               <Link href="/testimonials" className="block py-2 hover:text-cm-mint transition-colors">{t("footer.links.testimonials")}</Link>
               <Link href="/kontakt/patient" className="block py-2 hover:text-cm-mint transition-colors">{t("footer.links.contact")}</Link>
             </div>

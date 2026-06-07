@@ -30,6 +30,12 @@ export const routes = [
     priority: "0.7",
   },
   {
+    path: "/downloads",
+    title: "Downloads & Ratgeber – Checklisten & Infoblätter zur Pflege | CuraMain",
+    description: "Kostenlose Ratgeber von CuraMain Frankfurt: Checkliste Krankenhausentlassung, Wegweiser Pflegegrad, Infoblatt § 37.3 & Leistungsübersicht als PDF herunterladen.",
+    priority: "0.7",
+  },
+  {
     path: "/testimonials",
     title: "Bewertungen & Testimonials – CuraMain",
     description: "Lesen Sie echte Bewertungen unserer Patient·innen auf Google. CuraMain – ambulanter Pflegedienst Rhein-Main-Gebiet.",

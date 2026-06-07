@@ -1,0 +1,26 @@
+PDF-ABLAGE FÜR DAS DOWNLOAD-CENTER (/downloads) — Stand 07.06.2026
+===================================================================
+
+Die Word-Quellen liegen in:
+  06_Kommunikation/Downloads_Website/*.docx
+
+GF-Schritt (einmalig pro Dokument-Update):
+  Jede docx in Word öffnen → Datei → Exportieren → PDF
+  und mit EXAKT diesen Dateinamen HIER in diesen Ordner speichern:
+
+  1. curamain-infoblatt-leistungen.pdf
+     (aus CuraMain_Infoblatt_Leistungen.docx)
+  2. curamain-checkliste-krankenhausentlassung.pdf
+     (aus CuraMain_Checkliste_Krankenhausentlassung.docx)
+  3. curamain-wegweiser-pflegegrad.pdf
+     (aus CuraMain_Wegweiser_Pflegegrad.docx)
+  4. curamain-beratungsbesuch-37-3.pdf
+     (aus CuraMain_Infoblatt_Beratungsbesuch_37-3.docx)
+
+Danach: normaler Build + Deploy — Vite kopiert diesen Ordner
+automatisch nach dist, die Links auf /downloads funktionieren dann live.
+
+Hinweis Partner-Seite (/partner/dokumente): Die dort verlinkten 5 PDFs
+(Versorgungsvertrag, Pflegekonzept, Hygieneplan, Leistungsverzeichnis)
+fehlen ebenfalls noch und gehören auch in diesen Ordner.
+Diese Datei (LIES-MICH) wird nicht verlinkt und kann online bleiben.

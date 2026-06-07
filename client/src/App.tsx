@@ -32,6 +32,7 @@ import Offenbach from "./pages/Offenbach";
 import Sachsenhausen from "./pages/Sachsenhausen";
 import Westend from "./pages/Westend";
 import Bockenheim from "./pages/Bockenheim";
+import Downloads from "./pages/Downloads";
 
 function PublicLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -96,6 +97,7 @@ function Router() {
       <Route path="/">{() => <PublicLayout><Home /></PublicLayout>}</Route>
       <Route path="/leistungen">{() => <PublicLayout><Leistungen /></PublicLayout>}</Route>
       <Route path="/faq">{() => <PublicLayout><FAQ /></PublicLayout>}</Route>
+      <Route path="/downloads">{() => <PublicLayout><Downloads /></PublicLayout>}</Route>
       <Route path="/testimonials">{() => <PublicLayout><Testimonials /></PublicLayout>}</Route>
       <Route path="/kontakt/patient">{() => <PublicLayout><KontaktPatient /></PublicLayout>}</Route>
       <Route path="/ueber-uns">{() => <PublicLayout><UeberUns /></PublicLayout>}</Route>
