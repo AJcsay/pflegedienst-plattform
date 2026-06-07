@@ -8,12 +8,14 @@ const categoryLabels: Record<string, string> = {
   infoblatt: "Infoblatt",
   checkliste: "Checkliste",
   wegweiser: "Wegweiser",
+  vorsorge: "Vorsorge",
 };
 
 const categoryColors: Record<string, string> = {
   infoblatt: "bg-cm-teal-50 text-cm-teal-700",
   checkliste: "bg-green-50 text-green-700",
   wegweiser: "bg-amber-50 text-amber-700",
+  vorsorge: "bg-indigo-50 text-indigo-700",
 };
 
 const downloads: Document[] = (downloadsData as { downloads: Document[] }).downloads;
@@ -22,9 +24,9 @@ export default function Downloads() {
   useSEO({
     title: "Downloads & Ratgeber – Checklisten & Infoblätter zur Pflege | CuraMain",
     description:
-      "Kostenlose Ratgeber von CuraMain Frankfurt: Checkliste Krankenhausentlassung, Wegweiser Pflegegrad, Infoblatt § 37.3 & Leistungsübersicht als PDF herunterladen.",
+      "Kostenlose Ratgeber von CuraMain Frankfurt: Checkliste Krankenhausentlassung, Wegweiser Pflegegrad, Patientenverfügung, Vorsorgevollmacht & mehr als PDF herunterladen.",
     keywords:
-      "Pflege Downloads Frankfurt, Checkliste Krankenhausentlassung, Pflegegrad beantragen PDF, Beratungsbesuch 37.3 Infoblatt, Pflegedienst Ratgeber, CuraMain Downloads",
+      "Pflege Downloads Frankfurt, Checkliste Krankenhausentlassung, Pflegegrad beantragen PDF, Patientenverfügung Wegweiser, Vorsorgevollmacht Infoblatt, Betreuungsverfügung, Pflegedienst Ratgeber, CuraMain Downloads",
     canonical: "https://www.curamain.de/downloads",
   });
 

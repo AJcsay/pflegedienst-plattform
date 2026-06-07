@@ -59,6 +59,7 @@ export default function Navbar() {
       items: [
         { label: t("nav.groups.patients.services"), href: "/leistungen" },
         { label: t("nav.groups.patients.faq"), href: "/faq" },
+        { label: t("nav.groups.patients.downloads"), href: "/downloads" },
         { label: t("nav.groups.patients.contact"), href: "/kontakt/patient" },
       ],
     },

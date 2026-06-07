@@ -39,6 +39,46 @@
       "fileName": "curamain-beratungsbesuch-37-3.pdf",
       "fileSize": null,
       "publishedAt": "2026-06-07"
+    },
+    {
+      "id": 5,
+      "title": "Wegweiser Patientenverfügung",
+      "description": "Selbstbestimmt entscheiden (§ 1827 BGB): Was hineingehört, warum Ehepartner nicht automatisch entscheiden dürfen, und wo es amtliche Vorlagen gibt.",
+      "category": "vorsorge",
+      "fileUrl": "/dokumente/curamain-wegweiser-patientenverfuegung.pdf",
+      "fileName": "curamain-wegweiser-patientenverfuegung.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-06-07"
+    },
+    {
+      "id": 6,
+      "title": "Wegweiser Vorsorgevollmacht",
+      "description": "Ihre Vertrauensperson handelt für Sie (§ 1820 BGB) — ohne Betreuungsverfahren. Form, Notariat, Vorsorgeregister und Praxis-Tipps.",
+      "category": "vorsorge",
+      "fileUrl": "/dokumente/curamain-wegweiser-vorsorgevollmacht.pdf",
+      "fileName": "curamain-wegweiser-vorsorgevollmacht.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-06-07"
+    },
+    {
+      "id": 7,
+      "title": "Infoblatt Betreuungsverfügung",
+      "description": "Ihr Sicherheitsnetz: Sie bestimmen, wen das Gericht als Betreuung einsetzt — und halten Wünsche fest, z. B. so lange wie möglich zu Hause.",
+      "category": "vorsorge",
+      "fileUrl": "/dokumente/curamain-infoblatt-betreuungsverfuegung.pdf",
+      "fileName": "curamain-infoblatt-betreuungsverfuegung.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-06-07"
+    },
+    {
+      "id": 8,
+      "title": "Infoblatt Konto- und Depotvollmacht",
+      "description": "Damit Miete, Rechnungen und Pflegekosten im Ernstfall weiterlaufen: Bankvollmacht richtig anlegen — mit drei Praxis-Tipps.",
+      "category": "vorsorge",
+      "fileUrl": "/dokumente/curamain-infoblatt-konto-depotvollmacht.pdf",
+      "fileName": "curamain-infoblatt-konto-depotvollmacht.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-06-07"
     }
   ]
 }

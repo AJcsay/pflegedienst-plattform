@@ -32,7 +32,7 @@ export const routes = [
   {
     path: "/downloads",
     title: "Downloads & Ratgeber – Checklisten & Infoblätter zur Pflege | CuraMain",
-    description: "Kostenlose Ratgeber von CuraMain Frankfurt: Checkliste Krankenhausentlassung, Wegweiser Pflegegrad, Infoblatt § 37.3 & Leistungsübersicht als PDF herunterladen.",
+    description: "Kostenlose Ratgeber von CuraMain Frankfurt: Checkliste Krankenhausentlassung, Wegweiser Pflegegrad, Patientenverfügung, Vorsorgevollmacht & mehr als PDF herunterladen.",
     priority: "0.7",
   },
   {
