@@ -9,6 +9,7 @@ const categoryLabels: Record<string, string> = {
   checkliste: "Checkliste",
   wegweiser: "Wegweiser",
   vorsorge: "Vorsorge",
+  vorlage: "Vorlage zum Ausfüllen",
 };
 
 const categoryColors: Record<string, string> = {
@@ -16,6 +17,7 @@ const categoryColors: Record<string, string> = {
   checkliste: "bg-green-50 text-green-700",
   wegweiser: "bg-amber-50 text-amber-700",
   vorsorge: "bg-indigo-50 text-indigo-700",
+  vorlage: "bg-rose-50 text-rose-700",
 };
 
 const downloads: Document[] = (downloadsData as { downloads: Document[] }).downloads;
@@ -128,7 +130,10 @@ export default function Downloads() {
         <p className="max-w-4xl mx-auto mt-6 text-xs text-cm-ink/50 leading-relaxed">
           Hinweis: Alle Angaben mit Stand Juni 2026, sorgfältig recherchiert und ohne Gewähr.
           Leistungsbeträge der Pflegeversicherung können sich durch Gesetzesänderungen anpassen —
-          die jeweils aktuellen Werte nennen wir Ihnen gern im Gespräch.
+          die jeweils aktuellen Werte nennen wir Ihnen gern im Gespräch. Die Vorlagen zur Vorsorge
+          basieren auf den amtlichen Mustern und Textbausteinen des Bundesministeriums der Justiz
+          (www.bmj.de) und ersetzen keine Rechtsberatung — bei komplexen Konstellationen wenden Sie
+          sich an Notariat, Rechtsanwält·innen oder einen anerkannten Betreuungsverein.
         </p>
       </section>
     </div>

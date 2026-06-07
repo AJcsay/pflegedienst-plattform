@@ -79,6 +79,66 @@
       "fileName": "curamain-infoblatt-konto-depotvollmacht.pdf",
       "fileSize": null,
       "publishedAt": "2026-06-07"
+    },
+    {
+      "id": 9,
+      "title": "Vorlage Patientenverfügung",
+      "description": "Zum Ausfüllen und Ankreuzen — mit den amtlichen Textbausteinen des Bundesjustizministeriums, im klaren CuraMain-Layout.",
+      "category": "vorlage",
+      "fileUrl": "/dokumente/curamain-vorlage-patientenverfuegung.pdf",
+      "fileName": "curamain-vorlage-patientenverfuegung.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-06-07"
+    },
+    {
+      "id": 10,
+      "title": "Vorlage Vorsorgevollmacht",
+      "description": "Das amtliche Muster zum Ankreuzen (JA/NEIN je Bereich) — aktualisiert auf die seit 2023 geltenden Paragrafen.",
+      "category": "vorlage",
+      "fileUrl": "/dokumente/curamain-vorlage-vorsorgevollmacht.pdf",
+      "fileName": "curamain-vorlage-vorsorgevollmacht.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-06-07"
+    },
+    {
+      "id": 11,
+      "title": "Vorlage Betreuungsverfügung",
+      "description": "Zum Ausfüllen: Wer soll Betreuer·in werden, wer nicht — und Ihre Wünsche für die Lebensgestaltung, z. B. Pflege zu Hause.",
+      "category": "vorlage",
+      "fileUrl": "/dokumente/curamain-vorlage-betreuungsverfuegung.pdf",
+      "fileName": "curamain-vorlage-betreuungsverfuegung.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-06-07"
+    },
+    {
+      "id": 12,
+      "title": "Vorbereitungsblatt Bankvollmacht",
+      "description": "Alle Angaben und die Checkliste für den Termin bei Ihrer Bank — damit die Konto-/Depotvollmacht beim ersten Besuch klappt.",
+      "category": "vorlage",
+      "fileUrl": "/dokumente/curamain-vorbereitungsblatt-bankvollmacht.pdf",
+      "fileName": "curamain-vorbereitungsblatt-bankvollmacht.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-06-07"
+    },
+    {
+      "id": 13,
+      "title": "Pflegetagebuch",
+      "description": "7 Tage dokumentieren für die MD-Begutachtung: Tagesprotokoll mit Bereichen, Dauer und nächtlichen Hilfen — zum Ausdrucken.",
+      "category": "vorlage",
+      "fileUrl": "/dokumente/curamain-pflegetagebuch.pdf",
+      "fileName": "curamain-pflegetagebuch.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-06-07"
+    },
+    {
+      "id": 14,
+      "title": "Notfall- und Medikamentenblatt",
+      "description": "Für den Kühlschrank: Notfallkontakte, Diagnosen, Medikationsplan und Besonderheiten — alles auf einen Blick eintragen.",
+      "category": "vorlage",
+      "fileUrl": "/dokumente/curamain-notfall-medikamentenblatt.pdf",
+      "fileName": "curamain-notfall-medikamentenblatt.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-06-07"
     }
   ]
 }
