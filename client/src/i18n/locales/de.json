@@ -62,9 +62,9 @@
       "keywords": "Pflege und Teilhabe Frankfurt, Pflegedienst Frankfurt, ambulanter Pflegedienst Frankfurt, häusliche Pflege Frankfurt, Pflegedienst Frankfurt Nordend, Pflegedienst Frankfurt Bornheim, Pflegedienst Frankfurt Ostend, kultursensible Pflege Frankfurt, mehrsprachiger Pflegedienst, Grundpflege Frankfurt, Behandlungspflege Frankfurt, Teilhabe Frankfurt, CuraMain"
     },
     "hero": {
-      "pill": "Pflege & Teilhabe in Frankfurt – für jede Lebensphase",
+      "pill": "Pflege aus Überzeugung — Ihr ambulanter Pflegedienst in Frankfurt",
       "h1": "Weil Ihr Zuhause der beste Ort zum Heilen ist.",
-      "p": "Professionelle, kultursensible Pflege in Frankfurt – direkt bei Ihnen zu Hause in Nordend, Bornheim und Ostend. Unser mehrsprachiges Team begleitet Menschen jeden Alters mit Kompetenz, Herz und einem echten Verständnis für ihre Lebenssituation.",
+      "p": "International aufgestellt, vielsprachig im Alltag: Bei CuraMain werden Sie verstanden — in der Sprache, die sich für Sie wie Zuhause anfühlt.",
       "ctaPrimary": "Kostenloses Erstgespräch anfordern",
       "ctaPhone": "069 79 216 147",
       "subline": "Kostenlos & unverbindlich · Mehrsprachig · Antwort innerhalb 24h",
@@ -73,14 +73,26 @@
       "badge3": "Frankfurt – Nordend · Bornheim · Ostend"
     },
     "stats": [
-      { "value": "4,8★", "label": "Patientenzufriedenheit" },
-      { "value": "150+", "label": "Versorgte Patienten" },
-      { "value": "5+", "label": "Jahre Erfahrung" },
-      { "value": "100%", "label": "Kassenzulassung" }
+      {
+        "value": "4,8★",
+        "label": "Patientenzufriedenheit"
+      },
+      {
+        "value": "150+",
+        "label": "Versorgte Patienten"
+      },
+      {
+        "value": "13+",
+        "label": "Jahre Pflegeerfahrung im Team"
+      },
+      {
+        "value": "100%",
+        "label": "Kassenzulassung"
+      }
     ],
     "services": {
       "label": "Was wir leisten",
-      "h2": "Pflege, die den ganzen Menschen sieht.",
+      "h2": "Unsere Leistungen – alles aus einer Hand.",
       "p": "Von der medizinischen Behandlungspflege bis zur hauswirtschaftlichen Unterstützung – wir betreuen Sie mit allen Pflegeleistungen aus einer Hand. Schrittweise wachsen wir um Pflege- und Teilhabe-Angebote für Kinder, Jugendliche und Erwachsene mit Behinderungen.",
       "cta": "Alle Leistungen ansehen",
       "items": [
@@ -107,22 +119,26 @@
       ]
     },
     "culture": {
-      "label": "Kultursensibel",
-      "h2a": "Vielfalt ist ",
-      "h2b": "unsere Stärke.",
-      "p": "Frankfurt ist eine der vielfältigsten Städte Deutschlands. Bei CuraMain spiegelt sich diese Vielfalt in unserem Team wider – unser mehrsprachiges Team respektiert religiöse, kulturelle und geschlechtssensible Bedürfnisse.",
+      "label": "Kultursensible Pflege",
+      "h2a": "Pflege, die den ganzen Menschen sieht.",
+      "h2b": "",
+      "p": "Glaube, Rituale, Essgewohnheiten, Feiertage – was Ihnen wichtig ist, gehört für uns zur Pflege dazu. Wir nehmen uns Zeit, Ihre Gewohnheiten kennenzulernen, und richten unsere Pflege danach aus.",
       "points": [
         {
-          "title": "Mehrsprachiges Team",
-          "desc": "Pflege in Ihrer Sprache – unser Team kommuniziert in mehreren Sprachen."
+          "title": "Religiös und kulturell sensibel",
+          "desc": "Ihre Gewohnheiten werden geachtet – bei Körperpflege, Mahlzeiten und im Umgang."
         },
         {
-          "title": "Religiös sensibel",
-          "desc": "Gebetszeiten, Ramadan, halal/koschere Ernährung."
+          "title": "Feste Bezugspersonen",
+          "desc": "Menschen, die Sie und Ihre Gewohnheiten kennen."
         },
         {
-          "title": "Geschlechtssensibel",
-          "desc": "Auf Wunsch ausschließlich weibliche oder männliche Pflegekräfte."
+          "title": "Wünsche zur Person Ihrer Pflege",
+          "desc": "Etwa gleichgeschlechtliche Pflege – wir berücksichtigen sie, wann immer unser Team es möglich macht."
+        },
+        {
+          "title": "Erfahrung im Team",
+          "desc": "Getragen von über 13 Jahren Pflegeerfahrung in unserem Team."
         }
       ]
     },
@@ -198,8 +214,8 @@
       ]
     },
     "ctaBanner": {
-      "h2": "Lassen Sie uns sprechen.",
-      "p": "Die Erstberatung ist kostenlos, mehrsprachig und unverbindlich. Wir kommen auch zu Ihnen nach Hause.",
+      "h2": "Sprechen wir über die Pflege, die Sie brauchen.",
+      "p": "Die Erstberatung ist kostenlos und unverbindlich – wir kommen auch zu Ihnen nach Hause.",
       "book": "Termin vereinbaren",
       "phone": "069 / 79 216 147",
       "badge1": "Mehrsprachig",
@@ -337,12 +353,30 @@
       "description": "Fordern Sie jetzt Ihre kostenlose Erstberatung bei CuraMain im Rhein-Main-Gebiet an. Wir beraten Sie zu Pflegeleistungen, Pflegegraden und Kosten.",
       "keywords": "Pflegeberatung Rhein-Main, Erstberatung Pflegedienst Rhein-Main-Gebiet, Pflegedienst Kontakt, CuraMain"
     },
-    "languages": ["Deutsch", "Englisch", "Spanisch", "Arabisch", "+ weitere auf Anfrage"],
+    "languages": [
+      "Deutsch",
+      "Englisch",
+      "Spanisch",
+      "Arabisch",
+      "+ weitere auf Anfrage"
+    ],
     "districts": [
-      { "value": "nordend-ost", "label": "Nordend-Ost" },
-      { "value": "bornheim", "label": "Bornheim" },
-      { "value": "ostend", "label": "Ostend" },
-      { "value": "anderer", "label": "Anderer Stadtteil – bitte Anfrage senden" }
+      {
+        "value": "nordend-ost",
+        "label": "Nordend-Ost"
+      },
+      {
+        "value": "bornheim",
+        "label": "Bornheim"
+      },
+      {
+        "value": "ostend",
+        "label": "Ostend"
+      },
+      {
+        "value": "anderer",
+        "label": "Anderer Stadtteil – bitte Anfrage senden"
+      }
     ],
     "hero": {
       "pill": "Kostenlos & unverbindlich",

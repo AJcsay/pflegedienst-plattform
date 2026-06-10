@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 import {
   Heart, Shield, Phone, ArrowRight, CheckCircle2,
-  Award, Star, Quote, Users, Stethoscope, HandHeart, Globe2
+  Star, Quote, Users, Stethoscope, HandHeart,
 } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
@@ -32,77 +32,76 @@ export default function Home() {
 
   const stats = t("home.stats", { returnObjects: true }) as Array<{ value: string; label: string }>;
   const serviceItems = t("home.services.items", { returnObjects: true }) as Array<{ title: string; sub: string; desc: string }>;
-  const servicePhotos = [PHOTOS.behandlung, PHOTOS.grundpflege, PHOTOS.beratung, PHOTOS.hauswirtschaft];
   const culturePoints = t("home.culture.points", { returnObjects: true }) as Array<{ title: string; desc: string }>;
   const teilhabeItems = t("home.teilhabe.items", { returnObjects: true }) as Array<{ title: string; desc: string }>;
   const coverageAreas = t("home.coverage.areas", { returnObjects: true }) as Array<{ slug: string; name: string; sub: string }>;
   const testimonials = t("home.testimonials.items", { returnObjects: true }) as Array<{ name: string; role: string; text: string }>;
 
   return (
-    <div className="bg-cm-cream">
+    <div className="bg-white">
       {/* ─────────────────────────────────────────── */}
-      {/* HERO mit Bild + integrierte Stats-Karten   */}
+      {/* HERO — zentriert, hell, mit Bild-Trio       */}
       {/* ─────────────────────────────────────────── */}
-      <section
-        className="relative min-h-[680px] lg:min-h-[760px] hero-bg flex flex-col -mt-24 pt-24"
-        style={{ backgroundImage: `url(${PHOTOS.hero}), linear-gradient(135deg, #daedeb, #f9f6f1)` }}
-      >
-        <div className="relative z-10 container pt-8 pb-8 flex-1">
-          <span className="pill inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm border border-white/60 shadow-sm">
-            <Heart className="w-4 h-4 text-cm-teal" fill="currentColor" />
+      <section className="-mt-24 pt-24 bg-white">
+        <div className="container pt-10 lg:pt-16 pb-10 text-center">
+          <span className="inline-flex items-center gap-2 bg-cm-teal-50 text-cm-teal-700 px-4 py-2 rounded-full text-sm font-medium">
+            <Heart className="w-4 h-4" fill="currentColor" aria-hidden="true" />
             {t("home.hero.pill")}
           </span>
-          <h1 className="h-serif text-5xl lg:text-7xl text-cm-teal mt-6 mb-6 max-w-3xl leading-[1.05]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-cm-navy mt-6 mb-5 max-w-3xl mx-auto leading-[1.1] tracking-tight">
             {t("home.hero.h1")}
           </h1>
-          <p className="text-lg text-cm-ink/80 max-w-xl mb-8 leading-relaxed">
+          <p className="text-lg text-cm-ink/70 max-w-2xl mx-auto mb-7 leading-relaxed">
             {t("home.hero.p")}
           </p>
-          <div className="flex flex-wrap gap-3 mb-6">
+          <div className="flex flex-wrap gap-3 justify-center mb-4">
             <Link
               href="/kontakt/patient"
-              className="bg-cm-teal-600 hover:bg-cm-teal-700 text-white px-7 py-3.5 rounded-full font-medium shadow-lg flex items-center gap-2 transition-colors min-h-[48px]"
+              className="bg-cm-teal-600 hover:bg-cm-teal-700 text-white px-7 py-3.5 rounded-xl font-medium shadow-lg flex items-center gap-2 transition-colors min-h-[48px]"
             >
               {t("home.hero.ctaPrimary")}
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </Link>
             <a
               href="tel:+496979216147"
-              className="pill border border-white/60 px-7 py-3.5 rounded-full font-medium flex items-center gap-2 shadow-sm min-h-[48px]"
+              className="border border-cm-navy text-cm-navy px-7 py-3.5 rounded-xl font-medium flex items-center gap-2 hover:bg-cm-teal-50 transition-colors min-h-[48px]"
             >
-              <Phone className="w-4 h-4 text-cm-teal-700" />
+              <Phone className="w-4 h-4" aria-hidden="true" />
               {t("home.hero.ctaPhone")}
             </a>
           </div>
-          <p className="text-sm text-cm-ink/70 mb-6 inline-flex items-center gap-1.5">
+          <p className="text-sm text-cm-ink/70 mb-8 inline-flex items-center gap-1.5">
             <CheckCircle2 className="w-4 h-4 text-cm-teal-700" aria-hidden="true" />
             {t("home.hero.subline")}
           </p>
-          {/* Trust-Block über Fold: Kassenzulassung + Sprachen + Region */}
-          <div className="flex flex-wrap gap-2">
-            <span className="pill border border-white/60 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm shadow-sm">
-              <Shield className="w-3.5 h-3.5 text-cm-teal-700" />
-              {t("home.hero.badge1")}
-            </span>
-            <span className="pill border border-white/60 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm shadow-sm">
-              <Globe2 className="w-3.5 h-3.5 text-cm-teal-700" />
-              {t("home.hero.badge2")}
-            </span>
-            <span className="pill border border-white/60 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm shadow-sm">
-              <Award className="w-3.5 h-3.5 text-cm-teal-700" />
-              {t("home.hero.badge3")}
-            </span>
+          {/* Bild-Trio */}
+          <div className="grid grid-cols-[1fr_1.4fr_1fr] gap-3 lg:gap-4 items-center max-w-4xl mx-auto">
+            <img
+              src={PHOTOS.behandlung}
+              alt=""
+              loading="eager"
+              className="w-full h-40 sm:h-48 lg:h-60 object-cover rounded-2xl"
+            />
+            <img
+              src={PHOTOS.hero}
+              alt="Pflegefachperson von CuraMain bei der häuslichen Pflege"
+              loading="eager"
+              className="w-full h-48 sm:h-56 lg:h-72 object-cover rounded-2xl"
+            />
+            <img
+              src={PHOTOS.beratung}
+              alt=""
+              loading="eager"
+              className="w-full h-40 sm:h-48 lg:h-60 object-cover rounded-2xl"
+            />
           </div>
         </div>
-        {/* Stats-Karten am unteren Hero-Rand */}
-        <div className="relative z-10 container pb-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        {/* Stats-Leiste */}
+        <div className="container pb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto">
             {stats.map((s) => (
-              <div
-                key={s.label}
-                className="glass border border-white/50 rounded-2xl px-4 py-4 text-center shadow-sm"
-              >
-                <div className="h-serif text-3xl lg:text-4xl font-semibold text-cm-teal-600">{s.value}</div>
+              <div key={s.label} className="bg-cm-cream rounded-2xl px-4 py-4 text-center">
+                <div className="text-2xl lg:text-3xl font-semibold text-cm-navy">{s.value}</div>
                 <div className="text-xs text-cm-ink/70 mt-1">{s.label}</div>
               </div>
             ))}
@@ -116,7 +115,7 @@ export default function Home() {
       <section className="container py-12 lg:py-20">
         <div className="max-w-2xl mb-10">
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cm-teal">{t("home.services.label")}</span>
-          <h2 className="h-serif text-4xl lg:text-5xl text-cm-ink mt-3 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-semibold text-cm-navy mt-3 mb-4 tracking-tight">
             {t("home.services.h2")}
           </h2>
           <p className="text-cm-ink/70 leading-relaxed">
@@ -130,10 +129,10 @@ export default function Home() {
               <Link
                 key={s.title}
                 href="/leistungen"
-                className="group bg-white p-7 rounded-3xl border border-cm-teal-100 hover:border-cm-teal-300 hover:shadow-lg transition"
+                className="group bg-white p-7 rounded-2xl border border-cm-teal-100 hover:border-cm-teal-300 hover:shadow-lg transition"
               >
-                <div className="w-12 h-12 rounded-2xl bg-cm-teal-50 flex items-center justify-center mb-5">
-                  <Icon className="w-6 h-6 text-cm-teal" />
+                <div className="w-12 h-12 rounded-xl bg-cm-teal-50 flex items-center justify-center mb-5">
+                  <Icon className="w-6 h-6 text-cm-teal" aria-hidden="true" />
                 </div>
                 <h3 className="font-semibold text-lg mb-1.5 text-cm-ink">{s.title}</h3>
                 <p className="text-xs uppercase tracking-wider text-cm-teal-600 mb-2">{s.sub}</p>
@@ -147,7 +146,7 @@ export default function Home() {
             href="/leistungen"
             className="inline-flex items-center gap-2 text-cm-teal-600 hover:text-cm-teal-700 font-medium"
           >
-            {t("home.services.cta")} <ArrowRight className="w-4 h-4" />
+            {t("home.services.cta")} <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </Link>
         </div>
       </section>
@@ -156,19 +155,25 @@ export default function Home() {
       {/* KULTURSENSIBLE PFLEGE (Split mit Bild)      */}
       {/* ─────────────────────────────────────────── */}
       <section className="container pb-12 lg:pb-20">
-        <div className="grid lg:grid-cols-2 gap-0 bg-white rounded-3xl overflow-hidden border border-cm-teal-100">
-          <div className="p-10 lg:p-14 flex flex-col justify-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <img
+            src={PHOTOS.team}
+            alt="Das internationale Pflegeteam von CuraMain"
+            loading="lazy"
+            className="w-full h-72 lg:h-[420px] object-cover rounded-2xl"
+          />
+          <div>
             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cm-teal">{t("home.culture.label")}</span>
-            <h2 className="h-serif text-4xl lg:text-5xl text-cm-ink mt-3 mb-5">
-              {t("home.culture.h2a")}<span className="text-cm-teal-600">{t("home.culture.h2b")}</span>
+            <h2 className="text-3xl lg:text-4xl font-semibold text-cm-navy mt-3 mb-5 tracking-tight">
+              {t("home.culture.h2a")}{t("home.culture.h2b")}
             </h2>
             <p className="text-cm-ink/70 leading-relaxed mb-6">
               {t("home.culture.p")}
             </p>
-            <ul className="space-y-2.5">
+            <ul className="space-y-3">
               {culturePoints.map((p) => (
                 <li key={p.title} className="flex gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-cm-teal flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-cm-teal flex-shrink-0 mt-0.5" aria-hidden="true" />
                   <div>
                     <span className="font-medium text-cm-ink">{p.title}</span>
                     <span className="text-cm-ink/70"> – {p.desc}</span>
@@ -177,10 +182,6 @@ export default function Home() {
               ))}
             </ul>
           </div>
-          <div
-            className="hero-bg min-h-[360px] lg:min-h-full"
-            style={{ backgroundImage: `url(${PHOTOS.team})` }}
-          />
         </div>
       </section>
 
@@ -188,10 +189,10 @@ export default function Home() {
       {/* PFLEGE & TEILHABE — IN VORBEREITUNG         */}
       {/* ─────────────────────────────────────────── */}
       <section className="container pb-12 lg:pb-20">
-        <div className="bg-white border border-cm-teal-100 rounded-3xl p-8 lg:p-12">
+        <div className="bg-white border border-cm-teal-100 rounded-2xl p-8 lg:p-12">
           <div className="max-w-3xl mb-8">
             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cm-teal">{t("home.teilhabe.label")}</span>
-            <h2 className="h-serif text-4xl lg:text-5xl text-cm-ink mt-3 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-semibold text-cm-navy mt-3 mb-4 tracking-tight">
               {t("home.teilhabe.h2")}
             </h2>
             <p className="text-cm-ink/70 leading-relaxed">
@@ -210,9 +211,9 @@ export default function Home() {
           <div className="mt-7 flex flex-wrap gap-3">
             <Link
               href="/kontakt/patient?thema=teilhabe"
-              className="bg-cm-teal-600 hover:bg-cm-teal-700 text-white px-6 py-3 rounded-full font-medium shadow-sm inline-flex items-center gap-2 transition-colors"
+              className="bg-cm-teal-600 hover:bg-cm-teal-700 text-white px-6 py-3 rounded-xl font-medium shadow-sm inline-flex items-center gap-2 transition-colors"
             >
-              {t("home.teilhabe.cta")} <ArrowRight className="w-4 h-4" />
+              {t("home.teilhabe.cta")} <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </Link>
             <span className="text-xs text-cm-ink/70 self-center">
               {t("home.teilhabe.note")}
@@ -225,11 +226,11 @@ export default function Home() {
       {/* VERSORGUNGSGEBIET (lokale Stadt-Links)      */}
       {/* ─────────────────────────────────────────── */}
       <section className="container pb-12 lg:pb-20">
-        <div className="bg-white border border-cm-teal-100 rounded-3xl p-8 lg:p-10">
+        <div className="bg-white border border-cm-teal-100 rounded-2xl p-8 lg:p-10">
           <div className="flex flex-wrap items-end justify-between gap-4 mb-6">
             <div>
               <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cm-teal">{t("home.coverage.label")}</span>
-              <h2 className="h-serif text-3xl lg:text-4xl text-cm-ink mt-2">{t("home.coverage.h2")}</h2>
+              <h2 className="text-2xl lg:text-3xl font-semibold text-cm-navy mt-2 tracking-tight">{t("home.coverage.h2")}</h2>
             </div>
           </div>
           <p className="text-cm-ink/70 leading-relaxed mb-6 max-w-2xl">
@@ -244,7 +245,7 @@ export default function Home() {
               >
                 <div className="font-semibold text-cm-ink group-hover:text-cm-teal-700 mb-1 flex items-center gap-2">
                   {c.name}
-                  <ArrowRight className="w-4 h-4 opacity-60 group-hover:translate-x-0.5 transition-transform" />
+                  <ArrowRight className="w-4 h-4 opacity-60 group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
                 </div>
                 <div className="text-xs text-cm-ink/70">{c.sub}</div>
               </Link>
@@ -255,7 +256,7 @@ export default function Home() {
               href="/frankfurt"
               className="inline-flex items-center gap-2 text-cm-teal-600 hover:text-cm-teal-700 font-medium text-sm"
             >
-              {t("home.coverage.cta")} <ArrowRight className="w-4 h-4" />
+              {t("home.coverage.cta")} <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </Link>
           </div>
         </div>
@@ -267,7 +268,7 @@ export default function Home() {
       <section className="container pb-12 lg:pb-20">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cm-teal">{t("home.testimonials.label")}</span>
-          <h2 className="h-serif text-4xl lg:text-5xl text-cm-ink mt-3">
+          <h2 className="text-3xl lg:text-4xl font-semibold text-cm-navy mt-3 tracking-tight">
             {t("home.testimonials.h2").split("\n").map((line, i) => (
               <span key={i}>{line}{i === 0 && <br />}</span>
             ))}
@@ -275,11 +276,11 @@ export default function Home() {
         </div>
         <div className="grid md:grid-cols-3 gap-5">
           {testimonials.map((testimonial) => (
-            <div key={testimonial.name} className="bg-white p-7 rounded-3xl border border-cm-teal-100 relative">
-              <Quote className="w-7 h-7 text-cm-teal-200 absolute top-5 right-5" />
+            <div key={testimonial.name} className="bg-white p-7 rounded-2xl border border-cm-teal-100 relative">
+              <Quote className="w-7 h-7 text-cm-teal-200 absolute top-5 right-5" aria-hidden="true" />
               <div className="flex gap-0.5 mb-4 text-yellow-400">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-current" />
+                  <Star key={i} className="w-4 h-4 fill-current" aria-hidden="true" />
                 ))}
               </div>
               <p className="text-cm-ink/80 italic leading-relaxed mb-5">„{testimonial.text}"</p>
@@ -295,45 +296,42 @@ export default function Home() {
             href="/testimonials"
             className="inline-flex items-center gap-2 text-cm-teal-600 hover:text-cm-teal-700 font-medium"
           >
-            {t("home.testimonials.cta")} <ArrowRight className="w-4 h-4" />
+            {t("home.testimonials.cta")} <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </Link>
         </div>
       </section>
 
       {/* ─────────────────────────────────────────── */}
-      {/* CTA-Banner                                  */}
+      {/* CTA-Banner — tiefes Tannen-Teal             */}
       {/* ─────────────────────────────────────────── */}
       <section className="container pb-12 lg:pb-20">
-        <div
-          className="rounded-3xl p-10 lg:p-16 text-center hero-bg hero-bg-dark"
-          style={{ backgroundImage: `url(${PHOTOS.beratung})` }}
-        >
-          <div className="relative z-10 max-w-2xl mx-auto">
-            <h2 className="h-serif text-4xl lg:text-5xl text-white mb-5">
+        <div className="rounded-2xl p-10 lg:p-16 text-center bg-cm-pine">
+          <div className="max-w-2xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-5 tracking-tight">
               {t("home.ctaBanner.h2")}
             </h2>
-            <p className="text-white/90 text-lg mb-8 leading-relaxed">
+            <p className="text-cm-mint-light text-lg mb-8 leading-relaxed">
               {t("home.ctaBanner.p")}
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Link
                 href="/kontakt/patient"
-                className="bg-white hover:bg-cm-teal-50 text-cm-teal-700 px-7 py-3.5 rounded-full font-medium shadow-lg inline-flex items-center gap-2 transition-colors"
+                className="bg-cm-mint hover:bg-cm-mint-dark text-cm-pine-deep px-7 py-3.5 rounded-xl font-medium shadow-lg inline-flex items-center gap-2 transition-colors"
               >
-                {t("home.ctaBanner.book")} <ArrowRight className="w-4 h-4" />
+                {t("home.ctaBanner.book")} <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Link>
               <a
                 href="tel:+496979216147"
-                className="bg-white/15 backdrop-blur border border-white/30 text-white px-7 py-3.5 rounded-full font-medium inline-flex items-center gap-2 hover:bg-white/25 transition-colors"
+                className="border border-cm-teal-400 text-white px-7 py-3.5 rounded-xl font-medium inline-flex items-center gap-2 hover:bg-white/10 transition-colors"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4" aria-hidden="true" />
                 {t("home.ctaBanner.phone")}
               </a>
             </div>
             <div className="mt-6 flex flex-wrap gap-3 justify-center text-sm text-white/80">
-              <span className="flex items-center gap-1.5"><Users className="w-4 h-4" />{t("home.ctaBanner.badge1")}</span>
-              <span className="flex items-center gap-1.5"><Shield className="w-4 h-4" />{t("home.ctaBanner.badge2")}</span>
-              <span className="flex items-center gap-1.5"><Heart className="w-4 h-4" />{t("home.ctaBanner.badge3")}</span>
+              <span className="flex items-center gap-1.5"><Users className="w-4 h-4" aria-hidden="true" />{t("home.ctaBanner.badge1")}</span>
+              <span className="flex items-center gap-1.5"><Shield className="w-4 h-4" aria-hidden="true" />{t("home.ctaBanner.badge2")}</span>
+              <span className="flex items-center gap-1.5"><Heart className="w-4 h-4" aria-hidden="true" />{t("home.ctaBanner.badge3")}</span>
             </div>
           </div>
         </div>

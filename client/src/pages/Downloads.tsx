@@ -60,7 +60,7 @@ export default function Downloads() {
           {downloads.map((doc) => (
             <a
               key={doc.id}
-              href={doc.fileUrl}
+              href={doc.fileUrl ?? undefined}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white p-6 rounded-3xl border border-cm-teal-100 hover:shadow-md transition-shadow group flex items-start gap-4"

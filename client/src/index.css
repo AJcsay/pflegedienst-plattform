@@ -256,6 +256,10 @@ html {
   --cm-ink: #1c2826;
   --cm-cream: #f9f6f1;
   --cm-mint: #9bd3cf;
+  --cm-navy: #0d1f52;
+  --cm-navy-light: #1A3578;
+  --cm-pine: #085041;
+  --cm-pine-deep: #04342C;
 }
 
 /* Cormorant Garamond für Display-Headlines */
@@ -310,6 +314,17 @@ html {
 .text-cm-mint { color: var(--cm-mint); }
 .border-cm-teal-100 { border-color: var(--cm-teal-100); }
 .border-cm-teal-200 { border-color: var(--cm-teal-200); }
+.text-cm-navy { color: var(--cm-navy); }
+.bg-cm-navy { background-color: var(--cm-navy); }
+.border-cm-navy { border-color: var(--cm-navy); }
+.bg-cm-pine { background-color: var(--cm-pine); }
+.bg-cm-pine-deep { background-color: var(--cm-pine-deep); }
+.text-cm-mint-light { color: #9FE1CB; }
+.text-cm-pine-deep { color: var(--cm-pine-deep); }
+.bg-cm-mint { background-color: var(--cm-mint); }
+.hover\:bg-cm-mint-dark:hover { background-color: #8cc6c0; }
+.border-cm-teal-400 { border-color: var(--cm-teal-400); }
+.hover\:bg-cm-navy-light:hover { background-color: var(--cm-navy-light); }
 .hover\:bg-cm-teal-500:hover { background-color: var(--cm-teal-700); }
 .hover\:bg-cm-teal-700:hover { background-color: var(--cm-teal-700); }
 .hover\:border-cm-teal-300:hover { border-color: var(--cm-teal-300); }

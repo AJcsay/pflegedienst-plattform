@@ -227,9 +227,9 @@ export default function PartnerKassen() {
                   {documents.map((doc) => (
                     <a
                       key={doc.id}
-                      href={doc.fileUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href={doc.fileUrl ?? `mailto:info@curamain.de?subject=${encodeURIComponent(`Dokumentenanfrage: ${doc.title}`)}`}
+                      target={doc.fileUrl ? "_blank" : undefined}
+                      rel={doc.fileUrl ? "noopener noreferrer" : undefined}
                       className="flex items-start gap-3 p-3 rounded-2xl bg-white hover:shadow-md transition-shadow group"
                     >
                       <FileText className="w-5 h-5 text-cm-teal flex-shrink-0 mt-0.5" />

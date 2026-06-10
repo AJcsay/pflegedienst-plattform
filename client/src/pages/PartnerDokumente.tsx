@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { FileText, FileDown } from "lucide-react";
+import { FileText, FileDown, Mail } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 import documentsData from "@/data/documents.json";
 import type { Document } from "@/data/types";
@@ -79,48 +79,70 @@ export default function PartnerDokumente() {
 
         {documents.length > 0 ? (
           <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
-            {documents.map((doc) => (
-              <a
-                key={doc.id}
-                href={doc.fileUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white p-6 rounded-3xl border border-cm-teal-100 hover:shadow-md transition-shadow group flex items-start gap-4"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-cm-teal-50 flex items-center justify-center flex-shrink-0">
-                  <FileText className="w-6 h-6 text-cm-teal" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-semibold text-cm-ink mb-1 group-hover:text-cm-teal-600 transition-colors">
-                    {doc.title}
-                  </h3>
-                  {doc.description && (
-                    <p className="text-sm text-cm-ink/70 mb-2">{doc.description}</p>
-                  )}
-                  <div className="flex items-center gap-2 flex-wrap mb-2">
-                    <span
-                      className={`text-xs px-3 py-0.5 rounded-full ${
-                        categoryColors[doc.category] || categoryColors.other
-                      }`}
-                    >
-                      {categoryLabels[doc.category] || doc.category}
-                    </span>
-                    {doc.fileName && (
-                      <span className="text-xs text-cm-ink/50">{doc.fileName}</span>
+            {documents.map((doc) => {
+              const inner = (
+                <>
+                  <div className="w-12 h-12 rounded-2xl bg-cm-teal-50 flex items-center justify-center flex-shrink-0">
+                    <FileText className="w-6 h-6 text-cm-teal" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-semibold text-cm-ink mb-1 group-hover:text-cm-teal-600 transition-colors">
+                      {doc.title}
+                    </h3>
+                    {doc.description && (
+                      <p className="text-sm text-cm-ink/70 mb-2">{doc.description}</p>
                     )}
-                    {doc.fileSize && (
-                      <span className="text-xs text-cm-ink/50">
-                        · {(doc.fileSize / 1024 / 1024).toFixed(1)} MB
+                    <div className="flex items-center gap-2 flex-wrap mb-2">
+                      <span
+                        className={`text-xs px-3 py-0.5 rounded-full ${
+                          categoryColors[doc.category] || categoryColors.other
+                        }`}
+                      >
+                        {categoryLabels[doc.category] || doc.category}
+                      </span>
+                      {doc.fileName && (
+                        <span className="text-xs text-cm-ink/50">{doc.fileName}</span>
+                      )}
+                      {doc.fileSize && (
+                        <span className="text-xs text-cm-ink/50">
+                          · {(doc.fileSize / 1024 / 1024).toFixed(1)} MB
+                        </span>
+                      )}
+                    </div>
+                    {doc.fileUrl ? (
+                      <span className="inline-flex items-center gap-1.5 text-sm text-cm-teal-600 font-medium">
+                        <FileDown className="w-4 h-4" />
+                        Download
+                      </span>
+                    ) : (
+                      <span className="inline-flex items-center gap-1.5 text-sm text-cm-teal-600 font-medium">
+                        <Mail className="w-4 h-4" />
+                        Auf Anfrage erhältlich
                       </span>
                     )}
                   </div>
-                  <span className="inline-flex items-center gap-1.5 text-sm text-cm-teal-600 font-medium">
-                    <FileDown className="w-4 h-4" />
-                    Download
-                  </span>
-                </div>
-              </a>
-            ))}
+                </>
+              );
+              return doc.fileUrl ? (
+                <a
+                  key={doc.id}
+                  href={doc.fileUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white p-6 rounded-3xl border border-cm-teal-100 hover:shadow-md transition-shadow group flex items-start gap-4"
+                >
+                  {inner}
+                </a>
+              ) : (
+                <a
+                  key={doc.id}
+                  href={`mailto:info@curamain.de?subject=${encodeURIComponent(`Dokumentenanfrage: ${doc.title}`)}`}
+                  className="bg-white p-6 rounded-3xl border border-cm-teal-100 hover:shadow-md transition-shadow group flex items-start gap-4"
+                >
+                  {inner}
+                </a>
+              );
+            })}
           </div>
         ) : (
           <div className="text-center py-12 max-w-2xl mx-auto bg-white rounded-3xl border border-cm-teal-100">

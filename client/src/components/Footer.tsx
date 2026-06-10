@@ -6,7 +6,7 @@ export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-cm-ink text-white/80 mt-12 lg:mt-20">
+    <footer className="bg-cm-pine-deep text-white/80 mt-12 lg:mt-20">
       <div className="container py-14 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}

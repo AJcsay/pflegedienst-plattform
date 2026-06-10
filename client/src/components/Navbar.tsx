@@ -199,7 +199,7 @@ export default function Navbar() {
 
             <Link
               href="/kontakt/patient"
-              className="hidden md:inline-flex bg-cm-teal hover:bg-cm-teal-500 text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-md whitespace-nowrap transition-colors"
+              className="hidden md:inline-flex bg-cm-navy hover:bg-cm-navy-light text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-md whitespace-nowrap transition-colors"
             >
               {t("nav.cta")}
             </Link>

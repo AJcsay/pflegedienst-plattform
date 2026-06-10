@@ -62,9 +62,9 @@
       "keywords": "home care Frankfurt, outpatient nursing Frankfurt, ambulatory care Frankfurt, culturally sensitive care Frankfurt, multilingual nursing service, care Frankfurt Nordend, care Frankfurt Bornheim, CuraMain"
     },
     "hero": {
-      "pill": "Care & Participation in Frankfurt – at every stage of life",
+      "pill": "Care from conviction — your home care service in Frankfurt",
       "h1": "Because your home is the best place to heal.",
-      "p": "Professional, culturally sensitive care in Frankfurt – right at home in Nordend, Bornheim, and Ostend. Our multilingual team supports people of all ages with expertise, compassion, and a genuine understanding of each person's life situation.",
+      "p": "Internationally rooted, multilingual every day: at CuraMain you are understood — in the language that feels like home to you.",
       "ctaPrimary": "Request a free consultation",
       "ctaPhone": "069 79 216 147",
       "subline": "Free & no obligation · Multilingual · Reply within 24 h",
@@ -73,14 +73,26 @@
       "badge3": "Frankfurt – Nordend · Bornheim · Ostend"
     },
     "stats": [
-      { "value": "4.8★", "label": "Patient satisfaction" },
-      { "value": "150+", "label": "Patients cared for" },
-      { "value": "5+", "label": "Years of experience" },
-      { "value": "100%", "label": "Insurer approval" }
+      {
+        "value": "4.8★",
+        "label": "Patient satisfaction"
+      },
+      {
+        "value": "150+",
+        "label": "Patients cared for"
+      },
+      {
+        "value": "13+",
+        "label": "Years of nursing experience in our team"
+      },
+      {
+        "value": "100%",
+        "label": "Insurer approval"
+      }
     ],
     "services": {
       "label": "What we offer",
-      "h2": "Care that sees the whole person.",
+      "h2": "Our services – everything from a single source.",
       "p": "From medical treatment care to household support – we provide all nursing services under one roof. Step by step, we are expanding to include care and participation services for children, young people, and adults with disabilities.",
       "cta": "View all services",
       "items": [
@@ -107,22 +119,26 @@
       ]
     },
     "culture": {
-      "label": "Culturally Sensitive",
-      "h2a": "Diversity is ",
-      "h2b": "our strength.",
-      "p": "Frankfurt is one of Germany's most diverse cities. At CuraMain, that diversity is reflected in our team – our multilingual staff respects religious, cultural, and gender-sensitive needs.",
+      "label": "Culturally sensitive care",
+      "h2a": "Care that sees the whole person.",
+      "h2b": "",
+      "p": "Faith, rituals, eating habits, holidays – whatever matters to you is part of good care for us. We take the time to get to know your habits and shape our care around them.",
       "points": [
         {
-          "title": "Multilingual Team",
-          "desc": "Care in your language – our team communicates in multiple languages."
+          "title": "Religiously and culturally sensitive",
+          "desc": "Your habits are respected – in personal care, at mealtimes and in everyday interaction."
         },
         {
-          "title": "Religiously Sensitive",
-          "desc": "Prayer times, Ramadan, halal/kosher dietary needs respected."
+          "title": "Familiar caregivers",
+          "desc": "People who know you and your routines."
         },
         {
-          "title": "Gender Sensitive",
-          "desc": "On request, exclusively female or male nursing professionals."
+          "title": "Preferences about who cares for you",
+          "desc": "Such as same-gender care – we accommodate it whenever our team makes it possible."
+        },
+        {
+          "title": "Experience in our team",
+          "desc": "Carried by more than 13 years of nursing experience in our team."
         }
       ]
     },
@@ -198,8 +214,8 @@
       ]
     },
     "ctaBanner": {
-      "h2": "Let's talk.",
-      "p": "The initial consultation is free, multilingual, and non-binding. We can also come to your home.",
+      "h2": "Let's talk about the care you need.",
+      "p": "The initial consultation is free and without obligation – we are happy to visit you at home.",
       "book": "Schedule an appointment",
       "phone": "069 / 79 216 147",
       "badge1": "Multilingual",
@@ -337,12 +353,30 @@
       "description": "Request your free initial consultation with CuraMain in the Rhine-Main region. We advise you on care services, care levels, and costs.",
       "keywords": "care consultation Rhine-Main, outpatient nursing consultation Rhine-Main, nursing service contact, CuraMain"
     },
-    "languages": ["German", "English", "Spanish", "Arabic", "+ more on request"],
+    "languages": [
+      "German",
+      "English",
+      "Spanish",
+      "Arabic",
+      "+ more on request"
+    ],
     "districts": [
-      { "value": "nordend-ost", "label": "Nordend-Ost" },
-      { "value": "bornheim", "label": "Bornheim" },
-      { "value": "ostend", "label": "Ostend" },
-      { "value": "anderer", "label": "Other district – please send an enquiry" }
+      {
+        "value": "nordend-ost",
+        "label": "Nordend-Ost"
+      },
+      {
+        "value": "bornheim",
+        "label": "Bornheim"
+      },
+      {
+        "value": "ostend",
+        "label": "Ostend"
+      },
+      {
+        "value": "anderer",
+        "label": "Other district – please send an enquiry"
+      }
     ],
     "hero": {
       "pill": "Free & no obligation",

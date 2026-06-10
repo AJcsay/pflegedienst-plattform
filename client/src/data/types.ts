@@ -20,8 +20,8 @@ export interface Document {
   title: string;
   description?: string;
   category: "quality" | "supply" | "contract" | "other" | string;
-  fileUrl: string;
-  fileName?: string;
+  fileUrl: string | null;
+  fileName?: string | null;
   fileSize?: number | null;
   publishedAt: string;
 }
