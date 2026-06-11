@@ -56,7 +56,7 @@ export default function Karriere() {
     <div className="bg-cm-cream">
       {/* HERO */}
       <section
-        className="relative min-h-[360px] hero-bg -mt-24 pt-24"
+        className="relative min-h-[420px] hero-bg -mt-24 pt-24"
         style={{ backgroundImage: `url(${PHOTOS.team}), linear-gradient(135deg, #daedeb, #f9f6f1)` }}
       >
         <div className="relative z-10 container pt-6 pb-10">
@@ -64,10 +64,10 @@ export default function Karriere() {
             <Briefcase className="w-4 h-4 text-cm-teal" />
             Übertariflich · Dienstwagen · 30 Tage Urlaub
           </span>
-          <h1 className="h-serif text-5xl lg:text-7xl text-cm-teal mt-6 mb-6 max-w-3xl leading-[1.05]">
+          <h1 className="h-serif text-5xl lg:text-7xl text-cm-teal mt-6 mb-6 max-w-5xl leading-[1.05]">
             Karriere bei CuraMain.
           </h1>
-          <p className="text-lg text-cm-ink/80 max-w-2xl leading-relaxed mb-6">
+          <p className="text-lg lg:text-xl text-cm-ink/80 max-w-3xl leading-relaxed mb-6">
             Werden Sie Teil eines Teams, das Pflege mit Leidenschaft lebt. Wir suchen engagierte Fachkräfte, die den Unterschied machen wollen.
           </p>
           <Link

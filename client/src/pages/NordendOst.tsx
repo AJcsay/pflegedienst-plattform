@@ -50,7 +50,7 @@ export default function NordendOst() {
     <div className="bg-cm-cream">
       {/* HERO */}
       <section
-        className="relative min-h-[360px] hero-bg -mt-24 pt-24"
+        className="relative min-h-[420px] hero-bg -mt-24 pt-24"
         style={{ background: "linear-gradient(135deg, #daedeb 0%, #f9f6f1 100%)" }}
       >
         <div className="relative z-10 container pt-6 pb-10">
@@ -58,10 +58,10 @@ export default function NordendOst() {
             <MapPin className="w-4 h-4 text-cm-teal" />
             Versorgungsgebiet · Nordend-Ost
           </span>
-          <h1 className="h-serif text-5xl lg:text-7xl text-cm-teal mt-6 mb-6 max-w-3xl leading-[1.05]">
+          <h1 className="h-serif text-5xl lg:text-7xl text-cm-teal mt-6 mb-6 max-w-5xl leading-[1.05]">
             Pflege im Nordend-Ost — vor Ort, persönlich und in unter 10 Minuten bei Ihnen.
           </h1>
-          <p className="text-lg text-cm-ink/80 max-w-2xl leading-relaxed">
+          <p className="text-lg lg:text-xl text-cm-ink/80 max-w-3xl leading-relaxed">
             Vom Merianplatz bis zum Bürgerhospital — Ihr ambulanter Pflegedienst direkt an der Berger Straße.
           </p>
         </div>

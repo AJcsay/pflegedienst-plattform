@@ -95,7 +95,7 @@ export default function KontaktPatient() {
     <div className="bg-cm-cream">
       {/* HERO */}
       <section
-        className="relative min-h-[300px] hero-bg -mt-24 pt-24"
+        className="relative min-h-[380px] hero-bg -mt-24 pt-24"
         style={{ background: "linear-gradient(135deg, #daedeb 0%, #f9f6f1 100%)" }}
       >
         <div className="relative z-10 container pt-6 pb-10">
@@ -103,10 +103,10 @@ export default function KontaktPatient() {
             <CheckCircle2 className="w-4 h-4 text-cm-teal" />
             {t("kontakt.hero.pill")}
           </span>
-          <h1 className="h-serif text-5xl lg:text-7xl text-cm-teal mt-6 mb-6 max-w-3xl leading-[1.05]">
+          <h1 className="h-serif text-5xl lg:text-7xl text-cm-teal mt-6 mb-6 max-w-5xl leading-[1.05]">
             {t("kontakt.hero.h1")}
           </h1>
-          <p className="text-lg text-cm-ink/80 max-w-2xl leading-relaxed">
+          <p className="text-lg lg:text-xl text-cm-ink/80 max-w-3xl leading-relaxed">
             {t("kontakt.hero.p")}
           </p>
         </div>
