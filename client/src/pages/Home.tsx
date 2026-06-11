@@ -43,66 +43,66 @@ export default function Home() {
       {/* HERO — zentriert, hell, mit Bild-Trio       */}
       {/* ─────────────────────────────────────────── */}
       <section className="-mt-24 pt-24 bg-white">
-        <div className="container pt-10 lg:pt-16 pb-10 text-center">
+        <div className="container pt-14 lg:pt-24 pb-12 text-center">
           <span className="inline-flex items-center gap-2 bg-cm-teal-50 text-cm-teal-700 px-4 py-2 rounded-full text-sm font-medium">
             <Heart className="w-4 h-4" fill="currentColor" aria-hidden="true" />
             {t("home.hero.pill")}
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-cm-navy mt-6 mb-5 max-w-3xl mx-auto leading-[1.1] tracking-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-semibold text-cm-navy mt-7 mb-6 max-w-5xl mx-auto leading-[1.08] tracking-tight">
             {t("home.hero.h1")}
           </h1>
-          <p className="text-lg text-cm-ink/70 max-w-2xl mx-auto mb-7 leading-relaxed">
+          <p className="text-lg lg:text-xl text-cm-ink/70 max-w-3xl mx-auto mb-8 leading-relaxed">
             {t("home.hero.p")}
           </p>
           <div className="flex flex-wrap gap-3 justify-center mb-4">
             <Link
               href="/kontakt/patient"
-              className="bg-cm-teal-600 hover:bg-cm-teal-700 text-white px-7 py-3.5 rounded-xl font-medium shadow-lg flex items-center gap-2 transition-colors min-h-[48px]"
+              className="bg-cm-teal-600 hover:bg-cm-teal-700 text-white px-8 py-4 rounded-xl font-medium shadow-lg flex items-center gap-2 transition-colors min-h-[48px]"
             >
               {t("home.hero.ctaPrimary")}
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </Link>
             <a
               href="tel:+496979216147"
-              className="border border-cm-navy text-cm-navy px-7 py-3.5 rounded-xl font-medium flex items-center gap-2 hover:bg-cm-teal-50 transition-colors min-h-[48px]"
+              className="border border-cm-navy text-cm-navy px-8 py-4 rounded-xl font-medium flex items-center gap-2 hover:bg-cm-teal-50 transition-colors min-h-[48px]"
             >
               <Phone className="w-4 h-4" aria-hidden="true" />
               {t("home.hero.ctaPhone")}
             </a>
           </div>
-          <p className="text-sm text-cm-ink/70 mb-8 inline-flex items-center gap-1.5">
+          <p className="text-sm text-cm-ink/70 mb-10 inline-flex items-center gap-1.5">
             <CheckCircle2 className="w-4 h-4 text-cm-teal-700" aria-hidden="true" />
             {t("home.hero.subline")}
           </p>
-          {/* Bild-Trio */}
-          <div className="grid grid-cols-[1fr_1.4fr_1fr] gap-3 lg:gap-4 items-center max-w-4xl mx-auto">
+          {/* Bild-Trio — volle Container-Breite */}
+          <div className="grid grid-cols-[1fr_1.4fr_1fr] gap-3 lg:gap-5 items-center">
             <img
               src={PHOTOS.behandlung}
               alt=""
               loading="eager"
-              className="w-full h-40 sm:h-48 lg:h-60 object-cover rounded-2xl"
+              className="w-full h-44 sm:h-56 lg:h-80 object-cover rounded-2xl"
             />
             <img
               src={PHOTOS.hero}
               alt="Pflegefachperson von CuraMain bei der häuslichen Pflege"
               loading="eager"
-              className="w-full h-48 sm:h-56 lg:h-72 object-cover rounded-2xl"
+              className="w-full h-52 sm:h-64 lg:h-96 object-cover rounded-2xl"
             />
             <img
               src={PHOTOS.beratung}
               alt=""
               loading="eager"
-              className="w-full h-40 sm:h-48 lg:h-60 object-cover rounded-2xl"
+              className="w-full h-44 sm:h-56 lg:h-80 object-cover rounded-2xl"
             />
           </div>
         </div>
-        {/* Stats-Leiste */}
-        <div className="container pb-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto">
+        {/* Stats-Leiste — volle Container-Breite */}
+        <div className="container pb-14">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 lg:gap-4">
             {stats.map((s) => (
-              <div key={s.label} className="bg-cm-cream rounded-2xl px-4 py-4 text-center">
-                <div className="text-2xl lg:text-3xl font-semibold text-cm-navy">{s.value}</div>
-                <div className="text-xs text-cm-ink/70 mt-1">{s.label}</div>
+              <div key={s.label} className="bg-cm-cream rounded-2xl px-4 py-5 text-center">
+                <div className="text-2xl lg:text-4xl font-semibold text-cm-navy">{s.value}</div>
+                <div className="text-xs lg:text-sm text-cm-ink/70 mt-1">{s.label}</div>
               </div>
             ))}
           </div>
