@@ -85,7 +85,7 @@ export default function Westend() {
             Im Westend pflegen wir in modernen und altehrwürdigen Wohnungen gleichermaßen — und wir wissen, dass Pflege hier oft bedeutet, behutsam in ein eingespieltes Leben einzutreten. Unsere Pflegefachpersonen kommen pünktlich, bereiten sich auf jede Patient·in individuell vor und koordinieren eng mit Hausarztpraxen sowie der nahegelegenen Universitätsklinik Frankfurt. Die Uniklinik mit ihrem breiten Fachspektrum ist eines der wichtigsten medizinischen Zentren Hessens — wir sorgen dafür, dass der Übergang zwischen Klinik und Zuhause reibungslos verläuft.
           </p>
           <p className="text-lg text-cm-ink/80 leading-relaxed mb-6">
-            Das Westend ist ein internationales Viertel — Konsulate, internationale Familien, Menschen aus allen Teilen der Welt haben hier ihr Zuhause gefunden. Unser mehrsprachiges Team pflegt in mindestens fünf Sprachen, darunter Englisch, Spanisch und Arabisch, und bringt kulturelle Sensibilität als festen Bestandteil jeder Pflegebeziehung mit. Niemand soll wegen der Sprache oder Herkunft auf professionelle häusliche Pflege verzichten müssen.
+            Das Westend ist ein internationales Viertel — Konsulate, internationale Familien, Menschen aus allen Teilen der Welt haben hier ihr Zuhause gefunden. Unser international aufgestelltes, vielsprachiges Team bringt kulturelle Sensibilität als festen Bestandteil jeder Pflegebeziehung mit — Sie werden verstanden, in der Sprache, die sich für Sie wie Zuhause anfühlt. Niemand soll wegen der Sprache oder Herkunft auf professionelle häusliche Pflege verzichten müssen.
           </p>
           <p className="text-lg text-cm-ink/80 leading-relaxed">
             Von unserem Standort in der Berger Straße 69 sind wir im Westend in unter 20 Minuten — per E-Bike zuverlässig auch dann, wenn der Berufsverkehr auf der Bockenheimer Landstraße stockt. Mehr Pünktlichkeit, mehr Pflegezeit, mehr Vertrauen.
@@ -150,7 +150,7 @@ export default function Westend() {
             </div>
             <h3 className="h-serif text-xl text-cm-ink mb-3">International & kultursensibel</h3>
             <p className="text-sm text-cm-ink/70 leading-relaxed">
-              Im internationalen Westend pflegen wir in fünf Sprachen — Ihre Herkunft bestimmt nicht die Qualität Ihrer Pflege.
+              Im internationalen Westend werden Sie verstanden — Ihre Herkunft bestimmt nicht die Qualität Ihrer Pflege.
             </p>
           </div>
         </div>

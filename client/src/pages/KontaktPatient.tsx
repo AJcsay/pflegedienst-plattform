@@ -22,7 +22,7 @@ export default function KontaktPatient() {
     canonical: "https://www.curamain.de/kontakt/patient",
   });
 
-  // Markenregel: mindestens fünf Sprachen (aus i18n)
+  // Sprachregel 2026-06-11: keine Einzelsprachen/Zahl — internationale Umschreibung (aus i18n)
   type District = { value: string; label: string };
   const SPRACHEN = t("kontakt.languages", { returnObjects: true }) as string[];
   const STADTTEILE = t("kontakt.districts", { returnObjects: true }) as District[];

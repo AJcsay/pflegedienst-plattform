@@ -74,7 +74,7 @@ export default function Ostend() {
             Das Ostend hat sich in den letzten zehn Jahren stärker verändert als fast jeder andere Frankfurter Stadtteil. Die Europäische Zentralbank, neue Wohnquartiere am Osthafen, der Zoo, das Hanauer Landstraßen-Quartier — und gleichzeitig Generationen von Familien, die hier seit Jahrzehnten leben. Unsere Pflege wird beidem gerecht.
           </p>
           <p className="text-lg text-cm-ink/80 leading-relaxed mb-6">
-            Aus der Berger Straße 69 sind wir in unter 12 Minuten am Ostpark, an der Klinik des Roten Kreuzes oder in den ruhigen Wohnstraßen rund um die Habsburgerallee. Mit dem E-Bike kommen wir auch dort an, wo Autos im EZB-Berufsverkehr feststecken. Unser mehrsprachiges Team spricht die Sprachen der vielfältigen Ostend-Bevölkerung — in über 5 Sprachen, kultursensibel und vertraut mit den Traditionen des Stadtteils.
+            Aus der Berger Straße 69 sind wir in unter 12 Minuten am Ostpark, an der Klinik des Roten Kreuzes oder in den ruhigen Wohnstraßen rund um die Habsburgerallee. Mit dem E-Bike kommen wir auch dort an, wo Autos im EZB-Berufsverkehr feststecken. Unser vielsprachiges Team spricht die Sprachen der vielfältigen Ostend-Bevölkerung — kultursensibel und vertraut mit den Traditionen des Stadtteils.
           </p>
           <p className="text-lg text-cm-ink/80 leading-relaxed">
             Im Ostend bedeutet Pflege Anschluss: Anschluss an das Krankenhaus, Anschluss an die Hausarztpraxis und vor allem Anschluss an die Menschen, die Sie täglich begleiten.

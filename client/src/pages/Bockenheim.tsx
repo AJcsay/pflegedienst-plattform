@@ -85,7 +85,7 @@ export default function Bockenheim() {
             CuraMain versorgt Patient·innen in Bockenheim mit dem vollen Leistungsumfang häuslicher Pflege — von der Behandlungspflege nach Krankenhausaufenthalt über tägliche Grundpflege bis hin zu Aktivierung und Betreuung nach § 45b SGB XI. Wir arbeiten eng mit dem Bürgerhospital Frankfurt zusammen, das als wichtigstes Krankenhaus im Viertel für viele Patient·innen erste Anlaufstelle ist. Nach einem stationären Aufenthalt dort sorgen wir für den nahtlosen Übergang in Ihr gewohntes Zuhause.
           </p>
           <p className="text-lg text-cm-ink/80 leading-relaxed mb-6">
-            Bockenheim ist eines der vielfältigsten Viertel Frankfurts — kulturell, sprachlich und in jeder Hinsicht. Unser Team pflegt in mindestens fünf Sprachen, darunter Englisch, Spanisch und Arabisch, und bringt eine kultursensible Grundhaltung in jede Pflegebeziehung mit. Das bedeutet: Wir respektieren Ihre Gewohnheiten, Ihre Traditionen und Ihre Vorstellungen von guter Pflege — und passen uns an, nicht Sie an uns.
+            Bockenheim ist eines der vielfältigsten Viertel Frankfurts — kulturell, sprachlich und in jeder Hinsicht. Unser vielsprachiges Team bringt eine kultursensible Grundhaltung in jede Pflegebeziehung mit. Das bedeutet: Wir respektieren Ihre Gewohnheiten, Ihre Traditionen und Ihre Vorstellungen von guter Pflege — und passen uns an, nicht Sie an uns.
           </p>
           <p className="text-lg text-cm-ink/80 leading-relaxed">
             Mit dem E-Bike sind unsere Pflegefachpersonen trotz des lebhaften Bockenheimer Stadtverkehrs schnell und pünktlich bei Ihnen. Kein Stau, kein Parkplatzproblem — nur mehr Zeit für echte Pflege. Von unserem Standort in der Berger Straße 69 erreichen wir Bockenheim in der Regel in unter 20 Minuten.
@@ -150,7 +150,7 @@ export default function Bockenheim() {
             </div>
             <h3 className="h-serif text-xl text-cm-ink mb-3">Vielfalt als Stärke</h3>
             <p className="text-sm text-cm-ink/70 leading-relaxed">
-              Unser mehrsprachiges Team pflegt in mindestens fünf Sprachen — weil Bockenheims Vielfalt auch in der Pflege sichtbar sein darf.
+              Unser vielsprachiges Team pflegt Sie in Ihrer Sprache — weil Bockenheims Vielfalt auch in der Pflege sichtbar sein darf.
             </p>
           </div>
         </div>

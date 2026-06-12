@@ -199,7 +199,7 @@
         {
           "name": "Fatima A.",
           "role": "Daughter of a patient, Nordend-Ost",
-          "text": "My father barely speaks German – that was always a challenge for us. At CuraMain, we were immediately matched with an Arabic-speaking nursing professional. He finally feels understood and well cared for."
+          "text": "My father barely speaks German – that was always a challenge for us. At CuraMain, he was immediately cared for by a nursing professional who speaks his native language. He finally feels understood and well cared for."
         },
         {
           "name": "Dr. Markus R.",
@@ -354,11 +354,9 @@
       "keywords": "care consultation Rhine-Main, outpatient nursing consultation Rhine-Main, nursing service contact, CuraMain"
     },
     "languages": [
-      "German",
-      "English",
-      "Spanish",
-      "Arabic",
-      "+ more on request"
+      "We speak your language",
+      "Internationally diverse team",
+      "Culturally & gender sensitive"
     ],
     "districts": [
       {
@@ -399,7 +397,7 @@
       "districtPlaceholder": "Please select",
       "districtOtherHint": "We currently serve primarily Nordend-Ost, Bornheim, and Ostend. We will review your enquiry individually and respond within 48 hours.",
       "message": "Your message",
-      "messagePlaceholder": "What is this about? e.g. \"My father (78) needs personal care from next week and speaks Arabic.\"",
+      "messagePlaceholder": "What is this about? e.g. \"My father (78) needs personal care from next week.\"",
       "consent": "I have read the <1>Privacy Policy</1> and agree that my details may be stored to process my enquiry.",
       "submit": "Request free consultation",
       "submitting": "Sending …",
@@ -430,7 +428,7 @@
       "officeHours": "Office hours",
       "officeHoursVal": "Mon–Fri 8:00 am – 6:00 pm",
       "multilingual": "Multilingual",
-      "multilingualLabel": "We advise in:",
+      "multilingualLabel": "Multilingual advice:",
       "emergency": "Emergency?",
       "emergencyText": "Our 24/7 emergency line is always available for you.",
       "callNow": "Call now"

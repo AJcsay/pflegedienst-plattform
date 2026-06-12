@@ -75,7 +75,7 @@ export default function Offenbach() {
           name: "Spricht das Pflegeteam auch andere Sprachen als Deutsch?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Unser Team spricht mehrere Sprachen, darunter Englisch, Spanisch und Arabisch – mindestens fünf Sprachen. Wir legen großen Wert auf kultursensible Pflege.",
+            text: "Unser Team ist international aufgestellt und vielsprachig im Alltag. Wir legen großen Wert auf kultursensible Pflege.",
           },
         },
       ],
@@ -118,7 +118,7 @@ export default function Offenbach() {
     {
       icon: <Languages className="w-6 h-6 text-cm-teal" />,
       title: "Kultursensible Pflege",
-      text: "Mehrsprachiges Team – Englisch, Spanisch, Arabisch und weitere Sprachen. Vertrauen durch Verständnis.",
+      text: "Vielsprachiges Team — Vertrauen durch Verständnis.",
     },
     {
       icon: <MapPin className="w-6 h-6 text-cm-teal" />,
@@ -159,7 +159,7 @@ export default function Offenbach() {
     {
       frage: "Spricht das Pflegeteam auch andere Sprachen als Deutsch?",
       antwort:
-        "Unser Team spricht mehrere Sprachen, darunter Englisch, Spanisch und Arabisch – mindestens fünf Sprachen. Wir legen großen Wert auf kultursensible Pflege.",
+        "Unser Team ist international aufgestellt und vielsprachig im Alltag. Wir legen großen Wert auf kultursensible Pflege.",
     },
   ];
 

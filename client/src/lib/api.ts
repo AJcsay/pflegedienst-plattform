@@ -123,9 +123,46 @@ export async function submitBewerbung(
     return { success: false, error: errMsg };
   }
 
+  // Stufe 2 Plattform-Ausbau (2026-06-12): Bewerbung zusätzlich in die
+  // Directus-Pipeline spiegeln (Status-Tracking eingegangen → … → absage,
+  // AGG-Löschfrist automatisiert). Fire-and-forget: Ein Fehler hier darf den
+  // erfolgreichen Mail-Pfad (PHP → IMAP → A3) niemals beeinträchtigen.
+  // Anhang wird bewusst NICHT gespiegelt (Public-Upload deaktiviert) —
+  // er kommt weiterhin per Mail an bewerbung@curamain.de.
+  try {
+    void fetch("https://api.curamain.de/items/bewerbungen", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: `${payload.firstName} ${payload.lastName}`.trim(),
+        email: payload.email,
+        telefon: payload.phone || null,
+        rolle: mapRolle(payload.jobTitle),
+        nachricht: [
+          payload.jobTitle ? `Stelle: ${payload.jobTitle}` : null,
+          cv ? `Anhang (per E-Mail): ${cv.name}` : null,
+          payload.message || null,
+        ]
+          .filter(Boolean)
+          .join("\n"),
+      }),
+    }).catch(() => undefined);
+  } catch {
+    // ignore — Mail-Pfad ist maßgeblich
+  }
+
   try {
     return (await res.json()) as ApiResponse;
   } catch {
     return { success: true };
   }
+}
+
+/** Stellen-Titel auf die Directus-rolle-Werte mappen. */
+function mapRolle(jobTitle?: string): string {
+  const t = (jobTitle || "").toLowerCase();
+  if (t.includes("fachperson") || t.includes("fachkraft")) return "pflegefachperson";
+  if (t.includes("assisten") || t.includes("hilfskraft")) return "pflegeassistenz";
+  if (t.includes("büro") || t.includes("buero") || t.includes("verwaltung")) return "buerokraft";
+  return "sonstiges";
 }

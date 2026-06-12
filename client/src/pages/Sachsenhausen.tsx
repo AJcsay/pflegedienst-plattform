@@ -85,7 +85,7 @@ export default function Sachsenhausen() {
             CuraMain versorgt Patient·innen in Sachsenhausen mit professioneller häuslicher Pflege — von der Behandlungspflege nach Krankenhausaufenthalt über die tägliche Grundpflege bis hin zu aktivierenden Betreuungsangeboten nach § 45b SGB XI. Wir arbeiten eng mit Hausarztpraxen im Stadtteil zusammen und koordinieren Anschlusspflege nach Aufenthalten im Krankenhaus Sachsenhausen. Unser Ziel: keine Versorgungslücke, kein Papierstress für Sie oder Ihre Angehörigen.
           </p>
           <p className="text-lg text-cm-ink/80 leading-relaxed mb-6">
-            Sachsenhausen ist eines der vielfältigsten Quartiere Frankfurts. Hier leben Menschen mit Wurzeln aus aller Welt — und genau das spiegelt unser Team wider. Wir pflegen in mindestens fünf Sprachen, darunter Englisch, Spanisch und Arabisch, und bringen kulturelle Sensibilität in jeden Hausbesuch mit. Für uns bedeutet würdevolle Pflege, dass Ihre Herkunft, Ihre Gewohnheiten und Ihre persönlichen Überzeugungen respektiert werden — ohne Wenn und Aber.
+            Sachsenhausen ist eines der vielfältigsten Quartiere Frankfurts. Hier leben Menschen mit Wurzeln aus aller Welt — und genau das spiegelt unser Team wider. Wir pflegen vielsprachig und bringen kulturelle Sensibilität in jeden Hausbesuch mit. Für uns bedeutet würdevolle Pflege, dass Ihre Herkunft, Ihre Gewohnheiten und Ihre persönlichen Überzeugungen respektiert werden — ohne Wenn und Aber.
           </p>
           <p className="text-lg text-cm-ink/80 leading-relaxed">
             Unsere Pflegefachpersonen erreichen die meisten Adressen in Sachsenhausen in unter 15 Minuten von unserem Standort in der Berger Straße 69. Per E-Bike umfahren wir mühelos den Innenstadtverkehr, kommen zuverlässig und pünktlich — und haben dadurch mehr Zeit für das, was wirklich zählt: Sie.
@@ -150,7 +150,7 @@ export default function Sachsenhausen() {
             </div>
             <h3 className="h-serif text-xl text-cm-ink mb-3">Fünf Sprachen, eine Haltung</h3>
             <p className="text-sm text-cm-ink/70 leading-relaxed">
-              Englisch, Spanisch, Arabisch und mehr: Unser mehrsprachiges Team pflegt Sie in Ihrer Sprache — kultursensibel und geschlechtssensibel.
+              Unser vielsprachiges Team pflegt Sie in Ihrer Sprache — kultursensibel und geschlechtssensibel.
             </p>
           </div>
         </div>

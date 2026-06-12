@@ -112,7 +112,7 @@ export default function NordendOst() {
             </div>
             <h3 className="h-serif text-xl text-cm-ink mb-3">Mehrsprachige Versorgung — bei Ihnen zu Hause</h3>
             <p className="text-sm text-cm-ink/70 leading-relaxed">
-              Mehrsprachige Pflege in über 5 Sprachen — kultursensibel und geschlechtssensibel.
+              Vielsprachige Pflege — kultursensibel und geschlechtssensibel.
             </p>
           </div>
         </div>

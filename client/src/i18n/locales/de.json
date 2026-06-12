@@ -199,7 +199,7 @@
         {
           "name": "Fatima A.",
           "role": "Tochter eines Patienten, Nordend-Ost",
-          "text": "Mein Vater spricht kaum Deutsch – das war für uns immer ein Problem. Bei CuraMain wurde uns sofort eine arabischsprachige Pflegekraft zugeteilt. Er fühlt sich endlich verstanden und gut versorgt."
+          "text": "Mein Vater spricht kaum Deutsch – das war für uns immer ein Problem. Bei CuraMain kam sofort eine Pflegefachperson, die seine Muttersprache spricht. Er fühlt sich endlich verstanden und gut versorgt."
         },
         {
           "name": "Dr. Markus R.",
@@ -354,11 +354,9 @@
       "keywords": "Pflegeberatung Rhein-Main, Erstberatung Pflegedienst Rhein-Main-Gebiet, Pflegedienst Kontakt, CuraMain"
     },
     "languages": [
-      "Deutsch",
-      "Englisch",
-      "Spanisch",
-      "Arabisch",
-      "+ weitere auf Anfrage"
+      "Wir sprechen Ihre Sprache",
+      "International aufgestelltes Team",
+      "Kultursensibel & geschlechtssensibel"
     ],
     "districts": [
       {
@@ -399,7 +397,7 @@
       "districtPlaceholder": "Bitte wählen",
       "districtOtherHint": "Aktuell versorgen wir primär Nordend-Ost, Bornheim und Ostend. Wir prüfen Ihre Anfrage individuell und melden uns innerhalb von 48 Stunden.",
       "message": "Ihre Nachricht",
-      "messagePlaceholder": "Worum geht es? z. B.: Mein Vater (78) braucht Grundpflege ab nächster Woche, spricht Arabisch.",
+      "messagePlaceholder": "Worum geht es? z. B.: Mein Vater (78) braucht Grundpflege ab nächster Woche.",
       "consent": "Ich habe die <1>Datenschutzhinweise</1> gelesen und bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden.",
       "submit": "Kostenloses Erstgespräch anfordern",
       "submitting": "Wird gesendet …",
@@ -430,7 +428,7 @@
       "officeHours": "Bürozeiten",
       "officeHoursVal": "Mo–Fr 8:00–18:00 Uhr",
       "multilingual": "Mehrsprachig",
-      "multilingualLabel": "Wir beraten in:",
+      "multilingualLabel": "Mehrsprachige Beratung:",
       "emergency": "Notfall?",
       "emergencyText": "Unsere 24/7-Notfallbereitschaft ist jederzeit für Sie erreichbar.",
       "callNow": "Jetzt anrufen"

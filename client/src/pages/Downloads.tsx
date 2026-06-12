@@ -1,8 +1,38 @@
+import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import { FileText, FileDown, Phone, Languages } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 import downloadsData from "@/data/downloads.json";
 import type { Document } from "@/data/types";
+
+// Stufe 2 Plattform-Ausbau (2026-06-12): Dokumente kommen aus Directus
+// (api.curamain.de). Das lokale downloads.json bleibt als Fallback und für
+// das Prerendering (SEO) erhalten — neue Dokumente brauchen keinen Deploy mehr.
+const DIRECTUS_URL = "https://api.curamain.de";
+
+interface DirectusDokument {
+  id: number;
+  titel: string;
+  beschreibung: string | null;
+  kategorie: string | null;
+  datei: string | null;
+  sort: number | null;
+}
+
+function mapDirectus(items: DirectusDokument[]): Document[] {
+  return items
+    .filter((i) => i.datei)
+    .map((i) => ({
+      id: i.id,
+      title: i.titel,
+      description: i.beschreibung ?? undefined,
+      category: i.kategorie ?? "sonstiges",
+      fileUrl: `${DIRECTUS_URL}/assets/${i.datei}?download`,
+      fileName: undefined,
+      fileSize: null,
+      publishedAt: undefined,
+    })) as unknown as Document[];
+}
 
 const categoryLabels: Record<string, string> = {
   infoblatt: "Infoblatt",
@@ -20,9 +50,28 @@ const categoryColors: Record<string, string> = {
   vorlage: "bg-rose-50 text-rose-700",
 };
 
-const downloads: Document[] = (downloadsData as { downloads: Document[] }).downloads;
+const fallbackDownloads: Document[] = (downloadsData as { downloads: Document[] }).downloads;
 
 export default function Downloads() {
+  const [downloads, setDownloads] = useState<Document[]>(fallbackDownloads);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch(
+      `${DIRECTUS_URL}/items/dokumente?fields=id,titel,beschreibung,kategorie,datei,sort&sort=sort&limit=100`,
+      { signal: controller.signal }
+    )
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
+      .then((r: { data: DirectusDokument[] }) => {
+        const mapped = mapDirectus(r.data);
+        if (mapped.length > 0) setDownloads(mapped);
+      })
+      .catch(() => {
+        /* Fallback: statische Liste bleibt stehen */
+      });
+    return () => controller.abort();
+  }, []);
+
   useSEO({
     title: "Downloads & Ratgeber – Checklisten & Infoblätter zur Pflege | CuraMain",
     description:
@@ -105,7 +154,7 @@ export default function Downloads() {
               </h2>
               <p className="text-cm-ink/75 leading-relaxed mb-5">
                 Jedes dieser Themen erklären wir Ihnen gern in Ruhe bei Ihnen zu Hause —
-                auf Deutsch, Englisch, Spanisch oder Arabisch. Das Erstgespräch ist
+                in der Sprache, die sich für Sie wie Zuhause anfühlt. Das Erstgespräch ist
                 kostenlos und unverbindlich.
               </p>
               <div className="flex flex-wrap gap-3">

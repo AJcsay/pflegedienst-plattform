@@ -59,7 +59,7 @@ export default function Frankfurt() {
         {
           "@type": "Question",
           "name": "Spricht das CuraMain-Team Deutsch und andere Sprachen?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Ja, unser Pflegeteam ist mehrsprachig. Neben Deutsch sprechen wir Englisch, Spanisch, Arabisch und weitere Sprachen — mindestens fünf insgesamt. Kultursensible Pflege ist für uns selbstverständlich." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Ja, unser Pflegeteam ist international aufgestellt und vielsprachig im Alltag. Bei CuraMain werden Sie verstanden — in der Sprache, die sich für Sie wie Zuhause anfühlt. Kultursensible Pflege ist für uns selbstverständlich." }
         }
       ]
     };
@@ -117,7 +117,7 @@ export default function Frankfurt() {
     },
     {
       q: "Spricht das CuraMain-Team Deutsch und andere Sprachen?",
-      a: "Ja, unser Pflegeteam ist mehrsprachig. Neben Deutsch sprechen wir Englisch, Spanisch, Arabisch und weitere Sprachen — mindestens fünf insgesamt. Kultursensible Pflege ist für uns selbstverständlich."
+      a: "Ja, unser Pflegeteam ist international aufgestellt und vielsprachig im Alltag. Bei CuraMain werden Sie verstanden — in der Sprache, die sich für Sie wie Zuhause anfühlt. Kultursensible Pflege ist für uns selbstverständlich."
     },
   ];
 
@@ -168,7 +168,7 @@ export default function Frankfurt() {
             Unsere aktiven Versorgungsgebiete liegen in Frankfurt-Nordend, Frankfurt-Bornheim und Frankfurt-Ostend. Von unserem Standort an der Berger Straße 69 erreichen wir diese Stadtteile schnell und effizient – per E-Bike, ohne lange Anfahrtszeiten.
           </p>
           <p className="text-lg text-cm-ink/80 leading-relaxed">
-            Wir pflegen Menschen unterschiedlichster Herkunft und Lebenssituation. Unser mehrsprachiges Team kommuniziert auf Deutsch, Englisch, Spanisch, Arabisch und weiteren Sprachen – kultursensibel und mit Respekt vor individuellen Gewohnheiten und Werten.
+            Wir pflegen Menschen unterschiedlichster Herkunft und Lebenssituation. Unser vielsprachiges Team kommuniziert kultursensibel und mit Respekt vor individuellen Gewohnheiten und Werten — in der Sprache, die sich für Sie wie Zuhause anfühlt.
           </p>
         </div>
       </section>
