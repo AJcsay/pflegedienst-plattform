@@ -161,6 +161,15 @@
         }
       } catch (e) {}
     </script>
+
+    <!-- Umami Web-Analytics (selbst gehostet, stats.curamain.de) — cookielos &
+         anonymisiert, daher ohne Consent-Banner DSGVO-konform einsetzbar.
+         Stufe 1 Plattform-Ausbau, 2026-06-12. -->
+    <script
+      defer
+      src="https://stats.curamain.de/script.js"
+      data-website-id="315f0c9d-01b6-413a-bde6-ab9ec8d3210d"
+      data-domains="curamain.de,www.curamain.de"></script>
   </head>
 
   <body>
@@ -180,8 +189,7 @@
         });
       }
     </script>
-    <!-- Analytics-Snippet wurde mit dem Manus-Setup entfernt.
-         Bei Bedarf: Plausible / Matomo-Snippet hier einsetzen. -->
+    <!-- Web-Analytics: Umami-Snippet im <head> (stats.curamain.de, seit 2026-06-12). -->
   </body>
 
 </html>
