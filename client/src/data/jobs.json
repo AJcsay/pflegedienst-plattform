@@ -9,7 +9,7 @@
       "description": "Wir suchen eine engagierte Pflegedienstleitung, die unseren ambulanten Pflegedienst fachlich, organisatorisch und personell führt. Sie übernehmen die Verantwortung für Qualitätssicherung, Tourenplanung und Mitarbeiterführung in einem wachsenden Team.",
       "requirements": "Anerkannte Weiterbildung zur PDL (mindestens 460 Stunden), examinierte Pflegefachperson, mehrjährige Berufserfahrung, Führungskompetenz, sicherer Umgang mit Pflegesoftware.",
       "benefits": "Übertarifliches Gehalt, Dienstwagen zur Privatnutzung, betriebliche Altersvorsorge, 30 Tage Urlaub, regelmäßige Fortbildungen.",
-      "active": true,
+      "active": false,
       "publishedAt": "2026-04-26"
     },
     {
@@ -22,7 +22,7 @@
       "requirements": "Abgeschlossene Ausbildung zur Pflegefachperson (Altenpflege, Gesundheits- und Krankenpflege oder Pflegefachfrau/-mann), Führerschein Klasse B, Empathie und Teamfähigkeit.",
       "benefits": "Übertarifliches Gehalt nach TVöD-P, Dienstwagen, flexible Dienstpläne, kollegiales Team, Sprachzulagen für mehrsprachige Mitarbeitende.",
       "active": true,
-      "publishedAt": "2026-04-26"
+      "publishedAt": "2026-06-12"
     },
     {
       "id": 3,
@@ -34,7 +34,7 @@
       "requirements": "Abgeschlossene Ausbildung zur Pflegefachperson, Führerschein Klasse B, Zuverlässigkeit.",
       "benefits": "Übertarifliches Stundenentgelt, flexible Dienstplangestaltung, betriebliche Altersvorsorge, Fortbildungen.",
       "active": true,
-      "publishedAt": "2026-04-26"
+      "publishedAt": "2026-06-12"
     },
     {
       "id": 4,
@@ -46,7 +46,7 @@
       "requirements": "Abgeschlossener Pflegehelfer-/Pflegeassistenzkurs (mind. 200 Stunden) oder vergleichbare Qualifikation, Führerschein Klasse B, Zuverlässigkeit und Freude am Umgang mit älteren Menschen.",
       "benefits": "Faire Bezahlung mit Zuschlägen, Dienstkleidung gestellt, strukturierte Einarbeitung, Möglichkeit zur Weiterqualifikation zur Pflegefachperson.",
       "active": true,
-      "publishedAt": "2026-04-26"
+      "publishedAt": "2026-06-12"
     },
     {
       "id": 5,
@@ -57,7 +57,7 @@
       "description": "Auf Minijob-Basis übernehmen Sie hauswirtschaftliche Leistungen bei unseren Patient·innen — z. B. Einkaufen, Kochen, leichte Reinigung und Wäsche.",
       "requirements": "Erfahrung im Haushalt, Zuverlässigkeit, freundlicher Umgang mit älteren Menschen, Deutschkenntnisse für die Verständigung mit Patient·innen.",
       "benefits": "Geregelte Einsätze, Fahrtkostenpauschale, wertschätzendes Arbeitsklima, keine Wochenendpflicht.",
-      "active": true,
+      "active": false,
       "publishedAt": "2026-04-26"
     }
   ]
