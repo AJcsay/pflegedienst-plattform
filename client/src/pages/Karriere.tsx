@@ -1,7 +1,8 @@
 import { Link } from "wouter";
 import {
   ArrowRight, Briefcase, MapPin, Heart,
-  GraduationCap, Car, Calendar, Euro, Users, Coffee, Shield
+  GraduationCap, Car, Calendar, Euro, Users, Coffee, Shield,
+  ChevronDown, CheckCircle2, ClipboardList, Gift, Clock
 } from "lucide-react";
 import { useState } from "react";
 import { useSEO } from "@/hooks/useSEO";
@@ -49,6 +50,7 @@ export default function Karriere() {
   });
 
   const [filterType, setFilterType] = useState<string>("all");
+  const [openJobId, setOpenJobId] = useState<number | null>(null);
 
   const filteredJobs = allJobs.filter((job) => filterType === "all" || job.employmentType === filterType);
 
@@ -126,39 +128,150 @@ export default function Karriere() {
 
         {filteredJobs.length > 0 ? (
           <div className="space-y-4 max-w-3xl mx-auto">
-            {filteredJobs.map((job) => (
-              <div
-                key={job.id}
-                className="bg-white p-7 rounded-3xl border border-cm-teal-100 hover:shadow-md transition-shadow flex flex-wrap items-center gap-4 justify-between"
-              >
-                <div className="flex-1 min-w-0">
-                  <h3 className="h-serif text-2xl text-cm-ink mb-2">{job.title}</h3>
-                  <div className="flex flex-wrap items-center gap-2">
-                    {job.department && (
-                      <span className="text-xs px-3 py-1 rounded-full bg-cm-teal-50 text-cm-teal-700 inline-flex items-center gap-1">
-                        <Briefcase className="w-3 h-3" />
-                        {job.department}
-                      </span>
-                    )}
-                    {job.location && (
-                      <span className="text-xs px-3 py-1 rounded-full bg-cm-teal-50 text-cm-teal-700 inline-flex items-center gap-1">
-                        <MapPin className="w-3 h-3" />
-                        {job.location}
-                      </span>
-                    )}
-                    <span className="text-xs px-3 py-1 rounded-full bg-cm-teal-50 text-cm-teal-700">
-                      {employmentTypeLabels[job.employmentType] || job.employmentType}
-                    </span>
-                  </div>
-                </div>
-                <Link
-                  href={`/karriere/bewerbung?job=${job.id}`}
-                  className="bg-cm-teal hover:bg-cm-teal-500 text-white px-6 py-2.5 rounded-full text-sm font-medium inline-flex items-center gap-1.5 transition-colors"
+            {filteredJobs.map((job) => {
+              const isOpen = openJobId === job.id;
+              const detailsId = `job-details-${job.id}`;
+              return (
+                <div
+                  key={job.id}
+                  className="bg-white rounded-3xl border border-cm-teal-100 hover:shadow-md transition-shadow overflow-hidden"
                 >
-                  Bewerben <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-            ))}
+                  {/* Card header — toggles the full posting */}
+                  <button
+                    type="button"
+                    onClick={() => setOpenJobId(isOpen ? null : job.id)}
+                    aria-expanded={isOpen}
+                    aria-controls={detailsId}
+                    className="w-full text-left p-7 flex flex-wrap items-center gap-4 justify-between"
+                  >
+                    <div className="flex-1 min-w-0">
+                      <h3 className="h-serif text-2xl text-cm-ink mb-2">{job.title}</h3>
+                      <div className="flex flex-wrap items-center gap-2">
+                        {job.department && (
+                          <span className="text-xs px-3 py-1 rounded-full bg-cm-teal-50 text-cm-teal-700 inline-flex items-center gap-1">
+                            <Briefcase className="w-3 h-3" />
+                            {job.department}
+                          </span>
+                        )}
+                        {job.location && (
+                          <span className="text-xs px-3 py-1 rounded-full bg-cm-teal-50 text-cm-teal-700 inline-flex items-center gap-1">
+                            <MapPin className="w-3 h-3" />
+                            {job.location}
+                          </span>
+                        )}
+                        <span className="text-xs px-3 py-1 rounded-full bg-cm-teal-50 text-cm-teal-700">
+                          {employmentTypeLabels[job.employmentType] || job.employmentType}
+                        </span>
+                        {job.startDate && (
+                          <span className="text-xs px-3 py-1 rounded-full bg-cm-teal-50 text-cm-teal-700 inline-flex items-center gap-1">
+                            <Calendar className="w-3 h-3" />
+                            ab {job.startDate}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <span className="inline-flex items-center gap-1.5 text-sm font-medium text-cm-teal-700">
+                      {isOpen ? "Schließen" : "Details ansehen"}
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform ${isOpen ? "rotate-180" : ""}`}
+                      />
+                    </span>
+                  </button>
+
+                  {/* Full job posting */}
+                  {isOpen && (
+                    <div id={detailsId} className="px-7 pb-7 -mt-1">
+                      {/* Eckdaten */}
+                      <div className="grid sm:grid-cols-2 gap-3 mb-6 p-5 rounded-2xl bg-cm-teal-50/60 border border-cm-teal-100">
+                        {job.startDate && (
+                          <div className="flex items-start gap-2 text-sm text-cm-ink">
+                            <Calendar className="w-4 h-4 text-cm-teal mt-0.5 shrink-0" />
+                            <span><strong className="font-semibold">Eintritt:</strong> ab {job.startDate}</span>
+                          </div>
+                        )}
+                        {job.scope && (
+                          <div className="flex items-start gap-2 text-sm text-cm-ink">
+                            <Clock className="w-4 h-4 text-cm-teal mt-0.5 shrink-0" />
+                            <span><strong className="font-semibold">Umfang:</strong> {job.scope}</span>
+                          </div>
+                        )}
+                        {job.location && (
+                          <div className="flex items-start gap-2 text-sm text-cm-ink">
+                            <MapPin className="w-4 h-4 text-cm-teal mt-0.5 shrink-0" />
+                            <span><strong className="font-semibold">Standort:</strong> {job.location}</span>
+                          </div>
+                        )}
+                        {job.salary && (
+                          <div className="flex items-start gap-2 text-sm text-cm-ink">
+                            <Euro className="w-4 h-4 text-cm-teal mt-0.5 shrink-0" />
+                            <span><strong className="font-semibold">Vergütung:</strong> {job.salary}</span>
+                          </div>
+                        )}
+                      </div>
+
+                      {job.intro && (
+                        <p className="text-cm-ink/80 leading-relaxed mb-6">{job.intro}</p>
+                      )}
+
+                      {job.tasks && job.tasks.length > 0 && (
+                        <div className="mb-6">
+                          <h4 className="flex items-center gap-2 font-semibold text-cm-ink mb-3">
+                            <ClipboardList className="w-4 h-4 text-cm-teal" /> Ihre Aufgaben
+                          </h4>
+                          <ul className="space-y-2">
+                            {job.tasks.map((t, i) => (
+                              <li key={i} className="flex items-start gap-2 text-sm text-cm-ink/80">
+                                <CheckCircle2 className="w-4 h-4 text-cm-teal mt-0.5 shrink-0" />
+                                <span>{t}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+
+                      {job.profile && job.profile.length > 0 && (
+                        <div className="mb-6">
+                          <h4 className="flex items-center gap-2 font-semibold text-cm-ink mb-3">
+                            <GraduationCap className="w-4 h-4 text-cm-teal" /> Ihr Profil
+                          </h4>
+                          <ul className="space-y-2">
+                            {job.profile.map((p, i) => (
+                              <li key={i} className="flex items-start gap-2 text-sm text-cm-ink/80">
+                                <CheckCircle2 className="w-4 h-4 text-cm-teal mt-0.5 shrink-0" />
+                                <span>{p}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+
+                      {job.offer && job.offer.length > 0 && (
+                        <div className="mb-7">
+                          <h4 className="flex items-center gap-2 font-semibold text-cm-ink mb-3">
+                            <Gift className="w-4 h-4 text-cm-teal" /> Das bieten wir Ihnen
+                          </h4>
+                          <ul className="space-y-2">
+                            {job.offer.map((o, i) => (
+                              <li key={i} className="flex items-start gap-2 text-sm text-cm-ink/80">
+                                <CheckCircle2 className="w-4 h-4 text-cm-teal mt-0.5 shrink-0" />
+                                <span>{o}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+
+                      <Link
+                        href={`/karriere/bewerbung?job=${job.id}`}
+                        className="bg-cm-teal hover:bg-cm-teal-500 text-white px-6 py-3 rounded-full text-sm font-medium inline-flex items-center gap-1.5 transition-colors"
+                      >
+                        Auf diese Stelle bewerben <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         ) : (
           <div className="text-center py-12 max-w-2xl mx-auto bg-white rounded-3xl border border-cm-teal-100">

@@ -4,6 +4,14 @@ export interface Job {
   department?: string;
   location?: string;
   employmentType: "fulltime" | "parttime" | "minijob" | "internship" | string;
+  startDate?: string;
+  scope?: string;
+  salary?: string;
+  intro?: string;
+  tasks?: string[];
+  profile?: string[];
+  offer?: string[];
+  /** @deprecated durch intro/tasks/profile/offer ersetzt – bleibt für Abwärtskompatibilität optional */
   description?: string;
   requirements?: string;
   benefits?: string;

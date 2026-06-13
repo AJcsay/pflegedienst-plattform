@@ -6,9 +6,32 @@
       "department": "Leitung",
       "location": "Frankfurt am Main",
       "employmentType": "fulltime",
-      "description": "Wir suchen eine engagierte Pflegedienstleitung, die unseren ambulanten Pflegedienst fachlich, organisatorisch und personell führt. Sie übernehmen die Verantwortung für Qualitätssicherung, Tourenplanung und Mitarbeiterführung in einem wachsenden Team.",
-      "requirements": "Anerkannte Weiterbildung zur PDL (mindestens 460 Stunden), examinierte Pflegefachperson, mehrjährige Berufserfahrung, Führungskompetenz, sicherer Umgang mit Pflegesoftware.",
-      "benefits": "Übertarifliches Gehalt, Dienstwagen zur Privatnutzung, betriebliche Altersvorsorge, 30 Tage Urlaub, regelmäßige Fortbildungen.",
+      "startDate": "01.09.2026",
+      "scope": "Vollzeit · unbefristet · 39 Std./Woche",
+      "salary": "Übertarifliche Vergütung, orientiert am regional üblichen Entgeltniveau Hessen",
+      "intro": "CuraMain ist ein ambulanter Pflegedienst in Frankfurt am Main. Unter dem Leitbild „Pflege aus Überzeugung\" begleiten wir Menschen jeden Alters mit professioneller, kultursensibler Pflege in ihrem vertrauten Zuhause. Für die fachliche, organisatorische und personelle Führung unseres wachsenden Teams suchen wir eine examinierte Pflegedienstleitung.",
+      "tasks": [
+        "Fachliche, organisatorische und personelle Leitung des ambulanten Pflegedienstes",
+        "Sicherstellung der Pflege- und Versorgungsqualität nach SGB XI und unserem Qualitätsmanagement-Handbuch",
+        "Tourenplanung, Dienstplangestaltung und wirtschaftliche Steuerung der Einsätze",
+        "Führung, Einarbeitung und Weiterentwicklung des Pflegeteams",
+        "Erstbesuche, Pflegevisiten und Zusammenarbeit mit Kostenträgern, Ärzt·innen und Angehörigen"
+      ],
+      "profile": [
+        "Examinierte Pflegefachperson mit anerkannter Weiterbildung zur Pflegedienstleitung (mind. 460 Stunden) oder pflegewissenschaftlichem Studium",
+        "Mehrjährige Berufserfahrung, idealerweise im ambulanten Bereich",
+        "Führungskompetenz, Organisationstalent und betriebswirtschaftliches Grundverständnis",
+        "Sicherer Umgang mit Pflege- und Tourensoftware",
+        "Führerschein Klasse B"
+      ],
+      "offer": [
+        "Übertarifliche Vergütung, orientiert am regional üblichen Entgeltniveau Hessen",
+        "Unbefristeter Arbeitsvertrag mit echtem Gestaltungsspielraum",
+        "30 Tage Urlaub und arbeitgeberfinanzierte betriebliche Altersvorsorge",
+        "Dienstfahrzeug bzw. E-Bike für die Touren im Frankfurter Osten",
+        "Fort- und Weiterbildungen auf unsere Kosten",
+        "Ein wertschätzendes, internationales Team mit kurzen Entscheidungswegen"
+      ],
       "active": false,
       "publishedAt": "2026-04-26"
     },
@@ -18,9 +41,35 @@
       "department": "Pflege",
       "location": "Frankfurt am Main",
       "employmentType": "fulltime",
-      "description": "Verstärken Sie unser Team als examinierte Pflegefachperson in der ambulanten Versorgung. Sie betreuen Patient·innen in der Behandlungs- und Grundpflege und arbeiten eng mit Ärzten und Angehörigen zusammen.",
-      "requirements": "Abgeschlossene Ausbildung zur Pflegefachperson (Altenpflege, Gesundheits- und Krankenpflege oder Pflegefachfrau/-mann), Führerschein Klasse B, Empathie und Teamfähigkeit.",
-      "benefits": "Übertarifliches Gehalt nach TVöD-P, Dienstwagen, flexible Dienstpläne, kollegiales Team, Sprachzulagen für mehrsprachige Mitarbeitende.",
+      "startDate": "01.09.2026",
+      "scope": "Vollzeit · unbefristet · 39 Std./Woche",
+      "salary": "ca. €42.000–€52.000 brutto/Jahr, übertariflich und orientiert am regional üblichen Entgeltniveau Hessen",
+      "intro": "CuraMain ist ein ambulanter Pflegedienst in Frankfurt am Main. Unter dem Leitbild „Weil Ihr Zuhause der beste Ort zum Heilen ist\" begleiten wir unsere Patient·innen mit professioneller, kultursensibler Pflege direkt zu Hause. Zur Verstärkung unseres Teams suchen wir zum 01.09.2026 eine examinierte Pflegefachperson für die ambulante Versorgung im Frankfurter Osten (Bornheim, Nordend, Ostend).",
+      "tasks": [
+        "Eigenständige Grundpflege: Körperpflege, Mobilisation, Ankleiden, Ernährungsunterstützung",
+        "Behandlungspflege: Wundversorgung, Injektionen, Medikamentengabe, Vitalzeichenkontrolle",
+        "Beratungsbesuche nach § 37.3 SGB XI sowie Aktivierung und Betreuung nach § 45b SGB XI",
+        "Lückenlose Pflegedokumentation und Leistungserfassung in unserer Pflegesoftware",
+        "Abstimmung mit Angehörigen, Ärzt·innen, Therapeut·innen und Kooperationspartnern",
+        "Mitwirkung bei Pflegevisiten, Erstbesuchen und internen Qualitätssicherungsmaßnahmen"
+      ],
+      "profile": [
+        "Abgeschlossene, staatlich anerkannte Ausbildung als Pflegefachperson (Gesundheits- und Krankenpflege, Altenpflege oder Pflegefachfrau/-mann)",
+        "Erfahrung in der ambulanten Pflege ist willkommen, aber keine Voraussetzung",
+        "Empathie, Verlässlichkeit und echtes Interesse am Wohlbefinden der Menschen, die Sie pflegen",
+        "Selbstständige, strukturierte Arbeitsweise und Teamgeist",
+        "Gute Deutschkenntnisse (mind. B2) – weitere Sprachen sind herzlich willkommen",
+        "Führerschein Klasse B"
+      ],
+      "offer": [
+        "Übertarifliche Vergütung von ca. €42.000–€52.000 brutto/Jahr, orientiert am regional üblichen Entgeltniveau Hessen",
+        "Unbefristeter Arbeitsvertrag mit fairen, planbaren Bedingungen",
+        "Flexible Dienstpläne, die Ihre Wünsche berücksichtigen – Familie und Beruf bleiben vereinbar",
+        "Überschaubares Einsatzgebiet mit kurzen Wegen im Frankfurter Osten – Dienstfahrzeug bzw. E-Bike für die Touren",
+        "30 Tage Urlaub und arbeitgeberfinanzierte betriebliche Altersvorsorge",
+        "Strukturierte Einarbeitung durch unsere Pflegedienstleitung und Fortbildungen auf unsere Kosten",
+        "Ein wertschätzendes, internationales Team mit echtem Zusammenhalt"
+      ],
       "active": true,
       "publishedAt": "2026-06-12"
     },
@@ -30,9 +79,32 @@
       "department": "Pflege",
       "location": "Frankfurt am Main",
       "employmentType": "parttime",
-      "description": "Teilzeit-Stelle für examinierte Pflegefachpersonen mit individuell vereinbarter Stundenzahl. Ideal zur Vereinbarkeit von Familie und Beruf.",
-      "requirements": "Abgeschlossene Ausbildung zur Pflegefachperson, Führerschein Klasse B, Zuverlässigkeit.",
-      "benefits": "Übertarifliches Stundenentgelt, flexible Dienstplangestaltung, betriebliche Altersvorsorge, Fortbildungen.",
+      "startDate": "01.09.2026",
+      "scope": "Teilzeit · unbefristet · Stundenzahl nach Absprache (z. B. 20–30 Std./Woche)",
+      "salary": "Anteilig zur Vollzeit (ca. €42.000–€52.000 brutto/Jahr auf Vollzeitbasis), übertariflich",
+      "intro": "Sie möchten als examinierte Pflegefachperson arbeiten, brauchen aber einen Rahmen, der zu Ihrem Leben passt? Bei CuraMain in Frankfurt am Main vereinbaren wir die Stundenzahl individuell – ideal zur Vereinbarkeit von Familie und Beruf. Wir begleiten unsere Patient·innen mit professioneller, kultursensibler Pflege direkt zu Hause und suchen zum 01.09.2026 Verstärkung in Teilzeit.",
+      "tasks": [
+        "Grund- und Behandlungspflege in der häuslichen Versorgung",
+        "Beratungsbesuche nach § 37.3 SGB XI sowie Aktivierung und Betreuung nach § 45b SGB XI",
+        "Pflegedokumentation und Leistungserfassung in unserer Pflegesoftware",
+        "Abstimmung mit Angehörigen, Ärzt·innen und Kooperationspartnern",
+        "Touren im überschaubaren Einsatzgebiet Frankfurt-Ost mit planbaren Diensten"
+      ],
+      "profile": [
+        "Abgeschlossene Ausbildung als Pflegefachperson (Gesundheits- und Krankenpflege, Altenpflege oder Pflegefachfrau/-mann)",
+        "Zuverlässigkeit und Freude an der ambulanten Pflege",
+        "Gute Deutschkenntnisse (mind. B2) – weitere Sprachen herzlich willkommen",
+        "Führerschein Klasse B"
+      ],
+      "offer": [
+        "Übertarifliches Stundenentgelt, orientiert am regional üblichen Entgeltniveau Hessen",
+        "Frei vereinbarte Stundenzahl und flexible, verlässliche Dienstplangestaltung",
+        "Unbefristeter Arbeitsvertrag",
+        "Anteilig 30 Tage Urlaub und arbeitgeberfinanzierte betriebliche Altersvorsorge",
+        "Kurze Wege im Frankfurter Osten – Dienstfahrzeug bzw. E-Bike für die Touren",
+        "Strukturierte Einarbeitung und Fortbildungen auf unsere Kosten",
+        "Ein wertschätzendes, internationales Team"
+      ],
       "active": true,
       "publishedAt": "2026-06-12"
     },
@@ -42,9 +114,35 @@
       "department": "Pflege",
       "location": "Frankfurt am Main",
       "employmentType": "fulltime",
-      "description": "Unterstützen Sie unsere examinierten Fachkräfte bei der Grundpflege und der Begleitung unserer Patient·innen im Alltag. Eine sinnstiftende Tätigkeit mit echtem Mehrwert für die Menschen, die wir betreuen.",
-      "requirements": "Abgeschlossener Pflegehelfer-/Pflegeassistenzkurs (mind. 200 Stunden) oder vergleichbare Qualifikation, Führerschein Klasse B, Zuverlässigkeit und Freude am Umgang mit älteren Menschen.",
-      "benefits": "Faire Bezahlung mit Zuschlägen, Dienstkleidung gestellt, strukturierte Einarbeitung, Möglichkeit zur Weiterqualifikation zur Pflegefachperson.",
+      "startDate": "01.09.2026",
+      "scope": "Vollzeit oder Teilzeit · unbefristet",
+      "salary": "ca. €28.000–€34.000 brutto/Jahr (Vollzeit) zzgl. Zuschläge, orientiert am regional üblichen Entgeltniveau Hessen",
+      "intro": "Sie möchten Menschen im Alltag begleiten und etwas Sinnvolles tun? Als Pflegeassistent·in bei CuraMain in Frankfurt am Main unterstützen Sie unsere examinierten Pflegefachpersonen und begegnen unseren Patient·innen mit Wärme und Verlässlichkeit. Wir suchen zum 01.09.2026 Verstärkung – Quereinsteiger·innen mit der richtigen Haltung sind ausdrücklich willkommen.",
+      "tasks": [
+        "Unterstützung bei der Grundpflege: Körperpflege, Ankleiden, Mobilisation und Lagerung",
+        "Begleitung bei der Nahrungs- und Flüssigkeitsaufnahme",
+        "Hauswirtschaftliche Unterstützung: leichte Hausarbeit, Einkauf, Mahlzeitenzubereitung",
+        "Betreuung und Aktivierung nach § 45b SGB XI – Gesellschaft leisten, gemeinsame Aktivitäten",
+        "Begleitung bei Arztbesuchen und Behördengängen nach Bedarf",
+        "Dokumentation der erbrachten Leistungen in unserer Pflegesoftware"
+      ],
+      "profile": [
+        "Abgeschlossener Pflegehelfer- bzw. Pflegeassistenzkurs (mind. 200 Stunden) oder vergleichbare Qualifikation von Vorteil – aber kein Muss",
+        "Erfahrung in Pflege oder Betreuung (auch ehrenamtlich oder familiär) ist ein Plus",
+        "Empathie, Geduld und Freude am Umgang mit pflegebedürftigen Menschen",
+        "Zuverlässigkeit und Pünktlichkeit als selbstverständliche Grundlage",
+        "Gute Deutschkenntnisse (mind. B1) – weitere Sprachen herzlich willkommen",
+        "Führerschein Klasse B von Vorteil"
+      ],
+      "offer": [
+        "Faire Vergütung zzgl. Zuschläge, orientiert am regional üblichen Entgeltniveau Hessen",
+        "Unbefristeter Arbeitsvertrag in Voll- oder Teilzeit",
+        "Strukturierte Einarbeitung und fachliche Begleitung durch examinierte Kolleg·innen",
+        "Möglichkeit zur Weiterqualifizierung zur examinierten Pflegefachperson",
+        "Dienstkleidung wird gestellt; Dienstfahrzeug bzw. E-Bike für die Touren",
+        "30 Tage Urlaub und betriebliche Altersvorsorge",
+        "Ein wertschätzendes, internationales Team mit echter Gemeinschaft"
+      ],
       "active": true,
       "publishedAt": "2026-06-12"
     },
@@ -54,9 +152,26 @@
       "department": "Hauswirtschaft",
       "location": "Frankfurt am Main",
       "employmentType": "minijob",
-      "description": "Auf Minijob-Basis übernehmen Sie hauswirtschaftliche Leistungen bei unseren Patient·innen — z. B. Einkaufen, Kochen, leichte Reinigung und Wäsche.",
-      "requirements": "Erfahrung im Haushalt, Zuverlässigkeit, freundlicher Umgang mit älteren Menschen, Deutschkenntnisse für die Verständigung mit Patient·innen.",
-      "benefits": "Geregelte Einsätze, Fahrtkostenpauschale, wertschätzendes Arbeitsklima, keine Wochenendpflicht.",
+      "startDate": "01.09.2026",
+      "scope": "Minijob · flexible Einsatzzeiten · keine Wochenendpflicht",
+      "salary": "Auf Minijob-Basis zzgl. Fahrtkostenpauschale",
+      "intro": "Auf Minijob-Basis unterstützen Sie unsere Patient·innen im Haushalt und schenken ihnen damit ein Stück Selbstständigkeit im eigenen Zuhause. Wir suchen zum 01.09.2026 zuverlässige Verstärkung für die hauswirtschaftliche Versorgung im Frankfurter Osten.",
+      "tasks": [
+        "Leichte Reinigung, Wäsche und Ordnung im häuslichen Umfeld",
+        "Einkaufen und Zubereitung einfacher Mahlzeiten",
+        "Freundliche Begleitung und kurze Gespräche im Alltag der Patient·innen"
+      ],
+      "profile": [
+        "Erfahrung im Haushalt und ein Gespür für die Bedürfnisse älterer Menschen",
+        "Zuverlässigkeit und ein freundlicher, respektvoller Umgang",
+        "Ausreichende Deutschkenntnisse für die Verständigung mit Patient·innen"
+      ],
+      "offer": [
+        "Geregelte, planbare Einsätze ohne Wochenendpflicht",
+        "Fahrtkostenpauschale",
+        "Strukturierte Einarbeitung und ein wertschätzendes Arbeitsklima",
+        "Ein internationales Team, das Hauswirtschaft als wichtigen Teil guter Pflege versteht"
+      ],
       "active": false,
       "publishedAt": "2026-04-26"
     }
