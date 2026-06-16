@@ -3,8 +3,10 @@ import { useTranslation } from "react-i18next";
 import {
   Heart, Shield, Phone, ArrowRight, CheckCircle2,
   Star, Quote, Users, Stethoscope, HandHeart,
+  PhoneCall, ClipboardList, FileCheck2, HeartHandshake,
 } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import QuickContact from "@/components/QuickContact";
 
 // Lokale Bilder (in client/public/img/, siehe scripts/download-images.sh)
 const PHOTOS = {
@@ -19,6 +21,9 @@ const PHOTOS = {
 
 // Icon-Mapping für Service-Karten (Reihenfolge entspricht JSON-Array)
 const SERVICE_ICONS = [Stethoscope, HandHeart, Heart, Users];
+
+// Icon-Mapping für Prozess-Schritte (Reihenfolge entspricht JSON-Array)
+const PROCESS_ICONS = [PhoneCall, ClipboardList, FileCheck2, HeartHandshake];
 
 export default function Home() {
   const { t } = useTranslation();
@@ -36,6 +41,7 @@ export default function Home() {
   const teilhabeItems = t("home.teilhabe.items", { returnObjects: true }) as Array<{ title: string; desc: string }>;
   const coverageAreas = t("home.coverage.areas", { returnObjects: true }) as Array<{ slug: string; name: string; sub: string }>;
   const testimonials = t("home.testimonials.items", { returnObjects: true }) as Array<{ name: string; role: string; text: string }>;
+  const processSteps = t("home.process.steps", { returnObjects: true }) as Array<{ title: string; desc: string }>;
 
   return (
     <div className="bg-white">
@@ -148,6 +154,40 @@ export default function Home() {
           >
             {t("home.services.cta")} <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </Link>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────── */}
+      {/* PROZESS — So einfach geht's (4 Schritte)    */}
+      {/* ─────────────────────────────────────────── */}
+      <section className="container pb-12 lg:pb-20">
+        <div className="bg-cm-cream rounded-3xl p-8 lg:p-12">
+          <div className="max-w-2xl mb-10">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cm-teal">{t("home.process.label")}</span>
+            <h2 className="text-3xl lg:text-4xl font-semibold text-cm-navy mt-3 mb-4 tracking-tight">
+              {t("home.process.h2")}
+            </h2>
+            <p className="text-cm-ink/70 leading-relaxed">
+              {t("home.process.p")}
+            </p>
+          </div>
+          <ol className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {processSteps.map((step, i) => {
+              const Icon = PROCESS_ICONS[i];
+              return (
+                <li key={step.title} className="bg-white rounded-2xl border border-cm-teal-100 p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="w-9 h-9 rounded-full bg-cm-teal-600 text-white text-sm font-semibold flex items-center justify-center flex-shrink-0">
+                      {i + 1}
+                    </span>
+                    {Icon && <Icon className="w-6 h-6 text-cm-teal" aria-hidden="true" />}
+                  </div>
+                  <h3 className="font-semibold text-cm-ink mb-1.5 leading-snug">{step.title}</h3>
+                  <p className="text-sm text-cm-ink/70 leading-relaxed">{step.desc}</p>
+                </li>
+              );
+            })}
+          </ol>
         </div>
       </section>
 
@@ -300,6 +340,11 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {/* ─────────────────────────────────────────── */}
+      {/* INLINE-SCHNELLKONTAKT (eigenes Formular)    */}
+      {/* ─────────────────────────────────────────── */}
+      <QuickContact />
 
       {/* ─────────────────────────────────────────── */}
       {/* CTA-Banner — tiefes Tannen-Teal             */}

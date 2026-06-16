@@ -213,6 +213,55 @@
         }
       ]
     },
+    "process": {
+      "label": "So einfach geht's",
+      "h2": "In vier Schritten zu Ihrer Pflege.",
+      "p": "Von der ersten Anfrage bis zur täglichen Versorgung begleiten wir Sie durch jeden Schritt – verständlich und ohne Aufwand für Sie.",
+      "steps": [
+        {
+          "title": "Kostenlose Beratung",
+          "desc": "Sie rufen uns an oder senden das Formular. Wir melden uns innerhalb von 24 Stunden bei Ihnen."
+        },
+        {
+          "title": "Hausbesuch & Pflegeplan",
+          "desc": "Wir lernen Sie zu Hause kennen und erstellen gemeinsam einen individuellen Pflegeplan."
+        },
+        {
+          "title": "Kassen & Formalitäten",
+          "desc": "Wir übernehmen die Abrechnung mit Ihrer Pflege- und Krankenkasse und die nötigen Formalitäten."
+        },
+        {
+          "title": "Pflege beginnt",
+          "desc": "Ihr vertrautes Pflegeteam kommt zu Ihnen – pünktlich, zuverlässig und mehrsprachig."
+        }
+      ]
+    },
+    "quickContact": {
+      "label": "Jetzt starten",
+      "h2": "Sprechen wir über Ihre Pflege.",
+      "p": "Die erste Beratung ist kostenlos und unverbindlich – auf Wunsch bei Ihnen zu Hause. Schon drei Felder genügen.",
+      "points": [
+        "Mehrsprachiges Team",
+        "Kassenzugelassen",
+        "Mo–Fr 8–18 Uhr · Notfall 24/7"
+      ],
+      "formTitle": "Kostenlose Beratung anfragen",
+      "formHint": "Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
+      "name": "Ihr Name",
+      "namePlaceholder": "Max Mustermann",
+      "phone": "Telefon",
+      "phonePlaceholder": "0151 …",
+      "email": "E-Mail",
+      "emailOptional": "(optional)",
+      "emailPlaceholder": "max@beispiel.de",
+      "contactHelp": "Telefon oder E-Mail genügt, damit wir antworten können.",
+      "message": "Wie können wir helfen?",
+      "messagePlaceholder": "z. B.: Mein Vater (78) braucht Grundpflege ab nächster Woche.",
+      "submit": "Jetzt kostenlos anfragen",
+      "subline": "Kostenlos & unverbindlich · Antwort innerhalb von 24h",
+      "successH2": "Vielen Dank!",
+      "successP": "Ihre Anfrage ist bei uns eingegangen. Wir melden uns innerhalb von 24 Stunden bei Ihnen."
+    },
     "ctaBanner": {
       "h2": "Sprechen wir über die Pflege, die Sie brauchen.",
       "p": "Die Erstberatung ist kostenlos und unverbindlich – wir kommen auch zu Ihnen nach Hause.",

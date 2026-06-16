@@ -213,6 +213,55 @@
         }
       ]
     },
+    "process": {
+      "label": "How it works",
+      "h2": "Your care in four steps.",
+      "p": "From your first enquiry to daily care, we guide you through every step – clearly and with no effort on your part.",
+      "steps": [
+        {
+          "title": "Free consultation",
+          "desc": "Call us or send the form. We get back to you within 24 hours."
+        },
+        {
+          "title": "Home visit & care plan",
+          "desc": "We get to know you at home and create an individual care plan together."
+        },
+        {
+          "title": "Insurance & formalities",
+          "desc": "We handle billing with your care and health insurer and the necessary paperwork."
+        },
+        {
+          "title": "Care begins",
+          "desc": "Your familiar care team comes to you – punctual, reliable and multilingual."
+        }
+      ]
+    },
+    "quickContact": {
+      "label": "Get started",
+      "h2": "Let's talk about your care.",
+      "p": "The first consultation is free and without obligation – at your home if you wish. Just three fields are enough.",
+      "points": [
+        "Multilingual team",
+        "Insurer approved",
+        "Mon–Fri 8 am–6 pm · Emergency 24/7"
+      ],
+      "formTitle": "Request a free consultation",
+      "formHint": "We get back to you within 24 hours.",
+      "name": "Your name",
+      "namePlaceholder": "Jane Doe",
+      "phone": "Phone",
+      "phonePlaceholder": "0151 …",
+      "email": "Email",
+      "emailOptional": "(optional)",
+      "emailPlaceholder": "jane@example.com",
+      "contactHelp": "Phone or email is enough for us to reply.",
+      "message": "How can we help?",
+      "messagePlaceholder": "e.g.: My father (78) needs basic care starting next week.",
+      "submit": "Request now – free",
+      "subline": "Free & without obligation · Reply within 24h",
+      "successH2": "Thank you!",
+      "successP": "Your enquiry has reached us. We will get back to you within 24 hours."
+    },
     "ctaBanner": {
       "h2": "Let's talk about the care you need.",
       "p": "The initial consultation is free and without obligation – we are happy to visit you at home.",
