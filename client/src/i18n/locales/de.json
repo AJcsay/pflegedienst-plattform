@@ -70,7 +70,23 @@
       "subline": "Kostenlos & unverbindlich · Mehrsprachig · Antwort innerhalb 24h",
       "badge1": "Kassenzugelassen (§ 132a SGB V · § 72 SGB XI)",
       "badge2": "Mehrsprachig",
-      "badge3": "Frankfurt – Nordend · Bornheim · Ostend"
+      "badge3": "Frankfurt – Nordend · Bornheim · Ostend",
+      "h1a": "Weil Ihr Zuhause der beste Ort",
+      "h1b": "zum Heilen ist.",
+      "cards": [
+        {
+          "title": "Pflege zu Hause",
+          "sub": "im vertrauten Umfeld"
+        },
+        {
+          "title": "Pflege, die Ihre Sprache spricht",
+          "sub": "kultursensibel"
+        },
+        {
+          "title": "24/7 Notfall",
+          "sub": "immer erreichbar"
+        }
+      ]
     },
     "stats": [
       {
@@ -270,6 +286,55 @@
       "badge1": "Mehrsprachig",
       "badge2": "Kassenzugelassen",
       "badge3": "Mo–Fr 8:00–18:00, Notfall 24/7"
+    },
+    "band": {
+      "row1": [
+        "Wundversorgung",
+        "Injektionen",
+        "Medikamentengabe",
+        "Körperpflege",
+        "An- & Auskleiden",
+        "Ernährung",
+        "Hauswirtschaft",
+        "Beratung § 37.3",
+        "Betreuung"
+      ],
+      "row2": [
+        "Menschlichkeit",
+        "Zuverlässigkeit",
+        "Teamgeist",
+        "Qualität",
+        "Kultursensibel",
+        "Würdevoll",
+        "Regional verwurzelt",
+        "Pflege aus Überzeugung"
+      ]
+    },
+    "team": {
+      "label": "Unser Team",
+      "h2a": "Menschen, die",
+      "h2b": "Pflege leben",
+      "p": "Ein festes, eingespieltes Team – Sie wissen immer, wer zu Ihnen kommt.",
+      "members": [
+        {
+          "initials": "BB",
+          "name": "Boys Bangura",
+          "role": "Pflegedienstleitung",
+          "tag": "PDL & QMB"
+        },
+        {
+          "initials": "SS",
+          "name": "Salematu Sesay",
+          "role": "Pflegefachperson",
+          "tag": "Stellv. PDL"
+        },
+        {
+          "initials": "PF",
+          "name": "Pflegefachperson",
+          "role": "Hygienebeauftragte·r",
+          "tag": "Hygiene"
+        }
+      ]
     }
   },
   "leistungen": {

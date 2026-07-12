@@ -163,11 +163,13 @@
     background-color: #f9f6f1; /* Cream-Hintergrund analog Mockup */
     color: #1c2826; /* Ink */
   }
+  /* Redesign 2026-07: kräftige Sans-Headlines statt Serif
+     (Akzentwörter kursiv in Teal via .cm-accent) */
   h1, h2, h3 {
-    font-family: 'Cormorant Garamond', 'DM Serif Display', Georgia, serif;
-    letter-spacing: -0.01em;
-    line-height: 1.08;
-    font-weight: 500;
+    font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+    line-height: 1.14;
+    font-weight: 800;
     /* Lange dt. Komposita dürfen umbrechen statt zu überlaufen */
     overflow-wrap: anywhere;
     word-break: break-word;
@@ -241,32 +243,39 @@ html {
   scroll-padding-top: 150px;
 }
 
-/* ─────────────────────────────────────────── */
-/* Manus-Stil Design-Tokens & Helper-Klassen   */
-/* ─────────────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────── */
+/* Redesign 2026-07 — Design-Tokens (Navy #1A3578 + Vivid Teal) */
+/* Doccure-inspiriertes Mockup, freigegeben von GF 2026-07-13   */
+/* ─────────────────────────────────────────────────────────── */
 :root {
-  --cm-teal-50: #f0f7f6;
-  --cm-teal-100: #daedeb;
-  --cm-teal-200: #b6dbd7;
-  --cm-teal-300: #8cc6c0;
-  --cm-teal-400: #6fb1ad;
-  --cm-teal-500: #5a9a96;
-  --cm-teal-600: #467670;
-  --cm-teal-700: #3d6764;
-  --cm-ink: #1c2826;
-  --cm-cream: #f9f6f1;
-  --cm-mint: #9bd3cf;
-  --cm-navy: #0d1f52;
-  --cm-navy-light: #1A3578;
-  --cm-pine: #085041;
-  --cm-pine-deep: #04342C;
+  --cm-teal-50: #eaf7f7;
+  --cm-teal-100: #d5efef;
+  --cm-teal-200: #abe0e1;
+  --cm-teal-300: #6fc9cc;
+  --cm-teal-400: #3ab5ba;
+  --cm-teal-500: #0fa3a8;
+  --cm-teal-600: #0b8286;  /* WCAG AA: 4,6:1 mit Weiß */
+  --cm-teal-700: #086b6f;
+  --cm-ink: #1d2434;
+  --cm-cream: #fbf7f1;
+  --cm-mint: #4ed6db;       /* helle Teal-Akzente auf dunklem Grund */
+  --cm-navy: #1a3578;
+  --cm-navy-light: #27448d;
+  --cm-navy-mid: #14295e;
+  --cm-navy-deep: #0e1f4a;
+  /* Alt-Grün (Pine) auf Navy umgeleitet — alle bestehenden
+     bg-cm-pine-Sektionen erben automatisch die neue Farbwelt */
+  --cm-pine: #14295e;
+  --cm-pine-deep: #0e1f4a;
 }
 
-/* Cormorant Garamond für Display-Headlines */
+/* Redesign 2026-07: .h-serif bleibt als Klassenname bestehen
+   (auf vielen Unterseiten verwendet), rendert aber jetzt die
+   kräftige Sans-Display-Typo des neuen Designs. */
 .h-serif {
-  font-family: 'Cormorant Garamond', 'DM Serif Display', Georgia, serif;
-  letter-spacing: -0.01em;
-  font-weight: 500;
+  font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  font-weight: 800;
 }
 
 /* Glasmorphism für Navbar und Pills */
@@ -281,22 +290,35 @@ html {
   -webkit-backdrop-filter: blur(12px);
 }
 
-/* Hero-Hintergrund mit weißem Lesbarkeits-Verlauf */
+/* Redesign 2026-07: Unterseiten-Heros zentral auf dunkles Navy
+   umgestellt — Foto bleibt als Hintergrund, wird aber mit einem
+   Navy-Verlauf + Teal-Glow überlagert (ein Hebel für alle Seiten). */
 .hero-bg {
   background-size: cover;
   background-position: center;
+  background-color: var(--cm-navy-deep);
   position: relative;
 }
 .hero-bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(115deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.30) 50%, rgba(255,255,255,0.05) 100%);
+  background:
+    radial-gradient(900px 420px at 88% 10%, rgba(15,163,168,0.30), transparent 60%),
+    linear-gradient(115deg, rgba(14,31,74,0.92) 0%, rgba(14,31,74,0.78) 45%, rgba(26,53,120,0.55) 100%);
   pointer-events: none;
 }
 .hero-bg-dark::after {
-  background: linear-gradient(115deg, rgba(28,40,38,0.55) 0%, rgba(28,40,38,0.35) 50%, rgba(28,40,38,0.15) 100%);
+  background:
+    radial-gradient(900px 420px at 88% 10%, rgba(15,163,168,0.30), transparent 60%),
+    linear-gradient(115deg, rgba(14,31,74,0.92) 0%, rgba(14,31,74,0.78) 45%, rgba(26,53,120,0.55) 100%);
 }
+/* Textfarben in den umgestellten Heros (überschreibt Alt-Utilities) */
+.hero-bg h1 { color: #fff !important; }
+.hero-bg h1 span { color: var(--cm-mint) !important; }
+.hero-bg > div > p,
+.hero-bg p { color: rgba(255,255,255,0.85) !important; }
+.hero-bg .pill { background: rgba(255,255,255,0.92); }
 
 /* Direkte Farb-Klassen für Manus-Look (umgehen Tailwind-v4-Theme) */
 /* WCAG-AA: bg-cm-teal nutzt jetzt --cm-teal-600 (4,5:1 mit weiß, statt 2,45:1). */
@@ -329,6 +351,87 @@ html {
 .hover\:bg-cm-teal-700:hover { background-color: var(--cm-teal-700); }
 .hover\:border-cm-teal-300:hover { border-color: var(--cm-teal-300); }
 .hover\:text-cm-teal-700:hover { color: var(--cm-teal-700); }
+
+/* ─────────────────────────────────────────────────────────── */
+/* Redesign 2026-07 — Komponenten-Klassen (aus GF-Mockup)       */
+/* ─────────────────────────────────────────────────────────── */
+
+/* Zusätzliche Farb-Utilities */
+.bg-cm-navy-deep { background-color: var(--cm-navy-deep); }
+.bg-cm-navy-mid { background-color: var(--cm-navy-mid); }
+.text-cm-navy-deep { color: var(--cm-navy-deep); }
+.text-cm-teal-500 { color: var(--cm-teal-500); }
+.bg-cm-teal-100 { background-color: var(--cm-teal-100); }
+
+/* Kursives Teal-Akzentwort in Headlines */
+.cm-accent { font-style: italic; color: var(--cm-teal-500); }
+.cm-accent-dark { font-style: italic; color: var(--cm-mint); }
+
+/* Section-Badge mit Punkt (● UNSERE LEISTUNGEN) */
+.cm-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--cm-teal-50); color: var(--cm-teal-700);
+  font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 6px 14px; border-radius: 999px;
+}
+.cm-badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--cm-teal-500); }
+.cm-badge-dark { background: rgba(255,255,255,0.12); color: var(--cm-mint); }
+
+/* Dunkler Hero mit Teal-Glow (Start + Unterseiten) */
+.cm-hero-dark {
+  background:
+    radial-gradient(1100px 600px at 85% 20%, rgba(15,163,168,0.28), transparent 60%),
+    linear-gradient(135deg, var(--cm-navy-deep) 0%, var(--cm-navy) 75%);
+  color: #fff;
+}
+
+/* Organischer Foto-Blob (Hero) */
+.cm-blob {
+  position: relative; overflow: hidden;
+  border-radius: 46% 54% 52% 48% / 58% 44% 56% 42%;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.4), 0 0 0 10px rgba(255,255,255,0.06);
+}
+.cm-blob > img { width: 100%; height: 100%; object-fit: cover; }
+.cm-blob::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(200deg, rgba(15,163,168,0.16), transparent 40%, rgba(14,31,74,0.30) 96%);
+}
+
+/* Rotierender Zierring hinter dem Blob */
+@keyframes cm-spin { to { transform: rotate(360deg); } }
+.cm-ring {
+  position: absolute; border-radius: 50%;
+  border: 2px dashed rgba(78,214,219,0.5);
+  animation: cm-spin 40s linear infinite;
+}
+
+/* Schwebende Info-Karten über dem Hero-Foto */
+.cm-float {
+  position: absolute; background: #fff; color: var(--cm-ink);
+  border-radius: 14px; padding: 12px 18px;
+  font-size: 13.5px; font-weight: 700;
+  box-shadow: 0 14px 34px rgba(10,20,50,0.28);
+  display: flex; align-items: center; gap: 10px;
+}
+
+/* Leicht gekippte Leistungs-Karten (Doccure-Stil) */
+.cm-tilt { transition: transform 0.25s, box-shadow 0.25s; }
+.cm-tilt:nth-child(odd) { transform: rotate(-1.3deg); }
+.cm-tilt:nth-child(even) { transform: rotate(1.3deg); }
+.cm-tilt:hover { transform: rotate(0) translateY(-6px); box-shadow: 0 18px 44px rgba(20,35,80,0.2); }
+
+/* Laufende Diagonal-Bänder */
+@keyframes cm-slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.cm-band {
+  position: absolute; left: -5%; width: 110%;
+  padding: 14px 0; white-space: nowrap; overflow: hidden;
+  font-weight: 700; font-size: 15px; letter-spacing: 0.02em; color: #fff;
+}
+.cm-band .cm-band-inner { display: inline-block; animation: cm-slide 38s linear infinite; }
+.cm-band span { margin: 0 26px; display: inline-flex; align-items: center; gap: 10px; }
+.cm-band span::before { content: "✚"; font-size: 12px; opacity: 0.7; }
+.cm-band-teal { background: var(--cm-teal-500); transform: rotate(-2.2deg); box-shadow: 0 10px 30px rgba(15,163,168,0.3); }
+.cm-band-navy { background: var(--cm-navy); transform: rotate(2.2deg); }
 
 /* ─────────────────────────────────────────────────────────────── */
 /* Reduzierte Bewegung — WCAG 2.3.3 (Vestibulär/Gleichgewicht)    */

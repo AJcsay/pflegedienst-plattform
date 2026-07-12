@@ -70,7 +70,23 @@
       "subline": "Free & no obligation · Multilingual · Reply within 24 h",
       "badge1": "Approved by all health insurers (§ 132a SGB V · § 72 SGB XI)",
       "badge2": "Multilingual",
-      "badge3": "Frankfurt – Nordend · Bornheim · Ostend"
+      "badge3": "Frankfurt – Nordend · Bornheim · Ostend",
+      "h1a": "Because your home is the best place",
+      "h1b": "to heal.",
+      "cards": [
+        {
+          "title": "Care at home",
+          "sub": "in familiar surroundings"
+        },
+        {
+          "title": "Care that speaks your language",
+          "sub": "culturally sensitive"
+        },
+        {
+          "title": "24/7 emergency",
+          "sub": "always reachable"
+        }
+      ]
     },
     "stats": [
       {
@@ -270,6 +286,55 @@
       "badge1": "Multilingual",
       "badge2": "Insurer approved",
       "badge3": "Mon–Fri 8 am–6 pm, Emergency 24/7"
+    },
+    "band": {
+      "row1": [
+        "Wound care",
+        "Injections",
+        "Medication support",
+        "Personal hygiene",
+        "Dressing",
+        "Nutrition",
+        "Housekeeping",
+        "Advisory visits § 37.3",
+        "Companionship"
+      ],
+      "row2": [
+        "Humanity",
+        "Reliability",
+        "Team spirit",
+        "Quality",
+        "Culturally sensitive",
+        "Dignified",
+        "Locally rooted",
+        "Care from conviction"
+      ]
+    },
+    "team": {
+      "label": "Our team",
+      "h2a": "People who",
+      "h2b": "live care",
+      "p": "A stable, well-rehearsed team – you always know who is coming to you.",
+      "members": [
+        {
+          "initials": "BB",
+          "name": "Boys Bangura",
+          "role": "Head of Nursing",
+          "tag": "PDL & QMB"
+        },
+        {
+          "initials": "SS",
+          "name": "Salematu Sesay",
+          "role": "Registered nurse",
+          "tag": "Deputy PDL"
+        },
+        {
+          "initials": "PF",
+          "name": "Registered nurse",
+          "role": "Hygiene officer",
+          "tag": "Hygiene"
+        }
+      ]
     }
   },
   "leistungen": {

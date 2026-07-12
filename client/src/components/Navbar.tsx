@@ -109,7 +109,7 @@ export default function Navbar() {
             <Link
               href="/"
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap ${
-                isActive("/") ? "bg-cm-teal text-white" : "text-cm-ink hover:bg-cm-teal-50"
+                isActive("/") ? "bg-cm-navy text-white" : "text-cm-ink hover:bg-cm-teal-50"
               }`}
             >
               {t("nav.home")}
@@ -117,7 +117,7 @@ export default function Navbar() {
             <Link
               href="/ueber-uns"
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap ${
-                isActive("/ueber-uns") ? "bg-cm-teal text-white" : "text-cm-ink hover:bg-cm-teal-50"
+                isActive("/ueber-uns") ? "bg-cm-navy text-white" : "text-cm-ink hover:bg-cm-teal-50"
               }`}
             >
               {t("nav.about")}
@@ -146,7 +146,7 @@ export default function Navbar() {
                     onClick={() => setOpenDropdown(isOpen ? null : group.label)}
                     className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap ${
                       groupActive || isOpen
-                        ? "bg-cm-teal text-white"
+                        ? "bg-cm-navy text-white"
                         : "text-cm-ink hover:bg-cm-teal-50"
                     }`}
                   >
@@ -185,6 +185,10 @@ export default function Navbar() {
 
           {/* CTA + Sprachumschalter + Mobile toggle */}
           <div className="flex items-center gap-2 ml-auto">
+            {/* Telefonnummer (nur xl) — vertikal mittig zum Menü */}
+            <a href="tel:+496979216147" className="hidden xl:inline-flex items-center text-sm font-bold text-cm-navy hover:text-cm-teal-700 transition-colors mr-1 whitespace-nowrap">
+              069 / 79 216 147
+            </a>
             {/* Sprachumschalter DE | EN */}
             <button
               type="button"
@@ -199,7 +203,7 @@ export default function Navbar() {
 
             <Link
               href="/kontakt/patient"
-              className="hidden md:inline-flex bg-cm-navy hover:bg-cm-navy-light text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-md whitespace-nowrap transition-colors"
+              className="hidden md:inline-flex bg-cm-teal-600 hover:bg-cm-teal-700 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-md whitespace-nowrap transition-colors"
             >
               {t("nav.cta")}
             </Link>
