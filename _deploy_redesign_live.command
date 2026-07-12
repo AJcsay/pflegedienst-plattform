@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 # ─────────────────────────────────────────────────────────────────
-# CuraMain — Redesign 2026-07 LIVE-DEPLOY (Doppelklick im Finder)
+# CuraMain — Redesign 2026-07 LIVE-DEPLOY v2 (Doppelklick im Finder)
 #
-# Voraussetzung: Merge + Build sind bereits erledigt (Session 50).
-# Dieses Skript macht nur noch:
-#   1. git push origin main  (GitHub-Backup)
-#   2. FTPS-Spiegelung dist/public/ → All-Inkl /curamain.de/
-#   3. Live-Verifikation (Asset-Check auf www.curamain.de)
+# v2 (Reparatur 13.07.): Erst-Deploy übertrug Sandbox-Dateirechte
+# (600) → Apache 403 auf allen Dateien. Dieses Skript:
+#   1. repariert die Rechte auf dem Server SOFORT (chmod -R 755)
+#   2. setzt lokale Rechte auf 644/755 (greift am Mac)
+#   3. spiegelt mit --no-perms (Server-Standardrechte, nie wieder 600)
+#   4. pusht git + verifiziert live
 #
 # Das FTP-Passwort wird zur Laufzeit abgefragt — NIE gespeichert.
 # ─────────────────────────────────────────────────────────────────
@@ -15,34 +16,36 @@ export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/u
 
 cd "$(dirname "$0")"
 echo ""
-echo "  CuraMain Redesign-Deploy — $(date '+%Y-%m-%d %H:%M')"
+echo "  CuraMain Redesign-Deploy v2 (403-Fix) — $(date '+%Y-%m-%d %H:%M')"
 echo ""
 
-# ── Vorab-Prüfung: richtiger Branch + Build vorhanden ───────────
+# ── Vorab-Prüfung ────────────────────────────────────────────────
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 if [ "$BRANCH" != "main" ]; then
   echo "FEHLER: Branch ist '$BRANCH', erwartet 'main'. Abbruch."; exit 1
 fi
 if [ ! -f dist/public/index.html ] || [ ! -f dist/public/.htaccess ] || [ ! -f dist/public/php/contact.php ]; then
-  echo "FEHLER: dist/public/ unvollständig (index.html/.htaccess/php fehlen). Erst bauen!"; exit 1
+  echo "FEHLER: dist/public/ unvollständig. Abbruch."; exit 1
+fi
+if ! command -v lftp &>/dev/null; then
+  echo "FEHLER: lftp nicht installiert (brew install lftp). Abbruch."; exit 1
 fi
 JSREF=$(grep -o 'assets/index-[^"]*\.js' dist/public/index.html | head -1)
 echo "  Branch: main ✓   Build: $JSREF ✓"
 
-# ── 1. GitHub-Push ───────────────────────────────────────────────
+# ── 1. Lokale Dateirechte reparieren (greift am Mac) ────────────
 echo ""
-echo "── 1/3 git push origin main ──"
-git push origin main
-echo "  ✅ gepusht → github.com/AJcsay/pflegedienst-plattform"
+echo "── 1/4 Lokale Rechte: Dateien 644, Ordner 755 ──"
+find dist/public -type d -exec chmod 755 {} +
+find dist/public -type f -exec chmod 644 {} +
+OFFEN=$(find dist/public ! -perm -o=r | wc -l | tr -d ' ')
+echo "  Nicht world-readable: $OFFEN (sollte 0 sein)"
 
-# ── 2. FTPS-Deploy ───────────────────────────────────────────────
+# ── 2.+3. Server-Reparatur + Spiegelung ─────────────────────────
 echo ""
-echo "── 2/3 FTPS-Deploy → All-Inkl /curamain.de/ ──"
-if ! command -v lftp &>/dev/null; then
-  echo "FEHLER: lftp nicht installiert (brew install lftp). Abbruch."; exit 1
-fi
-cd dist/public
+echo "── 2/4 Server-chmod (Sofort-Fix 403) + 3/4 Mirror --no-perms ──"
 read -r -s -p "  All-Inkl FTP-Passwort für w01e2ff7: " FTP_PASS; echo
+cd dist/public
 lftp -e "
 set ftp:ssl-force true
 set ftp:ssl-protect-data true
@@ -51,24 +54,33 @@ set ssl:verify-certificate no
 set net:max-retries 3
 set net:timeout 30
 open -u 'w01e2ff7,${FTP_PASS}' ftp://w01e2ff7.kasserver.com
-mirror --reverse --delete --verbose --exclude-glob '.git*' --exclude-glob 'node_modules/' ./ /curamain.de/
+echo '--- Sofort-Fix: chmod -R 755 /curamain.de ---'
+chmod -R 755 /curamain.de
+echo '--- Spiegelung (ohne Rechte-Übertragung) ---'
+mirror --reverse --delete --verbose --no-perms --exclude-glob '.git*' --exclude-glob 'node_modules/' ./ /curamain.de/
+echo '--- Rechte-Nachlauf (neu hochgeladene Dateien) ---'
+chmod -R 755 /curamain.de
 bye
 " 2>&1 | tee /tmp/curamain-website-deploy.log
 unset FTP_PASS
 cd ../..
 
-# ── 3. Live-Verifikation ────────────────────────────────────────
+# ── 4. GitHub-Push + Live-Verifikation ──────────────────────────
 echo ""
-echo "── 3/3 Live-Verifikation ──"
+echo "── 4/4 git push + Live-Verifikation ──"
+git push origin main || echo "  (Push übersprungen/bereits aktuell)"
 sleep 3
-HTTP=$(curl -s -o /dev/null -w "%{http_code}" "https://www.curamain.de/$JSREF")
-if [ "$HTTP" = "200" ]; then
-  echo "  ✅ VERIFY OK — https://www.curamain.de/$JSREF (HTTP 200)"
+HTTP_INDEX=$(curl -s -o /dev/null -w "%{http_code}" "https://www.curamain.de/")
+HTTP_ASSET=$(curl -s -o /dev/null -w "%{http_code}" "https://www.curamain.de/$JSREF")
+echo "  Startseite: HTTP $HTTP_INDEX · Asset: HTTP $HTTP_ASSET"
+if [ "$HTTP_INDEX" = "200" ] && [ "$HTTP_ASSET" = "200" ]; then
   echo ""
-  echo "  🎉 Redesign ist LIVE: https://www.curamain.de"
-  echo "  Tipp: Hard-Reload (Cmd+Shift+R) wegen Service-Worker-Cache."
+  echo "  ✅ VERIFY OK — Redesign ist LIVE: https://www.curamain.de"
+  echo "  Tipp: Cmd+Shift+R (Service-Worker-Cache)."
 else
-  echo "  ⚠️  VERIFY FEHLGESCHLAGEN (HTTP $HTTP) — Log: /tmp/curamain-website-deploy.log"
+  echo ""
+  echo "  ⚠️  VERIFY WEITER FEHLGESCHLAGEN — Log: /tmp/curamain-website-deploy.log"
+  echo "  Bitte die letzten Log-Zeilen an Claude geben."
 fi
 echo ""
 read -p "Enter drücken zum Beenden..." _
