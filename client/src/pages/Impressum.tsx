@@ -40,7 +40,7 @@ export default function Impressum() {
             <div className="space-y-2">
               <p><strong>Registergericht:</strong> Amtsgericht Frankfurt am Main</p>
               <p><strong>Handelsregister-Nummer:</strong> HRB 143464</p>
-              <p><strong>Umsatzsteuer-ID:</strong> wird nach Erteilung ergänzt</p>
+              <p><strong>Umsatzsteuer-Identifikationsnummer:</strong> Eine Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG liegt nicht vor.</p>
             </div>
           </section>
 
