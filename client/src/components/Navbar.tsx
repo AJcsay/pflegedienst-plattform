@@ -185,10 +185,9 @@ export default function Navbar() {
 
           {/* CTA + Sprachumschalter + Mobile toggle */}
           <div className="flex items-center gap-2 ml-auto">
-            {/* Telefon-Hinweis (nur xl) */}
-            <a href="tel:+496979216147" className="hidden xl:block text-right leading-tight mr-1">
-              <span className="block text-[11px] text-cm-ink/60">{t("nav.phoneNote")}</span>
-              <span className="block text-sm font-bold text-cm-navy">069 / 79 216 147</span>
+            {/* Telefonnummer (nur xl) — vertikal mittig zum Menü */}
+            <a href="tel:+496979216147" className="hidden xl:inline-flex items-center text-sm font-bold text-cm-navy hover:text-cm-teal-700 transition-colors mr-1 whitespace-nowrap">
+              069 / 79 216 147
             </a>
             {/* Sprachumschalter DE | EN */}
             <button
