@@ -40,7 +40,7 @@ export default function Impressum() {
             <div className="space-y-2">
               <p><strong>Registergericht:</strong> Amtsgericht Frankfurt am Main</p>
               <p><strong>Handelsregister-Nummer:</strong> HRB 143464</p>
-              <p><strong>Umsatzsteuer-Identifikationsnummer:</strong> Eine Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG liegt nicht vor.</p>
+              <p><strong>Umsatzsteuer-Identifikationsnummer:</strong> DE462981946</p>
             </div>
           </section>
 
@@ -48,7 +48,8 @@ export default function Impressum() {
             <h2 className="text-2xl font-semibold mb-4">Berufsbezeichnung und Berufsrechtliches</h2>
             <div className="space-y-2">
               <p>Die CuraMain GmbH betreibt einen ambulanten Pflegedienst und unterliegt den Bestimmungen des Sozialgesetzbuches (SGB V, SGB XI) sowie dem Pflegeberufegesetz (PflBG).</p>
-              <p><strong>Zuständige Aufsichtsbehörde:</strong> Regierungspräsidium Gießen — Hessische Betreuungs- und Pflegeaufsicht (HGBP), Landgraf-Philipp-Platz 1–7, 35390 Gießen</p>
+              <p><strong>Zuständige Behörde nach dem Hessischen Gesetz über Betreuungs- und Pflegeleistungen (HGBP):</strong> Hessisches Amt für Versorgung und Soziales Frankfurt am Main (HAVS), Walter-Möller-Platz 1, 60439 Frankfurt am Main — obere Aufsichtsbehörde ist das Hessische Landesamt für Gesundheit und Pflege (HLfGP).</p>
+              <p>Der Betrieb eines ambulanten Pflegedienstes bedarf keiner gewerberechtlichen Zulassung. Die Versorgungsverträge nach § 72 SGB XI und § 132a SGB V werden mit den Pflege- und Krankenkassen geschlossen.</p>
             </div>
           </section>
 
