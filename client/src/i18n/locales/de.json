@@ -84,7 +84,7 @@
         },
         {
           "title": "Hausnotruf rund um die Uhr",
-          "sub": "ab 1. Oktober 2026"
+          "sub": "Sicherheit auf Knopfdruck"
         }
       ]
     },
@@ -544,7 +544,7 @@
       "multilingual": "Mehrsprachig",
       "multilingualLabel": "Mehrsprachige Beratung:",
       "emergency": "Notfall?",
-      "emergencyText": "Bei lebensbedrohlichen Notfällen wählen Sie bitte immer die 112, außerhalb der Sprechzeiten hilft der ärztliche Bereitschaftsdienst unter 116 117. Uns erreichen Sie Mo–Fr 8:00–18:00 Uhr; danach hinterlassen Sie uns gern eine Nachricht. Einen Hausnotruf rund um die Uhr bieten wir ab dem 1. Oktober 2026 an.",
+      "emergencyText": "Bei lebensbedrohlichen Notfällen wählen Sie bitte immer die 112, außerhalb der Sprechzeiten hilft der ärztliche Bereitschaftsdienst unter 116 117. Uns erreichen Sie Mo–Fr 8:00–18:00 Uhr; danach hinterlassen Sie uns gern eine Nachricht. Zusätzlich bieten wir Ihnen einen Hausnotruf mit rund um die Uhr besetzter Notrufzentrale.",
       "callNow": "Jetzt anrufen"
     },
     "map": {

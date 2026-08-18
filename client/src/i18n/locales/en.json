@@ -84,7 +84,7 @@
         },
         {
           "title": "Around-the-clock home emergency call",
-          "sub": "from 1 October 2026"
+          "sub": "safety at the push of a button"
         }
       ]
     },
@@ -544,7 +544,7 @@
       "multilingual": "Multilingual",
       "multilingualLabel": "Multilingual advice:",
       "emergency": "Emergency?",
-      "emergencyText": "In life-threatening emergencies always call 112; outside surgery hours the on-call medical service can be reached on 116 117. You can reach us Mon–Fri 8 am–6 pm; outside those hours please leave us a message. We will offer an around-the-clock home emergency call service from 1 October 2026.",
+      "emergencyText": "In life-threatening emergencies always call 112; outside surgery hours the on-call medical service can be reached on 116 117. You can reach us Mon–Fri 8 am–6 pm; outside those hours please leave us a message. We also offer a home emergency call service with an alarm centre staffed around the clock.",
       "callNow": "Call now"
     },
     "map": {
