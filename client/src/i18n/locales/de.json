@@ -30,7 +30,7 @@
   },
   "footer": {
     "tagline": "Pflege und Teilhabe im Rhein-Main-Gebiet. Professionelle, kultursensible ambulante Pflege – direkt bei Ihnen zu Hause.",
-    "hours": "Mo–Fr 8:00–18:00 Uhr · Notfall 24/7",
+    "hours": "Mo–Fr 8:00–18:00 Uhr",
     "pagesLabel": "Seiten",
     "coverageLabel": "Versorgungsgebiet",
     "careerLabel": "Karriere & Partner",
@@ -83,8 +83,8 @@
           "sub": "kultursensibel"
         },
         {
-          "title": "24/7 Notfall",
-          "sub": "immer erreichbar"
+          "title": "Hausnotruf rund um die Uhr",
+          "sub": "in Vorbereitung"
         }
       ]
     },
@@ -259,7 +259,7 @@
       "points": [
         "Mehrsprachiges Team",
         "Kassenzugelassen",
-        "Mo–Fr 8–18 Uhr · Notfall 24/7"
+        "Mo–Fr 8–18 Uhr erreichbar"
       ],
       "formTitle": "Kostenlose Beratung anfragen",
       "formHint": "Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
@@ -285,7 +285,7 @@
       "phone": "069 / 79 216 147",
       "badge1": "Mehrsprachig",
       "badge2": "Kassenzugelassen",
-      "badge3": "Mo–Fr 8:00–18:00, Notfall 24/7"
+      "badge3": "Mo–Fr 8:00–18:00 Uhr"
     },
     "band": {
       "row1": [
@@ -535,7 +535,7 @@
     "sidebar": {
       "reachUs": "So erreichen Sie uns",
       "phone": "069 / 79 216 147",
-      "phoneHours": "Mo–Fr 8:00–18:00 · Notfall 24/7",
+      "phoneHours": "Mo–Fr 8:00–18:00 Uhr",
       "emailReply": "Antwort innerhalb von 24h",
       "address": "Berger Str. 69",
       "city": "60316 Frankfurt am Main",
@@ -544,7 +544,7 @@
       "multilingual": "Mehrsprachig",
       "multilingualLabel": "Mehrsprachige Beratung:",
       "emergency": "Notfall?",
-      "emergencyText": "Unsere 24/7-Notfallbereitschaft ist jederzeit für Sie erreichbar.",
+      "emergencyText": "Bei lebensbedrohlichen Notfällen wählen Sie bitte immer die 112, außerhalb der Sprechzeiten hilft der ärztliche Bereitschaftsdienst unter 116 117. Uns erreichen Sie Mo–Fr 8:00–18:00 Uhr; danach hinterlassen Sie uns gern eine Nachricht. Ein Hausnotruf rund um die Uhr ist in Vorbereitung.",
       "callNow": "Jetzt anrufen"
     },
     "map": {

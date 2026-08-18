@@ -30,7 +30,7 @@
   },
   "footer": {
     "tagline": "Home care and participation in the Rhine-Main region. Professional, culturally sensitive outpatient care — right in your home.",
-    "hours": "Mon–Fri 8:00 am–6:00 pm · Emergency 24/7",
+    "hours": "Mon–Fri 8:00 am–6:00 pm",
     "pagesLabel": "Pages",
     "coverageLabel": "Service Area",
     "careerLabel": "Careers & Partners",
@@ -83,8 +83,8 @@
           "sub": "culturally sensitive"
         },
         {
-          "title": "24/7 emergency",
-          "sub": "always reachable"
+          "title": "Around-the-clock home emergency call",
+          "sub": "in preparation"
         }
       ]
     },
@@ -259,7 +259,7 @@
       "points": [
         "Multilingual team",
         "Insurer approved",
-        "Mon–Fri 8 am–6 pm · Emergency 24/7"
+        "Reachable Mon–Fri 8 am–6 pm"
       ],
       "formTitle": "Request a free consultation",
       "formHint": "We get back to you within 24 hours.",
@@ -285,7 +285,7 @@
       "phone": "069 / 79 216 147",
       "badge1": "Multilingual",
       "badge2": "Insurer approved",
-      "badge3": "Mon–Fri 8 am–6 pm, Emergency 24/7"
+      "badge3": "Mon–Fri 8 am–6 pm"
     },
     "band": {
       "row1": [
@@ -535,7 +535,7 @@
     "sidebar": {
       "reachUs": "How to reach us",
       "phone": "069 / 79 216 147",
-      "phoneHours": "Mon–Fri 8 am–6 pm · Emergency 24/7",
+      "phoneHours": "Mon–Fri 8 am–6 pm",
       "emailReply": "Reply within 24 h",
       "address": "Berger Str. 69",
       "city": "60316 Frankfurt am Main",
@@ -544,7 +544,7 @@
       "multilingual": "Multilingual",
       "multilingualLabel": "Multilingual advice:",
       "emergency": "Emergency?",
-      "emergencyText": "Our 24/7 emergency line is always available for you.",
+      "emergencyText": "In life-threatening emergencies always call 112; outside surgery hours the on-call medical service can be reached on 116 117. You can reach us Mon–Fri 8 am–6 pm; outside those hours please leave us a message. An around-the-clock home emergency call service is in preparation.",
       "callNow": "Call now"
     },
     "map": {

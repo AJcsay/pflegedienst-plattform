@@ -220,7 +220,7 @@ export default function Bockenheim() {
                 <a href="tel:+496979216147" className="text-cm-mint hover:underline">
                   069 / 79 216 147
                 </a>
-                <p className="text-white/70 text-sm mt-1">Mo–Fr 8:00–18:00 · Notfall 24/7</p>
+                <p className="text-white/70 text-sm mt-1">Mo–Fr 8:00–18:00 Uhr</p>
               </div>
             </div>
             <div className="flex gap-4">
