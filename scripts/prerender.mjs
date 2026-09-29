@@ -68,9 +68,19 @@ for (const r of routes) {
   html = setMetaProp(html, "og:url", canonical);
   html = setMetaName(html, "twitter:title", r.title);
   html = setMetaName(html, "twitter:description", r.description);
+  if (r.image) {
+    html = setMetaProp(html, "og:image", r.image);
+    html = setMetaName(html, "twitter:image", r.image);
+  }
+  if (r.imageAlt) html = setMetaProp(html, "og:image:alt", r.imageAlt);
+  if (r.jsonLd) {
+    // "<" escapen, damit Anzeigentext nie das Script-Tag schließen kann
+    const json = JSON.stringify(r.jsonLd).replace(/</g, "\\u003c");
+    html = html.replace("</head>", `    <script type="application/ld+json">${json}</script>\n  </head>`);
+  }
 
   const outPath =
-    r.path === "/" ? join(DIST, "index.html") : join(DIST, r.path.replace(/^\//, ""), "index.html");
+    r.path === "/" ? join(DIST, "index.html") : join(DIST, r.path.replace(/^\/|\/$/g, ""), "index.html");
   mkdirSync(dirname(outPath), { recursive: true });
   writeFileSync(outPath, html, "utf8");
   written++;

@@ -2,6 +2,7 @@
   "jobs": [
     {
       "id": 1,
+      "slug": "pflegedienstleitung",
       "title": "Pflegedienstleitung (PDL) m/w/d",
       "department": "Leitung",
       "location": "Frankfurt am Main",
@@ -37,6 +38,7 @@
     },
     {
       "id": 2,
+      "slug": "pflegefachperson-vollzeit",
       "title": "Pflegefachperson m/w/d",
       "department": "Pflege",
       "location": "Frankfurt am Main",
@@ -44,6 +46,7 @@
       "startDate": "01.10.2026",
       "scope": "Vollzeit · unbefristet · 39 Std./Woche",
       "salary": "ca. €42.000–€52.000 brutto/Jahr, übertariflich und orientiert am regional üblichen Entgeltniveau Hessen",
+      "teaser": "Examinierte Pflegefachperson in Vollzeit für die ambulante Pflege im Frankfurter Osten – übertarifliche Vergütung, flexible Dienstpläne, kurze Wege.",
       "intro": "CuraMain ist ein ambulanter Pflegedienst in Frankfurt am Main. Unter dem Leitbild „Weil Ihr Zuhause der beste Ort zum Heilen ist\" begleiten wir unsere Patient·innen mit professioneller, kultursensibler Pflege direkt zu Hause. Zur Verstärkung unseres Teams suchen wir zum 01.10.2026 eine examinierte Pflegefachperson für die ambulante Versorgung im Frankfurter Osten (Bornheim, Nordend, Ostend).",
       "tasks": [
         "Eigenständige Grundpflege: Körperpflege, Mobilisation, Ankleiden, Ernährungsunterstützung",
@@ -71,10 +74,12 @@
         "Ein wertschätzendes, internationales Team mit echtem Zusammenhalt"
       ],
       "active": true,
-      "publishedAt": "2026-06-12"
+      "publishedAt": "2026-06-12",
+      "ogImage": "/img/jobs/pflegefachperson-vollzeit.jpg"
     },
     {
       "id": 3,
+      "slug": "pflegefachperson-teilzeit",
       "title": "Pflegefachperson m/w/d",
       "department": "Pflege",
       "location": "Frankfurt am Main",
@@ -82,6 +87,7 @@
       "startDate": "01.10.2026",
       "scope": "Teilzeit · unbefristet · Stundenzahl nach Absprache (z. B. 20–30 Std./Woche)",
       "salary": "Anteilig zur Vollzeit (ca. €42.000–€52.000 brutto/Jahr auf Vollzeitbasis), übertariflich",
+      "teaser": "Examinierte Pflegefachperson in Teilzeit – Stundenzahl nach Ihren Wünschen, planbare Dienste und kurze Wege im Frankfurter Osten.",
       "intro": "Sie möchten als examinierte Pflegefachperson arbeiten, brauchen aber einen Rahmen, der zu Ihrem Leben passt? Bei CuraMain in Frankfurt am Main vereinbaren wir die Stundenzahl individuell – ideal zur Vereinbarkeit von Familie und Beruf. Wir begleiten unsere Patient·innen mit professioneller, kultursensibler Pflege direkt zu Hause und suchen zum 01.10.2026 Verstärkung in Teilzeit.",
       "tasks": [
         "Grund- und Behandlungspflege in der häuslichen Versorgung",
@@ -106,17 +112,24 @@
         "Ein wertschätzendes, internationales Team"
       ],
       "active": true,
-      "publishedAt": "2026-06-12"
+      "publishedAt": "2026-06-12",
+      "ogImage": "/img/jobs/pflegefachperson-teilzeit.jpg"
     },
     {
       "id": 4,
+      "slug": "pflegeassistenz",
       "title": "Pflegeassistent·in / Pflegehelfer·in m/w/d",
       "department": "Pflege",
       "location": "Frankfurt am Main",
       "employmentType": "fulltime",
+      "employmentTypes": [
+        "fulltime",
+        "parttime"
+      ],
       "startDate": "01.10.2026",
       "scope": "Vollzeit oder Teilzeit · unbefristet",
       "salary": "ca. €28.000–€34.000 brutto/Jahr (Vollzeit) zzgl. Zuschläge, orientiert am regional üblichen Entgeltniveau Hessen",
+      "teaser": "Pflegeassistent·in oder Pflegehelfer·in in Voll- oder Teilzeit – Quereinsteiger·innen mit Herz sind bei uns ausdrücklich willkommen.",
       "intro": "Sie möchten Menschen im Alltag begleiten und etwas Sinnvolles tun? Als Pflegeassistent·in bei CuraMain in Frankfurt am Main unterstützen Sie unsere examinierten Pflegefachpersonen und begegnen unseren Patient·innen mit Wärme und Verlässlichkeit. Wir suchen zum 01.10.2026 Verstärkung – Quereinsteiger·innen mit der richtigen Haltung sind ausdrücklich willkommen.",
       "tasks": [
         "Unterstützung bei der Grundpflege: Körperpflege, Ankleiden, Mobilisation und Lagerung",
@@ -144,10 +157,12 @@
         "Ein wertschätzendes, internationales Team mit echter Gemeinschaft"
       ],
       "active": true,
-      "publishedAt": "2026-06-12"
+      "publishedAt": "2026-06-12",
+      "ogImage": "/img/jobs/pflegeassistenz.jpg"
     },
     {
       "id": 5,
+      "slug": "hauswirtschaft-minijob",
       "title": "Hauswirtschaftliche Mitarbeiter·in m/w/d",
       "department": "Hauswirtschaft",
       "location": "Frankfurt am Main",
@@ -174,6 +189,50 @@
       ],
       "active": false,
       "publishedAt": "2026-04-26"
+    },
+    {
+      "id": 6,
+      "slug": "haushaltshilfe-reinigungskraft",
+      "title": "Haushaltshilfe / Reinigungskraft m/w/d",
+      "department": "Hauswirtschaft",
+      "location": "Frankfurt am Main",
+      "employmentType": "minijob",
+      "employmentTypes": [
+        "minijob",
+        "parttime"
+      ],
+      "startDate": "sofort",
+      "scope": "Minijob oder Teilzeit · Stundenzahl und Einsatzzeiten nach Absprache",
+      "salary": "Faire Vergütung – die Einzelheiten besprechen wir gern persönlich mit Ihnen",
+      "teaser": "Sie sorgen für ein sauberes, gepflegtes Zuhause – und damit für ein Stück Lebensqualität. Minijob oder Teilzeit in Frankfurt, ab sofort.",
+      "intro": "Ein sauberes, gepflegtes Zuhause gibt Sicherheit – gerade dann, wenn der Alltag nicht mehr allein gelingt. Als Haushaltshilfe bei CuraMain unterstützen Sie unsere Patient·innen in ihren eigenen vier Wänden und tragen dazu bei, dass sie so lange wie möglich selbstbestimmt zu Hause leben können. Wir suchen ab sofort zuverlässige Verstärkung für die hauswirtschaftliche Versorgung in Frankfurt am Main, vor allem im Frankfurter Osten – als Minijob oder in Teilzeit.",
+      "tasks": [
+        "Reinigung der Wohnung: Staubwischen, Böden, Küche und Bad",
+        "Wäsche waschen, aufhängen, zusammenlegen und einräumen, Betten frisch beziehen",
+        "Einkäufe und kleine Besorgungen – auf Wunsch gemeinsam mit den Patient·innen",
+        "Zubereitung einfacher Mahlzeiten und Ordnung in der Küche",
+        "Ein offenes Ohr im Alltag – und aufmerksam sein: Veränderungen geben Sie an unsere Pflegefachpersonen weiter",
+        "Kurze Dokumentation Ihrer Einsätze – wir weisen Sie ein"
+      ],
+      "profile": [
+        "Erfahrung im Haushalt oder in der Reinigung – eine Ausbildung ist nicht erforderlich",
+        "Gründlichkeit, Zuverlässigkeit und Pünktlichkeit",
+        "Ein freundlicher, respektvoller und geduldiger Umgang mit älteren und pflegebedürftigen Menschen",
+        "Diskretion – Sie sind Gast im Zuhause unserer Patient·innen",
+        "Deutschkenntnisse für die Verständigung im Alltag – weitere Sprachen sind herzlich willkommen",
+        "Mobil im Stadtgebiet, ob mit Bus und Bahn, Fahrrad oder Auto"
+      ],
+      "offer": [
+        "Minijob oder Teilzeit – Stundenzahl und Einsatzzeiten stimmen wir mit Ihnen ab",
+        "Feste Patient·innen und planbare Einsätze mit kurzen Wegen",
+        "Faire Vergütung, pünktlich zum Monatsende",
+        "Einarbeitung durch unser Team und feste Ansprechpartner·innen in der Pflegedienstleitung",
+        "Dienstkleidung wird gestellt; die Belehrung nach § 43 Infektionsschutzgesetz organisieren wir für Sie",
+        "Ein wertschätzendes, internationales Team, in dem Hauswirtschaft ein wichtiger Teil guter Pflege ist"
+      ],
+      "ogImage": "/img/jobs/haushaltshilfe-reinigungskraft.jpg",
+      "active": true,
+      "publishedAt": "2026-09-29"
     }
   ]
 }

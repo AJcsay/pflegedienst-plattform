@@ -8,8 +8,40 @@
  * mit dem useSEO(...) der jeweiligen Seite synchron halten. Dynamische Routen
  * (z. B. /pflegedienst/:city) und noindex-Seiten (404) werden bewusst NICHT
  * vorgerendert.
+ *
+ * Stellenanzeigen (/karriere/<slug>/) werden NICHT hier gepflegt, sondern automatisch
+ * aus client/src/data/jobs.json erzeugt (nur active: true) – siehe jobRoutes unten.
  */
-export const routes = [
+import { readFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import {
+  jobPath,
+  jobUrl,
+  jobImageUrl,
+  jobSeoTitle,
+  jobSeoDescription,
+  jobPostingSchema,
+} from "../client/src/lib/job-seo.mjs";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const jobsFile = JSON.parse(readFileSync(join(__dirname, "..", "client", "src", "data", "jobs.json"), "utf8"));
+
+/** Eine vorgerenderte Seite je aktiver Stelle – mit eigenem Vorschaubild und JobPosting-Daten. */
+export const jobRoutes = jobsFile.jobs
+  .filter((j) => j.active)
+  .map((job) => ({
+    path: jobPath(job),
+    canonical: jobUrl(job),
+    title: jobSeoTitle(job),
+    description: jobSeoDescription(job),
+    image: jobImageUrl(job),
+    imageAlt: `Stellenanzeige: ${job.title} bei CuraMain in Frankfurt`,
+    jsonLd: jobPostingSchema(job),
+    priority: "0.7",
+  }));
+
+const staticRoutes = [
   {
     path: "/",
     title: "CuraMain – Pflege & Teilhabe in Frankfurt | Nordend · Bornheim · Ostend",
@@ -157,3 +189,5 @@ export const routes = [
     priority: "0.2",
   },
 ];
+
+export const routes = [...staticRoutes, ...jobRoutes];

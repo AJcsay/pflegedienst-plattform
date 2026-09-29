@@ -17,6 +17,7 @@ import KontaktPatient from "./pages/KontaktPatient";
 import UeberUns from "./pages/UeberUns";
 import Karriere from "./pages/Karriere";
 import Bewerbung from "./pages/Bewerbung";
+import JobDetail from "./pages/JobDetail";
 import PartnerZuweiser from "./pages/PartnerZuweiser";
 import PartnerKapazitaet from "./pages/PartnerKapazitaet";
 import PartnerKassen from "./pages/PartnerKassen";
@@ -106,6 +107,8 @@ function Router() {
       <Route path="/karriere">{() => <PublicLayout><Karriere /></PublicLayout>}</Route>
       <Route path="/bewerbung">{() => <PublicLayout><Bewerbung /></PublicLayout>}</Route>
       <Route path="/karriere/bewerbung">{() => <PublicLayout><Bewerbung /></PublicLayout>}</Route>
+      {/* Einzelne Stellenanzeige – eigene, teilbare URL (muss NACH /karriere/bewerbung stehen) */}
+      <Route path="/karriere/:slug">{() => <PublicLayout><JobDetail /></PublicLayout>}</Route>
 
       {/* Partners */}
       <Route path="/partner/zuweiser">{() => <PublicLayout><PartnerZuweiser /></PublicLayout>}</Route>
