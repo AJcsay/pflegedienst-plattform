@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "wouter";
+import { Link, useSearch } from "wouter";
 import { useTranslation } from "react-i18next";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "sonner";
@@ -26,6 +26,14 @@ export default function KontaktPatient() {
   type District = { value: string; label: string };
   const SPRACHEN = t("kontakt.languages", { returnObjects: true }) as string[];
   const STADTTEILE = t("kontakt.districts", { returnObjects: true }) as District[];
+
+  // Thema aus der URL (?thema=intensivpflege | teilhabe) — landet als Betreff in der Mail (10.10.2026)
+  const thema = new URLSearchParams(useSearch()).get("thema");
+  const THEMEN: Record<string, string> = {
+    intensivpflege: "Anfrage Intensivpflege",
+    teilhabe: "Voranmeldung Pflege & Teilhabe",
+  };
+  const betreff = thema ? THEMEN[thema] : undefined;
 
   const [form, setForm] = useState({ name: "", email: "", phone: "", stadtteil: "", message: "", consent: false });
   const [website, setWebsite] = useState("");
@@ -62,6 +70,7 @@ export default function KontaktPatient() {
       phone: form.phone || undefined,
       message: form.message,
       stadtteil: form.stadtteil || undefined,
+      subject: betreff,
       category: "patient",
       website,
     });

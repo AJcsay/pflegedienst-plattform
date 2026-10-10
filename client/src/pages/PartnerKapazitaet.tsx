@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import { Link, useSearch } from "wouter";
 import { useState } from "react";
 import { toast } from "sonner";
 import { CheckCircle2, ArrowRight, Activity } from "lucide-react";
@@ -55,7 +55,8 @@ export default function PartnerKapazitaet() {
     contactPerson: "",
     email: "",
     phone: "",
-    careType: "",
+    // ?versorgung=intensivpflege (Link von /intensivpflege) waehlt die Pflegeart vor
+    careType: new URLSearchParams(useSearch()).get("versorgung") === "intensivpflege" ? "intensivpflege" : "",
     region: "",
     numberOfPatients: "",
     desiredStartDate: "",
@@ -224,6 +225,7 @@ export default function PartnerKapazitaet() {
                   <option value="">Bitte wählen</option>
                   <option value="grundpflege">Grundpflege</option>
                   <option value="behandlungspflege">Behandlungspflege</option>
+                  <option value="intensivpflege">Außerklinische Intensivpflege (Erwachsene)</option>
                   <option value="verhinderungspflege">Verhinderungspflege</option>
                   <option value="hauswirtschaft">Hauswirtschaft</option>
                   <option value="kombination">Kombination</option>

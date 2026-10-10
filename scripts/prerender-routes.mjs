@@ -44,16 +44,23 @@ export const jobRoutes = jobsFile.jobs
 const staticRoutes = [
   {
     path: "/",
-    title: "CuraMain – Pflege & Teilhabe in Frankfurt | Nordend · Bornheim · Ostend",
-    description: "CuraMain: Pflege & Teilhabe in Frankfurt – Nordend, Bornheim & Ostend. Grundpflege, Behandlungspflege, kultursensible Begleitung. Kassenzugelassen. ☎ 069 79 216 147",
-    keywords: "Pflege und Teilhabe Frankfurt, Pflegedienst Frankfurt, ambulanter Pflegedienst Frankfurt, häusliche Pflege Frankfurt, kultursensible Pflege Frankfurt, mehrsprachiger Pflegedienst, Grundpflege Frankfurt, Behandlungspflege Frankfurt, CuraMain",
+    title: "CuraMain – Ambulante Pflege & Intensivpflege in Frankfurt | Nordend · Bornheim · Ostend",
+    description: "CuraMain Frankfurt: ambulante Pflege und außerklinische Intensivpflege für Erwachsene – mit und ohne Beatmung. Kultursensibel, kassenzugelassen. ☎ 069 79 216 147",
+    keywords: "Pflegedienst Frankfurt, ambulanter Pflegedienst Frankfurt, Intensivpflege Frankfurt, außerklinische Intensivpflege Frankfurt, Beatmungspflege Frankfurt, häusliche Pflege Frankfurt, kultursensible Pflege Frankfurt, mehrsprachiger Pflegedienst, Pflege und Teilhabe Frankfurt, CuraMain",
     priority: "1.0",
   },
   {
     path: "/leistungen",
-    title: "Pflege & Teilhabe Frankfurt – Behandlungspflege, Grundpflege & mehr | CuraMain",
-    description: "Pflege und Teilhabe in Frankfurt: Behandlungspflege (SGB V), Grundpflege (SGB XI), Verhinderungspflege, Beratungsbesuche § 37.3 & kultursensible Betreuung. Kassenzugelassen.",
+    title: "Leistungen: Pflege, Behandlungspflege & Intensivpflege in Frankfurt | CuraMain",
+    description: "Behandlungspflege (SGB V), Grundpflege (SGB XI), außerklinische Intensivpflege für Erwachsene mit und ohne Beatmung, Verhinderungspflege und Beratungsbesuche § 37.3 – kultursensibel in Frankfurt.",
     priority: "0.8",
+  },
+  {
+    path: "/intensivpflege",
+    title: "Außerklinische Intensivpflege in Frankfurt & Rhein-Main | CuraMain",
+    description: "Intensivpflege zu Hause für Erwachsene – mit und ohne Beatmung, Trachealkanüle, 1:1 bis zu 24 Stunden am Tag. CuraMain Frankfurt & Rhein-Main. ☎ 069 79 216 147",
+    keywords: "Intensivpflege Frankfurt, außerklinische Intensivpflege Frankfurt, Intensivpflegedienst Frankfurt, Beatmungspflege Frankfurt, Heimbeatmung Frankfurt, Trachealkanüle Pflege Frankfurt, Intensivpflege Rhein-Main, CuraMain",
+    priority: "0.9",
   },
   {
     path: "/faq",

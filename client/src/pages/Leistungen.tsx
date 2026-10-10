@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 import {
-  Stethoscope, HandHeart, UserCheck, CalendarCheck, Users,
+  Stethoscope, HandHeart, UserCheck, CalendarCheck, Users, Wind,
   ArrowRight, CheckCircle2, Phone
 } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
@@ -13,11 +13,12 @@ const PHOTOS = {
   behandlung: "/img/behandlung.webp",
   grundpflege: "/img/grundpflege.webp",
   team: "/img/team.webp",
+  intensivpflege: "/img/intensivpflege-zuhause.webp",
 };
 
 // Icon-Mapping für fullServices (Reihenfolge entspricht JSON-Array)
-const FULL_SERVICE_ICONS = [Stethoscope, HandHeart];
-const FULL_SERVICE_IMGS = [PHOTOS.behandlung, PHOTOS.grundpflege];
+const FULL_SERVICE_ICONS = [Stethoscope, HandHeart, Wind];
+const FULL_SERVICE_IMGS = [PHOTOS.behandlung, PHOTOS.grundpflege, PHOTOS.intensivpflege];
 
 // Icon-Mapping für compactServices
 const COMPACT_SERVICE_ICONS = [UserCheck, CalendarCheck, Users];
@@ -45,7 +46,7 @@ export default function Leistungen() {
     return () => clearTimeout(timer);
   }, [section]);
 
-  type FullService = { id: string; title: string; sub: string; description: string; details: string[] };
+  type FullService = { id: string; title: string; sub: string; description: string; details: string[]; link?: string; linkLabel?: string };
   type CompactService = { id: string; title: string; sub: string; description: string; badge: string };
   type TeilhabeItem = { title: string; sub: string; desc: string };
   type CulturePoint = { title: string; desc: string };
@@ -102,6 +103,14 @@ export default function Leistungen() {
                     </li>
                   ))}
                 </ul>
+                {s.link && (
+                  <Link
+                    href={s.link}
+                    className="mt-7 inline-flex items-center gap-2 bg-cm-teal hover:bg-cm-teal-600 text-white px-6 py-3 rounded-full text-sm font-bold transition-colors"
+                  >
+                    {s.linkLabel} <ArrowRight className="w-4 h-4" />
+                  </Link>
+                )}
               </div>
               <div
                 className={`hero-bg min-h-[320px] ${i % 2 === 1 ? "lg:order-1" : ""}`}

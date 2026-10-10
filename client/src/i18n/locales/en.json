@@ -11,7 +11,8 @@
         "services": "Our Services",
         "faq": "Frequently Asked Questions",
         "downloads": "Downloads & Guides",
-        "contact": "Request Consultation"
+        "contact": "Request Consultation",
+        "intensive": "Intensive Care"
       },
       "applicants": {
         "label": "For Applicants",
@@ -29,7 +30,7 @@
     }
   },
   "footer": {
-    "tagline": "Home care and participation in the Rhine-Main region. Professional, culturally sensitive outpatient care — right in your home.",
+    "tagline": "Care and participation in the Rhine-Main region. Professional, culturally sensitive home care and out-of-hospital intensive care – right where you live.",
     "hours": "Mon–Fri 8:00 am–6:00 pm",
     "pagesLabel": "Pages",
     "coverageLabel": "Service Area",
@@ -51,18 +52,19 @@
       "insurance": "Health Insurers",
       "documents": "Documents",
       "imprint": "Legal Notice",
-      "privacy": "Privacy Policy"
+      "privacy": "Privacy Policy",
+      "intensive": "Intensive Care"
     },
     "copyright": "© {{year}} CuraMain · Managing Director: Alie Junior Sesay"
   },
   "home": {
     "seo": {
-      "title": "CuraMain – Home Care & Participation in Frankfurt | Nordend · Bornheim · Ostend",
-      "description": "CuraMain: Professional home care in Frankfurt – Nordend, Bornheim & Ostend. Medical and personal care, culturally sensitive support. Fully insured. ☎ 069 79 216 147",
+      "title": "CuraMain – Home Care & Intensive Care in Frankfurt | Nordend · Bornheim · Ostend",
+      "description": "CuraMain Frankfurt: home care and out-of-hospital intensive care for adults – with and without ventilation. Culturally sensitive, approved by health insurers. ☎ 069 79 216 147",
       "keywords": "home care Frankfurt, outpatient nursing Frankfurt, ambulatory care Frankfurt, culturally sensitive care Frankfurt, multilingual nursing service, care Frankfurt Nordend, care Frankfurt Bornheim, CuraMain"
     },
     "hero": {
-      "pill": "Care from conviction — your home care service in Frankfurt",
+      "pill": "Home care and intensive care in Frankfurt",
       "h1": "Because your home is the best place to heal.",
       "p": "Internationally rooted, multilingual every day: at CuraMain you are understood — in the language that feels like home to you.",
       "ctaPrimary": "Request a free consultation",
@@ -75,8 +77,8 @@
       "h1b": "to heal.",
       "cards": [
         {
-          "title": "Care at home",
-          "sub": "in familiar surroundings"
+          "title": "Intensive care at home",
+          "sub": "with and without ventilation"
         },
         {
           "title": "Care that speaks your language",
@@ -90,26 +92,22 @@
     },
     "stats": [
       {
-        "value": "4.8★",
-        "label": "Patient satisfaction"
-      },
-      {
-        "value": "150+",
-        "label": "Patients cared for"
-      },
-      {
         "value": "13+",
         "label": "Years of nursing experience in our team"
       },
       {
         "value": "100%",
         "label": "Insurer approval"
+      },
+      {
+        "value": "24 h",
+        "label": "Response to your enquiry"
       }
     ],
     "services": {
       "label": "What we offer",
       "h2": "Our services – everything from a single source.",
-      "p": "From medical treatment care to household support – we provide all nursing services under one roof. Step by step, we are expanding to include care and participation services for children, young people, and adults with disabilities.",
+      "p": "From medical treatment care to household support – and for adults with exceptionally high care needs, out-of-hospital intensive care. Step by step we are adding care and participation services for children, young people and adults with disabilities.",
       "cta": "View all services",
       "items": [
         {
@@ -164,15 +162,11 @@
       "p": "Anchored in our articles of association and currently in development: CuraMain is expanding its services to include care and participation for children, young people, and adults with disabilities. If you would like to express interest now, we welcome advance registrations – we will be in touch as soon as the relevant care is available.",
       "badge": "Coming Soon",
       "cta": "Pre-register for Care & Participation",
-      "note": "Phase 1 services (personal care, medical care, advisory visits) are already active.",
+      "note": "Already active: personal care, medical treatment care, advisory visits and out-of-hospital intensive care for adults.",
       "items": [
         {
           "title": "Paediatric Home Nursing",
           "desc": "Home nursing care for chronically ill children and young people (SGB V § 132a)."
-        },
-        {
-          "title": "Out-of-Hospital Intensive Care",
-          "desc": "Care for ventilator-dependent patients at home, in nurseries, and at school (§ 37c SGB V, AKI-RL)."
         },
         {
           "title": "School Accompaniment",
@@ -211,23 +205,7 @@
       "label": "Testimonials",
       "h2": "Real experiences.\nReal people.",
       "cta": "Read all reviews",
-      "items": [
-        {
-          "name": "Fatima A.",
-          "role": "Daughter of a patient, Nordend-Ost",
-          "text": "My father barely speaks German – that was always a challenge for us. At CuraMain, he was immediately cared for by a nursing professional who speaks his native language. He finally feels understood and well cared for."
-        },
-        {
-          "name": "Dr. Markus R.",
-          "role": "General Practitioner, Frankfurt-Bornheim",
-          "text": "I have been referring patients to CuraMain for over a year. The feedback is consistently positive: punctual, well-documented, and always reachable. A reliable partner for my practice."
-        },
-        {
-          "name": "Renate H.",
-          "role": "Patient, Bornheim",
-          "text": "After my hip surgery, I wanted to get home as quickly as possible. CuraMain coordinated the discharge with the clinic and was there on day one. I would never have thought it could go so smoothly."
-        }
-      ]
+      "items": []
     },
     "process": {
       "label": "How it works",
@@ -335,18 +313,32 @@
           "tag": "Hygiene"
         }
       ]
+    },
+    "aki": {
+      "label": "New at CuraMain",
+      "h2": "Intensive care at home – with and without ventilation.",
+      "p": "CuraMain now also cares for adults who need a registered nurse present at all times – on ventilation, with a tracheostomy tube or with very high medical care needs. One nurse is there for you alone, in your home in Frankfurt and the Rhine-Main region.",
+      "points": [
+        "Invasive and mask ventilation (NIV)",
+        "Tracheostomy tube, suctioning, secretion management",
+        "1:1 care for up to 24 hours a day",
+        "Billed directly to your health insurer"
+      ],
+      "cta": "All about intensive care",
+      "cta2": "Case enquiry for hospitals & practices",
+      "imgAlt": "Young man in a wheelchair at home, accompanied by a nurse and a relative"
     }
   },
   "leistungen": {
     "seo": {
-      "title": "Care & Participation Frankfurt – Medical Care, Personal Care & More | CuraMain",
+      "title": "Services: Home Care, Treatment Care & Intensive Care in Frankfurt | CuraMain",
       "description": "Care and participation in Frankfurt: medical treatment care (SGB V), personal care (SGB XI), respite care, advisory visits § 37.3 & culturally sensitive support. Insurer approved.",
       "keywords": "home care Frankfurt, nursing services Frankfurt, medical care Frankfurt, personal care Frankfurt, respite care Frankfurt, advisory visits Frankfurt, culturally sensitive care Frankfurt"
     },
     "hero": {
       "pill": "Billable to all health insurers",
       "h1": "Care & Participation.",
-      "p": "Active for you: the full spectrum of outpatient care in Frankfurt – insurer-approved, individually tailored, culturally sensitive. Coming soon: care and participation services for children, young people, and adults with disabilities."
+      "p": "Active for you: the full range of home care in Frankfurt and out-of-hospital intensive care for adults – individually tailored, culturally sensitive. In preparation: care and participation services for children, young people and adults with disabilities."
     },
     "fullServices": [
       {
@@ -376,6 +368,22 @@
           "Accompaniment to the toilet",
           "Bed-making and positioning"
         ]
+      },
+      {
+        "id": "intensivpflege",
+        "title": "Out-of-Hospital Intensive Care",
+        "sub": "§ 37c SGB V – for adults",
+        "description": "For adults who need a registered nurse present at all times – for example on ventilation or with a tracheostomy tube. One nurse is there for you alone, up to 24 hours a day, in Frankfurt and the Rhine-Main region.",
+        "details": [
+          "Invasive and non-invasive ventilation (NIV)",
+          "Tracheostoma and tracheostomy tube management, suctioning",
+          "Secretion and dysphagia management, PEG feeding",
+          "Vital sign monitoring, emergency measures per the physician's plan",
+          "Guidance and advice for relatives",
+          "Billed directly to your health insurer"
+        ],
+        "link": "/intensivpflege",
+        "linkLabel": "All about intensive care"
       }
     ],
     "compactServices": {
@@ -408,7 +416,7 @@
     "teilhabe": {
       "label": "Coming Soon — Launch Q4 2027 / Q1 2028",
       "h2": "Care and Participation – expanding step by step.",
-      "p": "Anchored in CuraMain GmbH's articles of association and currently under development: we are building depth in four additional service fields. These services are not yet bookable. If you would like to express interest now, we welcome advance registrations – we will be in touch once approval is in place.",
+      "p": "Anchored in CuraMain GmbH's articles of association and currently under development: we are building depth in three additional service fields. These services are not yet bookable. If you would like to express interest now, we welcome advance registrations – we will be in touch once approval is in place.",
       "cta": "Pre-register for Care & Participation",
       "note": "Note: The services listed here are not yet active. Advance registrations help us build the right capacity.",
       "items": [
@@ -416,11 +424,6 @@
           "title": "Paediatric Home Nursing",
           "sub": "SGB V § 132a — planned",
           "desc": "Home nursing for chronically ill children and young people: medication, tube feeding, tracheostomy care, wound management. Multilingual and culturally sensitive."
-        },
-        {
-          "title": "Out-of-Hospital Intensive Care",
-          "sub": "§ 37c SGB V · AKI-RL — planned",
-          "desc": "Round-the-clock care for ventilator-dependent patients in their own home, shared housing, or school and nursery settings."
         },
         {
           "title": "School Accompaniment",
@@ -622,11 +625,11 @@
         },
         {
           "year": "2026",
-          "text": "CuraMain GmbH is formally incorporated in Frankfurt am Main. With over 13 years of nursing experience and a multilingual team, CuraMain launches in Nordend, Bornheim, and Ostend – under the brand \"Care and Participation\" across every stage of life."
+          "text": "CuraMain GmbH is formally incorporated in Frankfurt am Main. With over 13 years of nursing experience and a multilingual team, CuraMain launches in Nordend, Bornheim, and Ostend – under the brand \"Care and Participation\" across every stage of life. In autumn 2026, out-of-hospital intensive care for adults is added."
         },
         {
           "year": "from 2027",
-          "text": "Phased expansion to include school accompaniment, social participation services, paediatric home nursing, and out-of-hospital intensive care – anchored in the articles of association, with a clear quality and staffing roadmap."
+          "text": "Phased expansion to include school accompaniment, social participation services and paediatric home nursing – anchored in the articles of association, with a clear quality and staffing roadmap."
         }
       ]
     },
@@ -634,6 +637,106 @@
       "h2": "Get to know us.",
       "p": "A personal conversation, a home visit, or a phone consultation – we make time for you.",
       "button": "Request consultation"
+    }
+  },
+  "intensivpflege": {
+    "seo": {
+      "title": "Out-of-Hospital Intensive Care in Frankfurt & Rhine-Main | CuraMain",
+      "description": "Intensive care at home for adults – with and without ventilation, tracheostomy, 1:1 for up to 24 hours a day. CuraMain Frankfurt & Rhine-Main. ☎ 069 79 216 147",
+      "keywords": "intensive care Frankfurt, home ventilation care Frankfurt, out-of-hospital intensive care, CuraMain"
+    },
+    "hero": {
+      "pill": "Out-of-hospital intensive care · for adults",
+      "h1": "Intensive care at home.",
+      "p": "For adults with and without ventilation: one registered nurse is there for you alone – up to 24 hours a day, in your home in Frankfurt and the Rhine-Main region. Culturally sensitive and multilingual.",
+      "ctaPrimary": "Request advice",
+      "ctaPhone": "069 79 216 147",
+      "imgAlt": "Young man in a wheelchair at home, accompanied by a nurse and a relative"
+    },
+    "leistungen": {
+      "label": "What we do",
+      "h2": "Medical treatment care for breathing, tracheostomy and safety.",
+      "items": [
+        {
+          "title": "Ventilation",
+          "desc": "Operating and monitoring the ventilator – invasive via tracheostomy tube and non-invasive with a mask; inhalation and oxygen."
+        },
+        {
+          "title": "Tracheostomy tube",
+          "desc": "Tracheostoma care, tube management, suctioning and secretion management."
+        },
+        {
+          "title": "Swallowing and nutrition",
+          "desc": "Dysphagia management, tube or PEG feeding."
+        },
+        {
+          "title": "Monitoring",
+          "desc": "Recording and assessing vital signs, medication, positioning and prophylaxis."
+        },
+        {
+          "title": "Safety in emergencies",
+          "desc": "Immediate action in emergencies – following the physician's emergency plan."
+        },
+        {
+          "title": "Supporting relatives",
+          "desc": "Guidance and advice for the family on equipment and care."
+        }
+      ]
+    },
+    "fuerWen": {
+      "label": "Who it is for",
+      "h2": "Who is out-of-hospital intensive care for?",
+      "p1": "Out-of-hospital intensive care is available to insured persons who need a registered nurse present at all times because immediate intervention may become necessary at any moment – for example on ventilation or with a tracheostomy tube.",
+      "p2": "Common reasons include neuromuscular diseases such as ALS, high spinal cord injury or severe neurological conditions after a hospital stay.",
+      "woH3": "Where we provide care",
+      "wo": "In your home or with your family, in supported living and at other suitable places – for example at work in a sheltered workshop. Service area: Frankfurt am Main and the Rhine-Main region.",
+      "einsH3": "1:1 care",
+      "eins": "One nurse is there for you alone – to the extent of your prescription, up to 24 hours a day.",
+      "entwoehnung": "We watch for signs that weaning from ventilation or the tube may be possible and then inform the treating physicians."
+    },
+    "ablauf": {
+      "label": "How it works",
+      "h2": "How care begins.",
+      "steps": [
+        {
+          "title": "Enquiry",
+          "desc": "Hospital, practice or family call or write to us. We reply within 24 hours on working days."
+        },
+        {
+          "title": "Prescription",
+          "desc": "A qualified physician prescribes intensive care; for ventilation or tracheostomy this includes an assessment of weaning potential."
+        },
+        {
+          "title": "Application",
+          "desc": "You submit the application to your health insurer – we help with the form and documents."
+        },
+        {
+          "title": "Start at home",
+          "desc": "Home visit, equipment briefing, duty roster – then care begins."
+        }
+      ]
+    },
+    "kosten": {
+      "h3": "Costs",
+      "p": "Out-of-hospital intensive care is a statutory health insurance benefit; we bill your health insurer directly. Adults pay the statutory co-payment: 10 % of the costs plus €10 per prescription, limited to the first 28 days per calendar year. The statutory burden limit applies.",
+      "quelle": "Legal basis: § 37c SGB V, G-BA guideline on out-of-hospital intensive care (as of 2026)."
+    },
+    "kliniken": {
+      "label": "For hospitals, practices & transition",
+      "h2": "Discharge, well prepared.",
+      "points": [
+        "Send case enquiries early – ideally during the hospital stay",
+        "Coordination with social services, prescribing physicians and equipment suppliers",
+        "Care by registered nurses qualified to health insurers' requirements for intensive care",
+        "Dedicated intensive care department lead and a fixed contact person"
+      ],
+      "cta": "Send a case enquiry",
+      "cta2": "Check capacity"
+    },
+    "cta": {
+      "h2": "Talk to us.",
+      "p": "We advise you and your relatives in person – on the prescription, cost coverage and getting care started. We reply within 24 hours on working days.",
+      "button": "Request advice"
     }
   }
 }

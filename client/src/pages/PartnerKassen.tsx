@@ -125,7 +125,7 @@ export default function PartnerKassen() {
         <div className="relative z-10 container pt-6 pb-10">
           <span className="pill inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm border border-white/60 shadow-sm">
             <Shield className="w-4 h-4 text-cm-teal" />
-            Kassenzugelassen seit 2020
+            Kassenzugelassen
           </span>
           <h1 className="h-serif text-5xl lg:text-7xl text-cm-teal mt-6 mb-6 max-w-5xl leading-[1.05]">
             Kassen & Kooperation.

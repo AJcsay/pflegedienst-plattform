@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 import {
   Heart, Shield, Phone, ArrowRight, CheckCircle2,
-  Star, Quote, Users, Home as HomeIcon, Languages, Clock,
+  Star, Quote, Users, Home as HomeIcon, Languages, Clock, Wind, Hospital,
 } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 import QuickContact from "@/components/QuickContact";
@@ -16,6 +16,7 @@ const PHOTOS = {
   beratung: "/img/beratung.webp",
   team: "/img/team.webp",
   aktivierung: "/img/aktivierung.webp",
+  intensivpflege: "/img/intensivpflege.webp",
 };
 
 // Foto-Mapping für die gekippten Leistungs-Karten (Reihenfolge = JSON-Array)
@@ -27,7 +28,8 @@ const SERVICE_PHOTOS = [
 ];
 
 // Icons für die schwebenden Hero-Karten (Reihenfolge = JSON-Array)
-const FLOAT_ICONS = [HomeIcon, Languages, Clock];
+// 10.10.2026: erste Karte = Intensivpflege zu Hause
+const FLOAT_ICONS = [Wind, Languages, Clock];
 
 export default function Home() {
   const { t } = useTranslation();
@@ -50,6 +52,7 @@ export default function Home() {
   const coverageAreas = t("home.coverage.areas", { returnObjects: true }) as Array<{ slug: string; name: string; sub: string }>;
   const testimonials = t("home.testimonials.items", { returnObjects: true }) as Array<{ name: string; role: string; text: string }>;
   const processSteps = t("home.process.steps", { returnObjects: true }) as Array<{ title: string; desc: string }>;
+  const akiPoints = t("home.aki.points", { returnObjects: true }) as string[];
 
   return (
     <div className="bg-white">
@@ -177,6 +180,51 @@ export default function Home() {
           >
             {t("home.services.cta")} <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </Link>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────── */}
+      {/* INTENSIVPFLEGE — neu seit 10.10.2026         */}
+      {/* ─────────────────────────────────────────── */}
+      <section id="intensivpflege" className="container pb-14 lg:pb-20">
+        <div className="cm-hero-dark rounded-[28px] overflow-hidden grid lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="relative min-h-[260px] lg:min-h-[440px]">
+            <img
+              src={PHOTOS.intensivpflege}
+              alt={t("home.aki.imgAlt")}
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{ objectPosition: "55% center" }}
+            />
+          </div>
+          <div className="p-8 lg:p-12 text-left">
+            <span className="cm-badge cm-badge-dark">{t("home.aki.label")}</span>
+            <h2 className="text-3xl lg:text-4xl text-white mt-4 mb-4 leading-tight">{t("home.aki.h2")}</h2>
+            <p className="text-white/80 leading-relaxed mb-6">{t("home.aki.p")}</p>
+            <ul className="grid sm:grid-cols-2 gap-3 mb-8">
+              {akiPoints.map((p) => (
+                <li key={p} className="flex gap-2.5 text-[14px] text-white/90">
+                  <CheckCircle2 className="w-5 h-5 text-cm-mint shrink-0" aria-hidden="true" />
+                  <span>{p}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/intensivpflege"
+                className="bg-cm-teal-500 hover:bg-cm-teal-600 text-white px-6 py-3.5 rounded-full font-bold inline-flex items-center gap-2 transition-colors min-h-[48px]"
+              >
+                {t("home.aki.cta")} <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </Link>
+              <Link
+                href="/partner/zuweiser?versorgung=intensivpflege"
+                className="border-[1.5px] border-white/45 hover:border-white text-white px-6 py-3.5 rounded-full font-bold inline-flex items-center gap-2 transition-colors min-h-[48px]"
+              >
+                <Hospital className="w-4 h-4" aria-hidden="true" />
+                {t("home.aki.cta2")}
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -315,7 +363,7 @@ export default function Home() {
             {t("home.teilhabe.p")}
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
           {teilhabeItems.map((f) => (
             <div key={f.title} className="border-[1.5px] border-dashed border-cm-teal-300 rounded-2xl p-5 bg-white">
               <div className="inline-block bg-cm-teal-50 text-cm-teal-700 text-[11px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full mb-3">
@@ -377,6 +425,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Stimmen erst anzeigen, wenn echte Bewertungen vorliegen (GF 17.09.2026) */}
+      {Array.isArray(testimonials) && testimonials.length > 0 && (
+      <>
       {/* ─────────────────────────────────────────── */}
       {/* TESTIMONIALS                                */}
       {/* ─────────────────────────────────────────── */}
@@ -422,6 +473,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </>
+      )}
 
       {/* ─────────────────────────────────────────── */}
       {/* INLINE-SCHNELLKONTAKT (eigenes Formular)    */}

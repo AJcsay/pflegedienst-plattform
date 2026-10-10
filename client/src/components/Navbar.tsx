@@ -58,6 +58,7 @@ export default function Navbar() {
       icon: Heart,
       items: [
         { label: t("nav.groups.patients.services"), href: "/leistungen" },
+        { label: t("nav.groups.patients.intensive"), href: "/intensivpflege" },
         { label: t("nav.groups.patients.faq"), href: "/faq" },
         { label: t("nav.groups.patients.downloads"), href: "/downloads" },
         { label: t("nav.groups.patients.contact"), href: "/kontakt/patient" },

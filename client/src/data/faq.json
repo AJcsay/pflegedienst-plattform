@@ -92,6 +92,38 @@
       ]
     },
     {
+      "id": "intensivpflege",
+      "title": "Intensivpflege",
+      "description": "Außerklinische Intensivpflege für Erwachsene – mit und ohne Beatmung",
+      "questions": [
+        {
+          "id": "was-ist-aki",
+          "question": "Was ist außerklinische Intensivpflege?",
+          "answer": "Außerklinische Intensivpflege ist eine Leistung der gesetzlichen Krankenversicherung (§ 37c SGB V). Sie erhalten Versicherte, bei denen ständig eine Pflegefachperson anwesend sein muss, weil jederzeit und unvorhersehbar ein sofortiges Eingreifen nötig werden kann – zum Beispiel bei einer Beatmung oder Trachealkanüle.\n\nCuraMain versorgt Erwachsene mit und ohne Beatmung in ihrer Wohnung in Frankfurt und Rhein-Main – 1:1, im Umfang der Verordnung bis zu 24 Stunden am Tag."
+        },
+        {
+          "id": "aki-verordnung",
+          "question": "Wie bekomme ich außerklinische Intensivpflege verordnet?",
+          "answer": "Die Intensivpflege verordnet eine dafür besonders qualifizierte Ärzt·in. Bei beatmeten oder trachealkanülierten Patient·innen gehört eine Potenzialerhebung dazu – sie klärt, ob eine Entwöhnung von Beatmung oder Kanüle möglich ist.\n\nDen Antrag bei der Krankenkasse stellen Sie als Versicherte·r. Wir helfen beim Ausfüllen und bei den Unterlagen und stimmen uns mit Klinik, Sozialdienst und Ärzt·innen ab."
+        },
+        {
+          "id": "aki-kosten",
+          "question": "Was kostet die Intensivpflege?",
+          "answer": "Wir rechnen direkt mit Ihrer Krankenkasse ab. Volljährige leisten die gesetzliche Zuzahlung: 10 % der Kosten und 10 € je Verordnung, begrenzt auf die ersten 28 Tage im Kalenderjahr (§ 37c Abs. 5 i. V. m. § 61 SGB V). Es gilt die gesetzliche Belastungsgrenze (§ 62 SGB V)."
+        },
+        {
+          "id": "aki-wo",
+          "question": "Wo versorgt CuraMain Intensivpflege-Patient·innen?",
+          "answer": "In Ihrer Wohnung oder in Ihrer Familie, in betreuten Wohnformen und an anderen geeigneten Orten – etwa am Arbeitsplatz in einer Werkstatt für behinderte Menschen. Unser Einsatzgebiet für die Intensivpflege ist Frankfurt am Main und Rhein-Main."
+        },
+        {
+          "id": "aki-kliniken",
+          "question": "Wie können Kliniken eine Intensivpflege-Versorgung anfragen?",
+          "answer": "Am besten frühzeitig – schon während des Klinikaufenthalts. Nutzen Sie die Patientenüberleitung (Seite „Für Partner“) oder rufen Sie uns an: 069 79 216 147. Wir melden uns innerhalb von 24 Stunden an Werktagen."
+        }
+      ]
+    },
+    {
       "id": "prozess",
       "title": "Prozess & Ablauf",
       "description": "Wie läuft die Zusammenarbeit mit CuraMain ab?",

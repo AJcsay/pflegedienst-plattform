@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import { Link, useSearch } from "wouter";
 import { useState } from "react";
 import { toast } from "sonner";
 import { CheckCircle2, ArrowRight, Stethoscope, Building2, Hospital } from "lucide-react";
@@ -32,13 +32,21 @@ const PartnerTabs = ({ active }: { active: string }) => (
   </div>
 );
 
+// Versorgungsart in der Zuweiser-Anfrage (10.10.2026: Intensivpflege fuer Erwachsene)
+const VERSORGUNGSARTEN: Record<string, string> = {
+  pflege: "Häusliche Kranken- und Altenpflege",
+  "aki-beatmet": "Außerklinische Intensivpflege – mit Beatmung / Trachealkanüle",
+  "aki-nicht-beatmet": "Außerklinische Intensivpflege – ohne Beatmung",
+  offen: "Noch unklar",
+};
+
 const inputCls =
   "w-full px-4 py-3 rounded-xl border border-cm-teal-100 focus:border-cm-teal-300 focus:ring-2 focus:ring-cm-teal-100 outline-none transition";
 
 export default function PartnerZuweiser() {
   useSEO({
     title: "Zuweiser-Portal für Ärzte & Kliniken – CuraMain",
-    description: "Patientenüberleitung an CuraMain Frankfurt: Zuweiser-Portal für Hausärzte, Fachärzte & Kliniken. Rückmeldung in 4h, nahtlose ambulante Weiterversorgung in Nordend, Bornheim & Ostend.",
+    description: "Patientenüberleitung an CuraMain Frankfurt – häusliche Pflege und außerklinische Intensivpflege: Zuweiser-Portal für Hausärzte, Fachärzte & Kliniken. Rückmeldung in 4h, nahtlose ambulante Weiterversorgung in Nordend, Bornheim & Ostend.",
     keywords: "Zuweiser Pflegedienst Frankfurt, Patientenüberleitung Frankfurt, ambulante Pflege nach Klinik Frankfurt, Pflegedienst Partner Frankfurt, Bürgerhospital Zuweiser, Sankt Katharinen Zuweiser",
     canonical: "https://www.curamain.de/partner/zuweiser",
   });
@@ -52,6 +60,8 @@ export default function PartnerZuweiser() {
     patientName: "",
     patientInsurance: "",
     careLevel: "",
+    // Versorgungsart; ?versorgung=intensivpflege (Link von /intensivpflege) waehlt AKI vor (10.10.2026)
+    careKind: new URLSearchParams(useSearch()).get("versorgung") === "intensivpflege" ? "aki-beatmet" : "",
     careNeeds: "",
     urgency: "normal" as "normal" | "urgent" | "emergency",
     notes: "",
@@ -83,6 +93,7 @@ export default function PartnerZuweiser() {
       form.patientName ? `Patient: ${form.patientName}` : "",
       form.patientInsurance ? `Versicherung: ${form.patientInsurance}` : "",
       form.careLevel ? `Pflegegrad: ${form.careLevel}` : "",
+      form.careKind ? `Versorgungsart: ${VERSORGUNGSARTEN[form.careKind] ?? form.careKind}` : "",
       `Dringlichkeit: ${form.urgency}`,
       form.careNeeds ? `Pflegebedarf: ${form.careNeeds}` : "",
       form.notes ? `Anmerkungen: ${form.notes}` : "",
@@ -94,7 +105,9 @@ export default function PartnerZuweiser() {
       email: form.email,
       phone: form.phone || undefined,
       organization: form.institutionName,
-      subject: `Patientenüberleitung (${form.urgency})`,
+      subject: form.careKind.startsWith("aki")
+        ? `Patientenüberleitung Intensivpflege (${form.urgency})`
+        : `Patientenüberleitung (${form.urgency})`,
       message,
       category: "referral",
       website,
@@ -145,7 +158,7 @@ export default function PartnerZuweiser() {
             Patientenüberleitung.
           </h1>
           <p className="text-lg lg:text-xl text-cm-ink/80 max-w-3xl leading-relaxed">
-            Leiten Sie Patienten schnell und unkompliziert an uns über. Wir gewährleisten eine nahtlose Versorgungsübernahme.
+            Leiten Sie Patient·innen schnell und unkompliziert an uns über – für die häusliche Pflege und für die außerklinische Intensivpflege Erwachsener, mit und ohne Beatmung.
           </p>
         </div>
       </section>
@@ -244,6 +257,15 @@ export default function PartnerZuweiser() {
                       <option value="emergency">Notfall</option>
                     </select>
                   </div>
+                </div>
+                <div>
+                  <label className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Versorgungsart</label>
+                  <select value={form.careKind} onChange={(e) => setForm((f) => ({ ...f, careKind: e.target.value }))} className={inputCls + " bg-white"}>
+                    <option value="">Bitte wählen</option>
+                    {Object.entries(VERSORGUNGSARTEN).map(([v, l]) => (
+                      <option key={v} value={v}>{l}</option>
+                    ))}
+                  </select>
                 </div>
                 <div>
                   <label className="text-sm font-medium text-cm-ink/80 mb-1.5 block">Pflegebedarf</label>

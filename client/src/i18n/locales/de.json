@@ -11,7 +11,8 @@
         "services": "Unsere Leistungen",
         "faq": "Häufige Fragen",
         "downloads": "Downloads & Ratgeber",
-        "contact": "Erstberatung anfordern"
+        "contact": "Erstberatung anfordern",
+        "intensive": "Intensivpflege"
       },
       "applicants": {
         "label": "Für Bewerber",
@@ -29,7 +30,7 @@
     }
   },
   "footer": {
-    "tagline": "Pflege und Teilhabe im Rhein-Main-Gebiet. Professionelle, kultursensible ambulante Pflege – direkt bei Ihnen zu Hause.",
+    "tagline": "Pflege und Teilhabe im Rhein-Main-Gebiet. Professionelle, kultursensible ambulante Pflege und außerklinische Intensivpflege – direkt bei Ihnen zu Hause.",
     "hours": "Mo–Fr 8:00–18:00 Uhr",
     "pagesLabel": "Seiten",
     "coverageLabel": "Versorgungsgebiet",
@@ -51,18 +52,19 @@
       "insurance": "Krankenkassen",
       "documents": "Dokumente",
       "imprint": "Impressum",
-      "privacy": "Datenschutz"
+      "privacy": "Datenschutz",
+      "intensive": "Intensivpflege"
     },
     "copyright": "© {{year}} CuraMain · Geschäftsführer: Alie Junior Sesay"
   },
   "home": {
     "seo": {
-      "title": "CuraMain – Pflege & Teilhabe in Frankfurt | Nordend · Bornheim · Ostend",
-      "description": "CuraMain: Pflege & Teilhabe in Frankfurt – Nordend, Bornheim & Ostend. Grundpflege, Behandlungspflege, kultursensible Begleitung. Kassenzugelassen. ☎ 069 79 216 147",
-      "keywords": "Pflege und Teilhabe Frankfurt, Pflegedienst Frankfurt, ambulanter Pflegedienst Frankfurt, häusliche Pflege Frankfurt, Pflegedienst Frankfurt Nordend, Pflegedienst Frankfurt Bornheim, Pflegedienst Frankfurt Ostend, kultursensible Pflege Frankfurt, mehrsprachiger Pflegedienst, Grundpflege Frankfurt, Behandlungspflege Frankfurt, Teilhabe Frankfurt, CuraMain"
+      "title": "CuraMain – Ambulante Pflege & Intensivpflege in Frankfurt | Nordend · Bornheim · Ostend",
+      "description": "CuraMain Frankfurt: ambulante Pflege und außerklinische Intensivpflege für Erwachsene – mit und ohne Beatmung. Kultursensibel, kassenzugelassen. ☎ 069 79 216 147",
+      "keywords": "Pflegedienst Frankfurt, ambulanter Pflegedienst Frankfurt, Intensivpflege Frankfurt, außerklinische Intensivpflege Frankfurt, Intensivpflegedienst Frankfurt, Beatmungspflege Frankfurt, Heimbeatmung Frankfurt, häusliche Pflege Frankfurt, Pflegedienst Frankfurt Nordend, Pflegedienst Frankfurt Bornheim, Pflegedienst Frankfurt Ostend, kultursensible Pflege Frankfurt, mehrsprachiger Pflegedienst, Pflege und Teilhabe Frankfurt, CuraMain"
     },
     "hero": {
-      "pill": "Pflege aus Überzeugung — Ihr ambulanter Pflegedienst in Frankfurt",
+      "pill": "Ambulante Pflege und Intensivpflege in Frankfurt",
       "h1": "Weil Ihr Zuhause der beste Ort zum Heilen ist.",
       "p": "International aufgestellt, vielsprachig im Alltag: Bei CuraMain werden Sie verstanden — in der Sprache, die sich für Sie wie Zuhause anfühlt.",
       "ctaPrimary": "Kostenloses Erstgespräch anfordern",
@@ -75,8 +77,8 @@
       "h1b": "zum Heilen ist.",
       "cards": [
         {
-          "title": "Pflege zu Hause",
-          "sub": "im vertrauten Umfeld"
+          "title": "Intensivpflege zu Hause",
+          "sub": "mit und ohne Beatmung"
         },
         {
           "title": "Pflege, die Ihre Sprache spricht",
@@ -90,32 +92,28 @@
     },
     "stats": [
       {
-        "value": "4,8★",
-        "label": "Patientenzufriedenheit"
-      },
-      {
-        "value": "150+",
-        "label": "Versorgte Patienten"
-      },
-      {
         "value": "13+",
         "label": "Jahre Pflegeerfahrung im Team"
       },
       {
         "value": "100%",
         "label": "Kassenzulassung"
+      },
+      {
+        "value": "24 h",
+        "label": "Rückmeldung auf Ihre Anfrage"
       }
     ],
     "services": {
       "label": "Was wir leisten",
       "h2": "Unsere Leistungen – alles aus einer Hand.",
-      "p": "Von der medizinischen Behandlungspflege bis zur hauswirtschaftlichen Unterstützung – wir betreuen Sie mit allen Pflegeleistungen aus einer Hand. Schrittweise wachsen wir um Pflege- und Teilhabe-Angebote für Kinder, Jugendliche und Erwachsene mit Behinderungen.",
+      "p": "Von der medizinischen Behandlungspflege bis zur hauswirtschaftlichen Unterstützung – und für Erwachsene mit besonders hohem Pflegebedarf die außerklinische Intensivpflege. Schrittweise wachsen wir um Pflege- und Teilhabe-Angebote für Kinder, Jugendliche und Erwachsene mit Behinderungen.",
       "cta": "Alle Leistungen ansehen",
       "items": [
         {
           "title": "Behandlungspflege",
           "sub": "SGB V – Medizinische Versorgung",
-          "desc": "Wundversorgung, Injektionen, Medikamentengabe – durch examinierte Fachkräfte nach ärztlicher Verordnung."
+          "desc": "Wundversorgung, Injektionen, Medikamentengabe – durch Pflegefachpersonen nach ärztlicher Verordnung."
         },
         {
           "title": "Grundpflege",
@@ -164,15 +162,11 @@
       "p": "In unserer Satzung verankert, schrittweise im Aufbau: CuraMain erweitert die Versorgung um Felder, die Pflege und Teilhabe für Kinder, Jugendliche und Erwachsene mit Behinderungen integrieren. Wenn Sie heute schon Interesse signalisieren möchten, freuen wir uns über eine Voranmeldung – wir melden uns, sobald die jeweilige Versorgung verfügbar ist.",
       "badge": "In Vorbereitung",
       "cta": "Voranmeldung Pflege & Teilhabe",
-      "note": "Phase-1-Versorgung (Grundpflege, Behandlungspflege, Beratung) ist bereits aktiv.",
+      "note": "Bereits aktiv: Grundpflege, Behandlungspflege, Beratung und außerklinische Intensivpflege für Erwachsene.",
       "items": [
         {
           "title": "Ambulante Kinderkrankenpflege",
           "desc": "Häusliche Krankenpflege für chronisch kranke Kinder und Jugendliche (SGB V § 132a)."
-        },
-        {
-          "title": "Außerklinische Intensivpflege",
-          "desc": "Versorgung beatmeter Patient·innen in häuslicher Umgebung, Kitas und Schulen (§ 37c SGB V, AKI-RL)."
         },
         {
           "title": "Schulbegleitung",
@@ -211,23 +205,7 @@
       "label": "Stimmen",
       "h2": "Echte Erfahrungen.\nEchte Menschen.",
       "cta": "Alle Bewertungen lesen",
-      "items": [
-        {
-          "name": "Fatima A.",
-          "role": "Tochter eines Patienten, Nordend-Ost",
-          "text": "Mein Vater spricht kaum Deutsch – das war für uns immer ein Problem. Bei CuraMain kam sofort eine Pflegefachperson, die seine Muttersprache spricht. Er fühlt sich endlich verstanden und gut versorgt."
-        },
-        {
-          "name": "Dr. Markus R.",
-          "role": "Allgemeinarzt, Frankfurt-Bornheim",
-          "text": "Ich überweise seit über einem Jahr Patienten an CuraMain. Die Rückmeldungen sind durchweg positiv: pünktlich, dokumentiert und immer erreichbar. Für meine Praxis ein verlässlicher Partner."
-        },
-        {
-          "name": "Renate H.",
-          "role": "Patientin, Bornheim",
-          "text": "Nach meiner Hüft-OP wollte ich so schnell wie möglich nach Hause. CuraMain hat die Entlassung mit der Klinik koordiniert und war schon am ersten Tag da. Ich hätte nicht gedacht, dass das so reibungslos klappt."
-        }
-      ]
+      "items": []
     },
     "process": {
       "label": "So einfach geht's",
@@ -335,25 +313,39 @@
           "tag": "Hygiene"
         }
       ]
+    },
+    "aki": {
+      "label": "Neu bei CuraMain",
+      "h2": "Intensivpflege zu Hause – mit und ohne Beatmung.",
+      "p": "CuraMain versorgt jetzt auch Erwachsene, bei denen ständig eine Pflegefachperson anwesend sein muss – bei Beatmung, mit Trachealkanüle oder bei sehr hohem Behandlungspflegebedarf. Eine Pflegefachperson ist ausschließlich für Sie da, in Ihrer Wohnung in Frankfurt und Rhein-Main.",
+      "points": [
+        "Beatmung invasiv und mit Maske (NIV)",
+        "Trachealkanüle, Absaugen, Sekretmanagement",
+        "1:1-Versorgung bis zu 24 Stunden am Tag",
+        "Abrechnung direkt mit der Krankenkasse"
+      ],
+      "cta": "Alles zur Intensivpflege",
+      "cta2": "Fallanfrage für Kliniken & Praxen",
+      "imgAlt": "Junger Mann im Rollstuhl zu Hause, begleitet von einer Pflegefachperson und einem Angehörigen"
     }
   },
   "leistungen": {
     "seo": {
-      "title": "Pflege & Teilhabe Frankfurt – Behandlungspflege, Grundpflege & mehr | CuraMain",
-      "description": "Pflege und Teilhabe in Frankfurt: Behandlungspflege (SGB V), Grundpflege (SGB XI), Verhinderungspflege, Beratungsbesuche § 37.3 & kultursensible Betreuung. Kassenzugelassen.",
-      "keywords": "Pflege und Teilhabe Frankfurt, Pflegeleistungen Frankfurt, Behandlungspflege Frankfurt, Grundpflege Frankfurt, Verhinderungspflege Frankfurt, Beratungsbesuche Frankfurt, kultursensible Pflege Frankfurt, ambulante Pflege Frankfurt kassenzugelassen"
+      "title": "Leistungen: Pflege, Behandlungspflege & Intensivpflege in Frankfurt | CuraMain",
+      "description": "Behandlungspflege (SGB V), Grundpflege (SGB XI), außerklinische Intensivpflege für Erwachsene mit und ohne Beatmung, Verhinderungspflege und Beratungsbesuche § 37.3 – kultursensibel in Frankfurt.",
+      "keywords": "Pflege und Teilhabe Frankfurt, Pflegeleistungen Frankfurt, Behandlungspflege Frankfurt, Grundpflege Frankfurt, Verhinderungspflege Frankfurt, Beratungsbesuche Frankfurt, kultursensible Pflege Frankfurt, ambulante Pflege Frankfurt kassenzugelassen, Intensivpflege Frankfurt, außerklinische Intensivpflege Frankfurt"
     },
     "hero": {
       "pill": "Mit allen Pflegekassen abrechenbar",
       "h1": "Pflege & Teilhabe.",
-      "p": "Aktiv für Sie: das volle Spektrum ambulanter Pflege in Frankfurt – kassenzugelassen, individuell abgestimmt, kultursensibel. In Vorbereitung: Pflege- und Teilhabe-Angebote für Kinder, Jugendliche und Erwachsene mit Behinderungen."
+      "p": "Aktiv für Sie: das volle Spektrum ambulanter Pflege in Frankfurt und die außerklinische Intensivpflege für Erwachsene – individuell abgestimmt, kultursensibel. In Vorbereitung: Pflege- und Teilhabe-Angebote für Kinder, Jugendliche und Erwachsene mit Behinderungen."
     },
     "fullServices": [
       {
         "id": "behandlungspflege",
         "title": "Behandlungspflege",
         "sub": "SGB V – Medizinische Versorgung",
-        "description": "Unsere examinierten Pflegefachpersonen führen alle ärztlich verordneten medizinischen Maßnahmen professionell und zuverlässig durch.",
+        "description": "Unsere Pflegefachpersonen führen alle ärztlich verordneten medizinischen Maßnahmen professionell und zuverlässig durch.",
         "details": [
           "Wundversorgung und Verbandswechsel",
           "Injektionen und Infusionen",
@@ -376,6 +368,22 @@
           "Begleitung bei Toilettengängen",
           "Betten und Lagern"
         ]
+      },
+      {
+        "id": "intensivpflege",
+        "title": "Außerklinische Intensivpflege",
+        "sub": "§ 37c SGB V – für Erwachsene",
+        "description": "Für Erwachsene, bei denen ständig eine Pflegefachperson anwesend sein muss – etwa bei Beatmung oder Trachealkanüle. Eine Pflegefachperson ist ausschließlich für Sie da, bis zu 24 Stunden am Tag, in Frankfurt und Rhein-Main.",
+        "details": [
+          "Invasive und nicht-invasive Beatmung (NIV)",
+          "Tracheostoma- und Trachealkanülenmanagement, Absaugen",
+          "Sekret- und Dysphagiemanagement, Ernährung über PEG",
+          "Überwachung der Vitalwerte, Notfallmaßnahmen nach ärztlichem Plan",
+          "Anleitung und Beratung von Angehörigen",
+          "Abrechnung direkt mit der Krankenkasse"
+        ],
+        "link": "/intensivpflege",
+        "linkLabel": "Alles zur Intensivpflege"
       }
     ],
     "compactServices": {
@@ -408,7 +416,7 @@
     "teilhabe": {
       "label": "In Vorbereitung — Start Q4 2027 / Q1 2028",
       "h2": "Pflege und Teilhabe – schrittweise erweitert.",
-      "p": "In der Satzung der CuraMain GmbH verankert, im Aufbau befindlich: Wir bauen Versorgungstiefe in vier zusätzlichen Feldern auf. Diese Leistungen sind heute noch nicht buchbar. Wenn Sie heute schon Bedarf signalisieren möchten, freuen wir uns über eine Voranmeldung – wir melden uns, sobald die Zulassung vorliegt.",
+      "p": "In der Satzung der CuraMain GmbH verankert, im Aufbau befindlich: Wir bauen Versorgungstiefe in drei zusätzlichen Feldern auf. Diese Leistungen sind heute noch nicht buchbar. Wenn Sie heute schon Bedarf signalisieren möchten, freuen wir uns über eine Voranmeldung – wir melden uns, sobald die Zulassung vorliegt.",
       "cta": "Voranmeldung Pflege & Teilhabe",
       "note": "Hinweis: Die hier genannten Leistungen sind noch nicht aktiv. Voranmeldungen helfen uns, die Versorgung passgenau aufzubauen.",
       "items": [
@@ -416,11 +424,6 @@
           "title": "Ambulante Kinderkrankenpflege",
           "sub": "SGB V § 132a — geplant",
           "desc": "Häusliche Krankenpflege für chronisch kranke Kinder und Jugendliche: Medikamente, Sondenkost, Trachealkanülen-Pflege, Wundversorgung. Mehrsprachig und kultursensibel."
-        },
-        {
-          "title": "Außerklinische Intensivpflege",
-          "sub": "§ 37c SGB V · AKI-RL — geplant",
-          "desc": "24-Stunden-Versorgung beatmeter Patient·innen in der eigenen Wohnung, Wohngemeinschaft oder im Schul- und Kindergartenalltag."
         },
         {
           "title": "Schulbegleitung",
@@ -622,11 +625,11 @@
         },
         {
           "year": "2026",
-          "text": "Notarielle Beurkundung der CuraMain GmbH in Frankfurt am Main. Mit über 13 Jahren Pflegeerfahrung und einem mehrsprachigen Team startet CuraMain in Nordend, Bornheim und Ostend – als Dachmarke Pflege und Teilhabe über alle Lebensphasen."
+          "text": "Notarielle Beurkundung der CuraMain GmbH in Frankfurt am Main. Mit über 13 Jahren Pflegeerfahrung und einem mehrsprachigen Team startet CuraMain in Nordend, Bornheim und Ostend – als Dachmarke Pflege und Teilhabe über alle Lebensphasen. Im Herbst 2026 kommt die außerklinische Intensivpflege für Erwachsene hinzu."
         },
         {
           "year": "ab 2027",
-          "text": "Stufenweiser Ausbau der Versorgung um Schulbegleitung, soziale Teilhabeleistungen, ambulante Kinderkrankenpflege und außerklinische Intensivpflege – in der Satzung verankert, mit klarem Qualitäts- und Personalfahrplan."
+          "text": "Stufenweiser Ausbau der Versorgung um Schulbegleitung, soziale Teilhabeleistungen und ambulante Kinderkrankenpflege – in der Satzung verankert, mit klarem Qualitäts- und Personalfahrplan."
         }
       ]
     },
@@ -634,6 +637,106 @@
       "h2": "Lernen Sie uns kennen.",
       "p": "Persönliches Gespräch, Hausbesuch oder Telefonberatung – wir nehmen uns Zeit für Sie.",
       "button": "Erstberatung anfragen"
+    }
+  },
+  "intensivpflege": {
+    "seo": {
+      "title": "Außerklinische Intensivpflege in Frankfurt & Rhein-Main | CuraMain",
+      "description": "Intensivpflege zu Hause für Erwachsene – mit und ohne Beatmung, Trachealkanüle, 1:1 bis zu 24 Stunden am Tag. CuraMain Frankfurt & Rhein-Main. ☎ 069 79 216 147",
+      "keywords": "Intensivpflege Frankfurt, außerklinische Intensivpflege Frankfurt, Intensivpflegedienst Frankfurt, Beatmungspflege Frankfurt, Heimbeatmung Frankfurt, Trachealkanüle Pflege Frankfurt, 1:1-Versorgung, Intensivpflege Rhein-Main, AKI Frankfurt, CuraMain"
+    },
+    "hero": {
+      "pill": "Außerklinische Intensivpflege · für Erwachsene",
+      "h1": "Intensivpflege zu Hause.",
+      "p": "Für Erwachsene mit und ohne Beatmung: Eine Pflegefachperson ist ausschließlich für Sie da – bis zu 24 Stunden am Tag, in Ihrer Wohnung in Frankfurt und Rhein-Main. Kultursensibel und vielsprachig im Alltag.",
+      "ctaPrimary": "Beratung anfragen",
+      "ctaPhone": "069 79 216 147",
+      "imgAlt": "Junger Mann im Rollstuhl zu Hause, begleitet von einer Pflegefachperson und einem Angehörigen"
+    },
+    "leistungen": {
+      "label": "Was wir leisten",
+      "h2": "Medizinische Behandlungspflege rund um Atmung, Kanüle und Sicherheit.",
+      "items": [
+        {
+          "title": "Beatmung",
+          "desc": "Bedienung und Überwachung des Beatmungsgeräts – invasiv über die Trachealkanüle und nicht-invasiv mit Maske; Inhalation und Sauerstoff."
+        },
+        {
+          "title": "Trachealkanüle",
+          "desc": "Pflege des Tracheostomas, Kanülenmanagement, Absaugen und Sekretmanagement."
+        },
+        {
+          "title": "Schlucken und Ernährung",
+          "desc": "Dysphagiemanagement, Ernährung über Sonde oder PEG."
+        },
+        {
+          "title": "Überwachung",
+          "desc": "Vitalwerte erfassen und bewerten, Medikamente, Lagerung und Prophylaxen."
+        },
+        {
+          "title": "Sicherheit im Notfall",
+          "desc": "Sofortiges Handeln in Notfallsituationen – nach dem ärztlichen Notfallplan."
+        },
+        {
+          "title": "Angehörige stärken",
+          "desc": "Anleitung und Beratung der Familie im Umgang mit Geräten und Pflege."
+        }
+      ]
+    },
+    "fuerWen": {
+      "label": "Für wen",
+      "h2": "Für wen ist außerklinische Intensivpflege?",
+      "p1": "Außerklinische Intensivpflege erhalten Versicherte, bei denen ständig eine Pflegefachperson anwesend sein muss, weil jederzeit und unvorhersehbar ein sofortiges Eingreifen nötig werden kann – zum Beispiel bei einer Beatmung oder Trachealkanüle.",
+      "p2": "Häufige Anlässe sind neuromuskuläre Erkrankungen wie ALS, eine hohe Querschnittlähmung oder schwere neurologische Erkrankungen nach einem Klinikaufenthalt.",
+      "woH3": "Wo wir versorgen",
+      "wo": "In Ihrer Wohnung oder in Ihrer Familie, in betreuten Wohnformen und an anderen geeigneten Orten – etwa am Arbeitsplatz in einer Werkstatt für behinderte Menschen. Einsatzgebiet: Frankfurt am Main und Rhein-Main.",
+      "einsH3": "1:1-Versorgung",
+      "eins": "Eine Pflegefachperson ist ausschließlich für Sie da – im Umfang, den Ihre Verordnung vorsieht, bis zu 24 Stunden am Tag.",
+      "entwoehnung": "Wir achten darauf, ob sich eine Entwöhnung von Beatmung oder Kanüle abzeichnet, und informieren dann die behandelnden Ärzt·innen."
+    },
+    "ablauf": {
+      "label": "So geht's",
+      "h2": "So startet die Versorgung.",
+      "steps": [
+        {
+          "title": "Anfrage",
+          "desc": "Klinik, Praxis oder Familie rufen an oder schreiben. Wir melden uns innerhalb von 24 Stunden an Werktagen."
+        },
+        {
+          "title": "Verordnung",
+          "desc": "Eine dafür qualifizierte Ärzt·in verordnet die Intensivpflege; bei Beatmung oder Kanüle gehört eine Potenzialerhebung dazu."
+        },
+        {
+          "title": "Antrag",
+          "desc": "Den Antrag bei der Krankenkasse stellen Sie als Versicherte·r – wir helfen beim Ausfüllen und bei den Unterlagen."
+        },
+        {
+          "title": "Start zu Hause",
+          "desc": "Hausbesuch, Einweisung in die Geräte, Dienstplan – dann beginnt die Versorgung."
+        }
+      ]
+    },
+    "kosten": {
+      "h3": "Kosten",
+      "p": "Außerklinische Intensivpflege ist eine Leistung der gesetzlichen Krankenversicherung; wir rechnen direkt mit Ihrer Krankenkasse ab. Volljährige leisten die gesetzliche Zuzahlung: 10 % der Kosten und 10 € je Verordnung, begrenzt auf die ersten 28 Tage im Kalenderjahr. Es gilt die gesetzliche Belastungsgrenze.",
+      "quelle": "Rechtsgrundlagen: § 37c SGB V, Außerklinische Intensivpflege-Richtlinie des G-BA (Stand 2026)."
+    },
+    "kliniken": {
+      "label": "Für Kliniken, Praxen & Überleitung",
+      "h2": "Entlassung gut vorbereitet.",
+      "points": [
+        "Fallanfrage gern frühzeitig – schon während des Klinikaufenthalts",
+        "Abstimmung mit Sozialdienst, verordnenden Ärzt·innen und Hilfsmittelversorgern",
+        "Versorgung durch Pflegefachpersonen, qualifiziert nach den Vorgaben der Krankenkassen für die Intensivpflege",
+        "Eigene Fachbereichsleitung Intensivpflege und feste Ansprechperson"
+      ],
+      "cta": "Fallanfrage stellen",
+      "cta2": "Kapazität anfragen"
+    },
+    "cta": {
+      "h2": "Sprechen Sie mit uns.",
+      "p": "Wir beraten Sie und Ihre Angehörigen persönlich – zur Verordnung, zur Kostenübernahme und zum Start der Versorgung. Wir melden uns innerhalb von 24 Stunden an Werktagen.",
+      "button": "Beratung anfragen"
     }
   }
 }

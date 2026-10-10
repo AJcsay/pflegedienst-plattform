@@ -11,6 +11,7 @@ import ConsentBanner from "./components/ConsentBanner";
 import MobileCallBar from "./components/MobileCallBar";
 import Home from "./pages/Home";
 import Leistungen from "./pages/Leistungen";
+import Intensivpflege from "./pages/Intensivpflege";
 import FAQ from "./pages/FAQ";
 import Testimonials from "./pages/Testimonials";
 import KontaktPatient from "./pages/KontaktPatient";
@@ -97,6 +98,7 @@ function Router() {
       {/* Public pages */}
       <Route path="/">{() => <PublicLayout><Home /></PublicLayout>}</Route>
       <Route path="/leistungen">{() => <PublicLayout><Leistungen /></PublicLayout>}</Route>
+      <Route path="/intensivpflege">{() => <PublicLayout><Intensivpflege /></PublicLayout>}</Route>
       <Route path="/faq">{() => <PublicLayout><FAQ /></PublicLayout>}</Route>
       <Route path="/downloads">{() => <PublicLayout><Downloads /></PublicLayout>}</Route>
       <Route path="/testimonials">{() => <PublicLayout><Testimonials /></PublicLayout>}</Route>
