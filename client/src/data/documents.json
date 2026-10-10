@@ -3,22 +3,42 @@
     {
       "id": 1,
       "title": "Versorgungsvertrag § 132a SGB V",
-      "description": "Auszug unseres Versorgungsvertrags für die häusliche Krankenpflege — verfügbar nach Abschluss des Zulassungsverfahrens.",
+      "description": "Häusliche Krankenpflege nach § 132a SGB V — wir senden Ihnen den Nachweis gerne zu.",
       "category": "contract",
       "fileUrl": null,
       "fileName": null,
       "fileSize": null,
-      "publishedAt": "2026-04-26"
+      "publishedAt": "2026-10-10"
     },
     {
       "id": 2,
       "title": "Versorgungsvertrag § 72 SGB XI",
-      "description": "Zulassungsbescheid und Landesrahmenvertrag Hessen — verfügbar nach Abschluss des Zulassungsverfahrens.",
+      "description": "Ambulante Pflege nach § 72 SGB XI — wir senden Ihnen den Nachweis gerne zu.",
       "category": "contract",
       "fileUrl": null,
       "fileName": null,
       "fileSize": null,
-      "publishedAt": "2026-04-26"
+      "publishedAt": "2026-10-10"
+    },
+    {
+      "id": 6,
+      "title": "Vertrag § 132l SGB V — Außerklinische Intensivpflege",
+      "description": "Außerklinische Intensivpflege für Erwachsene — wir senden Ihnen den Nachweis gerne zu.",
+      "category": "contract",
+      "fileUrl": null,
+      "fileName": null,
+      "fileSize": null,
+      "publishedAt": "2026-10-10"
+    },
+    {
+      "id": 7,
+      "title": "Fallanfrage-Bogen Intensivpflege",
+      "description": "Ausfüllbares PDF für Kliniken, Sozialdienste und Praxen — datensparsam und nur mit Einwilligung der Patient·in.",
+      "category": "supply",
+      "fileUrl": "/dokumente/curamain-fallanfrage-intensivpflege.pdf",
+      "fileName": "curamain-fallanfrage-intensivpflege.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-10-10"
     },
     {
       "id": 3,

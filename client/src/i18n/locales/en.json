@@ -326,7 +326,7 @@
       ],
       "cta": "All about intensive care",
       "cta2": "Case enquiry for hospitals & practices",
-      "imgAlt": "Young man in a wheelchair at home, accompanied by a nurse and a relative"
+      "imgAlt": "Woman in a power wheelchair with a ventilator and a nurse walking along the river Main in Frankfurt"
     }
   },
   "leistungen": {
@@ -651,7 +651,7 @@
       "p": "For adults with and without ventilation: one registered nurse is there for you alone – as prescribed for up to 24 hours a day, in your home in Frankfurt and the Rhine-Main region. Culturally sensitive and multilingual.",
       "ctaPrimary": "Request advice",
       "ctaPhone": "069 79 216 147",
-      "imgAlt": "Young man in a wheelchair at home, accompanied by a nurse and a relative"
+      "imgAlt": "Woman in a power wheelchair with a ventilator and a nurse walking along the river Main in Frankfurt"
     },
     "leistungen": {
       "label": "What we do",
@@ -732,7 +732,8 @@
         "Fixed contact person for hospitals and practices"
       ],
       "cta": "Send a case enquiry",
-      "cta2": "Check capacity"
+      "cta2": "Check capacity",
+      "cta3": "Case enquiry form (PDF)"
     },
     "cta": {
       "h2": "Talk to us.",

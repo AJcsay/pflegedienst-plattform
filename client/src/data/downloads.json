@@ -139,6 +139,16 @@
       "fileName": "curamain-notfall-medikamentenblatt.pdf",
       "fileSize": null,
       "publishedAt": "2026-06-07"
+    },
+    {
+      "id": 15,
+      "title": "Fallanfrage Intensivpflege",
+      "description": "Für Kliniken, Sozialdienste und Praxen: ausfüllbarer Bogen für die Anfrage zur außerklinischen Intensivpflege — datensparsam und nur mit Einwilligung der Patient·in.",
+      "category": "vorlage",
+      "fileUrl": "/dokumente/curamain-fallanfrage-intensivpflege.pdf",
+      "fileName": "curamain-fallanfrage-intensivpflege.pdf",
+      "fileSize": null,
+      "publishedAt": "2026-10-10"
     }
   ]
 }

@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 import {
   Wind, Activity, Utensils, HeartPulse, ShieldAlert, Users,
-  ArrowRight, CheckCircle2, Phone, Hospital, MapPin, UserCheck, Info,
+  ArrowRight, CheckCircle2, Phone, Hospital, MapPin, UserCheck, Info, FileDown,
 } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 
@@ -202,6 +202,16 @@ export default function Intensivpflege() {
               <UserCheck className="w-4 h-4" aria-hidden="true" />
               {t("intensivpflege.kliniken.cta2")}
             </Link>
+            {/* 10.10.2026: ausfuellbarer Fallanfrage-Bogen (Toolkit bau_aki_fallanfrage.py) */}
+            <a
+              href="/dokumente/curamain-fallanfrage-intensivpflege.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/85 hover:text-white underline underline-offset-4 inline-flex items-center gap-2 min-h-[48px] px-1"
+            >
+              <FileDown className="w-4 h-4" aria-hidden="true" />
+              {t("intensivpflege.kliniken.cta3")}
+            </a>
           </div>
         </div>
       </section>
