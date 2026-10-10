@@ -451,3 +451,17 @@ html {
     scroll-behavior: auto !important;
   }
 }
+
+/* 10.10.2026: KI-Kennzeichnung auf Fotos (components/KiMarke.tsx) */
+.cm-ki-marke {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: #fff; color: #0B2F63;
+  font-weight: 700; font-size: 11px; line-height: 1;
+  padding: 3px 9px 3px 3px; border-radius: 999px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.18); pointer-events: none;
+}
+.cm-ki-ai {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: #0B2F63; color: #fff; font-size: 9px; letter-spacing: 0;
+}

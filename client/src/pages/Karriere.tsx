@@ -5,6 +5,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { useSEO } from "@/hooks/useSEO";
+import KiMarke from "@/components/KiMarke";
 import { ACTIVE_JOBS, jobPath, jobTeaser, jobTypeLabel, jobTypes } from "@/lib/jobs";
 
 const PHOTOS = {
@@ -54,6 +55,7 @@ export default function Karriere() {
         className="relative min-h-[420px] hero-bg -mt-24 pt-24"
         style={{ backgroundImage: `url(${PHOTOS.team}), linear-gradient(135deg, #daedeb, #f9f6f1)` }}
       >
+        <KiMarke className="bottom-3 right-3" />
         <div className="relative z-10 container pt-6 pb-10">
           <span className="pill inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm border border-white/60 shadow-sm">
             <Briefcase className="w-4 h-4 text-cm-teal" />
@@ -186,6 +188,7 @@ export default function Karriere() {
           className="rounded-3xl p-10 lg:p-16 text-center hero-bg hero-bg-dark"
           style={{ backgroundImage: `url(${PHOTOS.team})` }}
         >
+          <KiMarke className="top-3 right-3" />
           <div className="relative z-10 max-w-2xl mx-auto">
             <h2 className="h-serif text-4xl lg:text-5xl text-white mb-4">
               Bereit für den nächsten Schritt?

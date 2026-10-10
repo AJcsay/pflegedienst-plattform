@@ -46,7 +46,10 @@ function html(job) {
 @font-face{font-family:Inter;src:url(${font("@fontsource-variable/inter/files/inter-latin-wght-normal.woff2")});font-weight:100 900}
 *{margin:0;padding:0;box-sizing:border-box}
 body{width:1200px;height:630px;display:flex;font-family:Inter,sans-serif;overflow:hidden;background:#fbf7f1}
-.photo{width:540px;height:630px;background:url(${photo}) ${photoX}% center/cover no-repeat}
+.photo{position:relative;width:540px;height:630px;background:url(${photo}) ${photoX}% center/cover no-repeat}
+/* 10.10.2026: KI-Kennzeichnung (Art. 50 Abs. 4 KI-VO), siehe client/src/components/KiMarke.tsx */
+.ki{position:absolute;top:16px;right:16px;display:flex;align-items:center;gap:8px;background:#fff;color:#0B2F63;font-weight:700;font-size:17px;line-height:1;padding:4px 12px 4px 4px;border-radius:999px}
+.ki b{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#0B2F63;color:#fff;font-size:12px}
 .panel{flex:1;height:630px;padding:48px 56px 44px;display:flex;flex-direction:column;color:#fff;
   background:linear-gradient(160deg,#0b8286 0%,#086b6f 55%,#0a4f52 100%)}
 .top{display:flex;align-items:center;gap:16px}
@@ -59,7 +62,7 @@ h1{font-family:Corm,serif;font-weight:600;font-size:60px;line-height:1.02;margin
 .facts span{font-size:19px;font-weight:500;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28)}
 .foot{margin-top:auto;padding-top:26px;font-size:20px;font-weight:600;display:flex;justify-content:space-between;opacity:.95}
 </style></head><body>
-<div class="photo"></div>
+<div class="photo"><span class="ki"><b>AI</b>KI-generiert</span></div>
 <div class="panel">
   <div class="top"><img src="${logo}" alt=""><span class="brand">CuraMain · Pflege und Teilhabe</span></div>
   <div class="kicker">Wir suchen Sie</div>

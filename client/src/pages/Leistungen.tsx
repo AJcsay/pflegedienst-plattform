@@ -5,6 +5,7 @@ import {
   ArrowRight, CheckCircle2, Phone
 } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import KiMarke from "@/components/KiMarke";
 import { useSearch } from "wouter";
 import { useEffect } from "react";
 
@@ -63,6 +64,7 @@ export default function Leistungen() {
         className="relative min-h-[420px] hero-bg -mt-24 pt-24"
         style={{ backgroundImage: `url(${PHOTOS.hero}), linear-gradient(135deg, #daedeb, #f9f6f1)` }}
       >
+        <KiMarke className="bottom-3 right-3" />
         <div className="relative z-10 container pt-6 pb-10">
           <span className="pill inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm border border-white/60 shadow-sm">
             <CheckCircle2 className="w-4 h-4 text-cm-teal" />
@@ -115,7 +117,9 @@ export default function Leistungen() {
               <div
                 className={`hero-bg min-h-[320px] ${i % 2 === 1 ? "lg:order-1" : ""}`}
                 style={{ backgroundImage: `url(${img})` }}
-              />
+              >
+                <KiMarke className="top-3 right-3" />
+              </div>
             </div>
           );
         })}
@@ -207,7 +211,9 @@ export default function Leistungen() {
           <div
             className="hero-bg min-h-[360px]"
             style={{ backgroundImage: `url(${PHOTOS.team})` }}
-          />
+          >
+            <KiMarke className="top-3 right-3" />
+          </div>
         </div>
       </section>
 

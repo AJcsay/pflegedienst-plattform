@@ -5,6 +5,7 @@ import {
   Star, Quote, Users, Home as HomeIcon, Languages, Clock, Wind, Hospital,
 } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import KiMarke from "@/components/KiMarke";
 import QuickContact from "@/components/QuickContact";
 
 // Lokale Bilder (in client/public/img/, siehe scripts/download-images.sh)
@@ -113,11 +114,12 @@ export default function Home() {
             <div className="cm-blob absolute inset-0">
               <img
                 src={PHOTOS.hero}
-                alt="Pflegefachperson von CuraMain im Gespräch mit einer Patientin zu Hause"
+                alt="KI-generiertes Symbolbild: Pflegefachperson im Gespräch mit einem älteren Ehepaar zu Hause"
                 loading="eager"
-                style={{ objectPosition: "38% center" }}
+                style={{ objectPosition: "62% center" }}
               />
             </div>
+            <KiMarke className="top-4 right-10" />
             {heroCards.map((c, i) => {
               const Icon = FLOAT_ICONS[i] ?? Heart;
               const pos = ["top-[8%] -left-[6%]", "bottom-[16%] -right-[4%]", "-bottom-[2%] left-[12%]"][i] ?? "";
@@ -161,6 +163,7 @@ export default function Home() {
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover"
               />
+              <KiMarke className="top-3 right-3" />
               <div
                 className="absolute inset-0"
                 style={{ background: "linear-gradient(rgba(14,31,74,0) 35%, rgba(14,31,74,0.82) 100%)" }}
@@ -196,6 +199,7 @@ export default function Home() {
               className="absolute inset-0 w-full h-full object-cover"
               style={{ objectPosition: "55% center" }}
             />
+            <KiMarke className="top-3 right-3" />
           </div>
           <div className="p-8 lg:p-12 text-left">
             <span className="cm-badge cm-badge-dark">{t("home.aki.label")}</span>
@@ -256,10 +260,11 @@ export default function Home() {
           <div className="relative rounded-3xl overflow-hidden min-h-[340px] lg:min-h-[420px]">
             <img
               src={PHOTOS.team}
-              alt="Das internationale Pflegeteam von CuraMain"
+              alt="KI-generiertes Symbolbild: Pflegefachmann mit Turban und ein junger Mann im Rollstuhl schauen gemeinsam auf ein Smartphone"
               loading="lazy"
               className="absolute inset-0 w-full h-full object-cover"
             />
+            <KiMarke className="top-4 right-4" />
             <div className="absolute bottom-5 left-5 right-5 bg-white/95 rounded-2xl px-5 py-4 flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-cm-teal-500 text-white flex items-center justify-center shrink-0">
                 <Languages className="w-5 h-5" aria-hidden="true" />

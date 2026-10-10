@@ -5,6 +5,7 @@ import {
   ArrowRight, CheckCircle2, Phone, Hospital, MapPin, UserCheck, Info, FileDown,
 } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import KiMarke from "@/components/KiMarke";
 
 /**
  * Außerklinische Intensivpflege (AKI) — eigene Leistungsseite, seit 10.10.2026.
@@ -82,6 +83,7 @@ export default function Intensivpflege() {
                 style={{ objectPosition: "55% center" }}
               />
             </div>
+            <KiMarke className="top-4 right-6" />
           </div>
         </div>
       </section>
@@ -129,6 +131,7 @@ export default function Intensivpflege() {
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover"
               />
+              <KiMarke className="top-3 right-3" />
             </div>
             <div className="bg-white rounded-3xl p-7 border border-cm-teal-100">
               <div className="flex items-center gap-3 mb-2">

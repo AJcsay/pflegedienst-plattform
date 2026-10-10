@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 import { Heart, Users, Award, Shield, ArrowRight, Target, Eye } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import KiMarke from "@/components/KiMarke";
 
 const PHOTOS = {
   team: "/img/team.webp",
@@ -33,6 +34,7 @@ export default function UeberUns() {
         className="relative min-h-[420px] hero-bg -mt-24 pt-24"
         style={{ backgroundImage: `url(${PHOTOS.team}), linear-gradient(135deg, #daedeb, #f9f6f1)` }}
       >
+        <KiMarke className="bottom-3 right-3" />
         <div className="relative z-10 container pt-6 pb-10">
           <span className="pill inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm border border-white/60 shadow-sm">
             <Heart className="w-4 h-4 text-cm-teal" fill="currentColor" />
