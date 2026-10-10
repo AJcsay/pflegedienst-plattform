@@ -54,7 +54,7 @@ export default function Frankfurt() {
         {
           "@type": "Question",
           "name": "Was kostet ambulante Pflege in Frankfurt?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Die Kosten für ambulante Pflege hängen vom Pflegegrad und den benötigten Leistungen ab. Die Pflegekasse übernimmt gemäß §36 SGB XI Sachleistungsbeträge zwischen 724 € (Pflegegrad 2) und 2.095 € (Pflegegrad 5) pro Monat. CuraMain berät Sie kostenlos über Ihre individuelle Kostenstruktur." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Die Kosten für ambulante Pflege hängen vom Pflegegrad und den benötigten Leistungen ab. Die Pflegekasse übernimmt gemäß §36 SGB XI Sachleistungsbeträge zwischen 796 € (Pflegegrad 2) und 2.299 € (Pflegegrad 5) pro Monat. CuraMain berät Sie kostenlos über Ihre individuelle Kostenstruktur." }
         },
         {
           "@type": "Question",
@@ -87,15 +87,17 @@ export default function Frankfurt() {
     { title: "Behandlungspflege", text: "Wundversorgung, Injektionen, Medikamentengabe nach ärztlicher Verordnung – abgerechnet über die Krankenkasse." },
     { title: "Betreuung & Alltagsbegleitung", text: "Gesellschaft, Gespräche, gemeinsame Aktivitäten – für mehr Lebensqualität im Alltag." },
     { title: "Verhinderungspflege", text: "Wenn Angehörige ausfallen oder Urlaub machen: Wir übernehmen zuverlässig und unkompliziert." },
-    { title: "24h-Rufbereitschaft", text: "Rund um die Uhr erreichbar für Notfälle – damit Sie und Ihre Familie sicher schlafen können." },
+    { title: "Intensivpflege zu Hause", text: "Für Erwachsene mit und ohne Beatmung – eine Pflegefachperson nur für Sie, im Umfang der Verordnung." },
   ];
 
   const pflegegrade = [
-    { grad: "Pflegegrad 1", betrag: "125 €", info: "Geringe Beeinträchtigung" },
-    { grad: "Pflegegrad 2", betrag: "724 €", info: "Erhebliche Beeinträchtigung" },
-    { grad: "Pflegegrad 3", betrag: "1.363 €", info: "Schwere Beeinträchtigung" },
-    { grad: "Pflegegrad 4", betrag: "1.693 €", info: "Schwerste Beeinträchtigung" },
-    { grad: "Pflegegrad 5", betrag: "2.095 €", info: "Schwerste Beeintr. + Besonderheiten" },
+    // Betraege 2026 (BMG-Uebersicht Leistungsbetraege 2026, Stand 04.11.2025): Sachleistung § 36,
+    // PG 1 ohne Sachleistung — Entlastungsbetrag § 45b
+    { grad: "Pflegegrad 1", betrag: "131 €", info: "Entlastungsbetrag (keine Sachleistung)" },
+    { grad: "Pflegegrad 2", betrag: "796 €", info: "Erhebliche Beeinträchtigung" },
+    { grad: "Pflegegrad 3", betrag: "1.497 €", info: "Schwere Beeinträchtigung" },
+    { grad: "Pflegegrad 4", betrag: "1.859 €", info: "Schwerste Beeinträchtigung" },
+    { grad: "Pflegegrad 5", betrag: "2.299 €", info: "Schwerste Beeintr. + Besonderheiten" },
   ];
 
   const faqs = [
@@ -113,7 +115,7 @@ export default function Frankfurt() {
     },
     {
       q: "Was kostet ambulante Pflege in Frankfurt?",
-      a: "Die Kosten für ambulante Pflege hängen vom Pflegegrad und den benötigten Leistungen ab. Die Pflegekasse übernimmt gemäß §36 SGB XI Sachleistungsbeträge zwischen 724 € (Pflegegrad 2) und 2.095 € (Pflegegrad 5) pro Monat. CuraMain berät Sie kostenlos über Ihre individuelle Kostenstruktur."
+      a: "Die Kosten für ambulante Pflege hängen vom Pflegegrad und den benötigten Leistungen ab. Die Pflegekasse übernimmt gemäß §36 SGB XI Sachleistungsbeträge zwischen 796 € (Pflegegrad 2) und 2.299 € (Pflegegrad 5) pro Monat. CuraMain berät Sie kostenlos über Ihre individuelle Kostenstruktur."
     },
     {
       q: "Spricht das CuraMain-Team Deutsch und andere Sprachen?",

@@ -46,7 +46,7 @@ const inputCls =
 export default function PartnerZuweiser() {
   useSEO({
     title: "Zuweiser-Portal für Ärzte & Kliniken – CuraMain",
-    description: "Patientenüberleitung an CuraMain Frankfurt – häusliche Pflege und außerklinische Intensivpflege: Zuweiser-Portal für Hausärzte, Fachärzte & Kliniken. Rückmeldung in 4h, nahtlose ambulante Weiterversorgung in Nordend, Bornheim & Ostend.",
+    description: "Patientenüberleitung an CuraMain Frankfurt – häusliche Pflege und außerklinische Intensivpflege: Zuweiser-Portal für Hausärzte, Fachärzte & Kliniken. Nahtlose ambulante Weiterversorgung in Nordend, Bornheim & Ostend.",
     keywords: "Zuweiser Pflegedienst Frankfurt, Patientenüberleitung Frankfurt, ambulante Pflege nach Klinik Frankfurt, Pflegedienst Partner Frankfurt, Bürgerhospital Zuweiser, Sankt Katharinen Zuweiser",
     canonical: "https://www.curamain.de/partner/zuweiser",
   });
@@ -307,8 +307,8 @@ export default function PartnerZuweiser() {
               </p>
             </div>
             <div className="bg-cm-ink text-white p-6 rounded-3xl">
-              <h3 className="h-serif text-xl mb-2">Notfall-Übernahme</h3>
-              <p className="text-sm text-white/80 mb-4">Rückmeldung innerhalb von 4 Stunden bei „Notfall"-Dringlichkeit.</p>
+              <h3 className="h-serif text-xl mb-2">Dringende Überleitung</h3>
+              <p className="text-sm text-white/80 mb-4">Rufen Sie uns direkt an – Mo–Fr 8:00–18:00 Uhr. Schriftliche Anfragen beantworten wir innerhalb von 24 Stunden an Werktagen.</p>
               <a
                 href="tel:+496979216147"
                 className="block w-full text-center bg-cm-mint hover:bg-cm-teal-300 text-cm-ink px-5 py-3 rounded-full font-medium transition-colors"

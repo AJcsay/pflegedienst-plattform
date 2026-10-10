@@ -128,11 +128,12 @@ export default function Offenbach() {
   ];
 
   const pflegegrade = [
-    { grad: 1, betrag: "125 €", info: "Eingeschränkte Alltagskompetenz" },
-    { grad: 2, betrag: "724 €", info: "Erhebliche Beeinträchtigung" },
-    { grad: 3, betrag: "1.363 €", info: "Schwere Beeinträchtigung" },
-    { grad: 4, betrag: "1.693 €", info: "Schwerste Beeinträchtigung" },
-    { grad: 5, betrag: "2.095 €", info: "Besondere Pflegebedürftigkeit" },
+    // Betraege 2026 (BMG-Uebersicht Leistungsbetraege 2026): Sachleistung § 36, PG 1 Entlastungsbetrag § 45b
+    { grad: 1, betrag: "131 €", info: "Entlastungsbetrag (keine Sachleistung)" },
+    { grad: 2, betrag: "796 €", info: "Erhebliche Beeinträchtigung" },
+    { grad: 3, betrag: "1.497 €", info: "Schwere Beeinträchtigung" },
+    { grad: 4, betrag: "1.859 €", info: "Schwerste Beeinträchtigung" },
+    { grad: 5, betrag: "2.299 €", info: "Schwerste Beeinträchtigung mit besonderen Anforderungen" },
   ];
 
   const faqItems = [

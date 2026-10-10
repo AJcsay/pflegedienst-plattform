@@ -35,12 +35,6 @@ const PartnerTabs = ({ active }: { active: string }) => (
 const inputCls =
   "w-full px-4 py-3 rounded-xl border border-cm-teal-100 focus:border-cm-teal-300 focus:ring-2 focus:ring-cm-teal-100 outline-none transition";
 
-// Phase-1-Versorgungsgebiete (Strategie 2026-04-30): Nordend-Ost, Bornheim, Ostend
-const LIVE_AVAILABILITY = [
-  { region: "Frankfurt-Nordend-Ost", a: "🟢 Frei", b: "🟢 Frei", c: "🟡 Begrenzt" },
-  { region: "Frankfurt-Bornheim", a: "🟢 Frei", b: "🟡 Begrenzt", c: "🟢 Frei" },
-  { region: "Frankfurt-Ostend", a: "🟢 Frei", b: "🟢 Frei", c: "🟢 Frei" },
-];
 
 export default function PartnerKapazitaet() {
   useSEO({
@@ -143,13 +137,13 @@ export default function PartnerKapazitaet() {
         <div className="relative z-10 container pt-6 pb-10">
           <span className="pill inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm border border-white/60 shadow-sm">
             <Activity className="w-4 h-4 text-cm-teal" />
-            Aktuelle Verfügbarkeiten
+            Für Kliniken, Praxen & Kassen
           </span>
           <h1 className="h-serif text-5xl lg:text-7xl text-cm-teal mt-6 mb-6 max-w-5xl leading-[1.05]">
             Kapazitätsabfrage.
           </h1>
           <p className="text-lg lg:text-xl text-cm-ink/80 max-w-3xl leading-relaxed">
-            Erkundigen Sie sich nach unseren aktuellen Versorgungskapazitäten in Ihrer Region.
+            Fragen Sie konkret an — für häusliche Pflege und außerklinische Intensivpflege. Wir melden uns innerhalb von 24 Stunden an Werktagen.
           </p>
         </div>
       </section>
@@ -158,41 +152,7 @@ export default function PartnerKapazitaet() {
         <PartnerTabs active="kapazitaet" />
         <h2 className="sr-only">Aktuelle Kapazitäten und Anfrage</h2>
 
-        {/* Live-Verfügbarkeits-Tabelle */}
-        <div className="bg-white rounded-3xl border border-cm-teal-100 overflow-hidden mb-8">
-          <div className="p-6 border-b border-cm-teal-100 flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <h3 className="h-serif text-2xl text-cm-ink">Live-Verfügbarkeit</h3>
-              <p className="text-xs text-cm-ink/70">Übersicht zur Orientierung · Echte Anfrage über das Formular</p>
-            </div>
-            <span className="text-xs bg-cm-teal-50 text-cm-teal-700 px-3 py-1 rounded-full">
-              🟢 Frei · 🟡 Begrenzt · 🔴 Ausgelastet
-            </span>
-          </div>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead className="bg-cm-teal-50 text-cm-ink/70">
-                <tr>
-                  <th className="text-left p-4">Region</th>
-                  <th className="text-left p-4">Behandlungspflege</th>
-                  <th className="text-left p-4">Grundpflege</th>
-                  <th className="text-left p-4">Verhinderungspflege</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-cm-teal-50">
-                {LIVE_AVAILABILITY.map((row) => (
-                  <tr key={row.region}>
-                    <td className="p-4 font-medium text-cm-ink">{row.region}</td>
-                    <td className="p-4">{row.a}</td>
-                    <td className="p-4">{row.b}</td>
-                    <td className="p-4">{row.c}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-
+        {/* 10.10.2026 (GF): keine festen Auslastungswerte nach außen — Kapazität nur auf konkrete Anfrage */}
         {/* Anfrage-Formular */}
         <div className="bg-white p-8 lg:p-10 rounded-3xl border border-cm-teal-100 max-w-3xl mx-auto">
           <h3 className="h-serif text-2xl text-cm-ink mb-6">Kapazität konkret anfragen</h3>
