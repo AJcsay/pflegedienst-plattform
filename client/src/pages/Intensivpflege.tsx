@@ -82,8 +82,8 @@ export default function Intensivpflege() {
                 loading="eager"
                 style={{ objectPosition: "55% center" }}
               />
+              <KiMarke className="top-[16%] right-[20%]" />
             </div>
-            <KiMarke className="top-4 right-6" />
           </div>
         </div>
       </section>
@@ -131,7 +131,7 @@ export default function Intensivpflege() {
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover"
               />
-              <KiMarke className="top-3 right-3" />
+              <KiMarke />
             </div>
             <div className="bg-white rounded-3xl p-7 border border-cm-teal-100">
               <div className="flex items-center gap-3 mb-2">
