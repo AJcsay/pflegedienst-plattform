@@ -60,7 +60,7 @@
   "home": {
     "seo": {
       "title": "CuraMain – Home Care & Intensive Care in Frankfurt | Nordend · Bornheim · Ostend",
-      "description": "CuraMain Frankfurt: home care and out-of-hospital intensive care for adults – with and without ventilation. Culturally sensitive, approved by health insurers. ☎ 069 79 216 147",
+      "description": "CuraMain Frankfurt: home care approved by health insurers and out-of-hospital intensive care for adults – with and without ventilation. Culturally sensitive. ☎ 069 79 216 147",
       "keywords": "home care Frankfurt, outpatient nursing Frankfurt, ambulatory care Frankfurt, culturally sensitive care Frankfurt, multilingual nursing service, care Frankfurt Nordend, care Frankfurt Bornheim, CuraMain"
     },
     "hero": {
@@ -78,7 +78,7 @@
       "cards": [
         {
           "title": "Intensive care at home",
-          "sub": "with and without ventilation"
+          "sub": "for adults, with and without ventilation"
         },
         {
           "title": "Care that speaks your language",
@@ -317,12 +317,12 @@
     "aki": {
       "label": "New at CuraMain",
       "h2": "Intensive care at home – with and without ventilation.",
-      "p": "CuraMain now also cares for adults who need a registered nurse present at all times – on ventilation, with a tracheostomy tube or with very high medical care needs. One nurse is there for you alone, in your home in Frankfurt and the Rhine-Main region.",
+      "p": "CuraMain now also cares for adults who need a registered nurse present at all times – often on ventilation or with a tracheostomy tube. One nurse is there for you alone, to the extent of your prescription, in your home in Frankfurt and the Rhine-Main region.",
       "points": [
         "Invasive and mask ventilation (NIV)",
         "Tracheostomy tube, suctioning, secretion management",
-        "1:1 care for up to 24 hours a day",
-        "Billed directly to your health insurer"
+        "1:1 as prescribed, up to 24 hours a day",
+        "Billed to your health insurer – statutory co-payment for adults"
       ],
       "cta": "All about intensive care",
       "cta2": "Case enquiry for hospitals & practices",
@@ -373,14 +373,14 @@
         "id": "intensivpflege",
         "title": "Out-of-Hospital Intensive Care",
         "sub": "§ 37c SGB V – for adults",
-        "description": "For adults who need a registered nurse present at all times – for example on ventilation or with a tracheostomy tube. One nurse is there for you alone, up to 24 hours a day, in Frankfurt and the Rhine-Main region.",
+        "description": "For adults who need a registered nurse present at all times – often on ventilation or with a tracheostomy tube. One nurse is there for you alone, as prescribed for up to 24 hours a day, in Frankfurt and the Rhine-Main region.",
         "details": [
           "Invasive and non-invasive ventilation (NIV)",
           "Tracheostoma and tracheostomy tube management, suctioning",
           "Secretion and dysphagia management, PEG feeding",
           "Vital sign monitoring, emergency measures per the physician's plan",
           "Guidance and advice for relatives",
-          "Billed directly to your health insurer"
+          "Billed to your health insurer; adults pay the statutory co-payment"
         ],
         "link": "/intensivpflege",
         "linkLabel": "All about intensive care"
@@ -642,13 +642,13 @@
   "intensivpflege": {
     "seo": {
       "title": "Out-of-Hospital Intensive Care in Frankfurt & Rhine-Main | CuraMain",
-      "description": "Intensive care at home for adults – with and without ventilation, tracheostomy, 1:1 for up to 24 hours a day. CuraMain Frankfurt & Rhine-Main. ☎ 069 79 216 147",
+      "description": "Intensive care at home for adults – with and without ventilation, tracheostomy, 1:1 as prescribed up to 24 h a day. CuraMain Frankfurt & Rhine-Main. ☎ 069 79 216 147",
       "keywords": "intensive care Frankfurt, home ventilation care Frankfurt, out-of-hospital intensive care, CuraMain"
     },
     "hero": {
       "pill": "Out-of-hospital intensive care · for adults",
       "h1": "Intensive care at home.",
-      "p": "For adults with and without ventilation: one registered nurse is there for you alone – up to 24 hours a day, in your home in Frankfurt and the Rhine-Main region. Culturally sensitive and multilingual.",
+      "p": "For adults with and without ventilation: one registered nurse is there for you alone – as prescribed for up to 24 hours a day, in your home in Frankfurt and the Rhine-Main region. Culturally sensitive and multilingual.",
       "ctaPrimary": "Request advice",
       "ctaPhone": "069 79 216 147",
       "imgAlt": "Young man in a wheelchair at home, accompanied by a nurse and a relative"
@@ -674,8 +674,8 @@
           "desc": "Recording and assessing vital signs, medication, positioning and prophylaxis."
         },
         {
-          "title": "Safety in emergencies",
-          "desc": "Immediate action in emergencies – following the physician's emergency plan."
+          "title": "Emergency measures on site",
+          "desc": "During care, the nurse acts immediately in an emergency – following the physician's emergency plan."
         },
         {
           "title": "Supporting relatives",
@@ -686,7 +686,7 @@
     "fuerWen": {
       "label": "Who it is for",
       "h2": "Who is out-of-hospital intensive care for?",
-      "p1": "Out-of-hospital intensive care is available to insured persons who need a registered nurse present at all times because immediate intervention may become necessary at any moment – for example on ventilation or with a tracheostomy tube.",
+      "p1": "Eligible are insured persons who, because of life-threatening situations, may need immediate intervention daily and unpredictably, so that a registered nurse must be present at all times. This often applies to people on ventilation or with a tracheostomy tube – the tube alone does not establish eligibility. Physician and health insurer assess each case.",
       "p2": "Common reasons include neuromuscular diseases such as ALS, high spinal cord injury or severe neurological conditions after a hospital stay.",
       "woH3": "Where we provide care",
       "wo": "In your home or with your family, in supported living and at other suitable places – for example at work in a sheltered workshop. Service area: Frankfurt am Main and the Rhine-Main region.",
@@ -704,11 +704,11 @@
         },
         {
           "title": "Prescription",
-          "desc": "A qualified physician prescribes intensive care; for ventilation or tracheostomy this includes an assessment of weaning potential."
+          "desc": "A qualified physician prescribes intensive care; for ventilation or tracheostomy this usually includes an assessment of weaning potential."
         },
         {
           "title": "Application",
-          "desc": "You submit the application to your health insurer – we help with the form and documents."
+          "desc": "You or your legal representative submit the application – we help. The health insurer reviews it with the Medical Service and approves it."
         },
         {
           "title": "Start at home",
@@ -718,7 +718,7 @@
     },
     "kosten": {
       "h3": "Costs",
-      "p": "Out-of-hospital intensive care is a statutory health insurance benefit; we bill your health insurer directly. Adults pay the statutory co-payment: 10 % of the costs plus €10 per prescription, limited to the first 28 days per calendar year. The statutory burden limit applies.",
+      "p": "Out-of-hospital intensive care is a statutory health insurance benefit; we bill your health insurer directly. Adults pay their insurer 10 % of the costs for the first 28 days of care per calendar year plus €10 per prescription. The statutory burden limit applies.",
       "quelle": "Legal basis: § 37c SGB V, G-BA guideline on out-of-hospital intensive care (as of 2026)."
     },
     "kliniken": {
@@ -727,8 +727,8 @@
       "points": [
         "Send case enquiries early – ideally during the hospital stay",
         "Coordination with social services, prescribing physicians and equipment suppliers",
-        "Care by registered nurses qualified to health insurers' requirements for intensive care",
-        "Dedicated intensive care department lead and a fixed contact person"
+        "Nurses briefed on the equipment and the physician's emergency plan",
+        "Fixed contact person for hospitals and practices"
       ],
       "cta": "Send a case enquiry",
       "cta2": "Check capacity"

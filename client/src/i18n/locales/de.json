@@ -60,7 +60,7 @@
   "home": {
     "seo": {
       "title": "CuraMain – Ambulante Pflege & Intensivpflege in Frankfurt | Nordend · Bornheim · Ostend",
-      "description": "CuraMain Frankfurt: ambulante Pflege und außerklinische Intensivpflege für Erwachsene – mit und ohne Beatmung. Kultursensibel, kassenzugelassen. ☎ 069 79 216 147",
+      "description": "CuraMain Frankfurt: kassenzugelassene ambulante Pflege und außerklinische Intensivpflege für Erwachsene – mit und ohne Beatmung. Kultursensibel. ☎ 069 79 216 147",
       "keywords": "Pflegedienst Frankfurt, ambulanter Pflegedienst Frankfurt, Intensivpflege Frankfurt, außerklinische Intensivpflege Frankfurt, Intensivpflegedienst Frankfurt, Beatmungspflege Frankfurt, Heimbeatmung Frankfurt, häusliche Pflege Frankfurt, Pflegedienst Frankfurt Nordend, Pflegedienst Frankfurt Bornheim, Pflegedienst Frankfurt Ostend, kultursensible Pflege Frankfurt, mehrsprachiger Pflegedienst, Pflege und Teilhabe Frankfurt, CuraMain"
     },
     "hero": {
@@ -78,7 +78,7 @@
       "cards": [
         {
           "title": "Intensivpflege zu Hause",
-          "sub": "mit und ohne Beatmung"
+          "sub": "für Erwachsene, mit und ohne Beatmung"
         },
         {
           "title": "Pflege, die Ihre Sprache spricht",
@@ -317,12 +317,12 @@
     "aki": {
       "label": "Neu bei CuraMain",
       "h2": "Intensivpflege zu Hause – mit und ohne Beatmung.",
-      "p": "CuraMain versorgt jetzt auch Erwachsene, bei denen ständig eine Pflegefachperson anwesend sein muss – bei Beatmung, mit Trachealkanüle oder bei sehr hohem Behandlungspflegebedarf. Eine Pflegefachperson ist ausschließlich für Sie da, in Ihrer Wohnung in Frankfurt und Rhein-Main.",
+      "p": "CuraMain versorgt jetzt auch Erwachsene, bei denen ständig eine Pflegefachperson anwesend sein muss – häufig bei Beatmung oder mit Trachealkanüle. Eine Pflegefachperson ist ausschließlich für Sie da, im Umfang Ihrer Verordnung, in Ihrer Wohnung in Frankfurt und Rhein-Main.",
       "points": [
         "Beatmung invasiv und mit Maske (NIV)",
         "Trachealkanüle, Absaugen, Sekretmanagement",
-        "1:1-Versorgung bis zu 24 Stunden am Tag",
-        "Abrechnung direkt mit der Krankenkasse"
+        "1:1 im Umfang der Verordnung, bis zu 24 Stunden am Tag",
+        "Abrechnung mit der Krankenkasse – gesetzliche Zuzahlung für Volljährige"
       ],
       "cta": "Alles zur Intensivpflege",
       "cta2": "Fallanfrage für Kliniken & Praxen",
@@ -373,14 +373,14 @@
         "id": "intensivpflege",
         "title": "Außerklinische Intensivpflege",
         "sub": "§ 37c SGB V – für Erwachsene",
-        "description": "Für Erwachsene, bei denen ständig eine Pflegefachperson anwesend sein muss – etwa bei Beatmung oder Trachealkanüle. Eine Pflegefachperson ist ausschließlich für Sie da, bis zu 24 Stunden am Tag, in Frankfurt und Rhein-Main.",
+        "description": "Für Erwachsene, bei denen ständig eine Pflegefachperson anwesend sein muss – häufig bei Beatmung oder Trachealkanüle. Eine Pflegefachperson ist ausschließlich für Sie da, im Umfang Ihrer Verordnung bis zu 24 Stunden am Tag, in Frankfurt und Rhein-Main.",
         "details": [
           "Invasive und nicht-invasive Beatmung (NIV)",
           "Tracheostoma- und Trachealkanülenmanagement, Absaugen",
           "Sekret- und Dysphagiemanagement, Ernährung über PEG",
           "Überwachung der Vitalwerte, Notfallmaßnahmen nach ärztlichem Plan",
           "Anleitung und Beratung von Angehörigen",
-          "Abrechnung direkt mit der Krankenkasse"
+          "Abrechnung mit der Krankenkasse; Volljährige leisten die gesetzliche Zuzahlung"
         ],
         "link": "/intensivpflege",
         "linkLabel": "Alles zur Intensivpflege"
@@ -642,13 +642,13 @@
   "intensivpflege": {
     "seo": {
       "title": "Außerklinische Intensivpflege in Frankfurt & Rhein-Main | CuraMain",
-      "description": "Intensivpflege zu Hause für Erwachsene – mit und ohne Beatmung, Trachealkanüle, 1:1 bis zu 24 Stunden am Tag. CuraMain Frankfurt & Rhein-Main. ☎ 069 79 216 147",
+      "description": "Intensivpflege zu Hause für Erwachsene – mit und ohne Beatmung, Trachealkanüle, 1:1 nach Verordnung bis zu 24 h täglich. CuraMain Frankfurt & Rhein-Main. ☎ 069 79 216 147",
       "keywords": "Intensivpflege Frankfurt, außerklinische Intensivpflege Frankfurt, Intensivpflegedienst Frankfurt, Beatmungspflege Frankfurt, Heimbeatmung Frankfurt, Trachealkanüle Pflege Frankfurt, 1:1-Versorgung, Intensivpflege Rhein-Main, AKI Frankfurt, CuraMain"
     },
     "hero": {
       "pill": "Außerklinische Intensivpflege · für Erwachsene",
       "h1": "Intensivpflege zu Hause.",
-      "p": "Für Erwachsene mit und ohne Beatmung: Eine Pflegefachperson ist ausschließlich für Sie da – bis zu 24 Stunden am Tag, in Ihrer Wohnung in Frankfurt und Rhein-Main. Kultursensibel und vielsprachig im Alltag.",
+      "p": "Für Erwachsene mit und ohne Beatmung: Eine Pflegefachperson ist ausschließlich für Sie da – im Umfang Ihrer Verordnung bis zu 24 Stunden am Tag, in Ihrer Wohnung in Frankfurt und Rhein-Main. Kultursensibel und vielsprachig im Alltag.",
       "ctaPrimary": "Beratung anfragen",
       "ctaPhone": "069 79 216 147",
       "imgAlt": "Junger Mann im Rollstuhl zu Hause, begleitet von einer Pflegefachperson und einem Angehörigen"
@@ -674,8 +674,8 @@
           "desc": "Vitalwerte erfassen und bewerten, Medikamente, Lagerung und Prophylaxen."
         },
         {
-          "title": "Sicherheit im Notfall",
-          "desc": "Sofortiges Handeln in Notfallsituationen – nach dem ärztlichen Notfallplan."
+          "title": "Notfallmaßnahmen vor Ort",
+          "desc": "Während der Versorgung handelt die Pflegefachperson im Notfall sofort – nach dem ärztlichen Notfallplan."
         },
         {
           "title": "Angehörige stärken",
@@ -686,7 +686,7 @@
     "fuerWen": {
       "label": "Für wen",
       "h2": "Für wen ist außerklinische Intensivpflege?",
-      "p1": "Außerklinische Intensivpflege erhalten Versicherte, bei denen ständig eine Pflegefachperson anwesend sein muss, weil jederzeit und unvorhersehbar ein sofortiges Eingreifen nötig werden kann – zum Beispiel bei einer Beatmung oder Trachealkanüle.",
+      "p1": "Anspruch haben Versicherte, bei denen wegen lebensbedrohlicher Situationen täglich und unvorhersehbar ein sofortiges Eingreifen nötig werden kann und deshalb ständig eine Pflegefachperson anwesend sein muss. Das betrifft häufig Menschen mit Beatmung oder Trachealkanüle – die Kanüle allein begründet den Anspruch nicht. Ärzt·in und Krankenkasse prüfen den Einzelfall.",
       "p2": "Häufige Anlässe sind neuromuskuläre Erkrankungen wie ALS, eine hohe Querschnittlähmung oder schwere neurologische Erkrankungen nach einem Klinikaufenthalt.",
       "woH3": "Wo wir versorgen",
       "wo": "In Ihrer Wohnung oder in Ihrer Familie, in betreuten Wohnformen und an anderen geeigneten Orten – etwa am Arbeitsplatz in einer Werkstatt für behinderte Menschen. Einsatzgebiet: Frankfurt am Main und Rhein-Main.",
@@ -704,11 +704,11 @@
         },
         {
           "title": "Verordnung",
-          "desc": "Eine dafür qualifizierte Ärzt·in verordnet die Intensivpflege; bei Beatmung oder Kanüle gehört eine Potenzialerhebung dazu."
+          "desc": "Eine dafür qualifizierte Ärzt·in verordnet die Intensivpflege; bei Beatmung oder Kanüle gehört in der Regel eine Potenzialerhebung dazu."
         },
         {
           "title": "Antrag",
-          "desc": "Den Antrag bei der Krankenkasse stellen Sie als Versicherte·r – wir helfen beim Ausfüllen und bei den Unterlagen."
+          "desc": "Den Antrag stellen Sie oder Ihre gesetzliche Vertretung – wir helfen dabei. Die Krankenkasse prüft mit dem Medizinischen Dienst und genehmigt."
         },
         {
           "title": "Start zu Hause",
@@ -718,8 +718,8 @@
     },
     "kosten": {
       "h3": "Kosten",
-      "p": "Außerklinische Intensivpflege ist eine Leistung der gesetzlichen Krankenversicherung; wir rechnen direkt mit Ihrer Krankenkasse ab. Volljährige leisten die gesetzliche Zuzahlung: 10 % der Kosten und 10 € je Verordnung, begrenzt auf die ersten 28 Tage im Kalenderjahr. Es gilt die gesetzliche Belastungsgrenze.",
-      "quelle": "Rechtsgrundlagen: § 37c SGB V, Außerklinische Intensivpflege-Richtlinie des G-BA (Stand 2026)."
+      "p": "Außerklinische Intensivpflege ist eine Leistung der gesetzlichen Krankenversicherung; wir rechnen direkt mit Ihrer Krankenkasse ab. Volljährige zahlen an ihre Krankenkasse 10 % der Kosten für die ersten 28 Versorgungstage im Kalenderjahr sowie 10 € je Verordnung. Es gilt die gesetzliche Belastungsgrenze.",
+      "quelle": "Rechtsgrundlagen: § 37c SGB V (Zuzahlung: Abs. 5 i. V. m. §§ 61, 62 SGB V), Außerklinische Intensivpflege-Richtlinie des G-BA (Stand 2026)."
     },
     "kliniken": {
       "label": "Für Kliniken, Praxen & Überleitung",
@@ -727,8 +727,8 @@
       "points": [
         "Fallanfrage gern frühzeitig – schon während des Klinikaufenthalts",
         "Abstimmung mit Sozialdienst, verordnenden Ärzt·innen und Hilfsmittelversorgern",
-        "Versorgung durch Pflegefachpersonen, qualifiziert nach den Vorgaben der Krankenkassen für die Intensivpflege",
-        "Eigene Fachbereichsleitung Intensivpflege und feste Ansprechperson"
+        "Pflegefachpersonen, eingearbeitet in die Geräte und den ärztlichen Notfallplan",
+        "Feste Ansprechperson für Kliniken und Praxen"
       ],
       "cta": "Fallanfrage stellen",
       "cta2": "Kapazität anfragen"

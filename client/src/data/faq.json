@@ -99,17 +99,17 @@
         {
           "id": "was-ist-aki",
           "question": "Was ist außerklinische Intensivpflege?",
-          "answer": "Außerklinische Intensivpflege ist eine Leistung der gesetzlichen Krankenversicherung (§ 37c SGB V). Sie erhalten Versicherte, bei denen ständig eine Pflegefachperson anwesend sein muss, weil jederzeit und unvorhersehbar ein sofortiges Eingreifen nötig werden kann – zum Beispiel bei einer Beatmung oder Trachealkanüle.\n\nCuraMain versorgt Erwachsene mit und ohne Beatmung in ihrer Wohnung in Frankfurt und Rhein-Main – 1:1, im Umfang der Verordnung bis zu 24 Stunden am Tag."
+          "answer": "Außerklinische Intensivpflege ist eine Leistung der gesetzlichen Krankenversicherung (§ 37c SGB V). Anspruch haben Versicherte, bei denen wegen lebensbedrohlicher Situationen täglich und unvorhersehbar ein sofortiges Eingreifen nötig werden kann und deshalb ständig eine Pflegefachperson anwesend sein muss. Das betrifft häufig Menschen mit Beatmung oder Trachealkanüle – die Kanüle allein begründet den Anspruch nicht.\n\nCuraMain versorgt Erwachsene mit und ohne Beatmung in ihrer Wohnung in Frankfurt und Rhein-Main – 1:1, im Umfang der Verordnung bis zu 24 Stunden am Tag."
         },
         {
           "id": "aki-verordnung",
           "question": "Wie bekomme ich außerklinische Intensivpflege verordnet?",
-          "answer": "Die Intensivpflege verordnet eine dafür besonders qualifizierte Ärzt·in. Bei beatmeten oder trachealkanülierten Patient·innen gehört eine Potenzialerhebung dazu – sie klärt, ob eine Entwöhnung von Beatmung oder Kanüle möglich ist.\n\nDen Antrag bei der Krankenkasse stellen Sie als Versicherte·r. Wir helfen beim Ausfüllen und bei den Unterlagen und stimmen uns mit Klinik, Sozialdienst und Ärzt·innen ab."
+          "answer": "Die Intensivpflege verordnet eine dafür besonders qualifizierte Ärzt·in. Bei beatmeten oder trachealkanülierten Patient·innen gehört in der Regel eine Potenzialerhebung dazu – sie klärt, ob eine Entwöhnung von Beatmung oder Kanüle möglich ist.\n\nDen Antrag bei der Krankenkasse stellen Sie oder Ihre gesetzliche Vertretung; die Krankenkasse prüft mit dem Medizinischen Dienst und genehmigt. Wir helfen bei den Unterlagen und stimmen uns mit Klinik, Sozialdienst und Ärzt·innen ab."
         },
         {
           "id": "aki-kosten",
           "question": "Was kostet die Intensivpflege?",
-          "answer": "Wir rechnen direkt mit Ihrer Krankenkasse ab. Volljährige leisten die gesetzliche Zuzahlung: 10 % der Kosten und 10 € je Verordnung, begrenzt auf die ersten 28 Tage im Kalenderjahr (§ 37c Abs. 5 i. V. m. § 61 SGB V). Es gilt die gesetzliche Belastungsgrenze (§ 62 SGB V)."
+          "answer": "Wir rechnen direkt mit Ihrer Krankenkasse ab. Volljährige zahlen an ihre Krankenkasse 10 % der Kosten für die ersten 28 Versorgungstage im Kalenderjahr sowie 10 € je Verordnung (§ 37c Abs. 5 i. V. m. § 61 SGB V). Es gilt die gesetzliche Belastungsgrenze (§ 62 SGB V)."
         },
         {
           "id": "aki-wo",
